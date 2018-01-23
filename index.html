@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>A Self-Learning, Modern Computer Science Curriculum</title>
-<!-- 2017-12-28 Thu 22:15 -->
+<!-- 2018-01-23 Tue 08:09 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="jbh" />
@@ -249,7 +249,7 @@ Why not get an accredited degree so you can pursue graduate studies later or jus
 </p>
 
 <p>
-The <a href="https://www.uopeople.edu/programs/cs/">University of The People</a> offers a fully online, accredited BSc in Computer Science that is tuition free. You pay $60 to enroll, and $100 per proctored exam so ~4k USD for a 4 year degree and they offer financial assistance.
+The <a href="https://www.uopeople.edu/programs/cs/">University of The People</a> offers a fully online, US Distance Education Accrediting Commission(DEAC) accredited BSc in Computer Science that is tuition free. You pay $60 to enroll, and $100 per proctored exam so ~4k USD for a 4 year degree and they offer financial assistance.
 They have 5 terms per academic year, with F/T students taking 2 courses per term or P/T students taking 1 course per term. In total there are 40 proctored exams, and you can either ask somebody to be an exam proctor, or use a service like ProctorU, or just look up local universities in your
 area they often offer this service. The material is all text based taken online, and both NYU and Berkeley will accept UoP courses for transfer into their BSc programs.   
 </p>
@@ -357,7 +357,7 @@ do them. Teaching Assistants (TAs) exist in universities to give guidence to stu
 <h3 id="sec-2-2"><span class="section-number-3">2.2</span> Intro to Programming</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
-This book/course has proven success teaching new students a profoundly typed discipline to programming.
+This book/course has proven success teaching new students a profoundly typed discipline to programming. Really all you need is a good drilling in basic computation, and the Little Schemer series is perfect for this as they are exercises instead of passive reading.
 </p>
 
 <ul class="org-ul">
@@ -384,7 +384,10 @@ This book/course has proven success teaching new students a profoundly typed dis
 <h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Alternative Intro</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
-The Little Schemer series books are a Q&amp;A format/Socratic method for learning the basics of recursion, types and other core ideas in Computer Science (read the Preface of each book). You can do the Little Schemer with pencil and paper. 
+The <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">Little Schemer series books</a> are a Q&amp;A format/Socratic method for learning the basics of computation (read the Preface of each book). You can do the Little Schemer with pencil and paper in 3 to 5 sittings. These are great books,
+the first in the series is <i>The Little Schemer</i> which teaches you the basics of recursion. The second is the <i>Seasoned Schemer</i>, a book on higher-order functions which will come in handy when you do the Parallel Algorithms book later. The <i>Reasoned Schemer</i> is a great
+book for learning relational programming (databases). The <i>Little Prover</i> will drill inductive proofs, excellent for when you take 15-150 Principals of Functional Programming. There is even <i>A Little Java book</i> to teach you the OOP paradigm should you ever find yourself 
+in need to learn Java. 
 </p>
 
 <ul class="org-ul">
@@ -401,6 +404,7 @@ The Little Schemer series books are a Q&amp;A format/Socratic method for learnin
 </div>
 </div>
 
+
 <div id="outline-container-sec-2-3" class="outline-3">
 <h3 id="sec-2-3"><span class="section-number-3">2.3</span> Repair Your Deficiencies in Elementary Math</h3>
 <div class="outline-text-3" id="text-2-3">
@@ -409,8 +413,7 @@ The best way to fix all your deficiencies in algebra is to jump into a first yea
 questions/search math.stackexchange.com, or hire a tutor from a local university. The reason why all universities dump incoming students into three semesters of calculus is it's the best solution for reteaching math to students since they undoubtedly learned it incorrectly in most high schools. A typical first year
 course will use the text <i>Calculus: Early Transcendentals</i> by Stewart which covers Single Variable, Multi-Variable and Differential Equations. I used Thomas' book instead, but it doesn't matter what text you use. What you want to be able to do is understand future material in this guide, such as the
 summation notation in 15-213 Computer Systems to describe Two's Compliment, proofs by induction used in 15-150 Functional Programming and in discrete math texts, understand amortized analysis, and calculus is also worth knowing for it's own sake as the fundamental theorem of calculus is a major breakthrough in terms of cultural importance
-and heavily used in all engineering disciplines and for finance and AI (stats), probability (integration), optimization (differentiation), estimation, ect. Stewart's book has everything you need to do this or Thomas' text. The discrete math text later in this guide will teach you proofs, but I highly recommend working
-through one of the rigorous courses below in addition to Thomas or Stewart. 
+and heavily used in all engineering disciplines and for finance and AI (stats), probability (integration), optimization (differentiation), estimation, ect. Stewart's book has everything you need to do this or Thomas' text.  
 </p>
 </div>
 
@@ -443,11 +446,16 @@ This mathematics <a href="https://www.maths.cam.ac.uk/sites/www.maths.cam.ac.uk/
 </div>
 
 <div id="outline-container-sec-2-3-2" class="outline-4">
-<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> Rigorous Theory of Calculus</h4>
+<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> Rigorous Theory of Calculus (Optional)</h4>
 <div class="outline-text-4" id="text-2-3-2">
 <p>
-Two options, the Math 2400/2410 course follows Spivak's book <i>Calculus</i>, which introduces students to rigorous, abstract mathematics in single variable calculus. The MIT course covers Apostol's book, which provides an absolute thorough drilling in university level mathematics 
-for anybody who needs to clear up their skills in basic algebra. It's much more formal with definition, theorem, proof type style but this is how most math texts at this level are written. My recommendation is if you have been out of school for a while do Apostol's two books.     
+Math 2400/2410 course follows Spivak's book <i>Calculus</i>, which introduces students to single variable calculus done rigorously. This will be hard to do by yourself, you'll need to ask questions on stack exchange or hire a tutor even with the 3rd version solution guide available, as some of the
+exercises are truly difficult. The preface of the course notes Honors Calculus, titled <i>Spivak and Me</i> detailing the writer's history of trying to teach Spivak to freshman students will explain how difficult the book can be. 
+</p>
+
+<p>
+The MIT course covers Apostol's book, which provides an absolute thorough drilling in university level mathematics for anybody who needs to clear up their skills in basic algebra. It's much more formal with definition, theorem, proof type style but this is how most math texts at this level are written. My recommendation is if you have been out of school for a while, or you struggle with math,
+do Apostol's two books and leave no exercises unfinished. I credit slogging through the first volume's exercises in building my mathematical maturity to a level where I could manipulate equations in later courses without making mistakes, even if some of the exercises do become tedious, you'll thank yourself later when trig identities and algebra manipulation become second nature.     
 </p>
 
 <ul class="org-ul">
@@ -715,6 +723,8 @@ Abstracting data to model it however you want using advanced SQL with a standard
 <li>Recorded lectures on <a href="https://www.youtube.com/playlist?list=PLSE8ODhjZXjYutVzTeAds8xUt1rcmyT7x">youtube</a>
 </li>
 <li>Uses readings from this <a href="http://db-book.com/">book</a>, assumes you have taken 15-213 and know some basic set theory
+</li>
+<li>Try this course with the small book <a href="https://mitpress.mit.edu/books/reasoned-schemer">The Reasoned Schemer</a> book which drills you in relational programming
 <ul class="org-ul">
 <li>(Optional) An <a href="http://15721.courses.cs.cmu.edu/spring2017/schedule.html">advanced class</a> w/recorded lectures on building your own dbms  
 </li>
@@ -777,7 +787,7 @@ The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> ha
 </li>
 <li>Note <a href="http://www.cs.cmu.edu/~15150/previous-semesters/2012-spring/tools.html">emacs setup</a> also <a href="http://courses.cs.washington.edu/courses/cse341/16sp/#software">here</a> (if you use emacs)
 </li>
-<li>Read this post about <a href="https://existentialtype.wordpress.com/2016/02/22/it-is-what-it-is-and-nothing-else/">what recursion is</a>
+<li>Read this post about <a href="https://existentialtype.wordpress.com/2016/02/22/it-is-what-it-is-and-nothing-else/">what recursion is</a> if you struggle with it, complete <a href="http://www.ccs.neu.edu/home/matthias/BTML/">The Little MLer</a> or <i>The Little Schemer</i> book
 <ul class="org-ul">
 <li>Try <a href="http://mlton.org/">MLton</a>, one of the few whole program optimizing compilers 
 </li>
@@ -802,6 +812,12 @@ Design, analysis and programming of sequential and parallel algorithms and data 
 <li>Complete, self-contained book with exercises, check <a href="http://www.cs.cmu.edu/~15210/schedule.html">15-210</a> course schedule for recitation pdfs and extra material
 </li>
 <li>If you want to try the 15-210 labs <a href="https://github.com/kidaa/Parallel-Algorithms.git">clone this repository</a>, read the lab handout pdf and just erase the answers and try them yourself, they are done in SML (and difficult).
+</li>
+<li>This course covers higher-order programming (where functions are first-class values), a good introduction to this is <i>The Seasoned Schemer</i> book
+<ul class="org-ul">
+<li>The <a href="https://www.interviewcake.com/data-structures-and-algorithms-guide">Intuitive Guide to Data Structures and Algorithms</a> helps to explain Big O notation and Logarithms in addition to the <i>Parallel and Sequential Algorithms</i> book
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -838,7 +854,7 @@ Terence Tao article <a href="https://terrytao.wordpress.com/career-advice/there%
 <h3 id="sec-5-4"><span class="section-number-3">5.4</span> Isolating Software Failure, Proving Safety and Testing</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
-How to verify software, and strategies of programming that minimize catastrophe during failure. 
+How to verify software, and strategies of programming that minimize catastrophe during failure. The <a href="https://mitpress.mit.edu/books/little-prover">Little Prover</a> is a good introduction in determining facts about computer programs.
 </p>
 
 <ul class="org-ul">
@@ -921,7 +937,8 @@ This material will really solidify your understanding of programming languages a
 <h3 id="sec-6-1"><span class="section-number-3">6.1</span> Advanced Algorithms</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
-Graduate level algorithms design course from Harvard with recorded lectures. Since you have already done the <i>Parallel and Sequential Algorithms</i> book, and some linear algebra you satisfy the prerequisites. 
+Graduate level algorithms design course from Harvard with recorded lectures. Since you have already done the <i>Parallel and Sequential Algorithms</i> book, and some linear algebra you satisfy the prerequisites. You want to go through the <i>Purely Functional Data Structures</i> book and match up the text with the lectures, all other lectures
+are optional but this is an excellent course.
 </p>
 
 <ul class="org-ul">
@@ -1335,7 +1352,7 @@ Whereas cryptography strives to render data unintelligible to all but the intend
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: jbh</p>
-<p class="date">Created: 2017-12-28 Thu 22:15</p>
+<p class="date">Created: 2018-01-23 Tue 08:09</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
