@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>A Self-Learning, Modern Computer Science Curriculum</title>
-<!-- 2018-07-18 Wed 21:28 -->
+<!-- 2018-07-19 Thu 22:02 -->
 <meta  charset="utf-8">
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="jbh">
@@ -280,14 +280,47 @@ Cal Newport has some anecdotes on how he was able to get the <a href="http://cal
 <div class="outline-text-2" id="text-2">
 <p>
 If you live near or wish to vacation to Raleigh NC (or possibly remote, ask him), for $500 (or see group rates when available) per course, you can hire this former CMU professor to <a href="https://calculem.us/">teach</a> you directly as a guided tutor introductory computer science regardless of your educational background covering <a href="https://calculem.us/classes/trees/">functional</a> data structures and other topics.  
-Some of this material exists in lecture notes <a href="http://www.cs.cmu.edu/~rjsimmon/15122-s16/schedule.html">here</a> from when he taught 15-122 <i>Principles of Imperative Computation</i>. I did have access to the lecture recordings at one point before they got paywalled and they are fantastic, covering much more than what is in the notes. The theme of that course is to be able to reason about programs without relying on just operational thinking: how do I prove on paper my programs will do what I expect them to do.
-If you go through those notes and like the material I highly recommend paying for guided instruction. He also offers <a href="https://calculem.us/development/">custom</a> courses, with greatly reduced rates if the material can be released for free. Perhaps something like this can be crowd sourced for an open <a href="http://www.cs.cmu.edu/~rjsimmon/15411-f15/schedule.html">compiler</a> course on edx.org  
+Some of this material exists in lecture notes <a href="http://www.cs.cmu.edu/~rjsimmon/15122-s16/schedule.html">here</a> from when he taught 15-122 <i>Principles of Imperative Computation</i>. I did have access to the lecture recordings at one point before they got paywalled and they are fantastic. It's a steal for only $500 to have a PhD give you guided personal instruction.  
 </p>
 </div>
 
 <div id="outline-container-sec-2-1" class="outline-3">
 <h3 id="sec-2-1"><span class="section-number-3">2.1</span> Intro to Programming</h3>
 <div class="outline-text-3" id="text-2-1">
+<p>
+Any of these options will suffice you don't have to do every resource.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> Common Lisp Intro</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+It's possible to do (or at least model) every course in this list using Common Lisp, such as building your own domain-specific <a href="https://www.pvk.ca/Blog/2014/03/15/sbcl-the-ultimate-assembly-code-breadboard/">machine code</a> while completing 15-213 <i>Computer Systems</i>, or hacking together <a href="https://common-lisp.net/project/fset/Site/FSet-Tutorial.html">purely</a> functional <a href="https://common-lisp.net/project/funds/funds.pdf">data structures</a>, or writing your own pattern matcher, or simulating a turing machine, ect.  
+Of course you will do the courses using their recommended languages and tools, but in addition to this, building your own toy prototypes for the topics here in CLisp can help you learn this material as per this axiom<a href="#sec-3-1">3.1</a> "people learn more when they discover something for themselves than they do if someone tells them about it." 
+Another reason is the language hasn't changed much in decades, so older books which are now free, can be used. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.cs.cmu.edu/~dst/LispBook/">(Book) Common Lisp - A Gentle Introduction to Symbolic Computation</a>
+<ul class="org-ul">
+<li>This book assumes no knowledge of programming and starts from pen and paper to writing complete programs.  
+</li>
+<li>A good sequel is <a href="https://github.com/norvig/paip-lisp">PAIP</a> by Norvig and <a href="http://www.paulgraham.com/onlisp.html">On Lisp</a> by PG
+<ul class="org-ul">
+<li>For example the straight-forward <a href="https://github.com/norvig/paip-lisp/blob/master/docs/chapter13.md">description</a> of OOP compared to other confusing large books attempting to teach Object-Oriented Programming   
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> Little Schemer</h4>
+<div class="outline-text-4" id="text-2-1-2">
 <p>
 The <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">Little Schemer series</a> books are a Q&amp;A format/Socratic method for learning the basics of computation (read the Preface of each book). You can do the Little Schemer with pencil and paper in a weekend though the authors recommend at least 3 sittings. The first in the series is <i>The Little Schemer</i> which teaches you to think recursively.
 The second is the <i>Seasoned Schemer</i> covering higher-order functions, which will help understand calculus. The differential operator is a higher-order function: given a function on the real line it yields its first derivative as a function on the real line. 
@@ -305,16 +338,23 @@ The second is the <i>Seasoned Schemer</i> covering higher-order functions, which
 </ul>
 </li>
 </ul>
+</div>
+</div>
 
+<div id="outline-container-sec-2-1-3" class="outline-4">
+<h4 id="sec-2-1-3"><span class="section-number-4">2.1.3</span> CMU's Fundamentals of Programming</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+Students who go directly to this course already have a background in programming. I did this course in Common Lisp, using a simple wrapper for tcl/tk similar to Python's tkinter and wrote my own toy data structures as they were explained. 
+Good information here on style, design and efficiency, with an introduction to <a href="https://www.cs.cmu.edu/~112/notes/notes-limits-of-computation.html">complexity</a>. 
+</p>
 
 <ul class="org-ul">
 <li><a href="https://www.cs.cmu.edu/~112/schedule.html">(Full Course) 15-112 Fundamentals of Programming and Computer Science</a>
 <ul class="org-ul">
-<li>Click on each lecture topic, there are short youtube videos explaining each topic. You should read <i>The Little Schemer</i> while taking this class to better grok recursion.
+<li>Click on each lecture topic, there are short youtube videos explaining each topic. 
 </li>
-<li>The homework assignments are self-correcting, meaning they include assert statements so you can check your work.
-</li>
-<li>Covers style, algorithmic thinking, introduction to testing and exceptions, the basics of imperative languages using Python. 
+<li>The homework assignments are self-correcting, with assert statements and a linter doing static analysis
 <ul class="org-ul">
 <li>Some <a href="https://www.cs.cmu.edu/~15131/f16/">notes</a> on editors and version control (git), how to write a good <a href="https://chris.beams.io/posts/git-commit/">commit comment</a>.
 </li>
@@ -325,6 +365,7 @@ The second is the <i>Seasoned Schemer</i> covering higher-order functions, which
 </ul>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -428,7 +469,6 @@ The merging of proof and program is what makes this a great book. If you can't g
 <div class="outline-text-3" id="text-3-3">
 <p>
 15-251 assumes students have completed <i>An Infinite Descent into Pure Mathematics</i> though it is self contained. "This course teaches the mathematical underpinnings of computation and explores some of the central results and questions regarding the nature of computation."
-This course goes well with the VanDrunen <i>Discrete Math with Standard ML</i> book but covers much more topics. 
 </p>
 
 <ul class="org-ul">
@@ -515,7 +555,6 @@ Though Apostol's <i>Calculus</i> has an excellent introduction to Linear Algebra
 <p>
 The "functional" part in functional programming refers to mathematical functions, meaning functions where each input has a single output.  The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course.
 SML is used because it's syntax and module system is simple, much like Scheme's easy syntax was once preferred for introductory courses so the complexity of the language gets out of the way and you learn the fundamentals. This course introduces you to programming with types, proving properties of programs, writing programs for parallel evaluation, and you'll find it surprisingly very intuitive making it easy to grok large programs.
-After this book and course notes, you'll be able to jump into the specifications for Erlang, F#, Rust, OCaml/ReasonML, Haskell or other functional language, as you will understand the fundamentals of pattern matching, immutable data structures/variables, higher order functions, exceptions, ect. 
 </p>
 
 <ul class="org-ul">
@@ -750,8 +789,7 @@ Most of the self learning and discovery is done through the labs, try them.
 <h3 id="sec-11-2"><span class="section-number-3">11.2</span> Advanced Algorithms (Purely Functional Data Structures)</h3>
 <div class="outline-text-3" id="text-11-2">
 <p>
-The typical text for a senior undergrad or graduate course on algorithm analysis is <i>The Design and Analysis of Algorithms</i> by Kozen (1992). This is an excellent book to carefully study with difficult problems well presented and clearly analyzed by Kozen. The Okasaki book (1999), <i>Purely Functional Data Structures</i> gives examples in Standard ML and Haskell. 
-There really is no need for more modern books yet, which is why <i>The Art of Computer Programming</i> series is still relevant despite it's first printing in 1969. If you've read Kozen and Okasaki, try the Harvard course psets and sample exams, then follow the latest research going on in algorithm design journals and papers on Google Scholar. 
+The typical text for a senior undergrad or graduate course on algorithm analysis is <i>The Design and Analysis of Algorithms</i> by Kozen (1992). This is an excellent book to study with difficult problems well presented and clearly analyzed by Kozen. The Okasaki book (1999), <i>Purely Functional Data Structures</i> gives examples in Standard ML and Haskell. 
 </p>
 
 <ul class="org-ul">
@@ -978,7 +1016,7 @@ These notes <a href="http://www.cs.cmu.edu/~./15381/#schedule">here</a> cover mo
 <ul class="org-ul">
 <li>Recorded lectures <a href="https://www.youtube.com/playlist?list=PLpIxOj-HnDsPfw9slkk0BfwuiNEYVnsd_">here</a> and <a href="https://www.youtube.com/playlist?list=PL_Ig1a5kxu55zgIn3Tb5Pc5C62Yo2sYHf">here</a>
 </li>
-<li>No formal pre-requisites, assignments are in Python.
+<li>No formal pre-requisites except grad level standing so familiar with some undergrad calculus and linear algebra/probability
 <ul class="org-ul">
 <li>MIT's Artificial General Intelligence <a href="https://agi.mit.edu/">free class</a> explores possible research paths for creating AGI
 </li>
@@ -1013,7 +1051,7 @@ A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95
 <ul class="org-ul">
 <li>Recorded lectures and reading cover the fundamentals of theoretical statistics
 </li>
-<li>The basic probability prereqs can be found <a href="https://www.youtube.com/playlist?list=PL_Ig1a5kxu57qPZnHm-ie-D7vs9g7U-Cl">here</a> or from any undergrad text on probability
+<li>The probability prereqs can be found <a href="https://www.youtube.com/playlist?list=PL_Ig1a5kxu57qPZnHm-ie-D7vs9g7U-Cl">here</a> or from any undergrad text on probability
 </li>
 <li>Additional lecture <a href="http://www.stat.cmu.edu/~larry/=sml/">notes</a> on the intersection of stats theory and ML
 <ul class="org-ul">
