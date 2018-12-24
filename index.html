@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>A Self-Learning, Modern Computer Science Curriculum</title>
-<!-- 2018-10-24 Wed 22:13 -->
+<!-- 2018-12-24 Mon 09:43 -->
 <meta  charset="utf-8">
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="jbh">
@@ -145,17 +145,15 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-1">1.1. How to Learn</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2. Preliminaries</a>
+<li><a href="#sec-2">2. Preliminaries(Optional)</a>
 <ul>
 <li><a href="#sec-2-1">2.1. Intro to Computation</a></li>
 <li><a href="#sec-2-2">2.2. Elementary Math</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Discrete Mathematics</a>
+<li><a href="#sec-3">3. Principles of Functional Programming</a>
 <ul>
-<li><a href="#sec-3-1">3.1. Introduction to Pure Mathematics (How to do Proofs)</a></li>
-<li><a href="#sec-3-2">3.2. Discrete Math with Standard ML</a></li>
-<li><a href="#sec-3-3">3.3. Great Theoretical Ideas in Computer Science</a></li>
+<li><a href="#sec-3-1">3.1. Intro to Programming using OCaml</a></li>
 </ul>
 </li>
 <li><a href="#sec-4">4. Algebra</a>
@@ -164,59 +162,66 @@ for the JavaScript code in this tag.
 <li><a href="#sec-4-2">4.2. Abstract Algebra</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5. Principles of Functional Programming</a></li>
+<li><a href="#sec-5">5. Discrete Mathematics</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Introduction to Pure Mathematics (How to do Proofs)</a></li>
+<li><a href="#sec-5-2">5.2. Discrete Math with Standard ML</a></li>
+<li><a href="#sec-5-3">5.3. Great Theoretical Ideas in Computer Science</a></li>
+</ul>
+</li>
 <li><a href="#sec-6">6. Computer Systems</a></li>
-<li><a href="#sec-7">7. Database Systems</a></li>
-<li><a href="#sec-8">8. Practical Data Science</a></li>
-<li><a href="#sec-9">9. Meta-Linguistic Abstraction</a></li>
-<li><a href="#sec-10">10. Programming Language Theory</a></li>
-<li><a href="#sec-11">11. Isolating Software Failure, Proving Safety and Testing</a>
+<li><a href="#sec-7">7. Compilers</a></li>
+<li><a href="#sec-8">8. Database Systems</a></li>
+<li><a href="#sec-9">9. Practical Data Science</a></li>
+<li><a href="#sec-10">10. Meta-Linguistic Abstraction</a></li>
+<li><a href="#sec-11">11. Programming Language Theory</a></li>
+<li><a href="#sec-12">12. Isolating Software Failure, Proving Safety and Testing</a>
 <ul>
-<li><a href="#sec-11-1">11.1. Physical Systems Software Security</a></li>
+<li><a href="#sec-12-1">12.1. Physical Systems Software Security</a></li>
 </ul>
 </li>
-<li><a href="#sec-12">12. Algorithms</a>
+<li><a href="#sec-13">13. Algorithms</a>
 <ul>
-<li><a href="#sec-12-1">12.1. Introduction to Parallel and Sequential Algorithms</a></li>
-<li><a href="#sec-12-2">12.2. Advanced Algorithms (Purely Functional Data Structures)</a></li>
+<li><a href="#sec-13-1">13.1. Introduction to Parallel and Sequential Algorithms</a></li>
+<li><a href="#sec-13-2">13.2. Advanced Algorithms (Purely Functional Data Structures)</a></li>
 </ul>
 </li>
-<li><a href="#sec-13">13. Complexity Theory</a>
+<li><a href="#sec-14">14. Complexity Theory</a>
 <ul>
-<li><a href="#sec-13-1">13.1. Undergraduate Complexity Theory</a></li>
-<li><a href="#sec-13-2">13.2. Graduate Complexity Theory</a></li>
-<li><a href="#sec-13-3">13.3. Useful Math for Theoretical CS</a></li>
+<li><a href="#sec-14-1">14.1. Undergraduate Complexity Theory</a></li>
+<li><a href="#sec-14-2">14.2. Graduate Complexity Theory</a></li>
+<li><a href="#sec-14-3">14.3. Useful Math for Theoretical CS</a></li>
 </ul>
 </li>
-<li><a href="#sec-14">14. Introduction to Quantum Computing</a></li>
-<li><a href="#sec-15">15. Jobs</a></li>
-<li><a href="#sec-16">16. Graduate Research in Type Theory</a>
+<li><a href="#sec-15">15. Introduction to Quantum Computing</a></li>
+<li><a href="#sec-16">16. Jobs</a></li>
+<li><a href="#sec-17">17. Graduate Research in Type Theory</a>
 <ul>
-<li><a href="#sec-16-1">16.1. Basic Proof Theory</a></li>
-<li><a href="#sec-16-2">16.2. Intro to Category Theory</a></li>
-<li><a href="#sec-16-3">16.3. Type Theory Foundations</a></li>
-<li><a href="#sec-16-4">16.4. Higher Dimensional Type Theory</a></li>
-<li><a href="#sec-16-5">16.5. Further Research</a></li>
+<li><a href="#sec-17-1">17.1. Basic Proof Theory</a></li>
+<li><a href="#sec-17-2">17.2. Intro to Category Theory</a></li>
+<li><a href="#sec-17-3">17.3. Type Theory Foundations</a></li>
+<li><a href="#sec-17-4">17.4. Higher Dimensional Type Theory</a></li>
+<li><a href="#sec-17-5">17.5. Further Research</a></li>
 </ul>
 </li>
-<li><a href="#sec-17">17. Graduate Research in Machine Learning/AI</a>
+<li><a href="#sec-18">18. Graduate Research in Machine Learning/AI</a>
 <ul>
-<li><a href="#sec-17-1">17.1. Graduate Introduction to General AI</a></li>
-<li><a href="#sec-17-2">17.2. Math Background for ML</a></li>
-<li><a href="#sec-17-3">17.3. Statistics Theory</a></li>
-<li><a href="#sec-17-4">17.4. Graduate Introduction to ML</a></li>
-<li><a href="#sec-17-5">17.5. Advanced Introduction to ML</a></li>
-<li><a href="#sec-17-6">17.6. Convex Optimization</a></li>
-<li><a href="#sec-17-7">17.7. Deep Learning</a></li>
-<li><a href="#sec-17-8">17.8. Algorithms for Big Data</a></li>
-<li><a href="#sec-17-9">17.9. Further Research</a></li>
+<li><a href="#sec-18-1">18.1. Graduate Introduction to General AI</a></li>
+<li><a href="#sec-18-2">18.2. Math Background for ML</a></li>
+<li><a href="#sec-18-3">18.3. Statistics Theory</a></li>
+<li><a href="#sec-18-4">18.4. Graduate Introduction to ML</a></li>
+<li><a href="#sec-18-5">18.5. Advanced Introduction to ML</a></li>
+<li><a href="#sec-18-6">18.6. Convex Optimization</a></li>
+<li><a href="#sec-18-7">18.7. Deep Learning</a></li>
+<li><a href="#sec-18-8">18.8. Algorithms for Big Data</a></li>
+<li><a href="#sec-18-9">18.9. Further Research</a></li>
 </ul>
 </li>
-<li><a href="#sec-18">18. Graduate Research Elective: Cryptography</a>
+<li><a href="#sec-19">19. Graduate Research Elective: Cryptography</a>
 <ul>
-<li><a href="#sec-18-1">18.1. Graduate Cryptography Intro</a></li>
-<li><a href="#sec-18-2">18.2. Applied Cryptography</a></li>
-<li><a href="#sec-18-3">18.3. Future Research</a></li>
+<li><a href="#sec-19-1">19.1. Graduate Cryptography Intro</a></li>
+<li><a href="#sec-19-2">19.2. Applied Cryptography</a></li>
+<li><a href="#sec-19-3">19.3. Future Research</a></li>
 </ul>
 </li>
 </ul>
@@ -233,7 +238,7 @@ for the JavaScript code in this tag.
 </blockquote>
 <p>
 This is a collection of modern resources on various undergrad level computer science topics, for someone with an interest in theory. Use <a href="https://en.wikipedia.org/wiki/Library_Genesis">LibGen</a> if you can't buy these books. You don't have to do everything here, just the topics of interest to you.
-If for any reason you want a condensed version, watch the <a href="#sec-3-3">Theory of Computation</a> lectures to see what interests you in the field. Almost all the material in each resource is self contained so will cover necessary background which if you don't have see the <a href="#sec-2">preliminaries</a>. 
+If for any reason you want a condensed version, watch the <a href="#sec-5-3">Theory of Computation</a> lectures to see what interests you in the field. Almost all the material in each resource is self contained so will cover necessary background which if you don't have see the <i>preliminaries</i>. 
 </p>
 </div>
 
@@ -258,15 +263,20 @@ Cal Newport has some anecdotes on how he was able to get the <a href="http://cal
 </div>
 
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Preliminaries</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Preliminaries(Optional)</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-sec-2-1" class="outline-3">
+<p>
+Everything here is optional, you can just start at CS3110 without a programming background. 
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
 <h3 id="sec-2-1"><span class="section-number-3">2.1</span> Intro to Computation</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 The <a href="https://htdp.org/">book</a> <i>How to Design Programs (HtDP)</i> has proven success teaching an introduction to programming while remaining rigorous. One of it's authors is now running a public school curriculum project called <a href="https://www.bootstrapworld.org/index.shtml">Bootstrap</a> and gave a <a href="https://youtu.be/5c0BvOlR5gs">talk</a> why this style of teaching programming has the most success, and how it's curriculum transfers to other fields such as
 how the students writing games are actually writing differential equations, as the behavior of a game over time is the integral. If you really want to understand programming you should start with this book. If you liked HtDP, it's sequel is <a href="https://papl.cs.brown.edu/2018/index.html">PAPL</a> (original <a href="http://cs.brown.edu/courses/cs173/2012/book/">Racket</a> version also exists, but Pyret and Racket are essentially the same languages just the author was tired of parenthesis complaints from other professors). 
-A very rigorous introduction exists as the classic MIT book <i>Structural Interpretation of Computer Programs</i> <a href="#sec-9">(SICP)</a> but the more programming you do before reading SICP, the more you get out of it. 
+A very rigorous introduction exists as the classic MIT book <i>Structural Interpretation of Computer Programs</i> <a href="#sec-10">(SICP)</a> but the more programming you do before reading SICP, the more you get out of it. 
 </p>
 </div>
 
@@ -383,76 +393,55 @@ This alternative Calculus w/Theory lecture <a href="https://www.youtube.com/play
 </div>
 
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Discrete Mathematics</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Principles of Functional Programming</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-Resources to learn undergrad Discrete Mathematics. 
+The "functional" part in functional programming refers to mathematical functions, meaning functions where each input has a single output.  The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course.
+SML is used because it's syntax and module system is simple, much like Scheme's easy syntax was once preferred for introductory courses so the complexity of the language gets out of the way and you learn the fundamentals. I would recommend doing CS3110 and using 15-150 as supplementary course notes for learning how to split up work to be run in parallel.
 </p>
+
+<ul class="org-ul">
+<li><a href="http://www.cs.cmu.edu/~15150/previous-semesters/2012-spring/lect.html">(Lecture Notes) 15-150 Principles of Functional Programming</a>
+<ul class="org-ul">
+<li>"PSML Chapters" are assigned reading from this book <a href="http://www.cs.cmu.edu/~rwh/isml/book.pdf">Programming in Standard ML</a> an excellent book.
+</li>
+<li>Can pair these notes with the recorded lectures from Unit 1 through 4 (specific to SML) at <a href="http://courses.cs.washington.edu/courses/cse341/16sp/#lectures">CSE341 (UW)</a>
+</li>
+<li>Do the <a href="https://github.com/functionalCS/15150labs">labs and homework</a> plus any exercises you find in the PSML book. Try the CSE341 <a href="http://courses.cs.washington.edu/courses/cse341/16sp/#homeworks">homework</a>
+</li>
+<li>Note <a href="http://www.cs.cmu.edu/~15150/previous-semesters/2012-spring/tools.html">emacs setup</a> also <a href="http://courses.cs.washington.edu/courses/cse341/16sp/#software">here</a> (if you use emacs)
+</li>
+<li>Read this post about <a href="https://existentialtype.wordpress.com/2016/02/22/it-is-what-it-is-and-nothing-else/">what recursion is</a> if you struggle with it then complete <a href="http://www.ccs.neu.edu/home/matthias/BTML/">The Little MLer</a> or <i>The Little Schemer</i> book
+<ul class="org-ul">
+<li>Try <a href="http://mlton.org/">MLton</a>, one of the few whole program optimizing compilers, and used to build the <a href="http://www.redprl.org/en/latest/">RedPRL</a> proof assistant
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
+
 <div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Introduction to Pure Mathematics (How to do Proofs)</h3>
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Intro to Programming using OCaml</h3>
 <div class="outline-text-3" id="text-3-1">
-<ul class="org-ul">
-<li><a href="https://infinitedescent.xyz/">(Book) An Infinite Descent into Pure Mathematics</a>
-<ul class="org-ul">
-<li>Collection of excellent lecture notes used in CMU's 15-151/21-127 Concepts of Mathematics class 
-</li>
-<li>Curriculum based on findings in evidenced based teaching
-</li>
-<li>Author's motivations for not including answers are explained <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">here</a>: "people learn more when they discover something for themselves than they do if someone tells them about it."
-<ul class="org-ul">
-<li>You may also find as you write your questions on math.stackexchange, that half way through writing you discover the answer yourself
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Discrete Math with Standard ML</h3>
-<div class="outline-text-3" id="text-3-2">
 <p>
-The merging of proof and program is what makes this a great book. If you can't get this book <i>Discrete Mathematics</i>, by L. Lovász, J. Pelikán, and K. Vesztergombi is normally <a href="http://www.math.cmu.edu/~lohp/2013-228.shtml">used</a> or just skip to 15-251 <i>Great Theoretical Ideas in CS</i>.
-If you can finish this book you've essentially done most of 15-150 <i>Principles of Functional Programming</i> (such as proving programs correct) and most of 15-215 <i>Great Theoretical Ideas in Computer Science</i>.  
+This Cornell OCaml course is totally self contained with it's own <a href="http://www.cs.cornell.edu/courses/cs3110/2018fa/textbook/">textbook</a>. You will want to archive the entire course locally using <a href="https://www.guyrutenberg.com/2014/05/02/make-offline-mirror-of-a-site-using-wget/">wget</a>.
+The release code for the assignments wget them <a href="https://www.cs.cornell.edu/courses/cs3110/2018sp/a5/a5.zip">here</a> and change URL to /a4/a4.zip, /a3/a3.zip, they range a0.zip - a5.zip
 </p>
 
 <ul class="org-ul">
-<li><a href="https://cs.wheaton.edu/~tvandrun/dmfp/">(Book/Lectures) Discrete Mathematics and Functional Programming - Thomas VanDrunen</a>
+<li><a href="http://www.cs.cornell.edu/courses/cs3110/2018fa/schedule.html">(Full Course) CS 3110 Data Structures and Functional Programming</a>
 <ul class="org-ul">
-<li>Lectures exist on the author's homepage, this book is used for a one semester university course with additional elective chapters in Graph Theory, Complexity Theory, Automata, ect. 
+<li>The free textbook is essentially the lectures, previous semester <a href="https://www.cs.cornell.edu/courses/cs3110/2018sp/">notes</a> have recommended chapters for additional books like <i>Real World Ocaml</i>
 </li>
-<li>List of <a href="https://math.vanderbilt.edu/schectex/commerrs/">Common Errors in Undergrad Math</a> like undistributed cancellations, sign errors, confusion about notation ect. if you missed it from the prelims section of this guide
+<li>Introduction to Coq, you can output OCaml directly from Coq or from <a href="http://www.cs.ru.nl/~gondelman/toolchain.pdf">Why3</a> tool
+</li>
+<li>You could attempt this course without any prereqs in programming
 <ul class="org-ul">
-<li><i>The Art of Computer Programming Vol 1: Fundamental Algorithms</i> by Donald E. Knuth also offers an excellent but terse introduction to Discrete Math
+<li>See this <a href="https://www.youtube.com/watch?v=-J8YyfrSwTk">talk</a> Effective ML how to properly write interfaces, error handling
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Great Theoretical Ideas in Computer Science</h3>
-<div class="outline-text-3" id="text-3-3">
-<p>
-This is a crash course in multiple topics such as Probability, Linear Algebra, Modular Arithmetic, Polynomials, Cryptography and Complexity Theory. 15-251 assumes students have completed <i>An Infinite Descent into Pure Mathematics</i> though it is self contained. "This course teaches the mathematical underpinnings of computation and explores some of the central results and questions regarding the nature of computation."
-</p>
-
-<ul class="org-ul">
-<li><a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">(Full Course) 15-251 Great Theoretical Ideas in Computer Science</a>
-<ul class="org-ul">
-<li>Recorded lectures if you click each topic, backup YouTube <a href="https://www.youtube.com/playlist?list=PLm3J0oaFux3aafQm568blS9blxtA_EWQv">lectures</a> and <a href="http://www.cs.cmu.edu/~15251/notes.html">course notes</a>
-</li>
-<li>Complete lecture <a href="http://www.cs.cmu.edu/~odonnell/papers/probability-and-computing-lecture-notes.pdf">notes</a> on discrete probability    
-</li>
-<li>Some more material on the most <a href="http://www.cs.cmu.edu/~15251/schedule.html">recent</a> course schedule such as <a href="http://www.cs.cmu.edu/~15251/notes/induction-pitfalls.pdf">induction pitfalls</a>
-<ul class="org-ul">
-<li>(Optional) MIT 6.042j <i>Mathematics for Computer Science</i> recorded <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/">lectures</a> and <a href="https://courses.csail.mit.edu/6.042/spring17/mcs.pdf">course notes</a> 
+<li>You can even program hardware such as a <a href="https://www.youtube.com/watch?v=X1cgRXhpQLY">FPGA</a> in OCaml using this <a href="https://github.com/janestreet/hardcaml">library</a> 
 </li>
 </ul>
 </li>
@@ -462,13 +451,12 @@ This is a crash course in multiple topics such as Probability, Linear Algebra, M
 </div>
 </div>
 </div>
-
 
 <div id="outline-container-sec-4" class="outline-2">
 <h2 id="sec-4"><span class="section-number-2">4</span> Algebra</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-It is possible in a functional language like SML to do algebra with types, proving two types are isomorphic with the desired properties of reflexivity, symmetry, and transitivity. It's also possible to abstract Lists and Trees into polynomials, as every polynomial looks like a sum of terms.
+It is possible in a functional language like ML to do algebra with types, proving two types are isomorphic with the desired properties of reflexivity, symmetry, and transitivity. It's also possible to abstract Lists and Trees into polynomials, as every polynomial looks like a sum of terms.
 As you will learn in 15-150 <i>Principles of Functional Programming</i> "most functional datastructures have constant time access near the outer layer of their structure, ie: the head of a list or the root of a tree. However, access at some random point inside the structure is typically linear since looking at some element of a list is
 linear in the length of the list, and looking at some element of a tree is linear in the depth of the tree. Datatype derivatives allow constant time access to the entire structure." 
 </p>
@@ -492,11 +480,15 @@ linear in the length of the list, and looking at some element of a tree is linea
 <ul class="org-ul">
 <li><a href="http://www.springer.com/gp/book/9780387940991">(Book) Linear Algebra: An Introduction to Abstract Mathematics - Robert J. Valenza</a>
 <ul class="org-ul">
-<li>Similar to Valenza's text is this free <a href="https://www.math.ucdavis.edu/~anne/linear_algebra/index.html">book</a> <i>Linear Algebra - As an Introduction to Abstract Mathematics</i> which you can use if you can't find Valenza's text 
+<li>This free <a href="https://www.math.ucdavis.edu/~anne/linear_algebra/index.html">book</a> <i>Linear Algebra - As an Introduction to Abstract Mathematics</i> from UC Davis, is an excellent companion to Valenza's text 
 </li>
 <li>These YouTube presentations <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">here</a> help with understanding the topics on a geometric level. Watch the <a href="https://youtu.be/kjBOesZCoqc?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a> to see what this means
 <ul class="org-ul">
 <li>Other Resource: Sheldon Axler has <a href="https://www.youtube.com/playlist?list=PLGAnmvB9m7zOBVCZBUUmSinFV0wEir2Vw">recorded lectures</a> for his book <i>Linear Algebra Done Right</i> aka Down With Determinants!
+<ul class="org-ul">
+<li>The exercises in Axler's book are hit and miss, most are way too easy, some near impossible but the presentation of material with vectors explained first before determinants is preferred  
+</li>
+</ul>
 </li>
 <li>Yet Another Resource: NJ Wildberger has a Linear Algebraic Geometry series of <a href="https://www.youtube.com/watch?v=yAb12PWrhV0&list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">lectures</a> 
 </li>
@@ -533,33 +525,83 @@ linear in the length of the list, and looking at some element of a tree is linea
 </div>
 
 <div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Principles of Functional Programming</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> Discrete Mathematics</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-The "functional" part in functional programming refers to mathematical functions, meaning functions where each input has a single output.  The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course.
-SML is used because it's syntax and module system is simple, much like Scheme's easy syntax was once preferred for introductory courses so the complexity of the language gets out of the way and you learn the fundamentals. This course introduces you to programming with types, proving properties of programs, writing programs for parallel evaluation, and you'll find it surprisingly very intuitive making it easy to grok large programs.
+Resources to learn undergrad Discrete Mathematics. 
+</p>
+</div>
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Introduction to Pure Mathematics (How to do Proofs)</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li><a href="https://infinitedescent.xyz/">(Book) An Infinite Descent into Pure Mathematics</a>
+<ul class="org-ul">
+<li>Collection of excellent lecture notes used in CMU's 15-151/21-127 Concepts of Mathematics class 
+</li>
+<li>Curriculum based on findings in evidenced based teaching
+</li>
+<li>Author's motivations for not including answers are explained <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">here</a>: "people learn more when they discover something for themselves than they do if someone tells them about it."
+<ul class="org-ul">
+<li>You may also find as you write your questions on math.stackexchange, that half way through writing you discover the answer yourself
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Discrete Math with Standard ML</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+The merging of proof and program is what makes this a great book. If you can't get this book <i>Discrete Mathematics</i>, by L. Lovász, J. Pelikán, and K. Vesztergombi is normally <a href="http://www.math.cmu.edu/~lohp/2013-228.shtml">used</a> or just skip to 15-251 <i>Great Theoretical Ideas in CS</i>.
+If you can finish this book you've essentially done most of 15-150 <i>Principles of Functional Programming</i> (such as proving programs correct) and most of 15-215 <i>Great Theoretical Ideas in Computer Science</i>.  
 </p>
 
 <ul class="org-ul">
-<li><a href="http://www.cs.cmu.edu/~15150/previous-semesters/2012-spring/lect.html">(Lecture Notes) 15-150 Principles of Functional Programming</a>
+<li><a href="https://cs.wheaton.edu/~tvandrun/dmfp/">(Book/Lectures) Discrete Mathematics and Functional Programming - Thomas VanDrunen</a>
 <ul class="org-ul">
-<li>"PSML Chapters" are assigned reading from this book <a href="http://www.cs.cmu.edu/~rwh/isml/book.pdf">Programming in Standard ML</a> an excellent book.
+<li>Lectures exist on the author's homepage, this book is used for a one semester university course with additional elective chapters in Graph Theory, Complexity Theory, Automata, ect. 
 </li>
-<li>Can pair these notes with the recorded lectures from Unit 1 through 4 (specific to SML) at <a href="http://courses.cs.washington.edu/courses/cse341/16sp/#lectures">CSE341 (UW)</a>
-</li>
-<li>Do the <a href="https://github.com/functionalCS/15150labs">labs and homework</a> plus any exercises you find in the PSML book. Try the CSE341 <a href="http://courses.cs.washington.edu/courses/cse341/16sp/#homeworks">homework</a>
-</li>
-<li>Note <a href="http://www.cs.cmu.edu/~15150/previous-semesters/2012-spring/tools.html">emacs setup</a> also <a href="http://courses.cs.washington.edu/courses/cse341/16sp/#software">here</a> (if you use emacs)
-</li>
-<li>Read this post about <a href="https://existentialtype.wordpress.com/2016/02/22/it-is-what-it-is-and-nothing-else/">what recursion is</a> if you struggle with it then complete <a href="http://www.ccs.neu.edu/home/matthias/BTML/">The Little MLer</a> or <i>The Little Schemer</i> book
+<li>List of <a href="https://math.vanderbilt.edu/schectex/commerrs/">Common Errors in Undergrad Math</a> like undistributed cancellations, sign errors, confusion about notation ect. if you missed it from the prelims section of this guide
 <ul class="org-ul">
-<li>Try <a href="http://mlton.org/">MLton</a>, one of the few whole program optimizing compilers, and used to build the <a href="http://www.redprl.org/en/latest/">RedPRL</a> proof assistant
+<li><i>The Art of Computer Programming Vol 1: Fundamental Algorithms</i> by Donald E. Knuth also offers an excellent but terse introduction to Discrete Math
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Great Theoretical Ideas in Computer Science</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+This is a crash course in multiple topics such as Probability, Linear Algebra, Modular Arithmetic, Polynomials, Cryptography and Complexity Theory. 15-251 assumes students have completed <i>An Infinite Descent into Pure Mathematics</i> though it is self contained. "This course teaches the mathematical underpinnings of computation and explores some of the central results and questions regarding the nature of computation."
+</p>
+
+<ul class="org-ul">
+<li><a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">(Full Course) 15-251 Great Theoretical Ideas in Computer Science</a>
+<ul class="org-ul">
+<li>Recorded lectures if you click each topic, backup YouTube <a href="https://www.youtube.com/playlist?list=PLm3J0oaFux3aafQm568blS9blxtA_EWQv">lectures</a> and <a href="http://www.cs.cmu.edu/~15251/notes.html">course notes</a>
+</li>
+<li>Complete lecture <a href="http://www.cs.cmu.edu/~odonnell/papers/probability-and-computing-lecture-notes.pdf">notes</a> on discrete probability    
+</li>
+<li>Some more material on the most <a href="http://www.cs.cmu.edu/~15251/schedule.html">recent</a> course schedule such as <a href="http://www.cs.cmu.edu/~15251/notes/induction-pitfalls.pdf">induction pitfalls</a>
+<ul class="org-ul">
+<li>(Optional) MIT 6.042j <i>Mathematics for Computer Science</i> recorded <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/">lectures</a> and <a href="https://courses.csail.mit.edu/6.042/spring17/mcs.pdf">course notes</a> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -606,8 +648,28 @@ and see how recursion works at a lower abstraction. You learn machine code instr
 </div>
 
 <div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Database Systems</h2>
+<h2 id="sec-7"><span class="section-number-2">7</span> Compilers</h2>
 <div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><a href="https://cseweb.ucsd.edu/classes/sp17/cse131-a/index.html">(Full Course) CSE 131: Compilers</a>
+<ul class="org-ul">
+<li>Recorded lectures/podcast <a href="https://podcast.ucsd.edu/podcasts/default.aspx?PodcastId=4014">here</a> 
+</li>
+<li>For a supplementary text, <i>Real World OCaml</i> <a href="https://dev.realworldocaml.org/">second ed</a> or this tutorial by Abdulaziz Ghuloum in <a href="https://cseweb.ucsd.edu/classes/sp17/cse131-a/s_materials.html">Scheme</a> 
+<ul class="org-ul">
+<li>An <a href="https://www.cs.cmu.edu/~15745/syllabus.html">advanced</a> compiler optimizing course for modern architectures 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Database Systems</h2>
+<div class="outline-text-2" id="text-8">
 <p>
 Interesting <a href="http://www.cs.cmu.edu/~./pavlo/blog/2015/09/the-next-50-years-of-databases.html">post</a> on the future of database systems by Andy Pavlo.
 </p>
@@ -629,9 +691,9 @@ Interesting <a href="http://www.cs.cmu.edu/~./pavlo/blog/2015/09/the-next-50-yea
 </div>
 </div>
 
-<div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> Practical Data Science</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Practical Data Science</h2>
+<div class="outline-text-2" id="text-9">
 <ul class="org-ul">
 <li><a href="http://www.datasciencecourse.org/lectures/">(Full Course) 15-388 Practical Data Science</a>
 <ul class="org-ul">
@@ -643,9 +705,9 @@ Interesting <a href="http://www.cs.cmu.edu/~./pavlo/blog/2015/09/the-next-50-yea
 </div>
 </div>
 
-<div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9"><span class="section-number-2">9</span> Meta-Linguistic Abstraction</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Meta-Linguistic Abstraction</h2>
+<div class="outline-text-2" id="text-10">
 <p>
 A classic introductory computer science book on thinking about the big picture of programs with abstraction: finding general patterns from specific problems and building programs based on these patterns. An applied example of this is the package manager <a href="http://dustycloud.org/misc/talks/guix/chicagolug_2015/guix_talk.html">GNU Guix</a> and distro GuixSD, which is a GNU implementation of the NixOS <a href="https://arxiv.org/pdf/1305.4584.pdf">functional software deployment model</a>. 
 Package builds, including entire system builds, are declared in one text file. The resulting software deployment is functional: build inputs go in such as compilers, customizations, environments ect, and a reproducible, immutable build comes out with a hashed identifier meaning you 
@@ -679,9 +741,9 @@ You are more likely to benefit from this book after having some programming expe
 </div>
 </div>
 
-<div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10"><span class="section-number-2">10</span> Programming Language Theory</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Programming Language Theory</h2>
+<div class="outline-text-2" id="text-11">
 <p>
 Read <a href="http://www.cs.cmu.edu/~rwh/courses/ppl/phil.html">these reasons</a> for studying programming languages. 
 </p>
@@ -702,9 +764,9 @@ Read <a href="http://www.cs.cmu.edu/~rwh/courses/ppl/phil.html">these reasons</a
 </div>
 
 
-<div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11"><span class="section-number-2">11</span> Isolating Software Failure, Proving Safety and Testing</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Isolating Software Failure, Proving Safety and Testing</h2>
+<div class="outline-text-2" id="text-12">
 <p>
 How to verify software, and strategies of programming that minimize catastrophe during failure. The <a href="https://mitpress.mit.edu/books/little-prover">Little Prover</a> is a good introduction in determining facts about computer programs.
 Prof Rob Simmons can be <a href="https://calculem.us/classes/">hired</a> as a tutor to teach you Coq, the curriculum follows the Software Foundations book series below.
@@ -740,9 +802,9 @@ Prof Rob Simmons can be <a href="https://calculem.us/classes/">hired</a> as a tu
 </ul>
 </div>
 
-<div id="outline-container-sec-11-1" class="outline-3">
-<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Physical Systems Software Security</h3>
-<div class="outline-text-3" id="text-11-1">
+<div id="outline-container-sec-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Physical Systems Software Security</h3>
+<div class="outline-text-3" id="text-12-1">
 <ul class="org-ul">
 <li><a href="http://symbolaris.com/course/fcps16.html">(Full Course) 15-424 Foundations of Cyber-Physical Systems</a>
 <ul class="org-ul">
@@ -758,12 +820,12 @@ Prof Rob Simmons can be <a href="https://calculem.us/classes/">hired</a> as a tu
 </div>
 
 
-<div id="outline-container-sec-12" class="outline-2">
-<h2 id="sec-12"><span class="section-number-2">12</span> Algorithms</h2>
-<div class="outline-text-2" id="text-12">
-</div><div id="outline-container-sec-12-1" class="outline-3">
-<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Introduction to Parallel and Sequential Algorithms</h3>
-<div class="outline-text-3" id="text-12-1">
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Algorithms</h2>
+<div class="outline-text-2" id="text-13">
+</div><div id="outline-container-sec-13-1" class="outline-3">
+<h3 id="sec-13-1"><span class="section-number-3">13.1</span> Introduction to Parallel and Sequential Algorithms</h3>
+<div class="outline-text-3" id="text-13-1">
 <p>
 Unlike a traditional introduction to algorithms and data structures, this puts an emphasis on thinking about how algorithms can do multiple things at once instead of one at a time and ways to design to exploit these properties. It uses a language based analysis model to estimate complexity for abstractions such as garbage collection.
 Most of the self learning and discovery is done through the labs, try them.
@@ -782,9 +844,9 @@ Most of the self learning and discovery is done through the labs, try them.
 </div>
 </div>
 
-<div id="outline-container-sec-12-2" class="outline-3">
-<h3 id="sec-12-2"><span class="section-number-3">12.2</span> Advanced Algorithms (Purely Functional Data Structures)</h3>
-<div class="outline-text-3" id="text-12-2">
+<div id="outline-container-sec-13-2" class="outline-3">
+<h3 id="sec-13-2"><span class="section-number-3">13.2</span> Advanced Algorithms (Purely Functional Data Structures)</h3>
+<div class="outline-text-3" id="text-13-2">
 <p>
 The typical text for a senior undergrad or graduate course on algorithm analysis is <i>The Design and Analysis of Algorithms</i> by Kozen (1992). This is an excellent book to study with difficult problems well presented and clearly analyzed by Kozen. The Okasaki book (1999), <i>Purely Functional Data Structures</i> gives examples in Standard ML and Haskell. 
 </p>
@@ -808,12 +870,12 @@ The typical text for a senior undergrad or graduate course on algorithm analysis
 </div>
 
 
-<div id="outline-container-sec-13" class="outline-2">
-<h2 id="sec-13"><span class="section-number-2">13</span> Complexity Theory</h2>
-<div class="outline-text-2" id="text-13">
-</div><div id="outline-container-sec-13-1" class="outline-3">
-<h3 id="sec-13-1"><span class="section-number-3">13.1</span> Undergraduate Complexity Theory</h3>
-<div class="outline-text-3" id="text-13-1">
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> Complexity Theory</h2>
+<div class="outline-text-2" id="text-14">
+</div><div id="outline-container-sec-14-1" class="outline-3">
+<h3 id="sec-14-1"><span class="section-number-3">14.1</span> Undergraduate Complexity Theory</h3>
+<div class="outline-text-3" id="text-14-1">
 <p>
 Expands on the lectures in 15-251. 
 </p>
@@ -833,9 +895,9 @@ Expands on the lectures in 15-251.
 </div>
 </div>
 
-<div id="outline-container-sec-13-2" class="outline-3">
-<h3 id="sec-13-2"><span class="section-number-3">13.2</span> Graduate Complexity Theory</h3>
-<div class="outline-text-3" id="text-13-2">
+<div id="outline-container-sec-14-2" class="outline-3">
+<h3 id="sec-14-2"><span class="section-number-3">14.2</span> Graduate Complexity Theory</h3>
+<div class="outline-text-3" id="text-14-2">
 <p>
 You may want to <a href="https://news.ycombinator.com/item?id=6346697">try solving</a> some of the problems in this domain. 
 </p>
@@ -853,9 +915,9 @@ You may want to <a href="https://news.ycombinator.com/item?id=6346697">try solvi
 </div>
 </div>
 
-<div id="outline-container-sec-13-3" class="outline-3">
-<h3 id="sec-13-3"><span class="section-number-3">13.3</span> Useful Math for Theoretical CS</h3>
-<div class="outline-text-3" id="text-13-3">
+<div id="outline-container-sec-14-3" class="outline-3">
+<h3 id="sec-14-3"><span class="section-number-3">14.3</span> Useful Math for Theoretical CS</h3>
+<div class="outline-text-3" id="text-14-3">
 <p>
 These scribed lecture <a href="http://www.cs.cmu.edu/~odonnell/toolkit13/">notes</a> give you a diverse background in math useful for theoretical CS, from the excellent book <a href="http://www.nature-of-computation.org/">The Nature of Computation</a> such as these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> from <i>A Theorist's ToolKit</i> which describe how to find research, how to write math in LaTeX, how to give a talk, resources on math.overflow ect.
 </p>
@@ -863,9 +925,9 @@ These scribed lecture <a href="http://www.cs.cmu.edu/~odonnell/toolkit13/">notes
 </div>
 </div>
 
-<div id="outline-container-sec-14" class="outline-2">
-<h2 id="sec-14"><span class="section-number-2">14</span> Introduction to Quantum Computing</h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> Introduction to Quantum Computing</h2>
+<div class="outline-text-2" id="text-15">
 <p>
 This is a graduate introduction to quantum computation/information theory, from the perspective of theoretical computer science. You'll learn that designing algorithms for a quantum computer is within the realm of your expertise despite not knowing anything about Physics.
 </p>
@@ -883,9 +945,9 @@ This is a graduate introduction to quantum computation/information theory, from 
 </div>
 </div>
 
-<div id="outline-container-sec-15" class="outline-2">
-<h2 id="sec-15"><span class="section-number-2">15</span> Jobs</h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-sec-16" class="outline-2">
+<h2 id="sec-16"><span class="section-number-2">16</span> Jobs</h2>
+<div class="outline-text-2" id="text-16">
 <p>
 This <a href="https://triplebyte.com/">service</a> matches your skills to people who want to pay you. Jane Street Capital is a finance tech company that hires functional programmers worldwide, you may want to <a href="https://blogs.janestreet.com/interviewing-at-jane-street/">apply</a> there. 
 There are numerous opportunities to apprentice as a <a href="https://www.nccgroup.trust/us/about-us/careers/current-vacancies/security-consultant/">security researcher</a> or get paid to prove business logic programs like 'smart contracts'. Check your local university employment listings as well, often students do not take these jobs as they are off chasing that startup stock options payday or doing industry internships, plenty of opportunities to work with post-doc researchers writing algorithms or analyzing data.
@@ -894,17 +956,17 @@ For web programming there exists free programming <a href="https://books.goalkic
 </div>
 </div>
 
-<div id="outline-container-sec-16" class="outline-2">
-<h2 id="sec-16"><span class="section-number-2">16</span> Graduate Research in Type Theory</h2>
-<div class="outline-text-2" id="text-16">
+<div id="outline-container-sec-17" class="outline-2">
+<h2 id="sec-17"><span class="section-number-2">17</span> Graduate Research in Type Theory</h2>
+<div class="outline-text-2" id="text-17">
 <p>
 Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> from <i>A Theorist's ToolKit</i> on how to find research, how to write math in LaTeX, how to give a talk, where to ask on stackexchange ect.
 </p>
 </div>
 
-<div id="outline-container-sec-16-1" class="outline-3">
-<h3 id="sec-16-1"><span class="section-number-3">16.1</span> Basic Proof Theory</h3>
-<div class="outline-text-3" id="text-16-1">
+<div id="outline-container-sec-17-1" class="outline-3">
+<h3 id="sec-17-1"><span class="section-number-3">17.1</span> Basic Proof Theory</h3>
+<div class="outline-text-3" id="text-17-1">
 <ul class="org-ul">
 <li>Start with the <a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">lectures</a> on <i>Basic Proof Theory</i> by Frank Pfenning
 <ul class="org-ul">
@@ -918,9 +980,9 @@ Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> f
 </div>
 </div>
 
-<div id="outline-container-sec-16-2" class="outline-3">
-<h3 id="sec-16-2"><span class="section-number-3">16.2</span> Intro to Category Theory</h3>
-<div class="outline-text-3" id="text-16-2">
+<div id="outline-container-sec-17-2" class="outline-3">
+<h3 id="sec-17-2"><span class="section-number-3">17.2</span> Intro to Category Theory</h3>
+<div class="outline-text-3" id="text-17-2">
 <ul class="org-ul">
 <li><a href="https://global.oup.com/academic/product/category-theory-9780199237180?cc=ca&lang=en&">(Book) Category Theory - Steve Awodey</a> 
 <ul class="org-ul">
@@ -938,9 +1000,9 @@ Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> f
 </div>
 </div>
 
-<div id="outline-container-sec-16-3" class="outline-3">
-<h3 id="sec-16-3"><span class="section-number-3">16.3</span> Type Theory Foundations</h3>
-<div class="outline-text-3" id="text-16-3">
+<div id="outline-container-sec-17-3" class="outline-3">
+<h3 id="sec-17-3"><span class="section-number-3">17.3</span> Type Theory Foundations</h3>
+<div class="outline-text-3" id="text-17-3">
 <ul class="org-ul">
 <li>Read Chapters 1-12, 23 and 24 from <a href="http://www.seas.upenn.edu/~bcpierce/tapl/index.html">TAPL</a>
 </li>
@@ -954,9 +1016,9 @@ Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> f
 </div>
 </div>
 
-<div id="outline-container-sec-16-4" class="outline-3">
-<h3 id="sec-16-4"><span class="section-number-3">16.4</span> Higher Dimensional Type Theory</h3>
-<div class="outline-text-3" id="text-16-4">
+<div id="outline-container-sec-17-4" class="outline-3">
+<h3 id="sec-17-4"><span class="section-number-3">17.4</span> Higher Dimensional Type Theory</h3>
+<div class="outline-text-3" id="text-17-4">
 <p>
 Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional Programmer's Guide to Homotopy Type Theory</i> with intro to Cubical Type Theory
 </p>
@@ -978,9 +1040,9 @@ Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional 
 </div>
 </div>
 
-<div id="outline-container-sec-16-5" class="outline-3">
-<h3 id="sec-16-5"><span class="section-number-3">16.5</span> Further Research</h3>
-<div class="outline-text-3" id="text-16-5">
+<div id="outline-container-sec-17-5" class="outline-3">
+<h3 id="sec-17-5"><span class="section-number-3">17.5</span> Further Research</h3>
+<div class="outline-text-3" id="text-17-5">
 <ul class="org-ul">
 <li>Use the <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub proxy</a> to get access to journalslike <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming">Functional Programming</a> or search Google Scholar for topics that interest you and click "Cited by" 
 </li>
@@ -994,17 +1056,17 @@ Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional 
 </div>
 
 
-<div id="outline-container-sec-17" class="outline-2">
-<h2 id="sec-17"><span class="section-number-2">17</span> Graduate Research in Machine Learning/AI</h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-sec-18" class="outline-2">
+<h2 id="sec-18"><span class="section-number-2">18</span> Graduate Research in Machine Learning/AI</h2>
+<div class="outline-text-2" id="text-18">
 <p>
 Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> from <i>A Theorist's ToolKit</i> on how to find research, how to write math in LaTeX, how to give a talk, where to ask on stackexchange ect. 
 </p>
 </div>
 
-<div id="outline-container-sec-17-1" class="outline-3">
-<h3 id="sec-17-1"><span class="section-number-3">17.1</span> Graduate Introduction to General AI</h3>
-<div class="outline-text-3" id="text-17-1">
+<div id="outline-container-sec-18-1" class="outline-3">
+<h3 id="sec-18-1"><span class="section-number-3">18.1</span> Graduate Introduction to General AI</h3>
+<div class="outline-text-3" id="text-18-1">
 <p>
 These notes <a href="http://www.cs.cmu.edu/~./15381/#schedule">here</a> cover more topics, such as Computer Vision/NLP/AGI and follows <i>AI: A Modern Approach</i> book by Norvig. The 15-780 course is specific to some topics in AI providing them 2-3 lectures each.
 </p>
@@ -1031,9 +1093,9 @@ These notes <a href="http://www.cs.cmu.edu/~./15381/#schedule">here</a> cover mo
 </div>
 
 
-<div id="outline-container-sec-17-2" class="outline-3">
-<h3 id="sec-17-2"><span class="section-number-3">17.2</span> Math Background for ML</h3>
-<div class="outline-text-3" id="text-17-2">
+<div id="outline-container-sec-18-2" class="outline-3">
+<h3 id="sec-18-2"><span class="section-number-3">18.2</span> Math Background for ML</h3>
+<div class="outline-text-3" id="text-18-2">
 <p>
 A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95z-GMcecVG5mzA">recorded</a> lectures and recommended <a href="https://canvas.cmu.edu/courses/603/assignments/syllabus">texts</a> for a crash course in the Math background for ML introductory courses
 </p>
@@ -1041,9 +1103,9 @@ A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95
 </div>
 
 
-<div id="outline-container-sec-17-3" class="outline-3">
-<h3 id="sec-17-3"><span class="section-number-3">17.3</span> Statistics Theory</h3>
-<div class="outline-text-3" id="text-17-3">
+<div id="outline-container-sec-18-3" class="outline-3">
+<h3 id="sec-18-3"><span class="section-number-3">18.3</span> Statistics Theory</h3>
+<div class="outline-text-3" id="text-18-3">
 <ul class="org-ul">
 <li><a href="http://www.stat.cmu.edu/~larry/=stat705/">(Full Course) 36-705 Intermediate Statistics</a>
 <ul class="org-ul">
@@ -1064,9 +1126,9 @@ A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95
 </div>
 
 
-<div id="outline-container-sec-17-4" class="outline-3">
-<h3 id="sec-17-4"><span class="section-number-3">17.4</span> Graduate Introduction to ML</h3>
-<div class="outline-text-3" id="text-17-4">
+<div id="outline-container-sec-18-4" class="outline-3">
+<h3 id="sec-18-4"><span class="section-number-3">18.4</span> Graduate Introduction to ML</h3>
+<div class="outline-text-3" id="text-18-4">
 <ul class="org-ul">
 <li><a href="http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml">(Full Course) 10-601 Masters Introduction to ML</a>
 <ul class="org-ul">
@@ -1083,9 +1145,9 @@ A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95
 </div>
 
 
-<div id="outline-container-sec-17-5" class="outline-3">
-<h3 id="sec-17-5"><span class="section-number-3">17.5</span> Advanced Introduction to ML</h3>
-<div class="outline-text-3" id="text-17-5">
+<div id="outline-container-sec-18-5" class="outline-3">
+<h3 id="sec-18-5"><span class="section-number-3">18.5</span> Advanced Introduction to ML</h3>
+<div class="outline-text-3" id="text-18-5">
 <ul class="org-ul">
 <li><a href="http://www.cs.cmu.edu/~bapoczos/Classes/ML10715_2015Fall/index.html">(Full Course) 10-715 Advanced Introduction to ML</a> 
 <ul class="org-ul">
@@ -1113,7 +1175,7 @@ A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95
 <ul class="org-ul">
 <li>Intended for PhD students outside the ML program, more theory and rigor than 10-601 
 </li>
-<li>Assumes you have this<a href="#sec-17-2">17.2</a> math background
+<li>Assumes you have this<a href="#sec-18-2">18.2</a> math background
 </li>
 <li>Some recorded recitations are <a href="https://www.youtube.com/playlist?list=PL_Ig1a5kxu54nrfuy4V0V1eHJk3C4dV3X">here</a>
 <ul class="org-ul">
@@ -1127,9 +1189,9 @@ A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95
 </div>
 </div>
 
-<div id="outline-container-sec-17-6" class="outline-3">
-<h3 id="sec-17-6"><span class="section-number-3">17.6</span> Convex Optimization</h3>
-<div class="outline-text-3" id="text-17-6">
+<div id="outline-container-sec-18-6" class="outline-3">
+<h3 id="sec-18-6"><span class="section-number-3">18.6</span> Convex Optimization</h3>
+<div class="outline-text-3" id="text-18-6">
 <ul class="org-ul">
 <li><a href="http://www.stat.cmu.edu/~ryantibs/convexopt/">(Full Course) 10-725 Convex Optimization</a>
 <ul class="org-ul">
@@ -1149,9 +1211,9 @@ A series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95
 </div>
 </div>
 
-<div id="outline-container-sec-17-7" class="outline-3">
-<h3 id="sec-17-7"><span class="section-number-3">17.7</span> Deep Learning</h3>
-<div class="outline-text-3" id="text-17-7">
+<div id="outline-container-sec-18-7" class="outline-3">
+<h3 id="sec-18-7"><span class="section-number-3">18.7</span> Deep Learning</h3>
+<div class="outline-text-3" id="text-18-7">
 <p>
 If you're interested in parallel GPU programming for training see these <a href="https://www.youtube.com/playlist?list=PLpIxOj-HnDsO4Atvrp86c-4La9Mq3kMQZ">lectures</a> and <a href="http://15418.courses.cs.cmu.edu/spring2016/lectures">notes</a>. 
 </p>
@@ -1159,7 +1221,11 @@ If you're interested in parallel GPU programming for training see these <a href=
 <ul class="org-ul">
 <li><a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2015/">(Full Course) 11-785 Introduction to Deep Learning</a>
 <ul class="org-ul">
-<li>Recorded lectures <a href="https://www.youtube.com/playlist?list=PL_Ig1a5kxu57NQ50jSuf0cjTe3zPLqv1O">here</a> to learn to build and tune deep learning models
+<li>Recorded lectures <a href="https://www.youtube.com/playlist?list=PLwrNrH82f0KgdZhGB7sm9NrOanfWBS-EN">here</a> to learn to build and tune deep learning models
+<ul class="org-ul">
+<li>If the playlist is deleted, which is frequently, (use youtube-dl to archive) search YouTube for "CMU 11-785" 
+</li>
+</ul>
 </li>
 <li>There are also applied courses and practical challenges/competitions on kaggle.com
 <ul class="org-ul">
@@ -1174,9 +1240,9 @@ If you're interested in parallel GPU programming for training see these <a href=
 </div>
 
 
-<div id="outline-container-sec-17-8" class="outline-3">
-<h3 id="sec-17-8"><span class="section-number-3">17.8</span> Algorithms for Big Data</h3>
-<div class="outline-text-3" id="text-17-8">
+<div id="outline-container-sec-18-8" class="outline-3">
+<h3 id="sec-18-8"><span class="section-number-3">18.8</span> Algorithms for Big Data</h3>
+<div class="outline-text-3" id="text-18-8">
 <ul class="org-ul">
 <li><a href="http://people.seas.harvard.edu/~minilek/cs229r/fall15/index.html">(Full Course) CS229r Algorithms for Big Data</a>
 <ul class="org-ul">
@@ -1189,9 +1255,9 @@ If you're interested in parallel GPU programming for training see these <a href=
 </div>
 
 
-<div id="outline-container-sec-17-9" class="outline-3">
-<h3 id="sec-17-9"><span class="section-number-3">17.9</span> Further Research</h3>
-<div class="outline-text-3" id="text-17-9">
+<div id="outline-container-sec-18-9" class="outline-3">
+<h3 id="sec-18-9"><span class="section-number-3">18.9</span> Further Research</h3>
+<div class="outline-text-3" id="text-18-9">
 <ul class="org-ul">
 <li>The <a href="http://www.jmlr.org/">Journal</a> of Machine Learning Research and other AI journals you can access with Sci-Hub
 </li>
@@ -1205,17 +1271,17 @@ If you're interested in parallel GPU programming for training see these <a href=
 </div>
 
 
-<div id="outline-container-sec-18" class="outline-2">
-<h2 id="sec-18"><span class="section-number-2">18</span> Graduate Research Elective: Cryptography</h2>
-<div class="outline-text-2" id="text-18">
+<div id="outline-container-sec-19" class="outline-2">
+<h2 id="sec-19"><span class="section-number-2">19</span> Graduate Research Elective: Cryptography</h2>
+<div class="outline-text-2" id="text-19">
 <p>
 Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> from <i>A Theorist's ToolKit</i> on how to find research, how to write math in LaTeX, how to give a talk, where to ask on stackexchange ect.
 </p>
 </div>
 
-<div id="outline-container-sec-18-1" class="outline-3">
-<h3 id="sec-18-1"><span class="section-number-3">18.1</span> Graduate Cryptography Intro</h3>
-<div class="outline-text-3" id="text-18-1">
+<div id="outline-container-sec-19-1" class="outline-3">
+<h3 id="sec-19-1"><span class="section-number-3">19.1</span> Graduate Cryptography Intro</h3>
+<div class="outline-text-3" id="text-19-1">
 <p>
 This course covers post-quantum crypto, elliptic curve crypto, and is taught by premiere researcher Tanja Lange (TU/e)
 </p>
@@ -1233,9 +1299,9 @@ This course covers post-quantum crypto, elliptic curve crypto, and is taught by 
 </div>
 </div>
 
-<div id="outline-container-sec-18-2" class="outline-3">
-<h3 id="sec-18-2"><span class="section-number-3">18.2</span> Applied Cryptography</h3>
-<div class="outline-text-3" id="text-18-2">
+<div id="outline-container-sec-19-2" class="outline-3">
+<h3 id="sec-19-2"><span class="section-number-3">19.2</span> Applied Cryptography</h3>
+<div class="outline-text-3" id="text-19-2">
 <ul class="org-ul">
 <li>Draft <a href="https://crypto.stanford.edu/~dabo/cryptobook/">book</a> <i>A Graduate Course in Applied Cryptography</i> - Dan Boneh and Victor Shoup
 </li>
@@ -1252,9 +1318,9 @@ This course covers post-quantum crypto, elliptic curve crypto, and is taught by 
 </div>
 
 
-<div id="outline-container-sec-18-3" class="outline-3">
-<h3 id="sec-18-3"><span class="section-number-3">18.3</span> Future Research</h3>
-<div class="outline-text-3" id="text-18-3">
+<div id="outline-container-sec-19-3" class="outline-3">
+<h3 id="sec-19-3"><span class="section-number-3">19.3</span> Future Research</h3>
+<div class="outline-text-3" id="text-19-3">
 <ul class="org-ul">
 <li>Follow whatever the PhD students of djb and Tanja Lange are <a href="https://hyperelliptic.org/tanja/students.html">working on</a>
 </li>
