@@ -4,22 +4,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Self-Learning, Modern Computer Science Curriculum</title>
 <style>
-	body{
-		margin:1em auto;
-		max-width:initial;
-		padding:0 .62em;
-		font:1.2em/1.62 sans-serif;
-	}
-	h1,h2,h3 {
-		line-height:1.2;
-	}
-	@media print{
-		body{
-			max-width:none
-		}
-	}
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.45;
+        background-color: #ededed;
+        margin: auto;
+        padding: 0.5rem;
+        max-width: 80ch;
+    }
+    
+    .pd {
+        padding-bottom: initial;
+    }
 </style>
-<article>
+<body>
 <div id="header">
 <h1 class="title">A Self-Learning, Modern Computer Science Curriculum</h1>
 </div>
@@ -41,7 +39,8 @@
 <li><a href="#calculus-with-theory">Calculus With Theory</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#principles-of-functional-programming">Principles of Functional Programming</a><ul>
+<li><a href="#functional-programming">Functional Programming</a><ul>
+<li><a href="#principles-of-functional-programming">Principles of Functional Programming</a></li>
 <li><a href="#intro-to-programming-using-ocaml">Intro to Programming using OCaml</a></li>
 </ul></li>
 <li><a href="#algebra">Algebra</a><ul>
@@ -168,10 +167,10 @@
 <li>Uses Apostol's <em>Calculus, Volume 1: One-Variable Calculus, with An Introduction to Linear Algebra</em> (buy the international version on Amazon for $20)</li>
 <li>Read <a href="https://math.vanderbilt.edu/schectex/commerrs/">Common Errors in Undergrad Math</a> like undistributed cancellations, sign errors, confusion about notation ect.</li>
 </ul></li>
-</ul></li>
 </ul>
-<h1 id="principles-of-functional-programming">Principles of Functional Programming</h1>
-<p>The functional part in functional programming refers to mathematical functions, meaning functions where each input has a single output. The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/ ">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course. SML is used because it's syntax and module system is simple, much like Scheme's easy syntax was once preferred for introductory courses so the complexity of the language gets out of the way and you learn the fundamentals.</p>
+<h1 id="functional-programming">Functional Programming</h1>
+<h2 id="principles-of-functional-programming">Principles of Functional Programming</h2>
+<p>The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/ ">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course. SML is used because it's syntax and module system is simple, much like Scheme's easy syntax was once preferred for introductory courses so the complexity of the language gets out of the way and you learn the fundamentals.</p>
 <ul>
 <li><a href="http://www.cs.cmu.edu/~15150/previous-semesters/2012-spring/lect.html">(Lecture Notes) 15-150 Principles of Functional Programming</a>
 <ul>
@@ -452,7 +451,7 @@
 </ul></li>
 </ul>
 <h1 id="jobs">Jobs</h1>
-<p>This <a href="https://triplebyte.com/">service</a> matches your skills to people who want to pay you. Jane Street Capital is a finance tech company that hires functional programmers worldwide, you may want to <a href="https://blogs.janestreet.com/interviewing-at-jane-street/">apply</a> there. There are numerous opportunities to apprentice as a <a href="https://www.nccgroup.trust/us/about-us/careers/current-vacancies/security-consultant/">security researcher</a> or get paid to prove business logic programs like 'smart contracts'. Check your local university employment listings as well, often students do not take these jobs as they are off chasing that startup stock options payday or doing industry internships, plenty of opportunities to work with post-doc researchers writing algorithms or analyzing data.</p>
+<p>This <a href="https://triplebyte.com/">service</a> matches your skills to people who want to pay you. Jane Street Capital is a finance tech company that hires functional programmers worldwide, you may want to <a href="https://blogs.janestreet.com/interviewing-at-jane-street/">apply</a> there. There are numerous opportunities to apprentice as a <a href="https://www.nccgroup.trust/us/about-us/careers/current-vacancies/security-consultant/">security researcher</a> or get paid to prove business logic programs like 'smart contracts'. Check your local university employment listings as well, often students do not take these jobs as they are off chasing that startup stock options payday or doing industry internships, plenty of opportunities to work with post-doc researchers writing algorithms or analyzing data. For web programming there exists free programming <a href="https://books.goalkicker.com/">notes</a> for software like NodeJS, which you can write software for in OCaml by compiling it into JS with <a href="https://bucklescript.github.io/">bucklescript</a> or compile to web assembly.</p>
 <h1 id="graduate-research-in-type-theory">Graduate Research in Type Theory</h1>
 <p>Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> from <em>A Theorist's ToolKit</em> on how to find research, how to write math in LaTeX, how to give a talk, where to ask on stackexchange ect.</p>
 <h2 id="basic-proof-theory">Basic Proof Theory</h2>
@@ -549,7 +548,6 @@
 <li>Probability lecture <a href="http://www.stat.cmu.edu/~siva/700/main.html">notes</a></li>
 </ul></li>
 </ul></li>
-<br>
 <li><a href="http://www.cs.cmu.edu/~epxing/Class/10701/lecture.html">(Full Course) 10-701 Introduction to ML</a>
 <ul>
 <li>Intended for PhD students outside the ML program, more theory and rigor than 10-601</li>
@@ -632,5 +630,5 @@
 <li>Try the <a href="https://cryptopals.com/">Cryptopals</a> challenges</li>
 <li>Read some cryptocurrency papers, such as Stellar's Consensus algorithm (soon to be used by mobilecoin.com), <a href="https://medium.com/@homakov/introducing-failsafe-network-ea47ab476fe6">Fail-Safe Network</a> or the <a href="https://github.com/zcash/zips/blob/master/protocol/protocol.pdf">protocol specification</a> for Zcash.</li>
 </ul>
-</article>
-
+</body>
+</html>
