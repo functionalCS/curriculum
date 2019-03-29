@@ -138,6 +138,7 @@ If for any reason you want a condensed version, watch the <i>Great Theoretical I
 </p>
 </div>
 
+
 <div id="outline-container-sec-1-1" class="outline-3">
 <h3 id="sec-1-1"><span class="section-number-3">1.1</span> Studying Strategies</h3>
 <div class="outline-text-3" id="text-1-1">
@@ -191,8 +192,8 @@ How command flags/switches work, how to setup networking, basic firewall introdu
 <h3 id="sec-2-2"><span class="section-number-3">2.2</span> Intro to Programming</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
-The <a href="https://htdp.org/">book</a> <i>How to Design Programs (HtDP)</i> has proven success teaching an introduction to programming while remaining rigorous. One of it's authors is now running a public school curriculum project called <a href="https://www.bootstrapworld.org/index.shtml">Bootstrap</a> and gave a <a href="https://youtu.be/5c0BvOlR5gs">talk</a> why this style of teaching programming has the most success, and how it's curriculum transfers to other fields such as
-how the students writing games are actually learning calculus, as the behavior of a game over time is the integral. If you liked HtDP, it's successor is <a href="https://papl.cs.brown.edu/2018/index.html">PAPL</a> (original <a href="http://cs.brown.edu/courses/cs173/2012/book/">Racket</a> version also exists, but Pyret and Racket are essentially the same languages just the author was tired of parenthesis complaints from other professors). 
+Try the Brown University book <a href="https://papl.cs.brown.edu/2018/index.html">PAPL</a> <i>Programming and Programming Languages</i> a well written introduction guiding the reader through the basics of programming and analyzing programming languages. PAPL's <a href="https://www.quora.com/What-does-Professor-Shriram-Krishnamurthi-expect-a-student-to-know-after-he-she-works-through-his-book-Programming-and-Programming-Languages-How-long-until-the-student-is-ready-for-an-interview-at-a-top-software-company">author</a> combined 3 semesters of Brown into one book. The same author has another <a href="https://htdp.org/">book</a> <i>How to Design Programs (HtDP)</i> and is part of the public school curriculum design project <a href="https://www.bootstrapworld.org/index.shtml">Bootstrap</a> which has had <a href="https://youtu.be/5c0BvOlR5gs">success</a> teaching PAPL style material. The <a href="https://www.pyret.org/index.html">Pyret</a> language used in the book makes creating types and testing them simple, and 
+has some similar syntax to ML-family <a href="#sec-3">languages</a>.    
 </p>
 </div>
 
@@ -319,9 +320,9 @@ From the same playlist, the foundations lecture series <a href="https://www.yout
 <h3 id="sec-3-1"><span class="section-number-3">3.1</span> Principles of Functional Programming</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
-This is an introduction to the theory of functional programming. The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course.
+The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course.
 SML is used because it's syntax and module system is simple, much like Scheme's easy syntax was once preferred for introductory courses so the complexity of the language gets out of the way and you learn the fundamentals. 
-Topics such as currying are much better defined and explained in this course than CS3110, both courses compliment each other.  
+Topics such as currying are much better defined and explained in this course than CS3110,  both courses compliment each other.  
 </p>
 
 <ul class="org-ul">
@@ -361,6 +362,8 @@ The release code for the assignments wget them <a href="https://www.cs.cornell.e
 <li>The free textbook is essentially the lectures, the <a href="https://www.cs.cornell.edu/courses/cs3110/2018sp/">notes</a> have recommended chapters for additional books like <i>Real World Ocaml</i>
 </li>
 <li>Introduction to Coq, you can extract OCaml from Coq, F* or from <a href="http://www.cs.ru.nl/~gondelman/toolchain.pdf">Why3</a> 
+</li>
+<li>Previous semesters have <a href="https://www.cs.cornell.edu/courses/cs3110/2009fa/lecturenotes.asp">notes</a> on asymptotic complexity of OCaml programs and solving recurrences
 </li>
 <li>No prereqs in programming required, if you get lost on something directly look it up in <a href="http://greenteapress.com/thinkocaml/">this</a> free book <i>How to Think Like a (functional) Computer Scientist</i>
 <ul class="org-ul">
@@ -601,7 +604,7 @@ How to build and analyze complex systems like a server farm.
 <ul class="org-ul">
 <li>This book assumes you have read the first 3 chapters of Sheldon Ross' <i>Introduction to Probability Models</i>
 </li>
-<li>Google has <a href="https://landing.google.com/sre/books/">book</a> on systems reliability and analysis of outages from a management point of view
+<li>Google has a <a href="https://landing.google.com/sre/books/">book</a> on systems reliability and analysis of outages from a management point of view
 </li>
 </ul>
 </li>
@@ -637,14 +640,12 @@ How the computing, economic and sociological worlds are connected.
 <h3 id="sec-7-1"><span class="section-number-3">7.1</span> Computer Networks</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
-The 15-213 <i>course</i> covers an introduction to computer networks.
+The 15-213 <i>course</i> covers an introduction to computer networks and socket programming. This book explains the principles underlying network architecture design.
 </p>
 
 <ul class="org-ul">
 <li><a href="https://book.systemsapproach.org/">(Book) Computer Networks: A Systems Approach - Larry Peterson and Bruce Davie</a>
 <ul class="org-ul">
-<li>Introduction to the design of network protocols
-</li>
 <li>Creative Commons License, you can build the book yourself from their github repository
 <ul class="org-ul">
 <li>Additional <a href="http://www.cs.cmu.edu/~15744/syllabus.html">slides</a> and recommended papers to understand the current state of network protocols, methods to test for censorship, topology, etc.
@@ -663,7 +664,7 @@ The 15-213 <i>course</i> covers an introduction to computer networks.
 <h2 id="sec-8"><span class="section-number-2">8</span> Compilers</h2>
 <div class="outline-text-2" id="text-8">
 <p>
-Search libgen.io or sci-hub for additional <a href="https://cc-conference.github.io/18/accepted-papers/">papers</a> or <a href="https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools">books</a> on parsers/compilers. 
+Search libgen.io or sci-hub for additional <a href="https://cc-conference.github.io/18/accepted-papers/">papers</a>.
 </p>
 
 <ul class="org-ul">
@@ -740,11 +741,7 @@ Interesting <a href="http://www.cs.cmu.edu/~./pavlo/blog/2015/09/the-next-50-yea
 <p>
 A classic introductory computer science book on thinking about the big picture of programs with abstraction: finding general patterns from specific problems and building programs based on these patterns. An applied example of this is the package manager <a href="http://dustycloud.org/misc/talks/guix/chicagolug_2015/guix_talk.html">GNU Guix</a> and distro GuixSD, which is a GNU implementation of the NixOS <a href="https://arxiv.org/pdf/1305.4584.pdf">functional software deployment model</a>. 
 Package builds, including entire system builds, are declared in one text file. The resulting software deployment is functional: build inputs go in such as compilers, customizations, environments ect, and a reproducible, immutable build comes out with a hashed identifier meaning you 
-can do roll backs to previous successful builds. A recent GUixSD feature <a href="https://arxiv.org/pdf/1709.00833.pdf">gexp</a> (g-expressions) is a good example what can be achieved through syntactic extensions of the Scheme language. 
-</p>
-
-<p>
-You are more likely to benefit from this book after having some programming experience, but no matter what <a href="https://twitter.com/id_aa_carmack/status/350028210551013376?lang=en">level</a> of programmer you are you'll still benefit from SICP.   
+can do roll backs to previous successful builds. A recent GUixSD feature <a href="https://arxiv.org/pdf/1709.00833.pdf">gexp</a> (g-expressions) is a good example what can be achieved through syntactic extensions of the Scheme language. You are more likely to benefit from this book after having some programming experience, but no matter what <a href="https://twitter.com/id_aa_carmack/status/350028210551013376?lang=en">level</a> of programmer you are you'll still benefit from SICP.   
 </p>
 
 <ul class="org-ul">
@@ -982,7 +979,7 @@ These scribed lecture <a href="http://www.cs.cmu.edu/~odonnell/toolkit13/">notes
 <h2 id="sec-17"><span class="section-number-2">17</span> Introduction to Quantum Computing</h2>
 <div class="outline-text-2" id="text-17">
 <p>
-This is a graduate introduction to quantum computation/information theory, from the perspective of theoretical computer science. 
+This is a graduate introduction to quantum computation/information theory, from the perspective of theoretical computer science. Topcoder has quantum algorithm <a href="https://www.topcoder.com/lp/digitalannealer">bounty's</a>.
 </p>
 
 <ul class="org-ul">
