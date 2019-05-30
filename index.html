@@ -57,8 +57,10 @@ body {
 </li>
 <li><a href="#sec-6">6. Computer Systems &amp; Architecture</a>
 <ul>
-<li><a href="#sec-6-1">6.1. Designing Systems</a></li>
-<li><a href="#sec-6-2">6.2. Analyzing Systems</a></li>
+<li><a href="#sec-6-1">6.1. x86 Architecture</a></li>
+<li><a href="#sec-6-2">6.2. x86 Operating Systems</a></li>
+<li><a href="#sec-6-3">6.3. RISC-V Architecture</a></li>
+<li><a href="#sec-6-4">6.4. Analyzing Systems</a></li>
 </ul>
 </li>
 <li><a href="#sec-7">7. Networks</a>
@@ -80,7 +82,8 @@ body {
 <li><a href="#sec-15">15. Algorithms</a>
 <ul>
 <li><a href="#sec-15-1">15.1. Introduction to Parallel and Sequential Algorithms</a></li>
-<li><a href="#sec-15-2">15.2. Advanced Algorithms (Purely Functional Data Structures)</a></li>
+<li><a href="#sec-15-2">15.2. Functional Data Structures</a></li>
+<li><a href="#sec-15-3">15.3. Algorithm Design</a></li>
 </ul>
 </li>
 <li><a href="#sec-16">16. Complexity Theory</a>
@@ -90,7 +93,11 @@ body {
 <li><a href="#sec-16-3">16.3. Useful Math for Theoretical CS</a></li>
 </ul>
 </li>
-<li><a href="#sec-17">17. Introduction to Quantum Computing</a></li>
+<li><a href="#sec-17">17. Introduction to Quantum Computing</a>
+<ul>
+<li><a href="#sec-17-1">17.1. Functional Differential Geometry</a></li>
+</ul>
+</li>
 <li><a href="#sec-18">18. Jobs</a></li>
 <li><a href="#sec-19">19. Graduate Research in Type Theory</a>
 <ul>
@@ -192,8 +199,13 @@ How command flags/switches work, how to setup networking, basic firewall introdu
 <h3 id="sec-2-2"><span class="section-number-3">2.2</span> Intro to Programming</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
-Try the Brown University book <a href="https://papl.cs.brown.edu/2018/index.html">PAPL</a> <i>Programming and Programming Languages</i> a well written introduction guiding the reader through the basics of programming and analyzing programming languages. PAPL's <a href="https://www.quora.com/What-does-Professor-Shriram-Krishnamurthi-expect-a-student-to-know-after-he-she-works-through-his-book-Programming-and-Programming-Languages-How-long-until-the-student-is-ready-for-an-interview-at-a-top-software-company">author</a> combined 3 semesters of Brown into one book. The same author has another <a href="https://htdp.org/">book</a> <i>How to Design Programs (HtDP)</i> and is part of the public school curriculum design project <a href="https://www.bootstrapworld.org/index.shtml">Bootstrap</a> which has had <a href="https://youtu.be/5c0BvOlR5gs">success</a> teaching PAPL style material. The <a href="https://www.pyret.org/index.html">Pyret</a> language used in the book makes creating types and testing them simple, and 
-has some similar syntax to ML-family <a href="#sec-3">languages</a>.    
+The best introduction that doesn't assume any prior background is <a href="https://papl.cs.brown.edu/2018/index.html">PAPL</a> <i>Programming and Programming Languages</i>. This book covers dynamic programming, memoization, types, graphs, closures, testing, parsing, objects, analysis and solving common recurrences. 
+PAPL's <a href="https://www.quora.com/What-does-Professor-Shriram-Krishnamurthi-expect-a-student-to-know-after-he-she-works-through-his-book-Programming-and-Programming-Languages-How-long-until-the-student-is-ready-for-an-interview-at-a-top-software-company">authors</a> combined 3 semesters of Brown into one book. There is recorded <a href="https://brown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%222559ad35-3fff-4ef1-a2ac-a951011eb91e%22&maxResults=50">lectures</a> covering the book material from the Brown university class CSCI 0190 <i>Accelerated Introduction to Computer Science</i>. The <a href="https://www.pyret.org/index.html">Pyret</a> language used in the book has some similar syntax to ML-family <a href="#sec-3">languages</a> which will make future courses easier to understand, 
+and you can run everything with the online interpreter, local software install isn't needed. This is the only intro to programming course I've seen where order notation is properly explained as O[n-&gt;n] meaning an expression that represents the function that maps n to n instead of ambiguous O(n) notation. 
+</p>
+
+<p>
+Prof. Shriram Krishnamurthi co-authored another introductory book <a href="https://htdp.org/">HtDP</a> <i>How to Design Programs</i> and is part of the public school curriculum design project <a href="https://www.bootstrapworld.org/index.shtml">Bootstrap</a> which has had <a href="https://youtu.be/5c0BvOlR5gs">success</a> teaching this style of material.
 </p>
 </div>
 
@@ -235,19 +247,6 @@ Another shill for Common Lisp as a good language choice is any old library you f
 The <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">Little Schemer series</a> books are a Q&amp;A format/Socratic method for learning the basics of computation (read the Preface of each book). You can do the Little Schemer with pencil and paper in a weekend though the authors recommend at least 3 sittings. The first in the series is <i>The Little Schemer</i> which teaches you to think recursively.
 The second is the <i>Seasoned Schemer</i> covering higher-order functions, which will help understand calculus. The differential operator is a higher-order function: given a function on the real line it yields its first derivative as a function on the real line. 
 </p>
-
-<ul class="org-ul">
-<li><a href="http://www.ccs.neu.edu/home/matthias/BTML/">(Book) The Little MLer - Matthias Felleisen, Daniel P. Friedman</a>
-<ul class="org-ul">
-<li>Self contained but will make much more sense if you've already done the first book,  <i>The Little Schemer</i> covering cons, lists and recursion. 
-</li>
-<li>Teaches you to think recursively, and provides an introduction to the principles of types, computation, and program construction.
-</li>
-<li>Applies to any functional language, almost all the exercises can be done in OCaml or another language with a small amount of syntactic adjustment.
-</li>
-</ul>
-</li>
-</ul>
 </div>
 </div>
 
@@ -255,7 +254,7 @@ The second is the <i>Seasoned Schemer</i> covering higher-order functions, which
 <h4 id="sec-2-2-4"><span class="section-number-4">2.2.4</span> Carnegie Mellon University Python Course</h4>
 <div class="outline-text-4" id="text-2-2-4">
 <p>
-Good information here on style, design and efficiency, with an introduction to <a href="https://www.cs.cmu.edu/~112/notes/notes-limits-of-computation.html">complexity</a> though you would learn all of this more rigorously in HtDP.
+Good information here on style, design and efficiency, with an introduction to <a href="https://www.cs.cmu.edu/~112/notes/notes-limits-of-computation.html">complexity</a> though you would learn all of this more rigorously in HtDP or PAPL.
 </p>
 
 <ul class="org-ul">
@@ -289,25 +288,28 @@ Good information here on style, design and efficiency, with an introduction to <
 (<a href="https://github.com/kragen/knuth-interview-2006">Don Knuth</a> )
 </p>
 </blockquote>
-</div>
-
-<div id="outline-container-sec-2-3-1" class="outline-4">
-<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> Mathematical Foundations</h4>
-<div class="outline-text-4" id="text-2-3-1">
-<p>
-See this <a href="https://www.youtube.com/user/njwildberger/playlists">playlist</a> of Math Foundations, specifically playlist <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">A</a>, and this lecture series on mathematics <a href="https://www.youtube.com/playlist?list=PL34B589BE3014EAEB">history</a>, which is a walk through of mathematics up to the present. Combined, these lectures are the elementary math background that all courses here will assume the student already has.  
-</p>
 
 <p>
-Norman Wildberger is a research mathematician at UNSW and these sets of foundations lectures cover the basic foundations of Arithmetic, Geometry, Algebra, and Analysis. No background is assumed about the student, so everything is built from the ground up starting with the natural numbers and each subsequent topic is precisely defined in terms of the previous topic. Proofs are done using highschool arithmetic, so are easy to follow.
-Mathematical objects are explained as types. He walks through proofs of ancient Greeks who only used straight lines and a compass to calculate square roots and write proofs. Calculus is introduced using rational number line algebra. These lecture series are the best introductory material I've found that thoroughly cover essential background that you may not already have, such as manipulation of mathematical expressions so you can follow future lectures in theoretical computer science without being lost what the professor is doing when complex summation expressions are being manipulated. 
-Wildberger is critical of the real numbers/modern set theory as foundations, but he will walk through these things too, so you won't be missing anything by exploring polynumbers or <a href="http://grondilu.github.io/cube.html">hacking</a> around around with <a href="https://www.youtube.com/playlist?list=PL3C58498718451C47">Rational Trigonometry</a>. If anything his criticism will give you a new appreciation for carefully constructed definitions, a form of math he prefers that is <a href="https://youtu.be/k5t4yV_vxA8">expression</a> oriented with clear specifications.  
+See this <a href="https://www.youtube.com/user/njwildberger/playlists">playlist</a> of Math Foundations by UNSW Prof. Wildberger, specifically playlist <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">A</a>, and this lecture series on mathematics <a href="https://www.youtube.com/playlist?list=PL34B589BE3014EAEB">history</a>, which is a walk through of mathematics up to the present. For example, his <a href="https://www.youtube.com/watch?v=K4eAyn-oK4M">lecture</a> on the notation of Limits and epsilon, which you will see in numerous future courses. 
+A great set of short texts, that pair with these lectures and focus on problem solving are the I.M. Gelfand correspondence school texts:
 </p>
 
+<ul class="org-ul">
+<li>Algebra (<a href="https://www.springer.com/gp/book/9780817636777">Birkhäuser</a>)
+</li>
+<li>The Method of Coordinates (<a href="https://store.doverpublications.com/0486425657.html">Dover</a>)
+</li>
+<li>Functions and Graphs (<a href="https://store.doverpublications.com/0486425649.html">Dover</a>)
+</li>
+<li>Trigonometry (<a href="https://www.springer.com/gp/book/9780817639143">Birkhäuser</a>)
+</li>
+<li>Sequences, Combinations, Limits (<a href="https://store.doverpublications.com/0486425665.html">Dover</a>)
+</li>
+</ul>
+
 <p>
-From the same playlist, the foundations lecture series <a href="https://www.youtube.com/playlist?list=PLIljB45xT85DpiADQOPth56AVC48SrPLc">B</a>, &amp; <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AYIeGfDQwHM8i6PQEDnnTI">C</a>, the Linear Algebra lectures, <a href="https://www.youtube.com/playlist?list=PLzdiPTrEWyz4rKFN541wFKvKPSg5Ea6XB">Algebraic</a> Calculus, and Algebraic Topology lectures are great resources to pair with the rest of this material here covering introductory Discrete math, Abstract Algebra, Topology, etc. To practice there is <a href="https://en.wikipedia.org/wiki/Po-Shen_Loh">Po-Shen Loh's</a> site <a href="https://www.expii.com/">Expii</a> with problem sets, and Cambridge also offers advice for incoming undergrads on readable <a href="http://www.maths.cam.ac.uk/documents/reading-list.pdf/">texts</a> you can combine with the Wildberger lectures. 
+For additional practice there is <a href="https://en.wikipedia.org/wiki/Po-Shen_Loh">Po-Shen Loh's</a> site <a href="https://www.expii.com/">Expii</a> with problem sets, and Cambridge also offers advice for incoming undergrads on readable <a href="http://www.maths.cam.ac.uk/documents/reading-list.pdf/">texts</a>. 
 </p>
-</div>
 </div>
 </div>
 </div>
@@ -321,8 +323,6 @@ From the same playlist, the foundations lecture series <a href="https://www.yout
 <div class="outline-text-3" id="text-3-1">
 <p>
 The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> has the best lecture notes, optionally combine with most <a href="http://www.cs.cmu.edu/~15150/lect.html">recent</a> course notes. Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this course.
-SML is used because it's syntax and module system is simple, much like Scheme's easy syntax was once preferred for introductory courses so the complexity of the language gets out of the way and you learn the fundamentals. 
-Topics such as currying are much better defined and explained in this course than CS3110,  both courses compliment each other.  
 </p>
 
 <ul class="org-ul">
@@ -365,13 +365,9 @@ The release code for the assignments wget them <a href="https://www.cs.cornell.e
 </li>
 <li>Previous semesters have <a href="https://www.cs.cornell.edu/courses/cs3110/2009fa/lecturenotes.asp">notes</a> on asymptotic complexity of OCaml programs and solving recurrences
 </li>
-<li>No prereqs in programming required, if you get lost on something directly look it up in <a href="http://greenteapress.com/thinkocaml/">this</a> free book <i>How to Think Like a (functional) Computer Scientist</i>
+<li>Assumes you have already done PAPL or <a href="http://greenteapress.com/thinkocaml/">this</a> free book <i>How to Think Like a (functional) Computer Scientist</i>, or another introductory course.
 <ul class="org-ul">
 <li>See this <a href="https://www.youtube.com/watch?v=-J8YyfrSwTk">talk</a> Effective ML how to properly write interfaces, error handling
-</li>
-<li>You can even program hardware such as a <a href="https://www.youtube.com/watch?v=X1cgRXhpQLY">FPGA</a> in OCaml using this <a href="https://github.com/janestreet/hardcaml">library</a> 
-</li>
-<li>Or websites using <a href="https://bucklescript.github.io/">bucklescript</a>
 </li>
 </ul>
 </li>
@@ -396,7 +392,7 @@ linear in the length of the list, and looking at some element of a tree is linea
 <h3 id="sec-4-1"><span class="section-number-3">4.1</span> Linear Algebra</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
-Wildberger has a series of intuitive <a href="https://www.youtube.com/watch?v=yAb12PWrhV0&list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">lectures</a> to understand projection and rotations.
+Wildberger has a series of intuitive <a href="https://www.youtube.com/watch?v=yAb12PWrhV0&list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">lectures</a> to understand this topic geometrically.
 </p>
 
 <ul class="org-ul">
@@ -479,7 +475,7 @@ Good advice on writing mathematics, introduces LaTeX. Cornell has a similar clas
 <div class="outline-text-3" id="text-5-2">
 <p>
 This book covers most of the topics in courses 15-251 and 15-150, and teaches you to write proofs as programs. If you don't know how to program this book will teach you by modeling math functions into SML functions, 
-polynomials into lists, sets into types, creating relations and proving their results with programs. If you really want to understand set theory for combinatorics or similar fields you should probably read this.    
+polynomials into lists, sets into types, creating relations and proving their results with programs. If you really want to understand set theory for combinatorics you should probably read this.    
 </p>
 
 <ul class="org-ul">
@@ -530,10 +526,13 @@ This is a crash course in multiple topics such as Probability, Linear Algebra, M
 "[Computer science] is not really about computers - and it's not about computers in the same sense that physics is not really about particle accelerators, and biology is not about microscopes and Petri dishes&#x2026;and geometry isn't really about using surveying instruments. Now the reason that we think computer science is about computers is pretty much the same reason that the Egyptians thought geometry was about surveying instruments: when some field is just getting started and you don't really understand it very well, it's very easy to confuse the essence of what you're doing with the tools that you use." (Hal Abelson) 
 </p>
 </blockquote>
+</div>
 
+<div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> x86 Architecture</h3>
+<div class="outline-text-3" id="text-6-1">
 <p>
-This covers computer architecture from a programmer's perspective, such as how to write cache friendly code, and other optimizations for the x86-64 arch. You learn how to manually write loops in assembly 
-and see how recursion works at a lower abstraction. You learn machine code instructions, how compilers work, return oriented programming (ROP) to bypass stack protections, the memory hierarchy, and networks. You could read K&amp;R's 
+This covers architecture from a programmer's perspective, such as how to write cache friendly code, assembly, how compilers work, return oriented programming (ROP) to bypass stack protections, the memory hierarchy, and networks. You could read K&amp;R's 
 <i>The C Programming Language</i> for a brief intro, though this course will explain C as you go anyway and fully covers pointers at the assembly language level making it self contained. 
 </p>
 
@@ -542,47 +541,15 @@ and see how recursion works at a lower abstraction. You learn machine code instr
 <ul class="org-ul">
 <li>Recorded lectures <a href="http://scs.hosted.panopto.com/Panopto/Podcast/Podcast.ashx?courseid=b96d90ae-9871-4fae-91e2-b1627b43e25e&type=mp4">here</a>
 </li>
-<li>Get the CS:APP book, 3rd version used or the global version (the global version has a lot of errata, try to get the reg version with the memory mountain graph on the cover)
-<ul class="org-ul">
+<li>Get the CS:APP book, 3rd version for x86-64 (beware of the global version <a href="http://csapp.cs.cmu.edu/3e/errata.html">errata</a> )
+</li>
 <li>The labs (Data Lab, Bomb Lab ect) are on the <a href="http://csapp.cs.cmu.edu/3e/students.html">book website</a> 
 </li>
-</ul>
-</li>
-<li>An interesting post on <a href="https://existentialtype.wordpress.com/2011/03/15/boolean-blindness/">Boolean Blindness</a>  
-</li>
-<li>You can also do Unix programming in <a href="http://mlton.org/References.attachments/Shipman02.pdf">Standard ML(pdf)</a> or <a href="https://ocaml.github.io/ocamlunix/index.html">OCaml</a>
-</li>
+<li>You can also do systems programming in <a href="http://mlton.org/References.attachments/Shipman02.pdf">Standard ML(pdf)</a> or <a href="https://ocaml.github.io/ocamlunix/index.html">OCaml</a>
+<ul class="org-ul">
 <li>Try the embedded security CTF <a href="https://microcorruption.com/login">here</a> after you finish the Attack Lab
-<ul class="org-ul">
+</li>
 <li>(Optional) A <a href="https://os.phil-opp.com/">series</a> of posts on writing an OS in Rust lang. <a href="https://www.red-bean.com/jimb/">Programming Rust</a> is also an excellent systems book 
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-
-<div id="outline-container-sec-6-1" class="outline-3">
-<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Designing Systems</h3>
-<div class="outline-text-3" id="text-6-1">
-<p>
-Knuth constructed a futuristic architecture with 256 registers for his <i>Art of Computer Programming</i> series to make hacking around with experimental systems programming easier. 
-If you ever find yourself implementing instructions for something (webAssembly devs) you should read through <a href="http://mmix.cs.hm.edu/doc/instructions-en.html">MMIX</a> documentation, for gems like MOR/MXOR. 
-</p>
-
-<ul class="org-ul">
-<li><a href="https://archive.org/details/springer_10.1007-3-540-46611-8">(Book) MMIXware: a RISC computer for the third millennium - Donald E Knuth</a>
-<ul class="org-ul">
-<li>An intro to MMIX <a href="http://mmix.cs.hm.edu/doc/fasc1.pdf">here</a> with some of it's interesting design (such as implementing proper integer arithmetic) and <a href="http://mmix.cs.hm.edu/getstarted.html">simulators</a> 
-</li>
-<li>Knuth uses literate programming to go through all design decisions, describing every line of code in detail as it's how he learned to write symbolic assemblers in the 1950s by reading other people's <a href="https://github.com/kragen/knuth-interview-2006">programs</a> while on vacation
-</li>
-<li>Combine with some <a href="https://www.cse.unsw.edu.au/~cs9242/18/lectures/">course notes</a> on open research issues for operating systems or read about the architecture and critiques of <a href="http://walfield.org/papers/200707-walfield-critique-of-the-GNU-Hurd.pdf">Hurd</a>
-<ul class="org-ul">
-<li>A <a href="https://www.morganclaypool.com/toc/cac/1/1">series</a> of papers in Computer Architecture curated by Princeton U (use <a href="https://en.wikipedia.org/wiki/Sci-Hub">sci-hub</a> to access them)
-</li>
-<li>Some MIT lecture <a href="http://web.mit.edu/6.033/www/index.shtml">notes</a> that follow Saltzer and Kaashoek's book <i>Principles of Computer System Design: An Introduction</i>
 </li>
 </ul>
 </li>
@@ -593,8 +560,54 @@ If you ever find yourself implementing instructions for something (webAssembly d
 </div>
 
 <div id="outline-container-sec-6-2" class="outline-3">
-<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Analyzing Systems</h3>
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> x86 Operating Systems</h3>
 <div class="outline-text-3" id="text-6-2">
+<p>
+MIT teaches OS engineering using a rewrite of the sixth edition Unix(v6) similar to the classic <a href="https://en.wikipedia.org/wiki/Lions'_Commentary_on_UNIX_6th_Edition,_with_Source_Code">Lions' Commentary</a> but in ANSI-C called <a href="https://pdos.csail.mit.edu/6.828/2018/xv6.html">xv6</a>. The idea is you read the source as you read booklet, to understand the system. 
+There is also a schedule of lecture <a href="https://pdos.csail.mit.edu/6.828/2018/schedule.html">notes</a>.
+</p>
+
+<p>
+The latest xv6 source and text are available via:
+</p>
+<ul class="org-ul">
+<li>git clone git://github.com/mit-pdos/xv6-public.git
+</li>
+<li>git clone git://github.com/mit-pdos/xv6-book.git
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> RISC-V Architecture</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+MIT's 6.004 course covers RISC-V: The free and open RISC Instruction Set Architecture. Take this if you are interested in programming FPGAs or <a href="https://www.seeedstudio.com/sipeed">cheap</a> embedded modules.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://6004.mit.edu/web/spring19/resources/lectures">(Full Course) 6.004 Computation Structures</a>
+<ul class="org-ul">
+<li>Recorded YouTube lectures <a href="https://www.youtube.com/channel/UC1DcxXg6GkAcp2zk2w7U6qQ/videos">here</a> 
+</li>
+<li>Book used is Computer Organization and Design: <a href="https://www.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-812275-4">RISC-V Edition</a>
+<ul class="org-ul">
+<li>A <a href="https://www.morganclaypool.com/toc/cac/1/1">series</a> of papers in Computer Architecture curated by Princeton U (use <a href="https://en.wikipedia.org/wiki/Sci-Hub">sci-hub</a> to access them)
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Analyzing Systems</h3>
+<div class="outline-text-3" id="text-6-4">
 <p>
 How to build and analyze complex systems like a server farm.
 </p>
@@ -603,8 +616,10 @@ How to build and analyze complex systems like a server farm.
 <li><a href="http://www.cs.cmu.edu/~harchol/PerformanceModeling/book.html">(Book) Performance Modeling and Design of Computer Systems: Queing Theory in Action - Mor Harchol-Balter</a>
 <ul class="org-ul">
 <li>This book assumes you have read the first 3 chapters of Sheldon Ross' <i>Introduction to Probability Models</i>
-</li>
+<ul class="org-ul">
 <li>Google has a <a href="https://landing.google.com/sre/books/">book</a> on systems reliability and analysis of outages from a management point of view
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -685,6 +700,8 @@ Search libgen.io or sci-hub for additional <a href="https://cc-conference.github
 </ul>
 </div>
 </div>
+
+
 
 <div id="outline-container-sec-9" class="outline-2">
 <h2 id="sec-9"><span class="section-number-2">9</span> Database Systems</h2>
@@ -895,23 +912,39 @@ Unlike a traditional introduction to algorithms and data structures, this puts a
 </div>
 
 <div id="outline-container-sec-15-2" class="outline-3">
-<h3 id="sec-15-2"><span class="section-number-3">15.2</span> Advanced Algorithms (Purely Functional Data Structures)</h3>
+<h3 id="sec-15-2"><span class="section-number-3">15.2</span> Functional Data Structures</h3>
 <div class="outline-text-3" id="text-15-2">
 <p>
-The typical text for a senior undergrad or graduate course on algorithm core theory and analysis is <i>The Design and Analysis of Algorithms</i> by Kozen (1992). This is an excellent book to study with difficult problems well presented and clearly analyzed by Kozen. The Okasaki book (1999), <i>Purely Functional Data Structures</i> gives examples in Standard ML and Haskell. 
-If you want a book to practice design, <i>Algorithm Design</i> by Jon Kleinberg and Éva Tardos walks through problems and how to design solutions for them. 
+"A stroll through intermediate data structures and their associated algorithms, from the point of view of functional programming." Note how pattern matching makes implementing these seemingly complicated structures a much easier task. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/">(Book) Functional Data Structures</a> 
+<ul class="org-ul">
+<li>Exercises and examples done in OCaml, no formal background beyond a typical introductory CS course
+<ul class="org-ul">
+<li>A more advanced book <a href="http://www.cambridge.org/ca/academic/subjects/computer-science/programming-languages-and-applied-logic/purely-functional-data-structures?format=PB&isbn=9780521663502">Purely Functional Data Structures</a> by Chris Okasaki uses an imaginary version of SML w/Appendix in Haskell.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-15-3" class="outline-3">
+<h3 id="sec-15-3"><span class="section-number-3">15.3</span> Algorithm Design</h3>
+<div class="outline-text-3" id="text-15-3">
+<p>
+The typical text for a senior undergrad or graduate course on algorithm core theory and analysis is <i>The Design and Analysis of Algorithms</i> by Kozen (1992). This is an excellent book to study with difficult problems well presented and clearly analyzed by Kozen.  
+If you want a book to practice design, <i>Algorithm Design</i> by Jon Kleinberg and Éva Tardos contains 200+ problems and how to design solutions for them.  
 </p>
 
 <ul class="org-ul">
 <li><a href="http://people.seas.harvard.edu/~cs224/fall14/lec.html">(Full Course) CS224 Advanced Algorithms</a>
 <ul class="org-ul">
-<li>Pair relevant Harvard Advanced Algorithms analysis lectures with <a href="http://www.cambridge.org/ca/academic/subjects/computer-science/programming-languages-and-applied-logic/purely-functional-data-structures?format=PB&isbn=9780521663502">Purely Functional Data Structures</a> book by Chris Okasaki (the full book, not the thesis .pdf it's missing a lot of material)
-<ul class="org-ul">
-<li>Splay trees/heaps/binomial heaps/hashing ect are all in the Okasaki book as well as CS224. Note how pattern matching makes implementing these algorithms a straight forward task. 
-</li>
-</ul>
-</li>
-<li>Alternatively this free 2017 <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/">Functional Data Structures</a> book from University of Waterloo with exercises done in OCaml.
+<li>Recorded lectures by Prof. Jelani Nelson walking through the design and analysis of online algorithms, linear programming, approximation algorithms, hashing, randomized algorithms.
 </li>
 </ul>
 </li>
@@ -999,6 +1032,15 @@ This is a graduate introduction to quantum computation/information theory, from 
 </li>
 </ul>
 </div>
+
+<div id="outline-container-sec-17-1" class="outline-3">
+<h3 id="sec-17-1"><span class="section-number-3">17.1</span> Functional Differential Geometry</h3>
+<div class="outline-text-3" id="text-17-1">
+<p>
+If this topic interests you, Gerald Jay Sussman &amp; Jack Wisdom's <a href="https://mitpress.mit.edu/books/functional-differential-geometry">book</a> teaches differential geometry using Scheme as a foundation for quantum field theory or general relativity. NJ Wildberger additionally has a set of introductory <a href="https://youtu.be/_mvjOoTieTk">lectures</a>.
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-sec-18" class="outline-2">
@@ -1006,8 +1048,9 @@ This is a graduate introduction to quantum computation/information theory, from 
 <div class="outline-text-2" id="text-18">
 <p>
 This <a href="https://triplebyte.com/">service</a> matches your skills to people who want to pay you. Jane Street Capital is a finance tech company that hires functional programmers worldwide, you may want to <a href="https://blogs.janestreet.com/interviewing-at-jane-street/">apply</a> there. 
-There are numerous opportunities to apprentice as a <a href="https://www.nccgroup.trust/us/about-us/careers/current-vacancies/security-consultant/">security researcher</a> or get paid to prove business logic programs like 'smart contracts'. Check your local university employment listings as well, often students do not take these jobs as they are off chasing that startup stock options payday or doing industry internships, plenty of opportunities to work with post-doc researchers writing algorithms or analyzing data.
-For web programming there exists free programming <a href="https://books.goalkicker.com/">notes</a> for software like NodeJS, which you can write software for in OCaml by compiling it into JS with <a href="https://bucklescript.github.io/">bucklescript</a> or compile to web assembly. 
+There are numerous opportunities to apprentice as a <a href="https://www.nccgroup.trust/us/about-us/careers/current-vacancies/security-consultant/">security researcher</a> or get paid to prove business logic programs like 'smart contracts'. For web programming there exists free programming <a href="https://books.goalkicker.com/">notes</a> for software like NodeJS, which you can write software for in OCaml by compiling it into JS with <a href="https://bucklescript.github.io/">bucklescript</a> or <a href="https://ocsigen.org/js_of_ocaml/3.1.0/manual/overview">js<sub>of</sub><sub>ocaml</sub></a> or just use <a href="https://www.256kilobytes.com/content/show/4399/get-these-dependencies-off-my-lawn-5-tasks-you-didnt-know-could-be-done-with-pure-html-and-css">pure html</a>. 
+There are also bounties for writing features available on topcoder, gitcoin or bountysource or consulting outfits such as toptal or clevertech, which tend to use <a href="https://app.codility.com/programmers/">codility tests</a> for filtering candidates. Do your own research on the current state of these outfits, through glassdoor or other employee review sites.   
+A large collection of remote job listing and consulting platforms is <a href="https://docs.google.com/spreadsheets/d/1JfNAbUX_lN9K3MCNHO15GJtJ5qpk7H9Cl3xTBwv2FR8/htmlview">here</a>.
 </p>
 </div>
 </div>
@@ -1124,13 +1167,13 @@ Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> f
 <h3 id="sec-20-1"><span class="section-number-3">20.1</span> Graduate Introduction to General AI</h3>
 <div class="outline-text-3" id="text-20-1">
 <p>
-These notes <a href="http://www.cs.cmu.edu/~./15381/#schedule">here</a> cover more topics, such as Computer Vision/NLP/AGI and follows <i>AI: A Modern Approach</i> book by Norvig. The 15-780 course is specific to some topics in AI providing them 2-3 lectures each.
+These notes <a href="http://www.cs.cmu.edu/~./15381/#schedule">here</a> cover more topics, such as Computer Vision/NLP/AGI and follows <i>AI: A Modern Approach</i> book by Norvig. The 4th edition draft of pseudocode algorithms for the book is <a href="https://github.com/aimacode/aima-pseudocode">here</a>.
 </p>
 
 <ul class="org-ul">
 <li><a href="http://www.cs.cmu.edu/afs/cs/Web/People/15780/#schedule">(Full Course) 15-780 Graduate Introduction to AI</a>
 <ul class="org-ul">
-<li>Recorded lectures <a href="https://www.youtube.com/playlist?list=PLpIxOj-HnDsPfw9slkk0BfwuiNEYVnsd_">here</a> and <a href="https://www.youtube.com/playlist?list=PL_Ig1a5kxu55zgIn3Tb5Pc5C62Yo2sYHf">here</a>
+<li>Recorded lectures <a href="https://www.youtube.com/playlist?list=PL_Ig1a5kxu55zgIn3Tb5Pc5C62Yo2sYHf">here</a> from prev term
 </li>
 <li>No formal pre-requisites except grad level standing so familiar with some undergrad calculus and linear algebra/probability
 <ul class="org-ul">
@@ -1147,6 +1190,7 @@ These notes <a href="http://www.cs.cmu.edu/~./15381/#schedule">here</a> cover mo
 </ul>
 </div>
 </div>
+
 
 <div id="outline-container-sec-20-2" class="outline-3">
 <h3 id="sec-20-2"><span class="section-number-3">20.2</span> Math Background for ML</h3>
