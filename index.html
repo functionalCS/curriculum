@@ -32,14 +32,14 @@ body {
 <li><a href="#sec-2">2. Preliminaries</a>
 <ul>
 <li><a href="#sec-2-1">2.1. Intro to Computing</a></li>
-<li><a href="#sec-2-2">2.2. Intro to Programming</a></li>
+<li><a href="#sec-2-2">2.2. A Rigorous Intro to Programming</a></li>
 <li><a href="#sec-2-3">2.3. Assumed Mathematical Background</a></li>
 </ul>
 </li>
 <li><a href="#sec-3">3. Functional Programming</a>
 <ul>
 <li><a href="#sec-3-1">3.1. Principles of Functional Programming</a></li>
-<li><a href="#sec-3-2">3.2. Intro to Programming using OCaml</a></li>
+<li><a href="#sec-3-2">3.2. Functional Programming &amp; Data Structures</a></li>
 </ul>
 </li>
 <li><a href="#sec-4">4. Algebra</a>
@@ -160,7 +160,34 @@ On Isaac Newton's iteration method to self-learn geometry:
 </blockquote>
 
 <p>
-My general algorithm for understanding a course is: watch a lecture or read the notes/assigned reading, do the labs, take my own notes, from my notes give a lecture to an invisible class with minimal jargon until I'm satisfied I understand that chapter or lecture. It's called the Feynman technique and is explained <a href="http://calnewport.com/blog/2012/10/26/mastering-linear-algebra-in-10-days-astounding-experiments-in-ultra-learning/">here</a> "If you can’t, out loud or on paper, explain the idea without confusion or contradiction, stop and figure it out right there".
+An anecdote on the studying method that works for me: 
+</p>
+<ol class="org-ol">
+<li>watch a lecture and pay attention to what's going on instead of taking notes. 
+</li>
+<li>afterwards take notes from the course slides or skip through the recorded lecture and take notes.
+<ul class="org-ul">
+<li>if definitions are presented in a lecture try and write my own examples, if a proof is given try to prove it myself. 
+</li>
+</ul>
+</li>
+<li>skim through the assigned reading, writing my own examples for any definitions in the reading and adding those to my notes
+<ul class="org-ul">
+<li>if exercises are in the reading try them, reading the relevant text chapters if I can't finish an exercise
+</li>
+</ul>
+</li>
+<li>proceed to that week's course assignments or labs, or any exams available
+</li>
+</ol>
+<p>
+Some readings are so dense and filled with definitions I had to spend a lot of time reading each page carefully to understand it. I also heavily used math or cs stackexchange in the beginning.
+Finally, from my notes I'll give a lecture to an invisible class with minimal jargon until I'm satisfied I understand that chapter or lecture. It's called the Feynman technique and is explained <a href="http://calnewport.com/blog/2012/10/26/mastering-linear-algebra-in-10-days-astounding-experiments-in-ultra-learning/">here</a> "If you can’t, out loud or on paper, explain the idea without confusion or contradiction, stop and figure it out right there".
+Eventually you will get stuck on a problem set that has errata you forgot to look up. After working at this for an hour or so and being confused what's going on you'll remember to always look up the errata for the assigned reading. 
+</p>
+
+
+<p>
 If you ignore the copious amounts of marketing on his site, Cal Newport has some other interesting anecdotes on studying, such as how he was able to get the <a href="http://calnewport.com/blog/2008/11/25/case-study-how-i-got-the-highest-grade-in-my-discrete-math-class/">best</a> grade in his Discrete Mathematics class, and the rest of the site is full of advice on studying, how to schedule yourself and deliberate <a href="http://calnewport.com/blog/2010/01/06/the-grandmaster-in-the-corner-office-what-the-study-of-chess-experts-teaches-us-about-building-a-remarkable-life/">practice</a>. Further anecdotes exist on the importance of deep work and <a href="https://azeria-labs.com/the-importance-of-deep-work-the-30-hour-method-for-learning-a-new-skill/">deliberate</a> practice.
 </p>
 </div>
@@ -196,82 +223,24 @@ How command flags/switches work, how to setup networking, basic firewall introdu
 
 
 <div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Intro to Programming</h3>
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> A Rigorous Intro to Programming</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
-The best introduction that doesn't assume any prior background is <a href="https://papl.cs.brown.edu/2018/index.html">PAPL</a> <i>Programming and Programming Languages</i>. This book covers dynamic programming, memoization, types, graphs, closures, testing, parsing, objects, analysis and solving common recurrences. 
-PAPL's <a href="https://www.quora.com/What-does-Professor-Shriram-Krishnamurthi-expect-a-student-to-know-after-he-she-works-through-his-book-Programming-and-Programming-Languages-How-long-until-the-student-is-ready-for-an-interview-at-a-top-software-company">authors</a> combined 3 semesters of Brown into one book. There is recorded <a href="https://brown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%222559ad35-3fff-4ef1-a2ac-a951011eb91e%22&maxResults=50">lectures</a> covering the book material from the Brown university class CSCI 0190 <i>Accelerated Introduction to Computer Science</i>. The <a href="https://www.pyret.org/index.html">Pyret</a> language used in the book has some similar syntax to ML-family <a href="#sec-3">languages</a> which will make future courses easier to understand, 
-and you can run everything with the online interpreter, local software install isn't needed. This is the only intro to programming course I've seen where order notation is properly explained as O[n-&gt;n] meaning an expression that represents the function that maps n to n instead of ambiguous O(n) notation. 
+The best rigorous introduction that doesn't assume any prior background, or assumes your background was taught incorrectly, is <a href="https://papl.cs.brown.edu/2018/index.html">PAPL</a> <i>Programming and Programming Languages</i>. 
 </p>
 
 <p>
-Prof. Shriram Krishnamurthi co-authored another introductory book <a href="https://htdp.org/">HtDP</a> <i>How to Design Programs</i> and is part of the public school curriculum design project <a href="https://www.bootstrapworld.org/index.shtml">Bootstrap</a> which has had <a href="https://youtu.be/5c0BvOlR5gs">success</a> teaching this style of material.
+This book is an active learning introduction dynamic programming, memoization, types, graphs, closures, testing, parsing, objects, analysis and solving common recurrences plus numerous topics all relevant to pursuing a CS undergrad. 
+PAPL's <a href="https://www.quora.com/What-does-Professor-Shriram-Krishnamurthi-expect-a-student-to-know-after-he-she-works-through-his-book-Programming-and-Programming-Languages-How-long-until-the-student-is-ready-for-an-interview-at-a-top-software-company">authors</a> combined 3 semesters of Brown into one book. The first 2/3 of the book, have recorded <a href="https://brown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%222559ad35-3fff-4ef1-a2ac-a951011eb91e%22&maxResults=50">lectures</a> from the Brown university class CSCI 0190 <i>Accelerated Introduction to Computer Science</i> and <a href="http://cs.brown.edu/courses/csci0190/2018/assignments.html">assignments</a>.
+The lectures have an interesting teaching style, worth watching if you want to see how data driven, evidence based teaching is done at an ivy league university but they compliment the text, not replace it as programming is best learned by doing. 
+You can run everything in a browser with the <a href="https://www.pyret.org/index.html">Pyret</a> online interpreter, local software install isn't needed. This is the only intro to programming course I've seen where order notation is properly explained. This is also the most rigorous introduction
+I've seen, the book and course are designed so you can't easily coast through the material and are forced to think. 
 </p>
-</div>
 
-<div id="outline-container-sec-2-2-1" class="outline-4">
-<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Alternative Introductions</h4>
-</div>
-<div id="outline-container-sec-2-2-2" class="outline-4">
-<h4 id="sec-2-2-2"><span class="section-number-4">2.2.2</span> Common Lisp</h4>
-<div class="outline-text-4" id="text-2-2-2">
 <p>
-It's possible to do (or at least model) every course in this list using Common Lisp, such as building your own domain-specific <a href="https://www.pvk.ca/Blog/2014/03/15/sbcl-the-ultimate-assembly-code-breadboard/">machine code</a> while completing 15-213 <i>Computer Systems</i>, or hacking together <a href="https://common-lisp.net/project/fset/Site/FSet-Tutorial.html">purely</a> functional <a href="https://common-lisp.net/project/funds/funds.pdf">data structures</a>, or writing your own pattern matcher, or simulating a turing machine, ect.  
-Of course you will do the courses using their recommended languages and tools, but in addition to this, building your own toy prototypes for the topics here in Lisp can help you learn this material as you discover it for yourself. 
-Another shill for Common Lisp as a good language choice is any old library you find that hasn't been updated for 20 years will likely work <a href="http://www.paulgraham.com/acl.html">fine</a>. There is also the joy of programming Lisp as a <a href="http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/#lisp-as-a-system">system</a>.
+The last 1/3 of the book is used for a class on programming languages, with unique <a href="https://cs.brown.edu/courses/cs173/2018/assignments.html">assignments</a>. Prof. Shriram Krishnamurthi co-authored another introductory book <a href="https://htdp.org/">HtDP</a> <i>How to Design Programs</i> and designs public school curriculum at <a href="https://www.bootstrapworld.org/index.shtml">Bootstrap</a> which has had <a href="https://youtu.be/5c0BvOlR5gs">success</a> teaching this style of material.
+The design recipes in HtDP are sometimes referred to in PAPL/lectures, you may want to try some of these but completing HtDP is not a prereq or hard dependency for PAPL.  
 </p>
-
-<ul class="org-ul">
-<li><a href="https://www.cs.cmu.edu/~dst/LispBook/">(Book) Common Lisp - A Gentle Introduction to Symbolic Computation</a>
-<ul class="org-ul">
-<li>This book assumes no knowledge of programming and starts from pen and paper to writing complete programs.
-</li>
-<li>The <a href="http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/">Road to Common Lisp</a> is another introduction with 2017 Common Lisp development recommendations
-</li>
-<li>A good sequel is <a href="https://github.com/norvig/paip-lisp">PAIP</a> by Norvig and <a href="http://www.paulgraham.com/onlisp.html">On Lisp</a> by PG
-<ul class="org-ul">
-<li>For example the straight-forward <a href="https://github.com/norvig/paip-lisp/blob/master/docs/chapter13.md">description</a> of OOP compared to other confusing large books attempting to teach Object-Oriented Programming   
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-sec-2-2-3" class="outline-4">
-<h4 id="sec-2-2-3"><span class="section-number-4">2.2.3</span> Little Schemer Series</h4>
-<div class="outline-text-4" id="text-2-2-3">
-<p>
-The <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">Little Schemer series</a> books are a Q&amp;A format/Socratic method for learning the basics of computation (read the Preface of each book). You can do the Little Schemer with pencil and paper in a weekend though the authors recommend at least 3 sittings. The first in the series is <i>The Little Schemer</i> which teaches you to think recursively.
-The second is the <i>Seasoned Schemer</i> covering higher-order functions, which will help understand calculus. The differential operator is a higher-order function: given a function on the real line it yields its first derivative as a function on the real line. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-sec-2-2-4" class="outline-4">
-<h4 id="sec-2-2-4"><span class="section-number-4">2.2.4</span> Carnegie Mellon University Python Course</h4>
-<div class="outline-text-4" id="text-2-2-4">
-<p>
-Good information here on style, design and efficiency, with an introduction to <a href="https://www.cs.cmu.edu/~112/notes/notes-limits-of-computation.html">complexity</a> though you would learn all of this more rigorously in HtDP or PAPL.
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.cs.cmu.edu/~112/schedule.html">(Full Course) 15-112 Fundamentals of Programming and Computer Science</a>
-<ul class="org-ul">
-<li>Click on each topic, there are short youtube videos for lectures. 
-</li>
-<li>The homework assignments (Python) are self-correcting, with assert statements and a linter doing static analysis
-<ul class="org-ul">
-<li>A post on how to write a good <a href="https://chris.beams.io/posts/git-commit/">commit comment</a>.
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -308,7 +277,8 @@ A great set of short texts, that pair with these lectures and focus on problem s
 </ul>
 
 <p>
-For additional practice there is <a href="https://en.wikipedia.org/wiki/Po-Shen_Loh">Po-Shen Loh's</a> site <a href="https://www.expii.com/">Expii</a> with problem sets, and Cambridge also offers advice for incoming undergrads on readable <a href="http://www.maths.cam.ac.uk/documents/reading-list.pdf/">texts</a>. 
+There is also a trigonometry <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/">boot camp</a> from Brown. For additional practice there is <a href="https://en.wikipedia.org/wiki/Po-Shen_Loh">Po-Shen Loh's</a> site <a href="https://www.expii.com/">Expii</a>, and Cambridge also offers advice for incoming undergrads on readable <a href="http://www.maths.cam.ac.uk/documents/reading-list.pdf/">texts</a>. The only thing to know about math is it's a learn by doing subject, 
+and you could also just use any typical first year Calculus undergrad text to fix your deficiences in math by going through the exercises and directly looking up whatever you've forgot on Wikipedia or in Sheldon Axler's <i>Precalculus</i>. MIT's <a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/">18.01</a> is probably the best choice, you get full lectures, recitations and practice sets.
 </p>
 </div>
 </div>
@@ -349,7 +319,7 @@ The 2012 version by <a href="http://dlicata.web.wesleyan.edu/">Dan Licata</a> ha
 </div>
 
 <div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Intro to Programming using OCaml</h3>
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Functional Programming &amp; Data Structures</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 This Cornell OCaml course is totally self contained with it's own <a href="http://www.cs.cornell.edu/courses/cs3110/2018fa/textbook/">textbook</a>. You will want to archive the entire course locally using <a href="https://www.guyrutenberg.com/2014/05/02/make-offline-mirror-of-a-site-using-wget/">wget</a>.
@@ -359,13 +329,13 @@ The release code for the assignments wget them <a href="https://www.cs.cornell.e
 <ul class="org-ul">
 <li><a href="https://www.cs.cornell.edu/courses/cs3110/2018sp/">(Full Course) CS 3110 Data Structures and Functional Programming</a>
 <ul class="org-ul">
-<li>The free textbook is essentially the lectures, the <a href="https://www.cs.cornell.edu/courses/cs3110/2018sp/">notes</a> have recommended chapters for additional books like <i>Real World Ocaml</i>
+<li>The free textbook is essentially the lectures, the <a href="https://www.cs.cornell.edu/courses/cs3110/2018sp/">notes</a> have recommended chapters for additional books like <i>Real World Ocaml</i> and have exercises.
 </li>
 <li>Introduction to Coq, you can extract OCaml from Coq, F* or from <a href="http://www.cs.ru.nl/~gondelman/toolchain.pdf">Why3</a> 
 </li>
 <li>Previous semesters have <a href="https://www.cs.cornell.edu/courses/cs3110/2009fa/lecturenotes.asp">notes</a> on asymptotic complexity of OCaml programs and solving recurrences
 </li>
-<li>Assumes you have already done PAPL or <a href="http://greenteapress.com/thinkocaml/">this</a> free book <i>How to Think Like a (functional) Computer Scientist</i>, or another introductory course.
+<li>Assumes you have already done PAPL or another rigorous introductory CS course
 <ul class="org-ul">
 <li>See this <a href="https://www.youtube.com/watch?v=-J8YyfrSwTk">talk</a> Effective ML how to properly write interfaces, error handling
 </li>
@@ -459,8 +429,10 @@ Good advice on writing mathematics, introduces LaTeX. Cornell has a similar clas
 <li>Collection of excellent lecture notes used in CMU's 15-151/21-127 Concepts of Mathematics class 
 </li>
 <li>Curriculum based on findings in evidenced based teaching
+</li>
+<li>List of <a href="https://math.vanderbilt.edu/schectex/commerrs/">Common Errors in Undergrad Math</a> like undistributed cancellations, sign errors, confusion about notation etc.
 <ul class="org-ul">
-<li>Alternatively try the <a href="https://archive.org/details/B-001-002-135">book</a> <i>Concrete Mathematics</i> for exercises, as it has answers included for self-study. 
+<li>For an introduction to math from a programmer's perspective try <a href="https://pimbook.org/">pimbook</a> instead
 </li>
 </ul>
 </li>
@@ -482,8 +454,10 @@ polynomials into lists, sets into types, creating relations and proving their re
 <li><a href="https://cs.wheaton.edu/~tvandrun/dmfp/">(Book/Lectures) Discrete Mathematics and Functional Programming - Thomas VanDrunen</a>
 <ul class="org-ul">
 <li>Lectures exist on the author's homepage, this book is used for a one semester university course with additional elective chapters in Graph Theory, Complexity Theory, Automata, etc.
+<ul class="org-ul">
+<li>The <a href="https://archive.org/details/B-001-002-135">book</a> <i>Concrete Mathematics</i> is an alternative for exercises, as it has answers included for self-study. 
 </li>
-<li>List of <a href="https://math.vanderbilt.edu/schectex/commerrs/">Common Errors in Undergrad Math</a> like undistributed cancellations, sign errors, confusion about notation etc. If you've done the preliminary math <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">foundations</a> already you won't have any confusion.  
+</ul>
 </li>
 </ul>
 </li>
@@ -1051,6 +1025,11 @@ This <a href="https://triplebyte.com/">service</a> matches your skills to people
 There are numerous opportunities to apprentice as a <a href="https://www.nccgroup.trust/us/about-us/careers/current-vacancies/security-consultant/">security researcher</a> or get paid to prove business logic programs like 'smart contracts'. For web programming there exists free programming <a href="https://books.goalkicker.com/">notes</a> for software like NodeJS, which you can write software for in OCaml by compiling it into JS with <a href="https://bucklescript.github.io/">bucklescript</a> or <a href="https://ocsigen.org/js_of_ocaml/3.1.0/manual/overview">js<sub>of</sub><sub>ocaml</sub></a> or just use <a href="https://www.256kilobytes.com/content/show/4399/get-these-dependencies-off-my-lawn-5-tasks-you-didnt-know-could-be-done-with-pure-html-and-css">pure html</a>. 
 There are also bounties for writing features available on topcoder, gitcoin or bountysource or consulting outfits such as toptal or clevertech, which tend to use <a href="https://app.codility.com/programmers/">codility tests</a> for filtering candidates. Do your own research on the current state of these outfits, through glassdoor or other employee review sites.   
 A large collection of remote job listing and consulting platforms is <a href="https://docs.google.com/spreadsheets/d/1JfNAbUX_lN9K3MCNHO15GJtJ5qpk7H9Cl3xTBwv2FR8/htmlview">here</a>.
+</p>
+
+<p>
+If you enjoy research look up research programming positions at a university near you. You get hired to a grant funded team of grad students and post-doc researchers. Sometimes they are just hiring for people to build
+a proper <a href="http://www.cs.cmu.edu/~bam/uicourse/05863fall18/schedule.html">user interface</a> for the doctors, or you could be doing data visualizations, or engineering experimental software. Depending on the work you are doing, they may even write you a letter of recommendation meaning you can use this to apply to a grad school.    
 </p>
 </div>
 </div>
