@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Self-Learning, Modern Computer Science Curriculum</title>
@@ -17,6 +18,7 @@ body {
         padding-bottom: initial;
     }
 </style>
+</head>
 <body>
 <div id="content">
 <h1 class="title">A Self-Learning, Modern Computer Science Curriculum</h1>
@@ -27,6 +29,7 @@ body {
 <li><a href="#sec-1">1. Introduction</a>
 <ul>
 <li><a href="#sec-1-1">1.1. Studying Strategies</a></li>
+<li><a href="#sec-1-2">1.2. A Concrete Example</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2. Preliminaries</a>
@@ -104,15 +107,28 @@ body {
 <li><a href="#sec-19-1">19.1. Basic Proof Theory</a></li>
 <li><a href="#sec-19-2">19.2. Intro to Category Theory</a></li>
 <li><a href="#sec-19-3">19.3. Type Theory Foundations</a></li>
-<li><a href="#sec-19-4">19.4. Higher Dimensional Type Theory</a></li>
+<li><a href="#sec-19-4">19.4. Higher Dimensional Type Theory</a>
+<ul>
+<li><a href="#sec-19-4-1">19.4.1. Computational Higher Type Theory (CHiTT)</a></li>
+<li><a href="#sec-19-4-2">19.4.2. Homotopy Type Theory (HoTT)</a></li>
+</ul>
+</li>
 <li><a href="#sec-19-5">19.5. Further Research</a></li>
 </ul>
 </li>
 <li><a href="#sec-20">20. Graduate Research in Machine Learning/AI</a>
 <ul>
 <li><a href="#sec-20-1">20.1. Graduate Introduction to General AI</a></li>
-<li><a href="#sec-20-2">20.2. Math Background for ML</a></li>
-<li><a href="#sec-20-3">20.3. Introduction to ML</a></li>
+<li><a href="#sec-20-2">20.2. Math Background for ML</a>
+<ul>
+<li><a href="#sec-20-2-1">20.2.1. Statistics Theory</a></li>
+</ul>
+</li>
+<li><a href="#sec-20-3">20.3. Introduction to ML</a>
+<ul>
+<li><a href="#sec-20-3-1">20.3.1. Practical Machine Learning</a></li>
+</ul>
+</li>
 <li><a href="#sec-20-4">20.4. Advanced Introduction to ML</a></li>
 <li><a href="#sec-20-5">20.5. Convex Optimization</a></li>
 <li><a href="#sec-20-6">20.6. Deep Learning</a></li>
@@ -168,6 +184,26 @@ Eventually you will get stuck on a problem set that has errata you forgot to loo
 
 <p>
 If you ignore the copious amounts of marketing on his site, Cal Newport has some other interesting anecdotes on studying, such as how he was able to get the <a href="http://calnewport.com/blog/2008/11/25/case-study-how-i-got-the-highest-grade-in-my-discrete-math-class/">best</a> grade in his Discrete Mathematics class, and the rest of the site is full of advice on studying, how to schedule yourself and <a href="https://azeria-labs.com/the-importance-of-deep-work-the-30-hour-method-for-learning-a-new-skill/">deliberate</a> <a href="http://calnewport.com/blog/2010/01/06/the-grandmaster-in-the-corner-office-what-the-study-of-chess-experts-teaches-us-about-building-a-remarkable-life/">practice</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> A Concrete Example</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+As an example, here are some <a href="https://n0x400.1mb.site/">notes</a> I took while working through <a href="https://www-cs-faculty.stanford.edu/~knuth/gkp.html">Concrete Math</a>. This example is just a snippet of Chapter 1.1 notes as publishers would have anything longer taken down. 
+</p>
+
+<p>
+At the time I decided to write myself a chapter guide that explains everything that is going on to somebody else at my then feeble level of elementary math understanding.
+This is similar to the Feynman technique where you are re-explaining something in your own words to prove to yourself you know the material. It turned out to be an excellent idea, 
+as a result I ended up really understanding the text. I would manually expand deeply nested functions or summation notation to step through them at first as I couldn't just operate 
+on that level of abstraction in the beginning being able to consider a nested pile of functions being passed around to new ones with let statements without missing some critical detail.  
+</p>
+
+<p>
+The mechanics of the notes were done in emacs org-mode, using LaTeX inlined with dollar signs, then exporting to html to read locally with a browser. I used this <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">list</a> of LaTeX symbols. You don't have to use emacs, Jupyter Notebook or <a href="https://www.overleaf.com/">Overleaf</a> will work fine, or just pen and paper.
 </p>
 </div>
 </div>
@@ -256,8 +292,8 @@ The last 1/3 of the book is used for a class on programming languages, also with
 </blockquote>
 
 <p>
-See this <a href="https://www.youtube.com/user/njwildberger/playlists">playlist</a> of Math Foundations by UNSW Prof. Wildberger, specifically playlist <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">A</a>, and this lecture series on mathematics <a href="https://www.youtube.com/playlist?list=PL34B589BE3014EAEB">history</a>, which is a walk through of mathematics up to the present. For example, his <a href="https://www.youtube.com/watch?v=K4eAyn-oK4M">lecture</a> on the notation of Limits and epsilon, which you will see in numerous future courses. 
-A great set of short texts, that pair with these lectures and focus on problem solving are the I.M. Gelfand correspondence school texts:
+See this <a href="https://www.youtube.com/user/njwildberger/playlists">playlist</a> of Math Foundations by UNSW Prof. Wildberger, specifically playlist <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">A</a>, and this lecture series on mathematics <a href="https://www.youtube.com/playlist?list=PL34B589BE3014EAEB">history</a>, which is a walk through of mathematics up to the present. Look up anything you forgot or have weak background in. For example, his <a href="https://www.youtube.com/watch?v=K4eAyn-oK4M">lecture</a> on the notation of Limits and epsilon, which you will see in numerous future courses. 
+A great set of (optional) short texts, that pair with these lectures and focus on problem solving are the I.M. Gelfand correspondence school texts:
 </p>
 
 <ul class="org-ul">
@@ -631,23 +667,10 @@ How the computing, economic and sociological worlds are connected.
 <h3 id="sec-7-1"><span class="section-number-3">7.1</span> Computer Networks</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
-The 15-213 <i>course</i> covers an introduction to computer networks and socket programming. This book explains the principles underlying network architecture design.
+This series of recorded <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/curriculum.php">lectures</a> by Cornell professor Nate Foster on functional Network Programming, will cover the modern theory and practice and
+introduce you to an entire new world of thinking about networks by developing (or using) customized domain specific languages. No background outside of familarity with OCaml/SML-like syntax is needed though
+the 15-213 <a href="#sec-6-1">course</a> contains a basic introduction to computer networks if you want. 
 </p>
-
-<ul class="org-ul">
-<li><a href="https://book.systemsapproach.org/">(Book) Computer Networks: A Systems Approach - Larry Peterson and Bruce Davie</a>
-<ul class="org-ul">
-<li>Creative Commons License, you can build the book yourself from their github repository
-</li>
-<li>Additional <a href="http://www.cs.cmu.edu/~15744/syllabus.html">slides</a> and recommended papers to understand the current state of network protocols, methods to test for censorship, topology, etc.
-<ul class="org-ul">
-<li>A series of recorded <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/curriculum.php">lectures</a> by Cornell Assoc. professor Nate Foster on Network Programming, covering the theory and practice. 
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -685,7 +708,7 @@ Search libgen.io or sci-hub for additional <a href="https://cc-conference.github
 <h2 id="sec-9"><span class="section-number-2">9</span> Database Systems</h2>
 <div class="outline-text-2" id="text-9">
 <p>
-Interesting <a href="http://www.cs.cmu.edu/~./pavlo/blog/2015/09/the-next-50-years-of-databases.html">post</a> on the future of database systems by Andy Pavlo.
+Interesting <a href="http://www.cs.cmu.edu/~./pavlo/blog/2015/09/the-next-50-years-of-databases.html">post</a> on the future of database systems by Andy Pavlo.  
 </p>
 
 <ul class="org-ul">
@@ -1101,36 +1124,72 @@ Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> f
 <div id="outline-container-sec-19-4" class="outline-3">
 <h3 id="sec-19-4"><span class="section-number-3">19.4</span> Higher Dimensional Type Theory</h3>
 <div class="outline-text-3" id="text-19-4">
+</div><div id="outline-container-sec-19-4-1" class="outline-4">
+<h4 id="sec-19-4-1"><span class="section-number-4">19.4.1</span> Computational Higher Type Theory (CHiTT)</h4>
+<div class="outline-text-4" id="text-19-4-1">
 <p>
-Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional Programmer's Guide to Homotopy Type Theory</i> with intro to Cubical Type Theory
+The idea here is that a sufficiently expressive programming language can be the foundation for all of constructive mathematics, because it satisfies Gödel's incompleteness theorems that demonstrate the inherent limitations of every formal axiomatic system. 
+Here “constructive” means having computational meaning, rather than only enjoying axiomatic freedom. Types in this theory, from a computational perspective (ie: the semantics of a language, not it's syntax) are specifications of program behaviors which can be used to compare each other and determine 'equality' and other interesting properties.
+Judgements are not defined by axioms/rules, so obey the incompleteness theorems. 
+</p>
+
+<p>
+If you're interested in the foundations of mathematics or just present day research into creating a new language with tie-ins to abstract algebraic topology then this field is for you. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.cs.uoregon.edu/research/summerschool/summer18/topics.php">(Seminar) Higher Dimensional Type Theory</a>
+<ul class="org-ul">
+<li>5 recorded lectures from Robert Harper into the current state of the field
+</li>
+<li>Extensive <a href="http://www.cs.cmu.edu/~rwh/courses/chtt/">lecture notes</a> from 15-819 Highter Type Theory course
+<ul class="org-ul">
+<li>An experimental proof assistant for this theory: <a href="http://www.redprl.org/">RedPRL</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-19-4-2" class="outline-4">
+<h4 id="sec-19-4-2"><span class="section-number-4">19.4.2</span> Homotopy Type Theory (HoTT)</h4>
+<div class="outline-text-4" id="text-19-4-2">
+<p>
+Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional Programmer's Guide to Homotopy Type Theory</i> with intro to Cubical Type Theory, aka Cartesian Cubical Higher Type Theory. 
 </p>
 
 <ul class="org-ul">
 <li><a href="http://www.cs.cmu.edu/~rwh/courses/hott/">(Full Course) Homotopy Type Theory</a>
 <ul class="org-ul">
 <li>Self-contained grad seminar with recorded lectures
+</li>
+<li>This is today regarded as a 'misadventure in formalism' as researchers decided HoTT has 'no computational content'
 <ul class="org-ul">
-<li>Assigns readings from self-contained HoTT book <a href="https://homotopytypetheory.org/book/">https://homotopytypetheory.org/book/</a> 
-</li>
-<li>Try the homework, see some of the <a href="https://ncatlab.org/homotopytypetheory/show/open+problems">open problems</a> in HoTT research 
+<li>The lectures are still great for explaining the overall theory of higher dimensional types
 </li>
 </ul>
+</li>
+<li>Assigns readings from self-contained HoTT <a href="https://homotopytypetheory.org/book/">book</a>
 </li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+</div>
+
 
 <div id="outline-container-sec-19-5" class="outline-3">
 <h3 id="sec-19-5"><span class="section-number-3">19.5</span> Further Research</h3>
 <div class="outline-text-3" id="text-19-5">
 <ul class="org-ul">
-<li>Use the <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub proxy</a> to get access to journalslike <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming">Functional Programming</a> or search Google Scholar for topics that interest you and click "Cited by" 
-</li>
 <li>Follow the research on Robert Harper's <a href="http://www.cs.cmu.edu/~rwh/">CMU page</a> or see CMU's <a href="http://www.cs.cmu.edu/Groups/pop/courses.html">Principles of Programming Group</a> for more graduate course offerings 
 </li>
-<li>See the POPL 2018 <a href="https://existentialtype.wordpress.com/2018/01/15/popl-2018-tutorial/">tutorial</a> on Computational Higher Type Theory 
+<li>Watch the recorded <a href="https://www.cs.uoregon.edu/research/summerschool/archives.html">lectures</a> at the yearly Oregon Programming Languages Summer School (OPLSS)
 </li>
 </ul>
 </div>
