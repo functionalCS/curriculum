@@ -198,12 +198,13 @@ As an example, here are some <a href="https://n0x400.1mb.site/">notes</a> I took
 <p>
 At the time I decided to write myself a chapter guide that explains everything that is going on to somebody else at my then feeble level of elementary math understanding.
 This is similar to the Feynman technique where you are re-explaining something in your own words to prove to yourself you know the material. It turned out to be an excellent idea, 
-as a result I ended up really understanding the text. I would manually expand deeply nested functions or summation notation to step through them at first as I couldn't just operate 
-on that level of abstraction in the beginning being able to consider a nested pile of functions being passed around to new ones with let statements without missing some critical detail.  
+as a result I ended up really understanding the text. I would manually expand deeply nested functions or summation notation to step through them at first as I couldn't operate 
+on that level of abstraction in the beginning without missing some critical details. The advice I'm trying to get across is that I taught myself the background as I read the text, either looking through precalc textbooks or math stackexchange, 
+which at first is a very slow process but by the end of the text I filled in huge gaps in my elementary math education and learned the book material at the same time. This method also will build your <a href="https://ahrefs.com/blog/google-advanced-search-operators/">research</a> skills. 
 </p>
 
 <p>
-The mechanics of the notes were done in emacs org-mode, using LaTeX inlined with dollar signs, then exporting to html to read locally with a browser. I used this <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">list</a> of LaTeX symbols. You don't have to use emacs, Jupyter Notebook or <a href="https://www.overleaf.com/">Overleaf</a> will work fine, or just pen and paper.
+The mechanics of the notes were done in emacs org-mode, using LaTeX inlined between dollar signs, then exporting to html to read locally with a browser. I used this <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">list</a> of LaTeX symbols. You don't have to use emacs, Jupyter Notebook or <a href="https://www.overleaf.com/">Overleaf</a> will work fine, or just pen and paper.
 </p>
 </div>
 </div>
@@ -1128,11 +1129,11 @@ Read these <a href="http://www.cs.cmu.edu/~15751/2016-lecture1.pdf">slides</a> f
 <p>
 The idea here is that a sufficiently expressive programming language can be the foundation for all of constructive mathematics, because it satisfies Gödel's incompleteness theorems that demonstrate the inherent limitations of every formal axiomatic system. 
 Here “constructive” means having computational meaning, rather than only enjoying axiomatic freedom. Types in this theory, from a computational perspective (ie: the semantics of a language, not it's syntax) are specifications of program behaviors which can be used to compare each other and determine 'equality' and other interesting properties.
-Judgements are not defined by axioms/rules, so obey the incompleteness theorems. 
+Judgements are not defined by axioms/rules, so obey the incompleteness theorems. You don't need any background in formal type theory.
 </p>
 
 <p>
-If you're interested in the foundations of mathematics or just present day research into creating a new language with tie-ins to algebraic topology then this field is for you. 
+If you're interested in the foundations of mathematics without set theory, or research into creating a new language with tie-ins to algebraic topology then this field is for you. 
 </p>
 
 <ul class="org-ul">
@@ -1157,7 +1158,9 @@ If you're interested in the foundations of mathematics or just present day resea
 <h4 id="sec-19-4-2"><span class="section-number-4">19.4.2</span> Homotopy Type Theory (HoTT)</h4>
 <div class="outline-text-4" id="text-19-4-2">
 <p>
-Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional Programmer's Guide to Homotopy Type Theory</i> with intro to Cubical Type Theory, aka Cartesian Cubical Computational Higher Type Theory.
+Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional Programmer's Guide to Homotopy Type Theory</i> with intro to Cubical Type Theory, aka (Cartesian) Cubical Computational Higher Type Theory.
+This is today regarded as a 'misadventure in formalism' by R.Harper, due to HoTT being insufficient for their computational needs, but everything you learn in this seminar will be necessary to understand 
+computational higher type theory papers like the magic of paths extending other programs. 
 </p>
 
 <ul class="org-ul">
@@ -1165,13 +1168,11 @@ Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional 
 <ul class="org-ul">
 <li>Self-contained grad seminar with recorded lectures
 </li>
-<li>This is today regarded as a 'misadventure in formalism' by R.Harper, researchers switched from HoTT to computational type theory (CHiTT)
+<li>The self-contained HoTT <a href="https://homotopytypetheory.org/book/">book</a> contains all the background material needed 
 <ul class="org-ul">
-<li>The lectures are still great for explaining the overall theory of higher dimensional types
+<li>Thierry Coquand also has <a href="http://www.cse.chalmers.se/~coquand/">seminars</a> in constructive algebra, and univalence 
 </li>
 </ul>
-</li>
-<li>Assigns readings from self-contained HoTT <a href="https://homotopytypetheory.org/book/">book</a>
 </li>
 </ul>
 </li>
@@ -1187,7 +1188,7 @@ Start with this <a href="https://youtu.be/caSOTjr1z18">talk</a> <i>A Functional 
 <ul class="org-ul">
 <li>Follow the research on Robert Harper's <a href="http://www.cs.cmu.edu/~rwh/">CMU page</a> or see CMU's <a href="http://www.cs.cmu.edu/Groups/pop/courses.html">Principles of Programming Group</a> for more graduate course offerings 
 </li>
-<li>Watch the recorded <a href="https://www.cs.uoregon.edu/research/summerschool/archives.html">lectures</a> at the yearly Oregon Programming Languages Summer School (OPLSS)
+<li>Watch the recorded <a href="https://www.cs.uoregon.edu/research/summerschool/archives.html">lectures</a> at the yearly Oregon Programming Languages Summer School, search through Google Scholar for higher type theory research.
 </li>
 </ul>
 </div>
