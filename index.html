@@ -29,7 +29,7 @@ body {
 <li><a href="#sec-1">1. Introduction</a>
 <ul>
 <li><a href="#sec-1-1">1.1. Studying Strategies</a></li>
-<li><a href="#sec-1-2">1.2. A Concrete Example</a></li>
+<li><a href="#sec-1-2">1.2. How I Learn</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2. Preliminaries</a>
@@ -156,7 +156,7 @@ body {
 </p>
 </blockquote>
 <p>
-This is a collection of modern resources on various undergrad level computer science topics, for someone with an interest in theory. Use <a href="https://en.wikipedia.org/wiki/Library_Genesis">LibGen</a> if you can't buy these books. You don't have to do everything here, just the topics of interest to you.
+This is a collection of modern resources on various undergrad level computer science topics, for someone with an interest in theory. Use <a href="https://www.worldcat.org/">WorldCat</a> or <a href="https://en.wikipedia.org/wiki/Library_Genesis">LibGen</a> if you can't buy these books. You don't have to do everything here, just the topics of interest to you.
 If for any reason you want a condensed version, watch the <i>Great Theoretical Ideas in Computer Science</i> lecture series to see what interests you in the field. Almost all the material in each resource is self contained so will cover necessary background which if you don't have see the <i>preliminaries</i>. 
 </p>
 </div>
@@ -177,8 +177,8 @@ On Isaac Newton's iteration method to self-learn geometry:
 
 <p>
 If you do a resource also do it's assignments and any older exams that are available. If you don't you'll probably be fooled into thinking you understand the material then will get lost in future courses.  
-Numerous  anecdotes exist on studying strategies,  like the Feynman technique and is explained <a href="http://calnewport.com/blog/2012/10/26/mastering-linear-algebra-in-10-days-astounding-experiments-in-ultra-learning/">here</a> "If you can’t, out loud or on paper, explain the idea without confusion or contradiction, stop and figure it out right there".
-Eventually you will get stuck on a problem set that has errata you forgot to look up. After working at this for an hour or so and being confused what's going on you'll remember to always look up the errata for the assigned reading. 
+Numerous anecdotes exist on studying strategies, like the Feynman method and is explained <a href="http://calnewport.com/blog/2012/10/26/mastering-linear-algebra-in-10-days-astounding-experiments-in-ultra-learning/">here</a> "If you can’t, out loud or on paper, explain the idea without confusion or contradiction, stop and figure it out right there".
+Eventually you will get stuck on a problem set that has errata you forgot to look up. After working at this for an hour or so and being confused what's going on you'll remember to always look up the errata for whatever book you're reading. 
 </p>
 
 
@@ -189,26 +189,26 @@ If you ignore the copious amounts of marketing on his site, Cal Newport has some
 </div>
 
 <div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2"><span class="section-number-3">1.2</span> A Concrete Example</h3>
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> How I Learn</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-As an example, here are some <a href="https://n0x400.1mb.site/">notes</a> I took while working through <a href="https://www-cs-faculty.stanford.edu/~knuth/gkp.html">Concrete Math</a>. This example is just a snippet of Chapter 1.1 notes as publishers would have anything longer taken down. 
+The method I personally find has worked best for me, is to open up an editor or paper notebook, and note anything that I don't fully understand in a book chapter or lecture. I then do my own research into secondary sources, and write my own examples or try
+some of the exercises before continuing with the material to make sure I understand everything up to that point. Many of these books and lectures assumed background I needed to backfill as I progressed through the material, for example if you are taking the 15-213 <a href="#sec-6-1">course</a>, you will come across
+two's complement and sign magnitude encoding expressed as a 'bit vector' sum. If you stop and write your own examples manually stepping through the summation notation you'll understand it. 
+If base16 is hard to understand at first, look at secondary material, and write your own examples in different bases like base2, or base10, then keep writing your own examples in base16 until you fully understand before proceeding. At first this is slow going but will pay dividends in future courses when you can skip entire review chapters because you took the time
+to learn and won't need a review. Note, some proofs and other upper level undergrad math may be too difficult at your current level, what I did was highlight these as a todo then with each new book or course, try and go back to those notes to see if it's now possible to fill in the blanks. For example the
+proof of the Cook-Levin theorem in 15-251. I sort of understood the general idea but flagged it as a todo. Months later I revisited my notes and found I had progressed a little in my understanding, filling in some details I missed the first time around.    
 </p>
 
 <p>
-At the time I decided to write myself a chapter guide that explains everything that is going on to somebody else at my then feeble level of elementary math understanding.
-This is similar to the Feynman technique where you are re-explaining something in your own words to prove to yourself you know the material. It turned out to be an excellent idea, 
-as a result I ended up really understanding the text. I would manually expand deeply nested functions or summation notation to step through them at first as I couldn't operate 
-on that level of abstraction in the beginning without missing some critical details. The advice I'm trying to get across is that I taught myself the background as I read the text, either looking through precalc textbooks or math stackexchange, 
-which at first is a very slow process but by the end of the text I filled in huge gaps in my elementary math education and learned the book material at the same time. This method also will build your <a href="https://ahrefs.com/blog/google-advanced-search-operators/">research</a> skills. 
+Finally I will conclude the lecture or chapter notes by explaining what was presented in the most simple yet still precise way possible to make sure I did actually understand what I just finished. 
+Sometimes I caught myself using technical terms which I couldn't precisely define, which would have made me look like I was bluffing if somebody called me on it, such as in a job or grad school interview, or worse
+sabotaged my own future education if I had progressed on a foundation of misunderstanding so I tried always to write a summary similar to the <a href="#sec-1-1">Feynman method</a> of unraveling jargon.     
 </p>
+</div>
+</div>
+</div>
 
-<p>
-The mechanics of the notes were done in emacs org-mode, using LaTeX inlined between dollar signs, then exporting to html to read locally with a browser. I used this <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">list</a> of LaTeX symbols. You don't have to use emacs, Jupyter Notebook or <a href="https://www.overleaf.com/">Overleaf</a> will work fine, or just pen and paper.
-</p>
-</div>
-</div>
-</div>
 
 <div id="outline-container-sec-2" class="outline-2">
 <h2 id="sec-2"><span class="section-number-2">2</span> Preliminaries</h2>
@@ -293,30 +293,44 @@ The last 1/3 of the book is used for a class on programming languages, also with
 </blockquote>
 
 <p>
-See this <a href="https://www.youtube.com/user/njwildberger/playlists">playlist</a> of Math Foundations by UNSW Prof. Wildberger, specifically playlist <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">A</a>, and this lecture series on mathematics <a href="https://www.youtube.com/playlist?list=PL34B589BE3014EAEB">history</a>, which is a walk through of mathematics up to the present. Look up anything you forgot or have weak background in. For example, his <a href="https://www.youtube.com/watch?v=K4eAyn-oK4M">lecture</a> on the notation of Limits and epsilon, which you will see in numerous future courses. 
-A great set of (optional) short texts, that pair with these lectures and focus on problem solving are the I.M. Gelfand correspondence school texts:
+This entire section is going to be replaced by it's own site soon, where I work with the reader to build math skills from the basics to a level of mathematical maturity needed to understand
+some of the undergrad texts in this guide. This means a knowledge of some basic linear algebra, ability to reason about proofs, and basic analysis/calculus.
 </p>
 
 <ul class="org-ul">
-<li>Algebra (<a href="https://www.springer.com/gp/book/9780817636777">Birkhäuser</a>)
+<li>It will roughly consist of the following:
+<ul class="org-ul">
+<li>Working through this entire playlist <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">Math Foundations A</a>, (if you need an appeal to authority, he has a PhD from Yale) and some select lectures the sequel playlist <a href="https://www.youtube.com/playlist?list=PLIljB45xT85DpiADQOPth56AVC48SrPLc">Math Foundations B</a> for example, his <a href="https://www.youtube.com/watch?v=K4eAyn-oK4M">lecture</a> on the notation of Limits and epsilon, which you will see in numerous future courses. 
 </li>
-<li>The Method of Coordinates (<a href="https://store.doverpublications.com/0486425657.html">Dover</a>)
+<li>Working some chapters from the AoPS <a href="https://artofproblemsolving.com/store/list/aops-curriculum">curriculum</a> such as <i>Introduction to Number Theory</i> and <i>Introduction to Algebra</i> which you can find at any local <a href="https://www.worldcat.org/">library</a> or if you must through Library Genesis. 
+<ul class="org-ul">
+<li>Learning math by actually doing it
 </li>
-<li>Functions and Graphs (<a href="https://store.doverpublications.com/0486425649.html">Dover</a>)
+</ul>
 </li>
-<li>Trigonometry (<a href="https://www.springer.com/gp/book/9780817639143">Birkhäuser</a>)
+<li>Working through some proofs in the <a href="#sec-5-1">Infinite Descent</a> book, and surveying some other <a href="https://en.wikipedia.org/wiki/Proofs_from_THE_BOOK">books</a> on proofs.  
 </li>
-<li>Sequences, Combinations, Limits (<a href="https://store.doverpublications.com/0486425665.html">Dover</a>)
+<li>Finally completing the <a href="http://www.math.iitb.ac.in/~srg/acicara2/">series</a> <i>A Course in Calculus and Real Analysis</i> which assumes no Trig background, highschool algebra abilities and the ability to understand basic proofs. 
+<ul class="org-ul">
+<li>It's a very thorough and often challenging text but at the same time completely intuitive because it uses classical analysis.
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 <p>
-There is also a trigonometry <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/">boot camp</a> from Brown. For additional practice there is <a href="https://en.wikipedia.org/wiki/Po-Shen_Loh">Po-Shen Loh's</a> site <a href="https://www.expii.com/">Expii</a>, and Cambridge also offers advice for incoming undergrads on readable <a href="http://www.maths.cam.ac.uk/documents/reading-list.pdf/">texts</a>. The only thing to know about math is it's a learn by doing subject, 
-and you could also just use any typical first year Calculus undergrad text to build your elementary math background by going through the exercises and directly looking up whatever you've forgot on Wikipedia or in Sheldon Axler's <i>Precalculus</i>. MIT's <a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/">18.01</a> is probably the best choice, you get full lectures, recitations and practice sets.
+The foundations lectures are not like any other math curriculum you've seen, they start with the very basics of arithmetic carefully specifying everything, and you prove the laws of arithmetic, the laws of division, fractions, and some alternative notation is introduced to more clearly specify areas in elementary math which can become confusing such as
+what he describes as the subtle shift in the meaning of variables in algebra, which changes once you get into more sophisticated courses but normally this is not covered in other resources. 
+The geometry is all rational, and doesn't cover sin/cos Trigonometry which will be built from scratch in the Calculus text including a precise definition of angles. Rational geometry is intuitive and compliments trig when you learn it later.  
+The foundations playlist A ends with an introduction to algebraic Calculus, where you get a full understanding of what that subject is about without needing any pictures to understand it. Wildberger has dissenting views regarding the legitimacy of the Real numbers and their constructions. 
+Being exposed to these views will actually help you understand these complex objects by walking through some of the theory. I'm not a mathematician and have no position on his position 
+but I can say him pointing out the lack of specification in many definitions gave me a cautious learning style where I ended up digging into future definitions I came across with my own examples to help remove ambiguity.      
 </p>
 
 <p>
-You can also learn calculus from the excellent book <a href="https://pimbook.org/">A Programmer's Introduction to Mathematics</a>, where the author uses big-O notation as an example to simplify calculus, a method Knuth once <a href="https://micromath.wordpress.com/2008/04/14/donald-knuth-calculus-via-o-notation/">advocated</a>.
+Alternatively if your elementary skills are already strong, you can try working through the excellent book <a href="https://pimbook.org/">A Programmer's Introduction to Mathematics</a>. 
 </p>
 </div>
 </div>
@@ -766,13 +780,13 @@ can do roll backs to previous successful builds. A recent GUixSD feature <a href
 <ul class="org-ul">
 <li>Recorded lectures from the first edition of SICP <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/">here</a>
 </li>
-<li>Read the excellent <a href="https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-5.html#%25_chap_Temp_2">forward</a> from SICP on what programming is 
+<li>Read the excellent <a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html">forward</a> from SICP on what programming is 
 <ul class="org-ul">
-<li>There is a <a href="http://web.mit.edu/~axch/www/test_manager.html">unit test library</a> for SICP as well as an online <a href="http://icampustutor.csail.mit.edu/6.001-public/">tutorial</a>
+<li>There is a <a href="https://github.com/axch/test-manager">unit test</a> framework for SICP
 </li>
 <li>SICP in <a href="http://www.neilvandyke.org/sicp-texi/">TeXinfo</a> so you can read it in emacs 
 </li>
-<li>Optional read: <a href="http://web.mit.edu/~axch/www/art.pdf">The Art of the Propagator</a> for further adventures in symbolic programming
+<li>Optional read: <a href="https://dspace.mit.edu/handle/1721.1/44215">The Art of the Propagator</a> for further adventures in symbolic programming
 </li>
 <li>If you like Lisp, see Norvig's old AI <a href="https://github.com/norvig/paip-lisp">book</a> for a really great programming craft text
 </li>
@@ -1290,7 +1304,7 @@ This course compliments 10-601. Only prereq you may have not already done is Mul
 <ul class="org-ul">
 <li>YouTube <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">lectures</a>, additional reading <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/page18/index.html">recommendations</a> and videos for each topic
 </li>
-<li>Kaggle has numerous <a href="https://www.kaggle.com/learn/machine-learning">tutorials</a> and competitions available 
+<li>Kaggle has numerous <a href="https://www.kaggle.com/learn/intro-to-machine-learning">tutorials</a> and competitions available 
 </li>
 </ul>
 </li>
@@ -1315,8 +1329,6 @@ This course compliments 10-601. Only prereq you may have not already done is Mul
 <li>Linear Algebra review crash course w/recorded lectures <a href="http://www.cs.cmu.edu/~zkolter/course/linalg/index.html">here</a> relevant to optimization/ML
 </li>
 <li>Real Analysis review <a href="https://www.youtube.com/channel/UC7gOYDYEgXG1yIH_rc2LgOw/playlists">here</a>
-</li>
-<li>Probability lecture <a href="http://www.stat.cmu.edu/~siva/700/main.html">notes</a>
 </li>
 </ul>
 </li>
@@ -1500,7 +1512,7 @@ This course covers post-quantum crypto, elliptic curve crypto, and is taught by 
 </li>
 <li>Try the <a href="https://cryptopals.com/">Cryptopals</a> challenges 
 </li>
-<li>Read some cryptocurrency papers, such as Stellar's Consensus algorithm (soon to be used by mobilecoin.com), <a href="https://medium.com/@homakov/introducing-failsafe-network-ea47ab476fe6">Fail-Safe Network</a> or the <a href="https://github.com/zcash/zips/blob/master/protocol/protocol.pdf">protocol specification</a> for Zcash.
+<li>Read some cryptocurrency papers, such as Stellar's Consensus algorithm (soon to be used by mobilecoin.com), <a href="https://github.com/fairlayer/wiki">Fairlayer</a> or the <a href="https://github.com/zcash/zips/blob/master/protocol/protocol.pdf">protocol specification</a> for Zcash.
 </li>
 </ul>
 </div>
