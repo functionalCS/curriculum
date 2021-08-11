@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-08-10 Tue 21:17 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computational Type Theory</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  body {
+  max-width: 40rem;
+  padding: 1rem;
+  margin: auto;
+  }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2} </style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">Computational Type Theory</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#Intro">Intro</a>
+<ul>
+<li><a href="#Voevodsky">Voevodsky</a></li>
+<li><a href="#Per%20Martin-Lof">Per Martin-Lof</a></li>
+<li><a href="#Robert%20Harper">Robert Harper</a></li>
+</ul>
+</li>
+<li><a href="#Draft%20Plan">Draft Plan</a></li>
+<li><a href="#TODO">TODO</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-Intro" class="outline-2">
+<h2 id="Intro">Intro</h2>
+<div class="outline-text-2" id="text-Intro">
+<blockquote>
+<p>
+"A sufficiently expressive programming language is the foundations for all of mathematics" - <a href="https://youtu.be/LE0SSLizYUI">Robert Harper OPLSS 2018</a>
+</p>
+</blockquote>
+
+<p>
+The goal is to understand the recent developments in computational type theory which came from <a href="https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f">Per Marin-Lof</a>'s intuitionistic type theory, and <a href="https://en.wikipedia.org/wiki/Vladimir_Voevodsky">Vladimir Voevodsky</a>'s univalent foundations. <a href="https://www.ias.edu/ideas/2014/voevodsky-origins">Voedvodsky</a>'s plan was to create a new foundation for 'all of mathematics', create new proof assistants so mathematicians without pedigree can contribute to global mathematics research since their proofs can easily be verified, that AI can extend a model (itself) and generate it's own proofs for that model, and that math will in the future be done entirely in a programming language because the theory of programming languages he claims is the same thing as mathematical logic, they express the same ideas in a different language, so why not unify them.
+</p>
+</div>
+
+<div id="outline-container-Voevodsky" class="outline-3">
+<h3 id="Voevodsky">Voevodsky</h3>
+<div class="outline-text-3" id="text-Voevodsky">
+<p>
+You should google and read everything you can about Field's medalist Voevodsky and his work at the Institute of Advanced Studies at Princeton. He has many talks on YouTube as well well worth viewing, too many to list here but we'll watch some later in the workshop. 
+</p>
+
+<p>
+Here is the quick rundown: Voevodsky found modern math was just too complicated for anybody including his peers at the IAS to trust outsider research because there were just too many problems found in old proofs including problems found in his own proofs. Unless you had some prestigious university pedigree nobody would be able to trust your proofs, so nobody even looks at them. In other words modern math is completely broken as a field and the best way to fix this he thought, was computer assisted proofs that way if some non-prestigious pedigree mathematician uploaded a paper it would come with a proof as a program you could run and verify it first so you knew you weren't wasting your time.
+</p>
+
+<p>
+Our existing proof assistants then were trash, and unable to be verified by humans printing hundreds of pages of first-order logic so long story short, an enormous amount of mathematicians and type theory specialists were assembled to produce Homotopy Type Theory (see the HoTT <a href="https://homotopytypetheory.org/book/">book</a>). This proved to be a dead end (not entirely, as we'll see later) and termed a 'misadventure in formalisms' by Robert Harper who deemed it insufficiently computational, and then these ideas became Computational Type Theory which is what we are taking here.
+</p>
+
+<p>
+There is a very good interview with Voevodsky <a href="https://johncarlosbaez.wordpress.com/2017/10/06/vladimir-voevodsky-1966-2017/">here</a>:
+</p>
+
+<blockquote>
+<p>
+When I first started to explore the possibility, computer proof verification was almost a forbidden subject among mathematicians. A conversation about the need for computer proof assistants would invariably drift to Gödel’s incompleteness theorem (which has nothing to do with the actual problem) or to one or two cases of verification of already existing proofs, which were used only to demonstrate how impractical the whole idea was.
+</p>
+</blockquote>
+
+<p>
+Voevodsky spent a year wandering around hallucinating (he died of a brain aneurysm) and recorded this experience before he claims he eliminated the hallucinations by focusing on work and returning to IAS where he invented the univalent foundations. There are interesting interviews you have to google translate <a href="https://baaltii1.livejournal.com/198675.html">here</a> and <a href="http://baaltii1.livejournal.com/200269.html">here</a> it's refreshing to see an expert in one field with the highest honors you can receive (Field's medal) be able to talk freely about other subjects in the sciences or talk about totally crazy things they themselves have put in time to understand. 
+</p>
+
+<p>
+Regardless what you think of Voevodsky his conjecture that modern math is in 'a crisis' is probably true, if you come from nowhere university and write up a proof of some obscure abstract lattice nobody else is going to bother to verify it or even read it. Voevodsky tried to fix this and his efforts continue long after his death.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Per%20Martin-Lof" class="outline-3">
+<h3 id="Per%20Martin-Lof">Per Martin-Lof</h3>
+<div class="outline-text-3" id="text-Per%20Martin-Lof">
+<p>
+A Swedish logician who is the best writer you'll ever read, and one of the most polished and amazing lecturers you'll ever hear he takes very advanced subjects and breaks them down that anybody at any level can understand. We will read all of his papers <a href="https://github.com/michaelt/martin-lof">here</a> which Robert Harper recommends if you want to understand constructive type theory, and hear some of his talks about logic/judgements.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Robert%20Harper" class="outline-3">
+<h3 id="Robert%20Harper">Robert Harper</h3>
+<div class="outline-text-3" id="text-Robert%20Harper">
+<p>
+Most of our material will consist of his lectures and draft book on Computational Type Theory, his Standard ML book, and his book <a href="http://www.cs.cmu.edu/~rwh/pfpl/">PFPL</a>. He also has a Homotopy type theory recorded lecture seminar we may do time allowing because it's great for explaining higher dimensional types.
+</p>
+
+<p>
+Robert Harper purposely makes his lectures provocative in order to elicit a response in the reviewer to investigate themselves what he's talking about it which is always a good strategy, so you will be interested in his lectures. He will hand out very blunt and honest answers, again this will be very refreshing as a viewer/learner/casual to witness.
+</p>
+
+<p>
+His bluntness has rubbed off on his PhD students, so we will also take courses and papers from <a href="https://dlicata.wescreates.wesleyan.edu/">Dan Licata</a>, <a href="https://www.cs.cmu.edu/~cangiuli/">Carlo Angiuli</a> and <a href="https://www.jonmsterling.com/">Jon Sterling</a> who frequently causes outrage on HN and is also not scared to write <a href="https://news.ycombinator.com/item?id=9051067">opinions</a>. I am primarily interested in opinionated researchers even if I totally disagree politically just to break out of the coma that is modern orthodox academia.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Draft%20Plan" class="outline-2">
+<h2 id="Draft%20Plan">Draft Plan</h2>
+<div class="outline-text-2" id="text-Draft%20Plan">
+<ul class="org-ul">
+<li>Dan Licata's COMP212 <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s21/">course</a> at Wesleyan</li>
+<li>Robert Harper's PFPL book</li>
+<li><a href="https://symbolaris.com/course/constlog.html">15-317 Constructive Logic</a> and proof theory (the assignments are all in SML)</li>
+<li>Category Theory lectures by Awodey and others (a huge subject we can only begin to get into like Categorial Logic)</li>
+<li>Constructive Type Theory draft book by Robert Harper and lectures/course</li>
+<li>Some practice proving in Agda, using Prof Ragde's ASCII screencast as he goes through some of <a href="https://plfa.github.io/">this</a> book</li>
+<li>Some of the HoTT lectures</li>
+<li>Playing around with the new proof assistant software for cubical computational higher type theory
+<ul class="org-ul">
+<li>Most of this all taken concurrently</li>
+</ul></li>
+</ul>
+
+<p>
+Essentially we are learning the 'Computational Trinitarianism' idea we will watch in one of Harper's lectures of concepts working in PL theory, Category theory and proof theory. 
+</p>
+
+<p>
+I can only do this a few hours a week until I'm done other workshops, but this is my primary research interest because there's other modeling you can do with computational type theory besides math foundations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-TODO" class="outline-2">
+<h2 id="TODO">TODO</h2>
+</div>
+</div>
+</body>
+</html>
