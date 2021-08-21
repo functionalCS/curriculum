@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-08-10 Tue 22:23 -->
+<!-- 2021-08-21 Sat 14:38 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cryptanalysis</title>
+<title>Post-Quantum Crypto and Cryptanalysis</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -223,12 +223,17 @@
 <body>
 <div id="content">
 <header>
-<h1 class="title">Cryptanalysis</h1>
+<h1 class="title">Post-Quantum Crypto and Cryptanalysis</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#Intro">Intro</a></li>
+<li><a href="#Intro">Intro</a>
+<ul>
+<li><a href="#What%20is%20%27Post-quantum%20crypto%27">What is 'Post-quantum crypto'</a></li>
+<li><a href="#Req%20background">Req background</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
@@ -237,16 +242,70 @@
 <h2 id="Intro">Intro</h2>
 <div class="outline-text-2" id="text-Intro">
 <p>
-I'm going to do the spring 2021 MasterMath Cryptology course from Eindhoven University of Technology (TU/e). <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto21/">Part I</a> is a self-contained, post-quantum cryptography course. <a href="https://homepages.cwi.nl/~stevens/mastermath/2021/">Part II</a> is cryptanalysis and all the lectures are open on YouTube, and the assignments are open to us. Tanja Lange the premiere researcher in these topics and Daniel Bernstein designed these courses as they are both department/research heads at TU/e now, djb is also on <a href="https://casa.rub.de/en/about/team">Team CASA</a> some German think tank for cyber security in the age of large-scale adversaries.
+Let's do the spring 2021 MasterMath Cryptology course from Eindhoven University of Technology (TU/e). <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto21/">Part I</a> is a self-contained, post-quantum cryptography course. <a href="https://homepages.cwi.nl/~stevens/mastermath/2021/">Part II</a> is cryptanalysis and all the lectures are open on YouTube, and the assignments are open to us. Tanja Lange the premiere researcher in these topics and Daniel Bernstein are both department/research heads at TU/e now, djb is also on <a href="https://casa.rub.de/en/about/team">Team CASA</a> some German think tank for cyber security in the age of large-scale adversaries.
 </p>
 
 <p>
-I'll also work through the cryptopals challenges which are similar to part II of the MasterMath Cryptology course assignments, and require learning abstract algebra for the final set of challenges. Want to learn some abstract algebra and cryptanalysis for fun and profit? 
+I'll also work through the <a href="https://cryptopals.com/">Cryptopals</a> challenges which are similar to part II of the MasterMath cryptanalysis course assignments, and will eventually require learning some abstract algebra and graphs for fun and profit.
+</p>
+</div>
+
+
+<div id="outline-container-What%20is%20%27Post-quantum%20crypto%27" class="outline-3">
+<h3 id="What%20is%20%27Post-quantum%20crypto%27">What is 'Post-quantum crypto'</h3>
+<div class="outline-text-3" id="text-What%20is%20%27Post-quantum%20crypto%27">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=dEpk4ZxceeY">Motivation and Intro</a> - Prof Tanja Lange</li>
+</ul>
+
+<p>
+It should be noted they already have quantum virtual machines to design and simulate running quantum algorithms, and even <a href="https://www.ibm.com/quantum-computing/">quantum cloud</a> services where IBM has 50 qubits available to the general public to run algorithms, Google announced 53 qubites and they're all promising 1000 qubits by 2023 while it's generally agreed you only need 300 qubits for 'quantum <a href="https://spectrum.ieee.org/qubit-supremacy">supremacy</a>' which means you can perform more calculations in an instant then there are atoms in the visible universe.
 </p>
 
 <p>
-TODO, this can only be updated on the weekends but I'll see what happens, the topic is very accessible despite what you've read elsewhere. TODO 
+Is any of these qubit claims true or just marketing? Who knows, but this motivation lecture explains that we should be ready anyway and start using post-quantum crypto now as all our countries are storing historical data in order to break it years later for various purposes. She actually shows the NSA Utah data station that vacuums up and holds the world's data in football field sized buildings and notes the problems with existing software update signatures because they're never going to tell the public when they've achieved 'quantum supremacy' and have the ability to forge software update keys.
 </p>
+
+<p>
+We are studying:
+</p>
+<ul class="org-ul">
+<li>signature replacements using lattice, isogeny graphs and new hash based schemes
+<ul class="org-ul">
+<li>all existing public key crypto is broken in a PQ time line so key negotiations and signatures which is essential to protect integrity and authentication, and to set up symmetric key communications channels so they are defacto 'broken' as well if you can produce forged software to collect keys, impersonate anybody you want or trivially recover the shared key exchanged during ECDH negotiation</li>
+</ul></li>
+<li>how to break these things or reduce their guarantees with generic attack methods</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Req%20background" class="outline-3">
+<h3 id="Req%20background">Req background</h3>
+<div class="outline-text-3" id="text-Req%20background">
+<p>
+On the course <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto21/">page</a> there's some prep videos if we don't have prior knowledge in cryptography:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=MyZLazQEkSk">Basic concepts and intro</a> - Prof Tanja Lange</li>
+</ul>
+
+<p>
+'Cryptology' is defined as cryptography and cryptanalysis.  
+</p>
+
+<p>
+Qubes OS is briefly mentioned, the gist of it is <a href="https://www.qubes-os.org/intro/">here</a> basically you run a heavily modified Xen Hypervisor to launch every app in their own private VM, the idea is to keep everything compartmentalized so if one 'app vm' is compromised it won't leak all your keys and whatever else is in /home. DJ Bernstein runs a modified version of <a href="https://groups.google.com/g/qubes-users/c/_VCVM9AdhEM/m/vE62h6-CBAAJ">Qubes OS</a> and sometimes is a contributer if you go through their mailing lists, he rewrote their AdminVM thing which controls all the VMs you launch into a tiny terminal program that consumes 70% less memory. Tails OS is developed by anonymous people in France and the original idea was a privacy ghost OS, you could boot from a live CD or USB and run everything in memory, then yank it out and supposedly leave no evidence behind however it grew in size so much not sure what it's supposed to be now, memory erasing after you shut it down is not guaranteed last time I checked, I'm sure we'll learn in this course about crypto pitfalls on modern hardware.
+</p>
+
+<p>
+One thing this course will teach you is how to make a unique protocol like what Max Vision and other hackers used to do to hide sketchy servers on public networks. You can alter the rounds of ssh and change other protocols where the only way to communicate with them is speaking that protocol otherwise nothing will even attempt to negotiate a connection, it's invisible and can even be camoflauged as other kinds of traffic which lazy hosting staff never did analysis on back in the day when he broke into their networks and placed his crime empire there.
+</p>
+
+<p>
+These review lectures are from <a href="https://www.hyperelliptic.org/tanja/teaching/CS20/">this</a> bachelor's course.   
+</p>
+</div>
 </div>
 </div>
 </div>
