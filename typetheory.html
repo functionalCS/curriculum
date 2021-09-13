@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-08-11 Wed 22:29 -->
+<!-- 2021-09-13 Mon 00:45 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Computational Type Theory</title>
@@ -235,8 +235,11 @@
 <li><a href="#Robert%20Harper">Robert Harper</a></li>
 </ul>
 </li>
-<li><a href="#Draft%20Plan">Draft Plan</a></li>
-<li><a href="#Let%27s%20begin">Let's begin</a></li>
+<li><a href="#Let%27s%20begin">Let's begin</a>
+<ul>
+<li><a href="#Intro%20to%20Type%20Theory">Intro to Type Theory</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
@@ -259,15 +262,15 @@ The goal is to understand the recent developments in computational type theory w
 <h3 id="Voevodsky">Voevodsky</h3>
 <div class="outline-text-3" id="text-Voevodsky">
 <p>
-You should google and read everything you can about Field's medalist Voevodsky and his work at the Institute of Advanced Studies at Princeton. He has many talks on YouTube as well well worth viewing, too many to list here but we'll watch some later in the workshop. 
+You should google and read everything you can about Field's medalist Voevodsky and his work at the Institute of Advanced Studies at Princeton. He has many talks on YouTube well worth viewing, too many to list here but we'll watch some later in the workshop. 
 </p>
 
 <p>
-Here is the quick rundown: Voevodsky found modern math was too complicated for anybody including his peers at the IAS to trust outsider research because there were too many problems found in old proofs including problems found in his own proofs. Unless you had some prestigious university pedigree nobody would be able to trust your proofs, so nobody even looks at them. In other words modern math is completely broken as a field and the best way to fix this he thought, was computer assisted proofs that way if some non-prestigious pedigree mathematician uploaded a paper it would come with a proof as a program you could run and verify it first so you knew you weren't wasting your time.
+Here is the quick rundown: Voevodsky found modern math was too complicated for anybody including his peers at the IAS to trust outsider research because there were too many problems found in even proofs written by top mathematicians including problems found in his own proofs. Unless you had some prestigious university pedigree nobody would be able to trust your proofs, so nobody even looks at them. In his words modern math is completely broken as a field and the best way to fix this he thought, was computer assisted proofs that way if some unkown mathematician uploaded a paper it would come with all it's proofs as a program you could run and verify it first so you knew you weren't wasting your time. 
 </p>
 
 <p>
-Our existing proof assistants then were trash, and unable to be verified by humans printing hundreds of pages of first-order logic so long story short, an enormous amount of mathematicians and type theory specialists were assembled to produce Homotopy Type Theory (see the HoTT <a href="https://homotopytypetheory.org/book/">book</a>). This proved to be a dead end (not entirely, as we'll see later) and termed a 'misadventure in formalisms' by Robert Harper who deemed it insufficiently computational, and then these ideas became Computational Type Theory which is what we are taking here.
+An enormous amount of mathematicians and type theory specialists were assembled to produce Homotopy Type Theory (see the HoTT <a href="https://homotopytypetheory.org/book/">book</a>). This was described by Robert Harper to be 'a misadventure in formalisms' who deemed it insufficiently computational, and then this research became Computational Type Theory which is what we are taking here.
 </p>
 
 <p>
@@ -279,14 +282,6 @@ There is a very good interview with Voevodsky <a href="https://johncarlosbaez.wo
 When I first started to explore the possibility, computer proof verification was almost a forbidden subject among mathematicians. A conversation about the need for computer proof assistants would invariably drift to Gödel’s incompleteness theorem (which has nothing to do with the actual problem) or to one or two cases of verification of already existing proofs, which were used only to demonstrate how impractical the whole idea was.
 </p>
 </blockquote>
-
-<p>
-Voevodsky spent a year wandering around hallucinating (he died of a brain aneurysm) and recorded this experience before he claims he eliminated the hallucinations by focusing on work and returning to IAS where he invented the univalent foundations. There are interesting interviews you have to google translate <a href="https://baaltii1.livejournal.com/198675.html">here</a> and <a href="http://baaltii1.livejournal.com/200269.html">here</a> it's refreshing to see an expert in one field with the highest honors you can receive (Field's medal) be able to talk freely about other subjects in the sciences or talk about totally crazy things they themselves have put in time to understand. 
-</p>
-
-<p>
-Regardless what you think of Voevodsky his conjecture that modern math is in 'a crisis' is probably true, if you come from nowhere university and write up a proof of some obscure abstract lattice nobody else is going to bother to verify it or even read it. Voevodsky tried to fix this and his efforts continue long after his death.
-</p>
 </div>
 </div>
 
@@ -294,7 +289,7 @@ Regardless what you think of Voevodsky his conjecture that modern math is in 'a 
 <h3 id="Per%20Martin-Lof">Per Martin-Lof</h3>
 <div class="outline-text-3" id="text-Per%20Martin-Lof">
 <p>
-A Swedish logician who is the best writer you'll ever read, and one of the most polished and amazing lecturers you'll ever hear he takes very advanced subjects and breaks them down that anybody at any level can understand. We will read all of his papers <a href="https://github.com/michaelt/martin-lof">here</a> which Robert Harper recommends if you want to understand constructive type theory, and hear some of his talks about logic/judgements.
+A Swedish logician who takes very advanced subjects and breaks them down that anybody at any level can understand. We will read many of his papers <a href="https://github.com/michaelt/martin-lof">here</a> and the <a href="http://www.cse.chalmers.se/research/group/logic/book/">book</a> <i>Programming in Martin-Lof's Type Theory</i> which Robert Harper assumes the viewer of this lectures is familiar with.  
 </p>
 </div>
 </div>
@@ -303,44 +298,9 @@ A Swedish logician who is the best writer you'll ever read, and one of the most 
 <h3 id="Robert%20Harper">Robert Harper</h3>
 <div class="outline-text-3" id="text-Robert%20Harper">
 <p>
-Most of our material will consist of his lectures and draft book on Computational Type Theory, his Standard ML book, and his book <a href="http://www.cs.cmu.edu/~rwh/pfpl/">PFPL</a>. He also has a Homotopy type theory recorded lecture seminar we may do time allowing because it's great for explaining higher dimensional types.
-</p>
-
-<p>
-Robert Harper purposely makes his lectures provocative in order to elicit a response in the reviewer to investigate themselves what he's talking about it which is always a good strategy, so you will be interested in his lectures. He will hand out very blunt and honest answers, again this will be very refreshing as a viewer/learner/casual to witness.
-</p>
-
-<p>
-His bluntness has rubbed off on his PhD students, so we will also take courses and papers from <a href="https://dlicata.wescreates.wesleyan.edu/">Dan Licata</a>, <a href="https://www.cs.cmu.edu/~cangiuli/">Carlo Angiuli</a> and <a href="https://www.jonmsterling.com/">Jon Sterling</a> who is also not scared to write <a href="https://news.ycombinator.com/item?id=9051067">opinions</a>. I am primarily interested in opinionated researchers even if I totally disagree politically just to break out of the coma that is modern orthodox academia. If they are opinionated they are passionate about whatever it is they're doing and it's probably worth out time to follow their research. For example Robert Harper's book PFPL is the only PL theory book I know of where the professor who wrote it insists 'this is how you do it and everything else is wrong'. Normally you are given a vague overview and not concrete instructions how to write a language spec. 
+Most of our material will consist of his lectures and draft book on Computational Type Theory, and his book <a href="http://www.cs.cmu.edu/~rwh/pfpl/">PFPL</a>. He also has a Homotopy type theory recorded lecture seminar we may do time allowing because it's great for explaining higher dimensional types. Robert Harper purposely makes his lectures provocative in order to elicit a response in the reviewer to investigate themselves what he's talking about it which is a good strategy. He will hand out very blunt and honest answers, this will be very refreshing. 
 </p>
 </div>
-</div>
-</div>
-
-<div id="outline-container-Draft%20Plan" class="outline-2">
-<h2 id="Draft%20Plan">Draft Plan</h2>
-<div class="outline-text-2" id="text-Draft%20Plan">
-<ul class="org-ul">
-<li>Dan Licata's COMP212 <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s21/">course</a> at Wesleyan</li>
-<li>Robert Harper's PFPL book</li>
-<li><a href="https://symbolaris.com/course/constlog.html">15-317 Constructive Logic</a> and proof theory (the assignments are all in SML)</li>
-<li>Category Theory lectures by Awodey and others (a huge subject we can only begin to get into like Categorial Logic)</li>
-<li>Constructive Type Theory draft book by Robert Harper and lectures/course</li>
-<li>Some practice proving in Agda, using Prof Ragde's ASCII screencast as he goes through some of <a href="https://plfa.github.io/">this</a> book</li>
-<li>Some of the HoTT lectures</li>
-<li>Playing around with the new proof assistant software for cubical computational higher type theory
-<ul class="org-ul">
-<li>Most of this all taken concurrently</li>
-</ul></li>
-</ul>
-
-<p>
-Essentially we are learning the <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">Computational Trinitarianism</a> test of Robert Harper that if what you're doing works in programming language theory, category theory and logic/proof theory then whatever you've done is a legit advancement to the field. He talks about this in many lectures we'll see soon. 
-</p>
-
-<p>
-There's other modeling you can do with computational type theory besides math foundations.
-</p>
 </div>
 </div>
 
@@ -348,25 +308,68 @@ There's other modeling you can do with computational type theory besides math fo
 <h2 id="Let%27s%20begin">Let's begin</h2>
 <div class="outline-text-2" id="text-Let%27s%20begin">
 <p>
-We should probably just start by watching one of Robert Harper's lectures on computational type theory. It will be well beyond our understanding but enough to keep you interested. Let's attempt to watch <a href="https://youtu.be/LE0SSLizYUI">this</a>.
+I guess we should start with the Oregon Programming Language Summer school archive from <a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">2012</a> as that edition gives category theory lectures, proof theory and type theory lectures together to show they are all describing the same thing which is computation. The notation will explained in the proof theory lectures, the PMLTT <a href="http://www.cse.chalmers.se/research/group/logic/book/">book</a> and we can concurrently take a <a href="https://symbolaris.com/course/constlog-schedule.html">constructive logic</a> course to run this logic as a program.
+</p>
+</div>
+
+<div id="outline-container-Intro%20to%20Type%20Theory" class="outline-3">
+<h3 id="Intro%20to%20Type%20Theory">Intro to Type Theory</h3>
+<div class="outline-text-3" id="text-Intro%20to%20Type%20Theory">
+<ul class="org-ul">
+<li><a href="https://youtu.be/9SnefrwBIDc">Type Theory Foundations 1.0</a> - Robert Harper
+<ul class="org-ul">
+<li>You can also watch the mp4 recordings hosted on the OPLSS 2012 <a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">archive</a>.</li>
+</ul></li>
+</ul>
+
+<p>
+This is a great lecture and the most accessible of all his lectures, as it's from the very beginning. 'Something is true only if you have a proof' is different than the typical logic we learn in school where to prove something exists, you can assume it doesn't then show a contradiction so it must exist. @16:30 classic Robert Harper comment about the absolute state of modern PL development.
 </p>
 
 <p>
-Immediately we learn we are learning type theory starting with computation. Why does he talk about NuPRL and not Lean, Agda or Coq? Briefly explained <a href="https://news.ycombinator.com/item?id=10826387">here</a> (behavioral type theory vs structural type theory) which we will soon learn.
+Interesting definition what a lemma is, or the lemma rule. Meet/Greatest Lower Bound in real analysis is the infimum or inf, the opposite of the supremum or sup and is shown with examples in Tao's <i>Analysis I</i> starting with Example 6.2.8 ie: the set {1,2,3,&#x2026;} the greatest lower bound is 1, and least upper bound is infinity. If you take an empty set, inf(empty) is infinity, and the sup(empty) is negative infinity, since by definition inf() will move positive to the right on the real number line looking for the 'greatest lower bound' of nothing, while sup() will move negatively left looking for the least upper bound. Since the set is empty and neither exist they just keep on going to infinity in opposite directions.
 </p>
 
-<p>
-~@6:15 he announces if you have had formal type theory experience you're screwed, whereas if you know nothing about type theory, you'll do fine in his computational type theory abstraction. His comment about playing the Coq video game comes from earlier lectures we'll watch later about how it kind of is like a video game, you use <a href="https://www.cs.cornell.edu/courses/cs3110/2018sp/a5/coq-tactics-cheatsheet.html">Coq tactics</a> to solve 'goals' and levelling up.
-</p>
+<ul class="org-ul">
+<li><a href="https://youtu.be/RZfY9FAzF7I">Type Theory Foundations 1.1</a> - Robert Harper</li>
+</ul>
 
 <p>
 TODO
 </p>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <hr>
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

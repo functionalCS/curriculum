@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-08-10 Tue 22:16 -->
+<!-- 2021-09-12 Sun 17:51 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Self-Learning, Modern Computer Science Curriculum</title>
@@ -243,6 +243,7 @@
 <li><a href="#Functional%20Programming">3. Functional Programming</a>
 <ul>
 <li><a href="#Principles%20of%20Functional%20Programming">3.1. Principles of Functional Programming</a></li>
+<li><a href="#CS%203110%20Data%20Structures%20and%20Functional%20Programming">3.2. CS 3110 Data Structures and Functional Programming</a></li>
 </ul>
 </li>
 <li><a href="#Algebra">4. Algebra</a>
@@ -287,12 +288,11 @@
 <li><a href="#Physical%20Systems%20Software%20Security">14.1. Physical Systems Software Security</a></li>
 </ul>
 </li>
-<li><a href="#Algorithms">15. Algorithms</a>
+<li><a href="#Workshop%20in%20Algorithms">15. Workshop in Algorithms</a>
 <ul>
-<li><a href="#Workshop">15.1. Workshop</a></li>
-<li><a href="#Introduction%20to%20Parallel%20and%20Sequential%20Algorithms">15.2. Introduction to Parallel and Sequential Algorithms</a></li>
-<li><a href="#Functional%20Data%20Structures">15.3. Functional Data Structures</a></li>
-<li><a href="#Advanced%20Data%20Structures">15.4. Advanced Data Structures</a></li>
+<li><a href="#Introduction%20to%20Parallel%20and%20Sequential%20Algorithms">15.1. Introduction to Parallel and Sequential Algorithms</a></li>
+<li><a href="#Functional%20Data%20Structures">15.2. Functional Data Structures</a></li>
+<li><a href="#Advanced%20Data%20Structures">15.3. Advanced Data Structures</a></li>
 </ul>
 </li>
 <li><a href="#Complexity%20Theory">16. Complexity Theory</a>
@@ -306,24 +306,23 @@
 <li><a href="#Performance%20Engineering">18. Performance Engineering</a></li>
 <li><a href="#Topics%20in%20Mathematics%20for%20Finance">19. Topics in Mathematics for Finance</a></li>
 <li><a href="#Jobs">20. Jobs</a></li>
-<li><a href="#Research%20in%20Computational%20Type%20Theory">21. Research in Computational Type Theory</a></li>
-<li><a href="#Research%20in%20Machine%20Learning%2FAI">22. Research in Machine Learning/AI</a>
+<li><a href="#Workshop%20in%20Computational%20Type%20Theory">21. Workshop in Computational Type Theory</a></li>
+<li><a href="#Workshop%20in%20Machine%20Learning%2FAI">22. Workshop in Machine Learning/AI</a>
 <ul>
-<li><a href="#Research%20in%20Machine%20Learning%2FAI--Workshop">22.1. Workshop</a></li>
-<li><a href="#General%20AI">22.2. General AI</a></li>
-<li><a href="#Math%20Background%20for%20ML">22.3. Math Background for ML</a></li>
-<li><a href="#Statistics%20Theory">22.4. Statistics Theory</a></li>
-<li><a href="#Modern%20Regression">22.5. Modern Regression</a></li>
-<li><a href="#Introduction%20to%20Machine%20Learning">22.6. Introduction to Machine Learning</a></li>
-<li><a href="#Introduction%20to%20Practical%20Machine%20Learning">22.7. Introduction to Practical Machine Learning</a></li>
-<li><a href="#Graduate%20Introduction%20to%20ML">22.8. Graduate Introduction to ML</a></li>
-<li><a href="#Advanced%20Statistical%20learning%20theory">22.9. Advanced Statistical learning theory</a></li>
-<li><a href="#Convex%20Optimization">22.10. Convex Optimization</a></li>
-<li><a href="#Deep%20Learning">22.11. Deep Learning</a></li>
-<li><a href="#Further%20Research">22.12. Further Research</a></li>
+<li><a href="#General%20AI">22.1. General AI</a></li>
+<li><a href="#Math%20Background%20for%20ML">22.2. Math Background for ML</a></li>
+<li><a href="#Statistics%20Theory">22.3. Statistics Theory</a></li>
+<li><a href="#Modern%20Regression">22.4. Modern Regression</a></li>
+<li><a href="#Introduction%20to%20Machine%20Learning">22.5. Introduction to Machine Learning</a></li>
+<li><a href="#Introduction%20to%20Practical%20Machine%20Learning">22.6. Introduction to Practical Machine Learning</a></li>
+<li><a href="#Graduate%20Introduction%20to%20ML">22.7. Graduate Introduction to ML</a></li>
+<li><a href="#Advanced%20Statistical%20learning%20theory">22.8. Advanced Statistical learning theory</a></li>
+<li><a href="#Convex%20Optimization">22.9. Convex Optimization</a></li>
+<li><a href="#Deep%20Learning">22.10. Deep Learning</a></li>
+<li><a href="#Further%20Research">22.11. Further Research</a></li>
 </ul>
 </li>
-<li><a href="#Research%20in%20Cryptography">23. Research in Cryptography</a></li>
+<li><a href="#Workshop%20in%20Cryptography">23. Workshop in Cryptography</a></li>
 </ul>
 </div>
 </nav>
@@ -405,7 +404,7 @@ I've rewritten this entire section into a <a href="https://learnaifromscratch.gi
 <p>
 Torrent archive 
 </p>
-<pre class="example" id="org90cddc9">
+<pre class="example" id="org903aa4b">
 2018 Lectures, labs, recorded recitations
 magnet:?xt=urn:btih:891283aff7f336ba6c56ed47e03a2f72a9b186d0&amp;dn=cs019
 </pre>
@@ -451,15 +450,35 @@ Try the new <a href="https://learnaifromscratch.github.io/math.html">math from s
 <h3 id="Principles%20of%20Functional%20Programming"><span class="section-number-3">3.1</span> Principles of Functional Programming</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
-Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this material to undergrads. Since the CMU 15-150 course is locked down now we can instead do <a href="https://dlicata.wescreates.wesleyan.edu/">Dan Licata's</a> version at Wesleyan (PhD advised by Robert Harper) that has short recorded lectures and assignments open to the public, it's very similar to the original 15-150 curriculum. 
+Robert Harper keeps a <a href="https://existentialtype.wordpress.com/2012/08/17/intro-curriculum-update/%20">blog</a> and a follow up <a href="https://existentialtype.wordpress.com/2011/03/21/the-dog-that-didnt-bark/">post</a> on the success of teaching this material to undergrads. Since the CMU 15-150 course is locked down now we can instead do <a href="https://dlicata.wescreates.wesleyan.edu/">Dan Licata's</a> version at Wesleyan (PhD advised by Robert Harper) that has short recorded lectures and assignments open to the public, it's very similar to the original 15-150 curriculum.
 </p>
 
+<ul class="org-ul">
+<li><a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s21/lect.html">(Full Course) COMP 212 - Functional Programming</a>
+<ul class="org-ul">
+<li>This course differs from CS19 in that you write proofs of specs, focus on parallelism</li>
+</ul></li>
+</ul>
+
+<pre class="example" id="org895c640">
+The labs and hw are locked for COMP212 now, but you can get the sp20 hw and labs from this torrent
+ - de-select the video lectures if you want a smaller download
+ 
+magnet:?xt=urn:btih:4802b90e2b2c0f419690b0a09ee8e2128a92d32f&amp;dn=fp-s20
+</pre>
+</div>
+</div>
+
+<div id="outline-container-CS%203110%20Data%20Structures%20and%20Functional%20Programming" class="outline-3">
+<h3 id="CS%203110%20Data%20Structures%20and%20Functional%20Programming"><span class="section-number-3">3.2</span> CS 3110 Data Structures and Functional Programming</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
-I go through the COMP212 sp2021 course <a href="./typetheory.html">here</a> if you want to learn computational type theory.
+Cornell's version uses OCaml, their <a href="https://cs3110.github.io/textbook/cover.html">book</a> now has embedded YouTube <a href="https://www.youtube.com/playlist?list=PLre5AT9JnKShBOPeuiD9b-I4XROIJhkIU">videos</a> and you can download a VM image to run OCaml as they have set it up in the course. Some overlap with CS19 in the exercises if you already did CS19, COMP212 focuses more on parallelism and the exercises much more difficult, try both courses they compliment each other.    
 </p>
 </div>
 </div>
 </div>
+
 
 <div id="outline-container-Algebra" class="outline-2">
 <h2 id="Algebra"><span class="section-number-2">4</span> Algebra</h2>
@@ -775,7 +794,7 @@ Try Sussman's new <a href="https://mitpress.mit.edu/books/software-design-flexib
 <h2 id="Programming%20Language%20Theory"><span class="section-number-2">13</span> Programming Language Theory</h2>
 <div class="outline-text-2" id="text-13">
 <p>
-I go through Robert Harper's PFPL book <a href="./typetheory.html">here</a> there's also an <a href="https://cs.uwaterloo.ca/~plragde/747/notes/index.html">Agda workshop</a> with screencasts as a replacement for Pierce's /Types and Programming Languages'. 
+I go through Robert Harper's PFPL book <a href="./typetheory.html">here</a> there's also an <a href="https://cs.uwaterloo.ca/~plragde/747/notes/index.html">Agda workshop</a> with screencasts as a replacement for Pierce's <i>Types and Programming Languages</i>. 
 </p>
 </div>
 </div>
@@ -801,7 +820,7 @@ How to verify software, and strategies of programming that minimize catastrophe 
 Brown's <a href="http://cs.brown.edu/courses/cs195y/2020/">CS195y</a> <i>Logic For Systems</i> I made a torrent for if you want to model state in a way similar to <a href="https://mitpress.mit.edu/books/software-abstractions-revised-edition">Alloy</a>, where you can prove it's logic before writing the program. Think about designing a security level scheme where different users have different access levels, you don't want some unforseen combination of states to result in granting access that shouldn't be granted. The <i>Software Abstractions</i> book and 195y course help you with this by providing a way to model your security scheme before you write the code using something similar to set theory proofs.
 </p>
 
-<pre class="example" id="org05d16c0">
+<pre class="example" id="org441f7ec">
 CS195y partial archive, some recorded lectures missing:
 magnet:?xt=urn:btih:3187a9951b43b85771a975653680a4a8d9faf61d&amp;dn=195y
 </pre>
@@ -821,32 +840,27 @@ magnet:?xt=urn:btih:3187a9951b43b85771a975653680a4a8d9faf61d&amp;dn=195y
 </div>
 </div>
 
-<div id="outline-container-Algorithms" class="outline-2">
-<h2 id="Algorithms"><span class="section-number-2">15</span> Algorithms</h2>
+<div id="outline-container-Workshop%20in%20Algorithms" class="outline-2">
+<h2 id="Workshop%20in%20Algorithms"><span class="section-number-2">15</span> Workshop in Algorithms</h2>
 <div class="outline-text-2" id="text-15">
-</div>
-<div id="outline-container-Workshop" class="outline-3">
-<h3 id="Workshop"><span class="section-number-3">15.1</span> Workshop</h3>
-<div class="outline-text-3" id="text-15-1">
 <p>
-I made an entire workshop for this <a href="https://learnaifromscratch.github.io/algorithms.html">here</a> where we practice competitive programming from basic to advanced algorithms.
+If you want to learn beginner to advanced algorithms try <a href="https://learnaifromscratch.github.io/algorithms.html">here</a> where we practice mixing competitive programming with standard algorithms texts.
 </p>
 
 <p>
 Here's a partial archive of <a href="https://www.cs.cmu.edu/~15451-s20/schedule.html">15-451</a> if you want to learn about NP-Completeness, approximation algorithms, online algorithms, graph compression, multiplicative weights, computational geometry, fast multiplication, embeddings, FFT some other topics:
 </p>
 
-<pre class="example" id="org5f164fe">
+<pre class="example" id="org0dda7a4">
 Recorded lectures 
 15-451 partial archive:
 magnet:?xt=urn:btih:0cd3da156921d9264a7e06b3fb148130037e1228&amp;dn=15451
 </pre>
 </div>
-</div>
 
 <div id="outline-container-Introduction%20to%20Parallel%20and%20Sequential%20Algorithms" class="outline-3">
-<h3 id="Introduction%20to%20Parallel%20and%20Sequential%20Algorithms"><span class="section-number-3">15.2</span> Introduction to Parallel and Sequential Algorithms</h3>
-<div class="outline-text-3" id="text-15-2">
+<h3 id="Introduction%20to%20Parallel%20and%20Sequential%20Algorithms"><span class="section-number-3">15.1</span> Introduction to Parallel and Sequential Algorithms</h3>
+<div class="outline-text-3" id="text-15-1">
 <p>
 <a href="http://libgen.rs/book/index.php?md5=133C8AB1B2EA8D696F762C1BCFFCC0F8">Search libgen</a> for 'Parallel and Sequential Algorithms' and get latest version. I archived all the lecture notes and some of the labs before they disappeared <a href="https://github.com/functionalCS/15210labs">here</a>. The book is excellent, it goes through many common algorithms you already know about and then teaches you how to make them more parallel and is used in CMU's 15-210 course which now is sealed up behind campus logins.
 </p>
@@ -858,8 +872,8 @@ magnet:?xt=urn:btih:0cd3da156921d9264a7e06b3fb148130037e1228&amp;dn=15451
 </div>
 
 <div id="outline-container-Functional%20Data%20Structures" class="outline-3">
-<h3 id="Functional%20Data%20Structures"><span class="section-number-3">15.3</span> Functional Data Structures</h3>
-<div class="outline-text-3" id="text-15-3">
+<h3 id="Functional%20Data%20Structures"><span class="section-number-3">15.2</span> Functional Data Structures</h3>
+<div class="outline-text-3" id="text-15-2">
 <p>
 "A stroll through intermediate data structures and their associated algorithms, from the point of view of functional programming." Note how pattern matching makes implementing these seemingly complicated structures a much easier task.
 </p>
@@ -875,8 +889,8 @@ magnet:?xt=urn:btih:0cd3da156921d9264a7e06b3fb148130037e1228&amp;dn=15451
 </div>
 
 <div id="outline-container-Advanced%20Data%20Structures" class="outline-3">
-<h3 id="Advanced%20Data%20Structures"><span class="section-number-3">15.4</span> Advanced Data Structures</h3>
-<div class="outline-text-3" id="text-15-4">
+<h3 id="Advanced%20Data%20Structures"><span class="section-number-3">15.3</span> Advanced Data Structures</h3>
+<div class="outline-text-3" id="text-15-3">
 <p>
 Taught by Erik Demaine's at MIT, mixes 2017 lectures with MIT OCW 2012 lectures, I used this course to learn cache-oblivious data structures while taking 15-853 <i>Algorithms in the Real World</i>. 
 </p>
@@ -1002,8 +1016,8 @@ I recommend checking local schools and labs in your area for research programmer
 </div>
 </div>
 
-<div id="outline-container-Research%20in%20Computational%20Type%20Theory" class="outline-2">
-<h2 id="Research%20in%20Computational%20Type%20Theory"><span class="section-number-2">21</span> Research in Computational Type Theory</h2>
+<div id="outline-container-Workshop%20in%20Computational%20Type%20Theory" class="outline-2">
+<h2 id="Workshop%20in%20Computational%20Type%20Theory"><span class="section-number-2">21</span> Workshop in Computational Type Theory</h2>
 <div class="outline-text-2" id="text-21">
 <p>
 I decided to make a new workshop <a href="./typetheory.html">here</a> to learn cubical/computational type theory. 
@@ -1011,22 +1025,17 @@ I decided to make a new workshop <a href="./typetheory.html">here</a> to learn c
 </div>
 </div>
 
-<div id="outline-container-Research%20in%20Machine%20Learning%2FAI" class="outline-2">
-<h2 id="Research%20in%20Machine%20Learning%2FAI"><span class="section-number-2">22</span> Research in Machine Learning/AI</h2>
+<div id="outline-container-Workshop%20in%20Machine%20Learning%2FAI" class="outline-2">
+<h2 id="Workshop%20in%20Machine%20Learning%2FAI"><span class="section-number-2">22</span> Workshop in Machine Learning/AI</h2>
 <div class="outline-text-2" id="text-22">
-</div>
-<div id="outline-container-Research%20in%20Machine%20Learning%2FAI--Workshop" class="outline-3">
-<h3 id="Research%20in%20Machine%20Learning%2FAI--Workshop"><span class="section-number-3">22.1</span> Workshop</h3>
-<div class="outline-text-3" id="text-22-1">
 <p>
 There exists an ongoing <a href="https://learnaifromscratch.github.io/">workshop</a> to teach ourselves machine learning/ neural networks doing 3 courses at once.
 </p>
 </div>
-</div>
 
 <div id="outline-container-General%20AI" class="outline-3">
-<h3 id="General%20AI"><span class="section-number-3">22.2</span> General AI</h3>
-<div class="outline-text-3" id="text-22-2">
+<h3 id="General%20AI"><span class="section-number-3">22.1</span> General AI</h3>
+<div class="outline-text-3" id="text-22-1">
 <p>
 You can still watch Berkeley's CS188 on <a href="https://www.youtube.com/playlist?list=PLVYtzYiUdm4ThHyh_pnhNQwdmN_OmryLc">Youtube</a>, uses Norvig's new 4th edition book out in 2020 but any edition you can find will do including the old Lisp addition that is available free on github. Just write your own autonomous agents for exercises. Sussman's grad <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034#Prospectus">course</a> is the perfect match to CS188 reviewing older papers with unsolved problems or deep ideas, like his own <i>Art of the Propagator</i> paper and <a href="http://groups.csail.mit.edu/mac/users/gjs/propagators/">implementation</a>. There is also AI <a href="https://courses.csail.mit.edu/6.803/schedule.html">readings</a> to explain intelligence from a computational point of view both these are nice compliments.   
 </p>
@@ -1034,17 +1043,17 @@ You can still watch Berkeley's CS188 on <a href="https://www.youtube.com/playlis
 </div>
 
 <div id="outline-container-Math%20Background%20for%20ML" class="outline-3">
-<h3 id="Math%20Background%20for%20ML"><span class="section-number-3">22.3</span> Math Background for ML</h3>
-<div class="outline-text-3" id="text-22-3">
+<h3 id="Math%20Background%20for%20ML"><span class="section-number-3">22.2</span> Math Background for ML</h3>
+<div class="outline-text-3" id="text-22-2">
 <p>
-This free <a href="https://mml-book.github.io/">book</a> <i>Mathematics for Machine Learning</i> will describe the math often used in ML. There's also a series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95z-GMcecVG5mzA">recorded</a> lectures and recommended <a href="https://canvas.cmu.edu/courses/603/assignments/syllabus">texts</a> from CMU and a crash course in linear algebra <a href="https://www.youtube.com/playlist?list=PLC7GP7QTnIJ8w2qcrHK1nIy7mWQnYSOmr">here</a> and a set of <a href="https://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf">notes</a>. You may also enjoy the <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/">Vector Boot Camp</a> from Brown for the multivariable calculus content. Strang now has a <a href="https://ocw.mit.edu/resources/res-18-010-a-2020-vision-of-linear-algebra-spring-2020/videos/">big picture</a> of Linear Algebra lectures as well. 
+This free <a href="https://mml-book.github.io/">book</a> <i>Mathematics for Machine Learning</i> will describe the math often used in ML. There's also a series of <a href="https://www.youtube.com/playlist?list=PL7y-1rk2cCsAqRtWoZ95z-GMcecVG5mzA">recorded</a> lectures and recommended <a href="https://canvas.cmu.edu/courses/603/assignments/syllabus">texts</a> from CMU and a crash course in linear algebra <a href="https://www.youtube.com/playlist?list=PLC7GP7QTnIJ8w2qcrHK1nIy7mWQnYSOmr">here</a> and a set of <a href="https://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf">notes</a>. You may also enjoy the <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/">Vector Boot Camp</a> from Brown for the multivariable calculus content. 
 </p>
 </div>
 </div>
 
 <div id="outline-container-Statistics%20Theory" class="outline-3">
-<h3 id="Statistics%20Theory"><span class="section-number-3">22.4</span> Statistics Theory</h3>
-<div class="outline-text-3" id="text-22-4">
+<h3 id="Statistics%20Theory"><span class="section-number-3">22.3</span> Statistics Theory</h3>
+<div class="outline-text-3" id="text-22-3">
 <ul class="org-ul">
 <li><a href="http://www.stat.cmu.edu/~larry/=stat705/">(Full Course) 36-705 Intermediate Statistics</a>
 <ul class="org-ul">
@@ -1058,8 +1067,8 @@ This free <a href="https://mml-book.github.io/">book</a> <i>Mathematics for Mach
 </div>
 
 <div id="outline-container-Modern%20Regression" class="outline-3">
-<h3 id="Modern%20Regression"><span class="section-number-3">22.5</span> Modern Regression</h3>
-<div class="outline-text-3" id="text-22-5">
+<h3 id="Modern%20Regression"><span class="section-number-3">22.4</span> Modern Regression</h3>
+<div class="outline-text-3" id="text-22-4">
 <p>
 CMU professor Cosma Shalizi has a great set of lecture <a href="http://www.stat.cmu.edu/~cshalizi/TALR/">notes</a> <i>The Truth About Linear Regression</i> in fact if you go through his extremely large page on <a href="http://bactra.org/notebooks/">notebooks</a> he will explain the insight to virtually <a href="http://bactra.org/notebooks/statistics.html">everything statistics</a> related such as what are <a href="http://bactra.org/notebooks/stoch-diff-eqs.html">stochastic differential equations</a> and notes about <a href="http://bactra.org/notebooks/teaching-statistics.html">teaching statistics</a> which books are recommended. I wish more professors did this.
 </p>
@@ -1068,12 +1077,12 @@ CMU professor Cosma Shalizi has a great set of lecture <a href="http://www.stat.
 
 
 <div id="outline-container-Introduction%20to%20Machine%20Learning" class="outline-3">
-<h3 id="Introduction%20to%20Machine%20Learning"><span class="section-number-3">22.6</span> Introduction to Machine Learning</h3>
-<div class="outline-text-3" id="text-22-6">
+<h3 id="Introduction%20to%20Machine%20Learning"><span class="section-number-3">22.5</span> Introduction to Machine Learning</h3>
+<div class="outline-text-3" id="text-22-5">
 <p>
 Torrent archive:
 </p>
-<pre class="example" id="orga315fba">
+<pre class="example" id="orgca9721b">
 Recorded zoom lectures, homework:
 magnet:?xt=urn:btih:2e1005d058b5f4c357d7338c85937aabdd91dcdc&amp;dn=10601
 </pre>
@@ -1089,8 +1098,8 @@ magnet:?xt=urn:btih:2e1005d058b5f4c357d7338c85937aabdd91dcdc&amp;dn=10601
 </div>
 
 <div id="outline-container-Introduction%20to%20Practical%20Machine%20Learning" class="outline-3">
-<h3 id="Introduction%20to%20Practical%20Machine%20Learning"><span class="section-number-3">22.7</span> Introduction to Practical Machine Learning</h3>
-<div class="outline-text-3" id="text-22-7">
+<h3 id="Introduction%20to%20Practical%20Machine%20Learning"><span class="section-number-3">22.6</span> Introduction to Practical Machine Learning</h3>
+<div class="outline-text-3" id="text-22-6">
 <p>
 "This course will teach you basic skills to decide which learning algorithm to use for what problem, code up your own learning algorithm and evaluate and debug it." You don't have to use Python, the prof in these lectures shills Julia for students to try instead.
 </p>
@@ -1107,8 +1116,8 @@ magnet:?xt=urn:btih:2e1005d058b5f4c357d7338c85937aabdd91dcdc&amp;dn=10601
 </div>
 
 <div id="outline-container-Graduate%20Introduction%20to%20ML" class="outline-3">
-<h3 id="Graduate%20Introduction%20to%20ML"><span class="section-number-3">22.8</span> Graduate Introduction to ML</h3>
-<div class="outline-text-3" id="text-22-8">
+<h3 id="Graduate%20Introduction%20to%20ML"><span class="section-number-3">22.7</span> Graduate Introduction to ML</h3>
+<div class="outline-text-3" id="text-22-7">
 <p>
 There is also Cornell's advanced ML <a href="https://www.cs.cornell.edu/courses/cs6780/2019sp/">class</a> though they deleted the recorded lectures like most other schools post-covid19 
 </p>
@@ -1126,8 +1135,8 @@ There is also Cornell's advanced ML <a href="https://www.cs.cornell.edu/courses/
 </div>
 
 <div id="outline-container-Advanced%20Statistical%20learning%20theory" class="outline-3">
-<h3 id="Advanced%20Statistical%20learning%20theory"><span class="section-number-3">22.9</span> Advanced Statistical learning theory</h3>
-<div class="outline-text-3" id="text-22-9">
+<h3 id="Advanced%20Statistical%20learning%20theory"><span class="section-number-3">22.8</span> Advanced Statistical learning theory</h3>
+<div class="outline-text-3" id="text-22-8">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/playlist?list=PLTB9VQq8WiaCBK2XrtYn5t9uuPdsNm7YE">(Lectures) - 10-702 Statistical Machine Learning Theory</a>
 <ul class="org-ul">
@@ -1144,8 +1153,8 @@ There is also Cornell's advanced ML <a href="https://www.cs.cornell.edu/courses/
 
 
 <div id="outline-container-Convex%20Optimization" class="outline-3">
-<h3 id="Convex%20Optimization"><span class="section-number-3">22.10</span> Convex Optimization</h3>
-<div class="outline-text-3" id="text-22-10">
+<h3 id="Convex%20Optimization"><span class="section-number-3">22.9</span> Convex Optimization</h3>
+<div class="outline-text-3" id="text-22-9">
 <p>
 Used to work on a variety of problems, recently research is in non-convex optimization of neural networks, search google scholar for 'non-convex'.
 </p>
@@ -1163,8 +1172,8 @@ Used to work on a variety of problems, recently research is in non-convex optimi
 
 
 <div id="outline-container-Deep%20Learning" class="outline-3">
-<h3 id="Deep%20Learning"><span class="section-number-3">22.11</span> Deep Learning</h3>
-<div class="outline-text-3" id="text-22-11">
+<h3 id="Deep%20Learning"><span class="section-number-3">22.10</span> Deep Learning</h3>
+<div class="outline-text-3" id="text-22-10">
 <ul class="org-ul">
 <li><a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2015/">(Full Course) 11-785 Introduction to Deep Learning</a>
 <ul class="org-ul">
@@ -1180,8 +1189,8 @@ Used to work on a variety of problems, recently research is in non-convex optimi
 </div>
 
 <div id="outline-container-Further%20Research" class="outline-3">
-<h3 id="Further%20Research"><span class="section-number-3">22.12</span> Further Research</h3>
-<div class="outline-text-3" id="text-22-12">
+<h3 id="Further%20Research"><span class="section-number-3">22.11</span> Further Research</h3>
+<div class="outline-text-3" id="text-22-11">
 <ul class="org-ul">
 <li>Search 'AI competitions' and try some past competitions</li>
 <li>Open <a href="http://www.chalearn.org/">challenges</a> in ML</li>
@@ -1193,15 +1202,16 @@ Used to work on a variety of problems, recently research is in non-convex optimi
 </div>
 
 
-<div id="outline-container-Research%20in%20Cryptography" class="outline-2">
-<h2 id="Research%20in%20Cryptography"><span class="section-number-2">23</span> Research in Cryptography</h2>
+<div id="outline-container-Workshop%20in%20Cryptography" class="outline-2">
+<h2 id="Workshop%20in%20Cryptography"><span class="section-number-2">23</span> Workshop in Cryptography</h2>
 <div class="outline-text-2" id="text-23">
 <p>
 I am working through Tanja Lange's course in post-quantum crypto and cryptanalysis in the new <a href="./crypto.html">crypto workshop</a> 
 </p>
 
 <p>
-Daniel J. Bernstein's posts on the IETF Crypto Forum Research Group [Cfrg] archive is a <a href="https://mailarchive.ietf.org/arch/msg/cfrg/E-q_6ABdKfPU5XG2N6IVAs_sNhA/?qid=435ba2be2c3db3444e338cc0259ee124">master class</a> in modern <a href="https://mailarchive.ietf.org/arch/msg/cfrg/oOY_QNA6QMsTJHLLbUjch6-GLsc/?qid=435ba2be2c3db3444e338cc0259ee124">cryptanalysis</a> and he rips apart bad standards/protocol designs, we will try to understand some of these in the crypto workshop above.</p>
+Daniel J. Bernstein's posts on the IETF Crypto Forum Research Group [Cfrg] archive is a <a href="https://mailarchive.ietf.org/arch/msg/cfrg/E-q_6ABdKfPU5XG2N6IVAs_sNhA/?qid=435ba2be2c3db3444e338cc0259ee124">master class</a> in modern <a href="https://mailarchive.ietf.org/arch/msg/cfrg/oOY_QNA6QMsTJHLLbUjch6-GLsc/?qid=435ba2be2c3db3444e338cc0259ee124">cryptanalysis</a> and he rips apart bad standards/protocol designs, we will try to understand some of these in the crypto workshop above.
+</p>
 </div>
 </div>
 </div>
