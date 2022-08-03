@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-09-13 Mon 00:45 -->
+<!-- 2022-08-02 Tue 20:19 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Computational Type Theory</title>
+<title>Type Theory</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -223,21 +223,28 @@
 <body>
 <div id="content">
 <header>
-<h1 class="title">Computational Type Theory</h1>
+<h1 class="title">Type Theory</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#Intro">Intro</a>
 <ul>
-<li><a href="#Voevodsky">Voevodsky</a></li>
-<li><a href="#Per%20Martin-Lof">Per Martin-Lof</a></li>
+<li><a href="#Vladimir%20Voevodsky">Vladimir Voevodsky</a></li>
 <li><a href="#Robert%20Harper">Robert Harper</a></li>
 </ul>
 </li>
 <li><a href="#Let%27s%20begin">Let's begin</a>
 <ul>
-<li><a href="#Intro%20to%20Type%20Theory">Intro to Type Theory</a></li>
+<li><a href="#Type%20theory%20foundations%201">Type theory foundations 1</a>
+<ul>
+<li><a href="#NuPRL%20%26%20dependent%20types">NuPRL &amp; dependent types</a></li>
+</ul>
+</li>
+<li><a href="#Lambda%20calculus">Lambda calculus</a></li>
+<li><a href="#Type%20theory%20foundations%201.1">Type theory foundations 1.1</a></li>
+<li><a href="#Type%20theory%20foundations%201.2">Type theory foundations 1.2</a></li>
+<li><a href="#Proof%20theory%20foundations%201.0">Proof theory foundations 1.0</a></li>
 </ul>
 </li>
 </ul>
@@ -254,23 +261,47 @@
 </blockquote>
 
 <p>
-The goal is to understand the recent developments in computational type theory which came from <a href="https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f">Per Marin-Lof</a>'s intuitionistic type theory, and <a href="https://en.wikipedia.org/wiki/Vladimir_Voevodsky">Vladimir Voevodsky</a>'s univalent foundations. <a href="https://www.ias.edu/ideas/2014/voevodsky-origins">Voedvodsky</a>'s plan was to create a new foundation for 'all of mathematics', create new proof assistants so mathematicians without pedigree can contribute to global mathematics research since their proofs can easily be verified, that AI can extend a model (itself) and generate it's own proofs for that model, and that math will in the future be done entirely in a programming language because the theory of programming languages he claims is the same thing as mathematical logic, they express the same ideas in a different language, so why not unify them.
+The goal is to understand the basics of modern type theory and the recent developments in computational type theory where they are researching a new foundation of mathematics.  
+</p>
+
+<p>
+Things I'll do::
+</p>
+
+<ul class="org-ul">
+<li>The OPLSS 2012 <a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">curriculum</a> of proof, <a href="https://www.jonmsterling.com/math/lectures/categorical-foundations.html#000R">category</a> and type theory
+<ul class="org-ul">
+<li>aka <i>Type Theory Foundations</i></li>
+</ul></li>
+<li>Robert Harper's entire book <i>PFPL</i> and the accommpanying OPLSS lectures</li>
+<li>Robert Harper's grad seminar on higher type theory/HoTT book</li>
+<li>Robert Harper's computational type theory OPLSS lectures
+<ul class="org-ul">
+<li>There's a draft book too we may be able to get</li>
+</ul></li>
+<li>Favonia's cubical type theory <a href="https://favonia.org/courses/hdtt2020/">grad seminar</a> and cartesian cubical type theory seminars</li>
+</ul>
+
+
+<p>
+Plus investigating all the new type theory research in verified compilation, security/secrecy,  mechanized algorithm cost analysis where you can formalize amortized analysis/big-O in Agda, and linear types that provide abstract resource control like freeing memory for autodiff compilers. There's many new things happening we're just going to review them and see what's interesting. Everything you learn here will end up in all major programming languages eventually.
 </p>
 </div>
 
-<div id="outline-container-Voevodsky" class="outline-3">
-<h3 id="Voevodsky">Voevodsky</h3>
-<div class="outline-text-3" id="text-Voevodsky">
+
+<div id="outline-container-Vladimir%20Voevodsky" class="outline-3">
+<h3 id="Vladimir%20Voevodsky">Vladimir Voevodsky</h3>
+<div class="outline-text-3" id="text-Vladimir%20Voevodsky">
 <p>
-You should google and read everything you can about Field's medalist Voevodsky and his work at the Institute of Advanced Studies at Princeton. He has many talks on YouTube well worth viewing, too many to list here but we'll watch some later in the workshop. 
+Read/watch <a href="https://www.math.ias.edu/vladimir/Lectures">everything</a> you can about Field's medalist <a href="https://www.ias.edu/ideas/2014/voevodsky-origins">Voevodsky</a> and his work at IAS Institute of Advanced Studies at Princeton. He has many talks well worth viewing, too many to list here but we'll watch some later in the workshop. 
 </p>
 
 <p>
-Here is the quick rundown: Voevodsky found modern math was too complicated for anybody including his peers at the IAS to trust outsider research because there were too many problems found in even proofs written by top mathematicians including problems found in his own proofs. Unless you had some prestigious university pedigree nobody would be able to trust your proofs, so nobody even looks at them. In his words modern math is completely broken as a field and the best way to fix this he thought, was computer assisted proofs that way if some unkown mathematician uploaded a paper it would come with all it's proofs as a program you could run and verify it first so you knew you weren't wasting your time. 
+The quick rundown: Voevodsky found modern math was too complicated for anybody including his peers at the IAS to trust outsider research because there were too many problems found in even proofs written by credentialed mathematicians. He had to rewrite his own proofs when by chance somebody found a mistake otherwise it would have gone unchallenged for who knows how long. He claimed unless you had some prestigious university pedigree nobody would trust your proofs, so nobody even looks at them and even established mathematicians like himself it was rare for anybody to verify what you did. In his words modern math is completely broken as a field and the best way to fix this he thought, was computer assisted proofs that way if some unknown mathematician uploaded a paper it would come with all it's proofs mechanized as a program you could run and verify it first so you knew you at least weren't wasting your time.
 </p>
 
 <p>
-An enormous amount of mathematicians and type theory specialists were assembled to produce Homotopy Type Theory (see the HoTT <a href="https://homotopytypetheory.org/book/">book</a>). This was described by Robert Harper to be 'a misadventure in formalisms' who deemed it insufficiently computational, and then this research became Computational Type Theory which is what we are taking here.
+Because he is a turbo genius that never spent a day in school, preferring to skip classes and do his own self-directed research, and didn't even apply to grad school but was invited by Harvard to earn a PhD (where he didn't attend classes there either), he then goes about redefining the foundations of math to make it more constructive for his purposes of proof mechanization and because of his position at IAS an enormous amount of mathematicians and type theory experts were assembled to produce Homotopy Type Theory (see the HoTT <a href="https://homotopytypetheory.org/book/">book</a>). This was described by Robert Harper to be 'a misadventure in formalisms' who deemed it insufficiently computational, but this research led to computational type theory which is what we are taking here. HoTT is still an <a href="https://www.uwo.ca/math/faculty/kapulkin/seminars/hottest_summer_school_2022.html">active research area</a> just because it can't replace the foundations of math doesn't mean it doesn't have many practical uses.   
 </p>
 
 <p>
@@ -285,36 +316,32 @@ When I first started to explore the possibility, computer proof verification was
 </div>
 </div>
 
-<div id="outline-container-Per%20Martin-Lof" class="outline-3">
-<h3 id="Per%20Martin-Lof">Per Martin-Lof</h3>
-<div class="outline-text-3" id="text-Per%20Martin-Lof">
-<p>
-A Swedish logician who takes very advanced subjects and breaks them down that anybody at any level can understand. We will read many of his papers <a href="https://github.com/michaelt/martin-lof">here</a> and the <a href="http://www.cse.chalmers.se/research/group/logic/book/">book</a> <i>Programming in Martin-Lof's Type Theory</i> which Robert Harper assumes the viewer of this lectures is familiar with.  
-</p>
-</div>
-</div>
-
 <div id="outline-container-Robert%20Harper" class="outline-3">
 <h3 id="Robert%20Harper">Robert Harper</h3>
 <div class="outline-text-3" id="text-Robert%20Harper">
 <p>
-Most of our material will consist of his lectures and draft book on Computational Type Theory, and his book <a href="http://www.cs.cmu.edu/~rwh/pfpl/">PFPL</a>. He also has a Homotopy type theory recorded lecture seminar we may do time allowing because it's great for explaining higher dimensional types. Robert Harper purposely makes his lectures provocative in order to elicit a response in the reviewer to investigate themselves what he's talking about it which is a good strategy. He will hand out very blunt and honest answers, this will be very refreshing. 
+Harper purposely makes his lectures provocative by grenade tossing heretical opinions regarding programming languages into the audience and having zero diplomacy while discussing the shortcomings of every mainstream language and their designs in order to elicit a response in the viewer to investigate themselves what he's talking about it which is a good strategy. 
+</p>
+
+<p>
+There's so much information in the lectures that none of them are the same, even if the same topic. I'd recommend watching all his OPLSS lectures because he will consistently slip in something you didn't know like how you should be approaching every paper on PL theory ie: exactly what to look for, what corresponds to a FFI in type theory, why the term 'functor' in ML has nothing to do with category theory, why 'IO monads' are trivial to implement using a module in ML or how dependent types existed in the 1980s version of SML, or how you should regard all programs as a polynomial from highschool.      
 </p>
 </div>
 </div>
 </div>
+
 
 <div id="outline-container-Let%27s%20begin" class="outline-2">
 <h2 id="Let%27s%20begin">Let's begin</h2>
 <div class="outline-text-2" id="text-Let%27s%20begin">
 <p>
-I guess we should start with the Oregon Programming Language Summer school archive from <a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">2012</a> as that edition gives category theory lectures, proof theory and type theory lectures together to show they are all describing the same thing which is computation. The notation will explained in the proof theory lectures, the PMLTT <a href="http://www.cse.chalmers.se/research/group/logic/book/">book</a> and we can concurrently take a <a href="https://symbolaris.com/course/constlog-schedule.html">constructive logic</a> course to run this logic as a program.
+I guess we should start with the Oregon Programming Language Summer school archive from <a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">2012</a> as that edition gives category theory lectures, proof theory and type theory foundations lectures together to show they are all describing the same thing.  
 </p>
 </div>
 
-<div id="outline-container-Intro%20to%20Type%20Theory" class="outline-3">
-<h3 id="Intro%20to%20Type%20Theory">Intro to Type Theory</h3>
-<div class="outline-text-3" id="text-Intro%20to%20Type%20Theory">
+<div id="outline-container-Type%20theory%20foundations%201" class="outline-3">
+<h3 id="Type%20theory%20foundations%201">Type theory foundations 1</h3>
+<div class="outline-text-3" id="text-Type%20theory%20foundations%201">
 <ul class="org-ul">
 <li><a href="https://youtu.be/9SnefrwBIDc">Type Theory Foundations 1.0</a> - Robert Harper
 <ul class="org-ul">
@@ -323,46 +350,102 @@ I guess we should start with the Oregon Programming Language Summer school archi
 </ul>
 
 <p>
-This is a great lecture and the most accessible of all his lectures, as it's from the very beginning. 'Something is true only if you have a proof' is different than the typical logic we learn in school where to prove something exists, you can assume it doesn't then show a contradiction so it must exist. @16:30 classic Robert Harper comment about the absolute state of modern PL development.
+This is a great lecture as it's from the very beginning. 'Something is true only if you have a proof' is different than the typical logic we learn in school where to prove something exists, you can assume it doesn't then show a contradiction so it must exist. In this style of logic you have to produce the proof. @16:30 classic Robert Harper about the absolute state of modern language development.
 </p>
 
 <p>
-Interesting definition what a lemma is, or the lemma rule. Meet/Greatest Lower Bound in real analysis is the infimum or inf, the opposite of the supremum or sup and is shown with examples in Tao's <i>Analysis I</i> starting with Example 6.2.8 ie: the set {1,2,3,&#x2026;} the greatest lower bound is 1, and least upper bound is infinity. If you take an empty set, inf(empty) is infinity, and the sup(empty) is negative infinity, since by definition inf() will move positive to the right on the real number line looking for the 'greatest lower bound' of nothing, while sup() will move negatively left looking for the least upper bound. Since the set is empty and neither exist they just keep on going to infinity in opposite directions.
+Interesting definition what a lemma is, or the lemma rule. Meet/Greatest Lower Bound he draws a nice intuitive category theory diagram to explain why it's called meet as you can see them both meet.
+</p>
+</div>
+
+<div id="outline-container-NuPRL%20%26%20dependent%20types" class="outline-4">
+<h4 id="NuPRL%20%26%20dependent%20types">NuPRL &amp; dependent types</h4>
+<div class="outline-text-4" id="text-NuPRL%20%26%20dependent%20types">
+<p>
+You'll notice Robert Harper talks alot about the NuPRL proof assistant and recommends we read their paper. This is because NuPRL implemented dependent types decades ago like SML and because NuPRL as far as I know is the only 'behavioral' type theory proof assistant. Agda, Lean, Coq etc., these are all structural type theory. The difference is outlined <a href="https://drops.dagstuhl.de/opus/volltexte/2017/7249/pdf/dagrep_v007_i001_p158_s17051.pdf">here</a>, behavior describes the dynamic aspects of programs (what happens when it runs) and not fixed structures of datatypes, from what I can guess, we'll find out as we go and read the NuPRL documentation.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Lambda%20calculus" class="outline-3">
+<h3 id="Lambda%20calculus">Lambda calculus</h3>
+<div class="outline-text-3" id="text-Lambda%20calculus">
+<p>
+Let's just get familiar with it to understand the lectures, Robert Harper's book will describe it in detail. 
 </p>
 
 <ul class="org-ul">
-<li><a href="https://youtu.be/RZfY9FAzF7I">Type Theory Foundations 1.1</a> - Robert Harper</li>
+<li><a href="https://www.cs.cornell.edu/courses/cs4110/2020fa/lectures/lecture13.pdf">CS 4110</a> - Lambda calculus pdf from Cornell's undergrad PL theory course.</li>
 </ul>
+
+<p>
+The lambda symbol denotes scope, so λx.e means x is bound somewhere in e and not a free variable like any other parameter to a function is bound in the function body and not a free variable, meaning you can't rename it without renaming the parameter, and it would be confusing to rename λx.(x y) to λx.(x x) as x is not free and already taken to represent the input. Note of course that if you have a free variable and you don't bind them to anything then you don't have a complete program. 
+</p>
+
+<p>
+Try the <a href="https://capra.cs.cornell.edu/lambdalab/">LambdaLab</a> which will show you how the expression is evaluated for example in 2.2 <i>Call-by-value</i> try inputting into LambdaLab (λx.λy.y x)(5 PLUS 2)λx.(x PLUS 1) to see how it's merely doing steps of computation via substitution. That's it, we're good to continue with the lectures.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Type%20theory%20foundations%201.1" class="outline-3">
+<h3 id="Type%20theory%20foundations%201.1">Type theory foundations 1.1</h3>
+<div class="outline-text-3" id="text-Type%20theory%20foundations%201.1">
+<ul class="org-ul">
+<li><a href="https://www.cs.uoregon.edu/research/summerschool/summer12/videos/Harper1_1.mp4">Type Theory Foundations 1.1</a>  - Robert Harper</li>
+</ul>
+
+<p>
+Everything he is doing here is in the <a href="http://www.cse.chalmers.se/research/group/logic/book/">book</a> <i>Programming in Martin-Loef's Type Theory</i> which I'll skim through after the first lecture. Remember his advice to just let what he's doing wash over you the first time then go after the details later. This is highly abstract a variable can be a whole program. 
+</p>
+
+<p>
+@30:44 about execution models 'all programming languages done properly are just big-assed, generalized polynomials'. This implies a lot of things like there's an 'algebra' of programs, a vector space of programs&#x2026;
+</p>
+</div>
+</div>
+
+<div id="outline-container-Type%20theory%20foundations%201.2" class="outline-3">
+<h3 id="Type%20theory%20foundations%201.2">Type theory foundations 1.2</h3>
+<div class="outline-text-3" id="text-Type%20theory%20foundations%201.2">
+<ul class="org-ul">
+<li><a href="https://www.cs.uoregon.edu/research/summerschool/summer12/videos/Harper1_2.mp4">Type Theory Foundations 1.2</a> - Robert Harper</li>
+</ul>
+
+<p>
+@2:09 'definitional equivalence' only works if it's actually defined not derived is what I take from what he's saying. A lot of this is covered in Terence Tao's <i>Analysis I</i> book where he painstakingly goes over reasons why just because you have x + 1 = s(x) doesn't mean you have 1 + x = s(x) and now we know why, they are equality of reference or symbolic equality.  
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-Proof%20theory%20foundations%201.0" class="outline-3">
+<h3 id="Proof%20theory%20foundations%201.0">Proof theory foundations 1.0</h3>
+<div class="outline-text-3" id="text-Proof%20theory%20foundations%201.0">
+<ul class="org-ul">
+<li><a href="https://www.cs.uoregon.edu/research/summerschool/summer12/videos/Pfenning1_0.mp4">Proof Theory 1.0</a> - Frank Pfenning</li>
+</ul>
+
+<p>
+The camera zooms so you can see the board shortly. There is an entire free course online from CMU <a href="https://symbolaris.com/course/constlog-schedule.html">15-317 Constructive Logic</a> where all the assignments are programming judgements in SML if you're interested. Frank is a German logician and apparently a competitive <a href="https://clublocker.com/teams/4307/home">squash player</a> that's ranked. He has some interesting publications on his CMU page like a resource aware type theory for digital contracts. He's the one who designed their 15-122 course where you use C0 or 'c naught' to develop contracts for reasoning about the correctness of C code or a logic for C programming. Once upon a time these lectures were open to the public and I watched them (done by Rob Simmons now at brilliant.org), but the course notes are very good if you're still interested. To be honest I found that if you didn't sabotage your C code there was just no way you could satisfy most of the proofs the prof talked about, as each lecture he routinely found more and more problems and bugs in code that looked fine but when combined with other states turned into a nightmare, unless of course you removed most of the aspects of C that make it C and just did some sort of limited programming that never took advantage of most of C's features. Of course contracts you run and then disable for production can be fully replaced by dependent types, which is what we're going to learn in this OPLSS lecture series from 2012. Robert Harper rages on his blog that these legacy courses are still included but for marketing reasons CMU has to keep them so they decided to at least terrify the student with all the bugs that can happen if management forces them to still teach 1970s programming.
+</p>
+
+<p>
+@9:00 linear types are the 'cutting edge' of PL right now, I believe only Haskell has them as a MVP style implementation but Jane Street's blog if you read it is actively hiring PL theoristss to help them augment their OCaml compiler for linear logic. They are essential for manipulating the garbage collector and freeing memory for things like autodiff in compilers. You can get around this with piles of ugly code manually manipulating the GC but you can't guarantee what you're doing is not a disaster, hence the need for linear types. 
+</p>
+
+<p>
+@15:15 after watching countless recorded lectures, I can provide production advice. Never, ever cut the sound to the crowd trying to capture a question in the audience. Every single time the question is incomprehensible, or everybody is coughing loudly or talking. Switching back to the prof mic is always delayed too like editors don't exist. What we need is a formal logic for lecture production where we realize the question can be derived by the prof's explanation which will be figured out by the viewer.
+</p>
+
+<p>
+@25:ish everything he's writing is in <a href="https://raw.githubusercontent.com/michaelt/martin-lof/master/pdfs/Meanings-of-the-Logical-Constants-1983.pdf">this</a> pdf a transcribed series of lectures by Per Martin-Löf which I'll do after this lecture. Martin-Lof or Leuf is a great lecturer taking advanced concepts and explaining them to everyday people (like us) using examples from history creating a path from today to the past and linking it all together. He even has a lecture on why he calls what we're doing <a href="https://youtu.be/FGUzgcLXNuk">judgements</a>.
+</p>
 
 <p>
 TODO
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <hr>
