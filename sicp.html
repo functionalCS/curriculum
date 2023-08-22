@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2023-08-22 Tue 15:42 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to do Structure and Interpretation of Computer Programs (SICP)</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {max-width: 62.5rem; padding: 1rem; margin: auto; background-color: #fafad2} </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">How to do Structure and Interpretation of Computer Programs (SICP)</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6bde18d">SICP workshop</a>
+<ul>
+<li><a href="#org5095690">SICP in 2023</a></li>
+<li><a href="#org3815db9">Optional lectures</a></li>
+<li><a href="#org803935c">SICP the sequels</a></li>
+</ul>
+</li>
+<li><a href="#org9baa7c7">BEGIN</a>
+<ul>
+<li><a href="#org88d1aa9">Install mit-scheme</a></li>
+<li><a href="#org7b467b9">IDE/Editor</a></li>
+<li><a href="#orgf394552">The book</a></li>
+</ul>
+</li>
+<li><a href="#org112d274">Chapter 1.1.x</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org6bde18d" class="outline-2">
+<h2 id="org6bde18d">SICP workshop</h2>
+<div class="outline-text-2" id="text-org6bde18d">
+<p>
+This exists because if you ask how to learn programming likely someone will shill this book due to it being a seminal text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately. Here we will figure out the math. 
+</p>
+</div>
+
+<div id="outline-container-org5095690" class="outline-3">
+<h3 id="org5095690">SICP in 2023</h3>
+<div class="outline-text-3" id="text-org5095690">
+<p>
+MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">change</a> implementations in later chapters to be much more complicated because of the limitations of JavaScript. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3815db9" class="outline-3">
+<h3 id="org3815db9">Optional lectures</h3>
+<div class="outline-text-3" id="text-org3815db9">
+<p>
+There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent versions and countless hackathons or compsci reading groups have videos on working through the book.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org803935c" class="outline-3">
+<h3 id="org803935c">SICP the sequels</h3>
+<div class="outline-text-3" id="text-org803935c">
+<p>
+You can do these after if interested:
+</p>
+
+<ul class="org-ul">
+<li>Software Design for Flexibility (SDF)
+<ul class="org-ul">
+<li>Taught in <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/">6.945</a> <i>Adventures in Advanced Symbolic Programming</i></li>
+</ul></li>
+<li>Structural Interpretation of Classical Mechanics (SICM)
+<ul class="org-ul">
+<li>Taught in <a href="http://groups.csail.mit.edu/mac/users/gjs/6946/">6.946</a> as a computational approach to classical mechanics</li>
+<li><a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/book.html">Free</a> html version</li>
+</ul></li>
+<li>Functional Differential Geometry 
+<ul class="org-ul">
+<li>Linear algebra in scheme for understanding general relativity or quantum field theory</li>
+<li><a href="http://groups.csail.mit.edu/mac/users/gjs/6946/calculus-indexed.pdf">Free</a> author pdf</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9baa7c7" class="outline-2">
+<h2 id="org9baa7c7">BEGIN</h2>
+<div class="outline-text-2" id="text-org9baa7c7">
+</div>
+<div id="outline-container-org88d1aa9" class="outline-3">
+<h3 id="org88d1aa9">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-org88d1aa9">
+<p>
+To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's 2022 grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you will have problems in later chapters. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. 
+</p>
+
+<p>
+I'm aware of #lang sicp in DrRacket and many other 3rd party implementations but if you want to do Sussman's more recent books after you're going to have to use the latest mit-scheme anyway so we may as well begin using the language the book actually wants you to use. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b467b9" class="outline-3">
+<h3 id="org7b467b9">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org7b467b9">
+<p>
+You could use emacs or edwin the editor that comes with mit-scheme. Edwin is what 6.001 and the graduate courses have used for decades and Sussman still uses edwin. You start edwin with <i>mit-scheme &#x2013;edit</i> but regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, a responsive REPL, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc.   
+</p>
+
+<ul class="org-ul">
+<li>Editor <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/#org6d580b9">setup</a> from 6.945 for emacs or edwin</li>
+<li>Sussman's .edwin config file <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/.edwin">here</a> for better fonts (save in home directory as .edwin (with the period))</li>
+<li>Edwin specific docs <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">here</a>
+<ul class="org-ul">
+<li>Edwin is a clone of Emacs 18 from the 1980s so find an old <a href="https://web.cs.dal.ca/~eem/info/emacsrefcard.pdf">refcard</a> for it.</li>
+</ul></li>
+</ul>
+
+<p>
+If you choose emacs install the most current vanilla emacs not any of those 'spacemacs' or whatever preconfigured versions that remove the GUI and add a bunch of junk. Click Options-&gt;Customize Emacs-&gt;Custom Themes and change the colors around if you want. You won't need a config file everything like MELPA package install is already included (and scheme mode). I also wouldn't install <a href="https://paredit.org/screencast/fib-fact.gif">Paredit mode</a> or anything until you start writing programs in the later chapters because you learn scope in the beginning by seeing how all the parens close expressions and having something automatically shifting around parens when you don't have experience is going to be rage inducing.  
+</p>
+
+<p>
+Commands:
+</p>
+<ul class="org-ul">
+<li>C-x C-c (exit) is hold down Ctrl and type x, keep holding Ctrl and type c.</li>
+<li>C-h t is hold down Ctrl and type h, release Ctrl and type t which starts the tutorial. 
+<ul class="org-ul">
+<li>PgUp/PgDn, End/Home, arrow keys and mouse all work too you don't have to use the movement commands in tutorial</li>
+</ul></li>
+<li>M-x the M is the 'meta' key which on a modern keyboard is usually ALT but you can redefine both C and M to be something else.</li>
+<li>C-g or Ctrl-g is the escape key if you accidentally screw up commands</li>
+</ul>
+
+<p>
+<b>Open multiple screens</b> 
+</p>
+
+<p>
+In either edwin or emacs: use command C-x C-f and type test.scm to open or make a new file. Use C-x 3 and a new window should open to the right or if you want the new window below use C-x 2. Click on the new window and type C-x b and press enter to switch to the scheme REPL which was the buffer you saw when you first opened the editor. Now you have a screen to enter code with the output beside it. In emacs there is no default scheme buffer you have to 'run inferior scheme' or M-x mit-scheme. 
+</p>
+
+<p>
+<b>Eval code</b>
+</p>
+
+<p>
+Click on the test.scm buffer and enter some random code:
+</p>
+<pre class="example">
+(define x 3)
+(+ x 2)
+(+ x 2 2)
+"this is a string"
+;this is a comment
+</pre>
+
+<p>
+How do you run this in the REPL? Either M-o or C-M-z (edwin) all described in the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">docs</a> and tutorial or type C-h m to get a list of available commands in whatever current buffer. To switch out of the help buffer C-x b and default will be test.scm or wherever you were last. 
+</p>
+
+<p>
+In emacs you can evaluate the entire file with C-c C-l but Lisp/Scheme programming is typically done incrementally you write a function then C-x C-e to run it in the interpreter, switch to the interpreter and give it some sample inputs to test, switch back to write a new function and repeat. If emacs asks what scheme to load type 'mit-scheme'.   
+</p>
+
+<p>
+<b>Errors</b>
+</p>
+
+<p>
+If you get:
+</p>
+<pre class="example">
+;To continue, call RESTART with an option number:
+; (RESTART 4) =&gt; Specify a value to use instead of apropros.
+; (RESTART 3) =&gt; Define apropros to a given value.
+; (RESTART 2) =&gt; Return to read-eval-print level 2.
+; (RESTART 1) =&gt; Return to read-eval-print level 1.
+</pre>
+<p>
+Then typing (RESTART 1) will return to the REPL or you can break/kill it in emacs. Keep in mind an interpreter will have a global state so if something isn't working maybe you still have old declared procedures/variables in the REPL state so restart it.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf394552" class="outline-3">
+<h3 id="orgf394552">The book</h3>
+<div class="outline-text-3" id="text-orgf394552">
+<p>
+I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of the illicit <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdfs</a> floating around to see the figures which are impossible to read in the online html version. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org112d274" class="outline-2">
+<h2 id="org112d274">Chapter 1.1.x</h2>
+<div class="outline-text-2" id="text-org112d274">
+<p>
+A computational process I would interpret as a running program or the act of computation itself. A procedure seems like it would be called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
+</p>
+
+<p>
+Ex 1.2 is an example of an impossible to read figure. Use the <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdf</a>.
+</p>
+<pre class="example">
+(/ (+ 5 4 (- 2 (- 3 (+ 6 (/ 4 5)))))
+   (* 3 (- 6 2) (- 2 7)))
+</pre>
+
+<p>
+Ex 1.3 simple (cond (and ())) you can write your own test cases/examples too:
+</p>
+<pre class="example">
+(= (three-square-sum 1 2 3) (+ (* 2 2) (* 3 3))
+(= (three-square-sum 3 1 2) 13)
+(= (three-square-sum 3 2 1) 13)
+(= (three-square-sum 1 1 1) 2)
+(= (three-square-sum 0 1 0) 1)
+</pre>
+
+<p>
+Ex 1.4 many languages won't let you do this and is a good example of symbolic programming it evals to (+ a b) if b &gt; 0 or (- a b) if not.  
+</p>
+
+<p>
+Ex 1.5 (define (p) (p)) is a non-terminating loop where (p) keeps calling itself. Since normal-order doesn't eval subexpressions into values until they are needed (p) is never run because it's never needed as (test 0 (p)) will always evaluate to 0. 
+</p>
+
+<p>
+Ex 1.6 new-if is a regular procedure so it's input (all the subexpressions) are evaluated first with applicative-order eval. The three inputs to new-if: (good-enough? guess x) returns a boolean, guess is already a value, but (sqrt-iter (improve guess x) x) will just keep improving the guess until the end of days as the cond predicate good-enough? is never reached to stop the recursion. The special-form if/else does not automatically evaluate the else clause it preforms the predicate test first.
+</p>
+
+<p>
+Ex 1.7 try examples yourself 
+</p>
+
+<pre class="example">
+1 ]=&gt; (sqrt 0.0009)
+;Value: .04030062264654547
+
+1 ]=&gt; (sqrt 1000000000000000)
+;takes forever, infinite loop?
+</pre>
+
+<p>
+(sqrt 0.0009) should be 0.03 and the gigantic number never terminates. This happens because using our current testing strategy of subtracting the square of the guess from the radicand the epsilon (0.001) isn't precise enough for small numbers and very large numbers clearly they never meet that precision or it takes too long to do so. If we ratio the change in guess with the existing guess, the closer they are together the closer they approach 1 so we can adjust our program to check for this by subtracting that ratio from 1 to see if the two guesses are within epsilon of each other:
+</p>
+
+<pre class="example">
+(define (good-enough? guess x)
+  (&lt; (abs(- 1 (/ (improve guess x) guess))) 0.001))
+</pre>
+
+<p>
+Now gigantic square roots eval immediately and tiny square roots are close enough to wolfram alpha online calculator precision. 
+</p>
+
+<p>
+Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8/4 + 4)/3 or 6/3 = 2. All I did was change improve procedure and delete average procedure since it wasn't needed anymore:
+</p>
+
+<pre class="example">
+(define (improve guess x)
+  (/ (+ (/ x (* guess guess)) (* 2 guess)) 3))
+</pre>
+
+<p>
+1.1.8 <i>Black-Box Abstractions</i> if you look at the mit-scheme <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-ref.html#index-exp">documentation</a> and scroll to the index at the bottom you'll find definitions for exp and log which are e<sup>x</sup> and log(x) base e. The square x function defined as (exp (double (log x))) if x is 8 then (exp ~4.16) which is 64. A log is an exponent, so what x in e<sup>x</sup> = 8 and it's 2.079. If we double that and feed it to e then e<sup>4.16</sup> = 64. We can see this ourselves using <a href="https://www.desmos.com/calculator/gren2g4hrs">desmos</a> go along the x-axis to 2, go up until it meets the blue log line, it lands at y = 0.7 or so. Double that to ~1.4 and travel x-axis to 1.4, go up to the exp(x) line and you'll see you intersect at y = 4 or the square of 2 is 4. Both e and it's log (usually written ln or 'the natural log') are always used in modeling instead of using a power function n<sup>x</sup> (n can be any base like 2, 3, 4) because it has crazy properties like the derivative of e is itself, this square property, and that you can estimate e<sup>x</sup> and ln(x) simply on a piece of paper when working with small calculus like displacements. For example e<sup>x</sup> for small x like 0.05 is just <a href="https://youtu.be/flge97Jp6uo">1 + x</a> and ln(1 + x) is just x for 'small' x.      
+</p>
+
+<p>
+TODO on to 1.2
+</p>
+
+<p>
+&#x2026;
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
