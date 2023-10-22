@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-08-22 Tue 15:42 -->
+<!-- 2023-10-22 Sun 01:29 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to do Structure and Interpretation of Computer Programs (SICP)</title>
@@ -238,6 +238,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -247,54 +269,63 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6bde18d">SICP workshop</a>
+<li><a href="#orgf3fb545">SICP workshop</a>
 <ul>
-<li><a href="#org5095690">SICP in 2023</a></li>
-<li><a href="#org3815db9">Optional lectures</a></li>
-<li><a href="#org803935c">SICP the sequels</a></li>
+<li><a href="#orgb4484f0">SICP in 2023</a></li>
+<li><a href="#orgd5c8a9b">Optional lectures</a></li>
+<li><a href="#org49c6185">SICP the sequels</a></li>
 </ul>
 </li>
-<li><a href="#org9baa7c7">BEGIN</a>
+<li><a href="#org799319a">BEGIN</a>
 <ul>
-<li><a href="#org88d1aa9">Install mit-scheme</a></li>
-<li><a href="#org7b467b9">IDE/Editor</a></li>
-<li><a href="#orgf394552">The book</a></li>
+<li><a href="#orgd602b1b">Install mit-scheme</a></li>
+<li><a href="#org58e83a0">IDE/Editor</a></li>
+<li><a href="#org3ab92fe">The book</a></li>
 </ul>
 </li>
-<li><a href="#org112d274">Chapter 1.1.x</a></li>
+<li><a href="#org32d5272">Chapter 1.1.x</a>
+<ul>
+<li><a href="#org1bdf8af">Chapter 1.2.1</a></li>
+<li><a href="#org901e5d8">Chapter 1.2.2</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org6bde18d" class="outline-2">
-<h2 id="org6bde18d">SICP workshop</h2>
-<div class="outline-text-2" id="text-org6bde18d">
+<div id="outline-container-orgf3fb545" class="outline-2">
+<h2 id="orgf3fb545">SICP workshop</h2>
+<div class="outline-text-2" id="text-orgf3fb545">
 <p>
-This exists because if you ask how to learn programming likely someone will shill this book due to it being a seminal text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately. Here we will figure out the math. 
+This exists because if you ask how to learn programming likely someone will shill this book due to it being a seminal text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately. In interviews the authors gave they explained they only used math because this was taught at MIT after 3 semesters of calculus so for that target audience it made sense to use some basic freshman calculus for assignments/examples. 
+</p>
+
+<p>
+I do this casually whenever I can usually with a phone over lunch while at work so there will be persistent spelling/grammar mistakes. 
 </p>
 </div>
 
-<div id="outline-container-org5095690" class="outline-3">
-<h3 id="org5095690">SICP in 2023</h3>
-<div class="outline-text-3" id="text-org5095690">
+<div id="outline-container-orgb4484f0" class="outline-3">
+<h3 id="orgb4484f0">SICP in 2023</h3>
+<div class="outline-text-3" id="text-orgb4484f0">
 <p>
-MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">change</a> implementations in later chapters to be much more complicated because of the limitations of JavaScript. 
+MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">change</a> implementations in later chapters to be much more complicated because of the limitations of JavaScript. If you want to do Sussman's other books may as well choose Scheme it's an easy language to pick up and that's what I'll use. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3815db9" class="outline-3">
-<h3 id="org3815db9">Optional lectures</h3>
-<div class="outline-text-3" id="text-org3815db9">
+<div id="outline-container-orgd5c8a9b" class="outline-3">
+<h3 id="orgd5c8a9b">Optional lectures</h3>
+<div class="outline-text-3" id="text-orgd5c8a9b">
 <p>
 There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent versions and countless hackathons or compsci reading groups have videos on working through the book.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org803935c" class="outline-3">
-<h3 id="org803935c">SICP the sequels</h3>
-<div class="outline-text-3" id="text-org803935c">
+<div id="outline-container-org49c6185" class="outline-3">
+<h3 id="org49c6185">SICP the sequels</h3>
+<div class="outline-text-3" id="text-org49c6185">
 <p>
 You can do these after if interested:
 </p>
@@ -303,6 +334,7 @@ You can do these after if interested:
 <li>Software Design for Flexibility (SDF)
 <ul class="org-ul">
 <li>Taught in <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/">6.945</a> <i>Adventures in Advanced Symbolic Programming</i></li>
+<li>Systems designed like biology</li>
 </ul></li>
 <li>Structural Interpretation of Classical Mechanics (SICM)
 <ul class="org-ul">
@@ -319,34 +351,38 @@ You can do these after if interested:
 </div>
 </div>
 
-<div id="outline-container-org9baa7c7" class="outline-2">
-<h2 id="org9baa7c7">BEGIN</h2>
-<div class="outline-text-2" id="text-org9baa7c7">
+<div id="outline-container-org799319a" class="outline-2">
+<h2 id="org799319a">BEGIN</h2>
+<div class="outline-text-2" id="text-org799319a">
 </div>
-<div id="outline-container-org88d1aa9" class="outline-3">
-<h3 id="org88d1aa9">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-org88d1aa9">
+<div id="outline-container-orgd602b1b" class="outline-3">
+<h3 id="orgd602b1b">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-orgd602b1b">
 <p>
-To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's 2022 grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you will have problems in later chapters. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. 
+To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's 2022 grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. 
 </p>
 
 <p>
-I'm aware of #lang sicp in DrRacket and many other 3rd party implementations but if you want to do Sussman's more recent books after you're going to have to use the latest mit-scheme anyway so we may as well begin using the language the book actually wants you to use. 
+I'm aware of #lang sicp in DrRacket and many other 3rd party implementations, you can start with those for the first few chapters but if you want to do Sussman's more recent books after you're going to have to use the latest mit-scheme anyway so we may as well begin using the language the book actually wants us to use. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7b467b9" class="outline-3">
-<h3 id="org7b467b9">IDE/Editor</h3>
-<div class="outline-text-3" id="text-org7b467b9">
+<div id="outline-container-org58e83a0" class="outline-3">
+<h3 id="org58e83a0">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org58e83a0">
 <p>
-You could use emacs or edwin the editor that comes with mit-scheme. Edwin is what 6.001 and the graduate courses have used for decades and Sussman still uses edwin. You start edwin with <i>mit-scheme &#x2013;edit</i> but regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, a responsive REPL, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc.   
+You can type scheme into any text editor, save is as a file.scm, run mit-scheme, and load your file.scm in the REPL you don't have to use anything else. 
+</p>
+
+<p>
+You could use emacs or edwin the editor that comes with mit-scheme. Edwin is what 6.001 and the graduate courses have used for decades and Sussman still it as per his 2022 course setup notes. You start edwin with <i>mit-scheme &#x2013;edit</i> but regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, a responsive REPL, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc. Edwin spits out the REPL results you can't interact with it (unless you spawn a shell of course).    
 </p>
 
 <ul class="org-ul">
 <li>Editor <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/#org6d580b9">setup</a> from 6.945 for emacs or edwin</li>
 <li>Sussman's .edwin config file <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/.edwin">here</a> for better fonts (save in home directory as .edwin (with the period))</li>
-<li>Edwin specific docs <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">here</a>
+<li>Edwin specific docs <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">here</a> (it has a stepper too)
 <ul class="org-ul">
 <li>Edwin is a clone of Emacs 18 from the 1980s so find an old <a href="https://web.cs.dal.ca/~eem/info/emacsrefcard.pdf">refcard</a> for it.</li>
 </ul></li>
@@ -361,12 +397,12 @@ Commands:
 </p>
 <ul class="org-ul">
 <li>C-x C-c (exit) is hold down Ctrl and type x, keep holding Ctrl and type c.</li>
-<li>C-h t is hold down Ctrl and type h, release Ctrl and type t which starts the tutorial. 
+<li>C-h t is hold down Ctrl and type h, release Ctrl and type t (starts the tutorial). 
 <ul class="org-ul">
 <li>PgUp/PgDn, End/Home, arrow keys and mouse all work too you don't have to use the movement commands in tutorial</li>
 </ul></li>
-<li>M-x the M is the 'meta' key which on a modern keyboard is usually ALT but you can redefine both C and M to be something else.</li>
-<li>C-g or Ctrl-g is the escape key if you accidentally screw up commands</li>
+<li>M-x the M is the 'meta' key which on a modern keyboard is usually ALT (sometimes the Windows key) but you can redefine both C and M to be something else.</li>
+<li>C-g or Ctrl-g is the escape key if you accidentally screw up mid command and want to try again.</li>
 </ul>
 
 <p>
@@ -393,11 +429,11 @@ Click on the test.scm buffer and enter some random code:
 </pre>
 
 <p>
-How do you run this in the REPL? Either M-o or C-M-z (edwin) all described in the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">docs</a> and tutorial or type C-h m to get a list of available commands in whatever current buffer. To switch out of the help buffer C-x b and default will be test.scm or wherever you were last. 
+How do you run this in the REPL? Either M-o or C-M-z (edwin) or follow the emacs GUI menus to 'evaluate region' all described in the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">docs</a> and tutorial. Type C-h m to get a list of available commands in whatever current buffer. To switch out of the help buffer C-x b and default will be test.scm or wherever you were last. You can highlight with the mouse (in emacs) snippets of code and just eval that selected code. 
 </p>
 
 <p>
-In emacs you can evaluate the entire file with C-c C-l but Lisp/Scheme programming is typically done incrementally you write a function then C-x C-e to run it in the interpreter, switch to the interpreter and give it some sample inputs to test, switch back to write a new function and repeat. If emacs asks what scheme to load type 'mit-scheme'.   
+Emacs you can evaluate the entire file with C-c C-l but Lisp/Scheme programming is typically done incrementally you write a function then C-x C-e to run it in the interpreter, switch to the interpreter and give it some sample inputs to test, switch back to write a new function and repeat. If emacs asks what scheme to load type 'mit-scheme'.   
 </p>
 
 <p>
@@ -405,24 +441,24 @@ In emacs you can evaluate the entire file with C-c C-l but Lisp/Scheme programmi
 </p>
 
 <p>
-If you get:
+If you get something similar:
 </p>
 <pre class="example">
+;Unbound variable: *2
 ;To continue, call RESTART with an option number:
-; (RESTART 4) =&gt; Specify a value to use instead of apropros.
-; (RESTART 3) =&gt; Define apropros to a given value.
-; (RESTART 2) =&gt; Return to read-eval-print level 2.
+; (RESTART 3) =&gt; Specify a value to use instead of *2.
+; (RESTART 2) =&gt; Define *2 to a given value.
 ; (RESTART 1) =&gt; Return to read-eval-print level 1.
 </pre>
 <p>
-Then typing (RESTART 1) will return to the REPL or you can break/kill it in emacs. Keep in mind an interpreter will have a global state so if something isn't working maybe you still have old declared procedures/variables in the REPL state so restart it.  
+Then typing (restart 1) will return to the REPL or you can try option 3 and fix the typo, or break/kill it in emacs. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf394552" class="outline-3">
-<h3 id="orgf394552">The book</h3>
-<div class="outline-text-3" id="text-orgf394552">
+<div id="outline-container-org3ab92fe" class="outline-3">
+<h3 id="org3ab92fe">The book</h3>
+<div class="outline-text-3" id="text-org3ab92fe">
 <p>
 I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of the illicit <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdfs</a> floating around to see the figures which are impossible to read in the online html version. 
 </p>
@@ -430,9 +466,9 @@ I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyf
 </div>
 </div>
 
-<div id="outline-container-org112d274" class="outline-2">
-<h2 id="org112d274">Chapter 1.1.x</h2>
-<div class="outline-text-2" id="text-org112d274">
+<div id="outline-container-org32d5272" class="outline-2">
+<h2 id="org32d5272">Chapter 1.1.x</h2>
+<div class="outline-text-2" id="text-org32d5272">
 <p>
 A computational process I would interpret as a running program or the act of computation itself. A procedure seems like it would be called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
 </p>
@@ -503,16 +539,193 @@ Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8
 </pre>
 
 <p>
-1.1.8 <i>Black-Box Abstractions</i> if you look at the mit-scheme <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-ref.html#index-exp">documentation</a> and scroll to the index at the bottom you'll find definitions for exp and log which are e<sup>x</sup> and log(x) base e. The square x function defined as (exp (double (log x))) if x is 8 then (exp ~4.16) which is 64. A log is an exponent, so what x in e<sup>x</sup> = 8 and it's 2.079. If we double that and feed it to e then e<sup>4.16</sup> = 64. We can see this ourselves using <a href="https://www.desmos.com/calculator/gren2g4hrs">desmos</a> go along the x-axis to 2, go up until it meets the blue log line, it lands at y = 0.7 or so. Double that to ~1.4 and travel x-axis to 1.4, go up to the exp(x) line and you'll see you intersect at y = 4 or the square of 2 is 4. Both e and it's log (usually written ln or 'the natural log') are always used in modeling instead of using a power function n<sup>x</sup> (n can be any base like 2, 3, 4) because it has crazy properties like the derivative of e is itself, this square property, and that you can estimate e<sup>x</sup> and ln(x) simply on a piece of paper when working with small calculus like displacements. For example e<sup>x</sup> for small x like 0.05 is just <a href="https://youtu.be/flge97Jp6uo">1 + x</a> and ln(1 + x) is just x for 'small' x.      
+1.1.8 <i>Black-Box Abstractions</i> if you look at the mit-scheme <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-ref.html#index-exp">documentation</a> and scroll to the index at the bottom you'll find definitions for exp and log which are e<sup>x</sup> and log(x) base e. The square x function defined as (exp (double (log x))) if x is 8 then (exp ~4.16) which is 64. A log is an exponent, so what x in e<sup>x</sup> = 8 and it's 2.079. If we double that and feed it to e then e<sup>4.16</sup> = 64. We can see this ourselves using <a href="https://www.desmos.com/calculator/gren2g4hrs">desmos</a> go along the x-axis to 2, go up until it meets the blue log line, it lands at y = 0.7 or so. Double that to ~1.4 and travel x-axis to 1.4, go up to the exp(x) line and you'll see you intersect at y = 4 or the square of 2 is 4. Both e and it's log (usually written ln or 'the natural log') are preferred for math modeling because it has properties like the derivative of e is itself, this square property we just learned, and that you can estimate e<sup>x</sup> and ln(x) simply on a piece of paper when working with small displacements. For example e<sup>x</sup> for small x like 0.05 is just <a href="https://youtu.be/flge97Jp6uo">1 + x</a> and ln(1 + x) is just x for 'small' x.      
+</p>
+</div>
+
+<div id="outline-container-org1bdf8af" class="outline-3">
+<h3 id="org1bdf8af">Chapter 1.2.1</h3>
+<div class="outline-text-3" id="text-org1bdf8af">
+<p>
+I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
+</p>
+
+<pre class="example">
+(define (factorial n)
+  (define (f total counter)
+    (if (&lt; counter 2)
+	total
+	(f (* total counter) (- counter 1))))
+  (f 1 n))
+
+(factorial 6)
+(factorial 1)
+(factorial 0)
+</pre>
+
+<p>
+The difference in the book between the delayed chain of operations and the iterated version is called re-entry. The delayed chain has to re-enter the same function before returning a value so must keep all that accounting of state somewhere.
 </p>
 
 <p>
-TODO on to 1.2
+Ex 1.9 addition is defined as a function that uses <i>a</i> as a counter and increments <i>b</i> everytime there is still an <i>a</i> left until <i>a</i> = 0. The first function (inc (function call)) is going to return a chain of increments until <i>a</i> = 0 then all delayed increment operations will be done. 
 </p>
 
 <p>
-&#x2026;
+Ex 1.10 the 'concise math definitions' means turn (* 5 n n) into 5n<sup>2</sup> so f(n) = 2y. If you are using edwin you can run the stepper see the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user.pdf">manual</a> for mit-scheme. Otherwise hand step:
 </p>
+
+<pre class="example">
+(define (A x y)
+  (cond ((= y 0) 0)
+        ((= x 0) (* 2 y))
+        ((= y 1) 2)
+        (else (A (- x 1)
+                 (A x (- y 1))))))
+
+(define (g n) (A 1 n))
+(define (h n) (A 2 n))
+
+(g 2)
+- (A 1 2)
+- (A 0 (A 1 1))
+- (A 0 (2)) 
+- (* 2 2)
+- 4
+
+(h 3)
+- (A 2 3)
+- (A 1 (A 2 2)))
+- (A 1 (A 1 (A 2 1)))
+- (A 1 (A 1 2))
+- (A 1 (A 0 (A 1 1)))
+- (A 1 (A 0 (2)))
+- (A 1 (* 2 2))
+- (A 1 4)
+- (A 0 (A 1 3))
+- (A 0 (A 0 (A 1 2)))
+- (A 0 (A 0 (A 0 (A 0 1))))
+- (A 0 (A 0 (A 0 (2))))
+- (A 0 (A 0 (4)))
+- (A 0 (* 2 4))
+- (A 0 (8))
+- (* 2 8)
+- 16
+</pre>
+
+<p>
+G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536 so it's \(2^{2^2..}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org901e5d8" class="outline-3">
+<h3 id="org901e5d8">Chapter 1.2.2</h3>
+<div class="outline-text-3" id="text-org901e5d8">
+<p>
+Tree recursive processes every element in the input we process requires doubling the amount of work on the rest of the input. Phi or \(\phi\) is a constant that is solely here to illustrate that the value of fib(n) grows exponentially with the input or the number returned by fib(n) is approximately \(\frac{\phi^n}{\sqrt 5}\). This sequence is some kind of exponential between \(\sqrt 2^n\) and \(2^n\) so is bounded by exponentials, thus is an exponential. 
+</p>
+
+<p>
+The 'golden ratio' is anything satisfying \(\frac{a + b}{a} = \frac{b}{a}\) and is found in taking diagonals of pentagons and other geometry you can look up on YouTube and phi is this ratio. In case it wasn't clear in the book the iterative algorithm comes from the observation that 0, 1, 1, 2, 3, 5.. the next in the sequence is the sum of the previous 2 numbers.   
+</p>
+
+<p>
+The change making algorithm is exactly what you would do if you had a pile of coins and were asked to find all the different ways to make change for some amount. First you would use one coin of denomination x then find all the other coins you could use with it to get to the total. Then try 2 coins of denomination x and all the other coins with those 2 coins to get to the total. This is a complete search algorithm or brute force meaning you are doing massive amounts of the same work over and over trying every possibility.
+</p>
+
+<ul class="org-ul">
+<li>(cc 2 1) 2 cents with 1 kinds of coins</li>
+<li>(+ (cc 2 0) (cc 1 1))</li>
+<li>(+ 0 (+ (cc 1 0) (cc 0 1)))</li>
+<li>(+ 0 (+ 0 + 1))
+<ul class="org-ul">
+<li>1 way to make change</li>
+</ul></li>
+</ul>
+
+<p>
+Ex 1.11 write examples 1, 2, 4, 11, 25, 59.. enter it into OEIS and there's actually a generating function solution a physicist figured out however the assignment wants us to create an iterable procedure. You can use the easy recursive procedure one to test your iterative one. I took eqv? from the mit-scheme reference manual.
+</p>
+
+<pre class="example">
+(define (f n)
+  (define (f-iter n1 n2 n3 counter)
+    (cond ((&lt; n 3) n)
+	  ((= counter n) n1)
+	  (else
+	   (f-iter (+ n1 (* 2 n2) (* 3 n3)) n1 n2 (+ counter 1)))))
+  (f-iter 2 1 0 2))
+  
+(define (g n)
+  (cond ((&lt; n 3 ) n )
+	(else (+
+	       (g (- n 1))
+	       (* 2 (g (- n 2)))
+	       (* 3 (g (- n 3)))))))
+(and
+ (eqv? (f 1) (g 1))
+ (eqv? (f 2) (g 2))
+ (eqv? (f 3) (g 3))
+ (eqv? (f 4) (g 4))
+ (eqv? (f 0) (g 0)))
+</pre>
+
+<p>
+Ex 1.12 Pascal's triangle or array is explained <a href="https://www.youtube.com/watch?v=h0Woqc_5qUE%20">here</a> as the number of paths you can take to get to that number in the array or the number of coefficients in (a + b)<sup>n</sup>  
+</p>
+
+<pre class="example">
+(define (pascal row col)
+  (cond ((= row 0) 1)
+	((&gt; col row) 0)
+        ((or (= col 0) (= col row)) 1)
+        ((or (= col 1) (= col (- row 1))) row)  
+        (else (+ (pascal (- row 1) (- col 1))
+                 (pascal (- row 1) col)))))                                      
+</pre>
+
+<p>
+For <a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle#/media/File:Sierpinski_Pascal_triangle.svg">example</a> (pascal 4, 2) is 6. The first and last columns are always 1, the n+1 and n-1 columns are the same as the row number if you start counting from 0. The value of (pascal 4, 2) is the value of (+ (pascal 3, 1) (pascal 3 2)) which is (+ 3 (pascal 2 1) (pascal 2 2)) or (+ 3 2 1). Trying to get a middle column element from row 30 takes a long time as the recursive process is generating a tree branch on almost every remaining input. 
+</p>
+
+<p>
+You can property test your program by noticing each element in a row of Pascal's array sums to \(2^{(row)}\): 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme">(define (pascal row col)
+  (cond ((= row 0) 1)
+	((&gt; col row) 0)
+	((or (= col 0) (= col row)) 1)
+	((or (= col 1) (= col (- row 1))) row)  
+	(else (+ (pascal (- row 1) (- col 1))
+		 (pascal (- row 1) col)))))
+
+(define (ptest n)
+  (define (row-sum count)
+    (cond ((= count 0) 1)
+	  (else (+ (pascal n count) (row-sum (- count 1))))))
+  (row-sum n))
+
+(define (test)
+  (and
+      (eqv? (ptest 2) (* 2 2))
+      (eqv? (ptest 3) (* 2 2 2))
+      (eqv? (ptest 10) (* 2 2 2 2 2 2 2 2 2 2))))
+</pre>
+</div>
+
+
+<p>
+TODO
+</p>
+
+<hr>
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
 </div>
 </div>
 </div>
