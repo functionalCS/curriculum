@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-10-22 Sun 22:10 -->
+<!-- 2023-10-22 Sun 22:20 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to do Structure and Interpretation of Computer Programs (SICP)</title>
@@ -269,62 +269,66 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6416366">SICP workshop</a>
+<li><a href="#org1134cd2">SICP workshop</a>
 <ul>
-<li><a href="#org4c151e6">SICP in 2023</a></li>
-<li><a href="#org22ab972">Optional lectures &amp; assignments</a>
+<li><a href="#org940dc3f">SICP in 2023</a></li>
+<li><a href="#org21ffd8e">Optional lectures &amp; assignments</a>
 <ul>
-<li><a href="#orgfc04576">Scheme challenges</a></li>
+<li><a href="#org5cc794f">Scheme challenges</a></li>
 </ul>
 </li>
-<li><a href="#org0378cc0">SICP the sequels</a></li>
+<li><a href="#org4352738">SICP the sequels</a></li>
 </ul>
 </li>
-<li><a href="#org52a90cf">BEGIN</a>
+<li><a href="#org56b7f36">BEGIN</a>
 <ul>
-<li><a href="#org57d3340">Install mit-scheme</a></li>
-<li><a href="#org9376a0d">IDE/Editor</a></li>
-<li><a href="#orgca4f3a3">The book</a></li>
+<li><a href="#org0647726">Install mit-scheme</a></li>
+<li><a href="#orgc7396fb">IDE/Editor</a></li>
+<li><a href="#org870c2f1">The book</a></li>
 </ul>
 </li>
-<li><a href="#orgb28a99d">Chapter 1.1.x</a>
+<li><a href="#org6d1430e">Chapter 1.x</a>
 <ul>
-<li><a href="#org2296376">Chapter 1.2.1</a></li>
-<li><a href="#orgb41519f">Chapter 1.2.2</a></li>
+<li><a href="#org2ca80bf">Chapter 1.2.1</a></li>
+<li><a href="#org350d054">Chapter 1.2.2</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org6416366" class="outline-2">
-<h2 id="org6416366">SICP workshop</h2>
-<div class="outline-text-2" id="text-org6416366">
+<div id="outline-container-org1134cd2" class="outline-2">
+<h2 id="org1134cd2">SICP workshop</h2>
+<div class="outline-text-2" id="text-org1134cd2">
 <p>
-This exists because if you ask how to learn programming likely someone will shill this book due to it being a seminal text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately. In interviews the authors gave they explained they only used math because this was taught at MIT after 3 semesters of calculus so for that target audience it made sense to use some basic freshman calculus for assignments/examples. I do this casually whenever I can usually with a phone over lunch while at work so there will be spelling/grammar mistakes. 
+This exists because if you ask how to learn programming likely someone will shill this book due to it being a seminal text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately. In interviews the authors gave they explained they only used math because this was taught at MIT after 3 semesters of calculus so for that target audience it made sense to use some basic freshman calculus for assignments/examples. I do this casually as of Oct 2023 whenever I can usually with a phone over lunch while at work so there will be spelling/grammar mistakes. 
 </p>
 </div>
 
-<div id="outline-container-org4c151e6" class="outline-3">
-<h3 id="org4c151e6">SICP in 2023</h3>
-<div class="outline-text-3" id="text-org4c151e6">
+<div id="outline-container-org940dc3f" class="outline-3">
+<h3 id="org940dc3f">SICP in 2023</h3>
+<div class="outline-text-3" id="text-org940dc3f">
 <p>
 MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">change</a> implementations in later chapters to be much more complicated because of the limitations of JavaScript. If you want to do Sussman's other books may as well choose Scheme it's an easy language to pick up and that's what I'll use. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org22ab972" class="outline-3">
-<h3 id="org22ab972">Optional lectures &amp; assignments</h3>
-<div class="outline-text-3" id="text-org22ab972">
+<div id="outline-container-org21ffd8e" class="outline-3">
+<h3 id="org21ffd8e">Optional lectures &amp; assignments</h3>
+<div class="outline-text-3" id="text-org21ffd8e">
 <p>
-There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures and countless hackathons or compsci reading groups have videos on working through the book. The original 6.001 course had many lengthy and difficult assignments in addition to the book exercises, <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/pages/projects/">here</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/index.html">here</a> is some examples, they are similar to the assignments done in <a href="https://learnaifromscratch.github.io/software.html">CS190</a>. Reminder the book was originally lecture notes for that course and students did a lot of programming some of it requiring going through existing scheme code and figuring it out themselves. 
+There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures and countless hackathons or compsci reading groups have videos on working through the book. 
+</p>
+
+<p>
+The original 6.001 course had many lengthy and difficult assignments in addition to the book exercises, <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/pages/projects/">here</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/index.html">here</a> is some examples, they are similar to the assignments done in <a href="https://learnaifromscratch.github.io/software.html">CS190</a>. Reminder the book was originally lecture notes for that course and students did a lot of extra programming some of it required going through existing scheme code and figuring it out themselves.  
 </p>
 </div>
 
-<div id="outline-container-orgfc04576" class="outline-4">
-<h4 id="orgfc04576">Scheme challenges</h4>
-<div class="outline-text-4" id="text-orgfc04576">
+<div id="outline-container-org5cc794f" class="outline-4">
+<h4 id="org5cc794f">Scheme challenges</h4>
+<div class="outline-text-4" id="text-org5cc794f">
 <p>
 If you want to do extra scheme hacking in addition to the book and you've already done something like CS190 then try the <a href="https://cryptopals.com/">Crytopals challenges</a> in scheme which is perfect for something like prototyping a crypto breaking toolkit. 
 </p>
@@ -332,9 +336,9 @@ If you want to do extra scheme hacking in addition to the book and you've alread
 </div>
 </div>
 
-<div id="outline-container-org0378cc0" class="outline-3">
-<h3 id="org0378cc0">SICP the sequels</h3>
-<div class="outline-text-3" id="text-org0378cc0">
+<div id="outline-container-org4352738" class="outline-3">
+<h3 id="org4352738">SICP the sequels</h3>
+<div class="outline-text-3" id="text-org4352738">
 <p>
 You can do these after if interested:
 </p>
@@ -360,13 +364,13 @@ You can do these after if interested:
 </div>
 </div>
 
-<div id="outline-container-org52a90cf" class="outline-2">
-<h2 id="org52a90cf">BEGIN</h2>
-<div class="outline-text-2" id="text-org52a90cf">
+<div id="outline-container-org56b7f36" class="outline-2">
+<h2 id="org56b7f36">BEGIN</h2>
+<div class="outline-text-2" id="text-org56b7f36">
 </div>
-<div id="outline-container-org57d3340" class="outline-3">
-<h3 id="org57d3340">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-org57d3340">
+<div id="outline-container-org0647726" class="outline-3">
+<h3 id="org0647726">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-org0647726">
 <p>
 To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's 2022 grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>.
 </p>
@@ -377,15 +381,15 @@ I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you
 </div>
 </div>
 
-<div id="outline-container-org9376a0d" class="outline-3">
-<h3 id="org9376a0d">IDE/Editor</h3>
-<div class="outline-text-3" id="text-org9376a0d">
+<div id="outline-container-orgc7396fb" class="outline-3">
+<h3 id="orgc7396fb">IDE/Editor</h3>
+<div class="outline-text-3" id="text-orgc7396fb">
 <p>
-Whatever you use keep some kind of exercise versioning so you can refer to them later in future chapters when the book asks you to use code you've already written. You can type scheme into any text editor, save is as a filename.scm, run mit-scheme, and load your file in the REPL manipulating it there you don't have to use an IDE. This is trivial with (load "filename.scm"). 
+Whatever you use keep some kind of exercise versioning so you can refer to them later in future chapters when the book asks you to use code you've already written. You can type scheme into any text editor, save is as filename.scm, run mit-scheme, and load your file in the REPL manipulating it there you don't have to use an IDE. This is trivial with (load "filename.scm"). 
 </p>
 
 <p>
-The only IDEs I use are emacs and edwin the editor that comes with mit-scheme. Edwin is what 6.001 and the graduate courses have used for decades and Sussman still it as per his 2022 course setup notes. You start edwin with <i>mit-scheme &#x2013;edit</i> but regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc. 
+The only IDEs I use are emacs and edwin the editor that comes with mit-scheme. Edwin is what 6.001 and the graduate courses have used for decades and Sussman still uses it as per his 2022 course setup notes. You start edwin with <i>mit-scheme &#x2013;edit</i> but regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc. 
 </p>
 
 <ul class="org-ul">
@@ -470,9 +474,9 @@ Then typing (restart 1) will return to the REPL or you can try option 3 and fix 
 </div>
 </div>
 
-<div id="outline-container-orgca4f3a3" class="outline-3">
-<h3 id="orgca4f3a3">The book</h3>
-<div class="outline-text-3" id="text-orgca4f3a3">
+<div id="outline-container-org870c2f1" class="outline-3">
+<h3 id="org870c2f1">The book</h3>
+<div class="outline-text-3" id="text-org870c2f1">
 <p>
 I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of the illicit <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdfs</a> floating around to see the figures which are impossible to read in the online html version. 
 </p>
@@ -480,9 +484,9 @@ I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyf
 </div>
 </div>
 
-<div id="outline-container-orgb28a99d" class="outline-2">
-<h2 id="orgb28a99d">Chapter 1.1.x</h2>
-<div class="outline-text-2" id="text-orgb28a99d">
+<div id="outline-container-org6d1430e" class="outline-2">
+<h2 id="org6d1430e">Chapter 1.x</h2>
+<div class="outline-text-2" id="text-org6d1430e">
 <p>
 A computational process I would interpret as a running program or the act of computation itself. A procedure seems like it would be called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
 </p>
@@ -557,9 +561,9 @@ Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8
 </p>
 </div>
 
-<div id="outline-container-org2296376" class="outline-3">
-<h3 id="org2296376">Chapter 1.2.1</h3>
-<div class="outline-text-3" id="text-org2296376">
+<div id="outline-container-org2ca80bf" class="outline-3">
+<h3 id="org2ca80bf">Chapter 1.2.1</h3>
+<div class="outline-text-3" id="text-org2ca80bf">
 <p>
 I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
 </p>
@@ -633,9 +637,9 @@ G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536&#x20
 </div>
 </div>
 
-<div id="outline-container-orgb41519f" class="outline-3">
-<h3 id="orgb41519f">Chapter 1.2.2</h3>
-<div class="outline-text-3" id="text-orgb41519f">
+<div id="outline-container-org350d054" class="outline-3">
+<h3 id="org350d054">Chapter 1.2.2</h3>
+<div class="outline-text-3" id="text-org350d054">
 <p>
 Tree recursive processes every element in the input we process requires doubling the amount of work on the rest of the input. Phi or \(\phi\) is a constant that is solely here to illustrate that the values of fib(n) grow exponentially with the input and fib(n) is approximately \(\frac{\phi^n}{\sqrt 5}\). This sequence is some kind of exponential between \(\sqrt 2^n\) and \(2^n\) so is bounded by exponentials, thus is an exponential. 
 </p>
