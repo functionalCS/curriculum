@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-10-22 Sun 01:29 -->
+<!-- 2023-10-22 Sun 22:10 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to do Structure and Interpretation of Computer Programs (SICP)</title>
@@ -269,63 +269,72 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf3fb545">SICP workshop</a>
+<li><a href="#org6416366">SICP workshop</a>
 <ul>
-<li><a href="#orgb4484f0">SICP in 2023</a></li>
-<li><a href="#orgd5c8a9b">Optional lectures</a></li>
-<li><a href="#org49c6185">SICP the sequels</a></li>
+<li><a href="#org4c151e6">SICP in 2023</a></li>
+<li><a href="#org22ab972">Optional lectures &amp; assignments</a>
+<ul>
+<li><a href="#orgfc04576">Scheme challenges</a></li>
 </ul>
 </li>
-<li><a href="#org799319a">BEGIN</a>
-<ul>
-<li><a href="#orgd602b1b">Install mit-scheme</a></li>
-<li><a href="#org58e83a0">IDE/Editor</a></li>
-<li><a href="#org3ab92fe">The book</a></li>
+<li><a href="#org0378cc0">SICP the sequels</a></li>
 </ul>
 </li>
-<li><a href="#org32d5272">Chapter 1.1.x</a>
+<li><a href="#org52a90cf">BEGIN</a>
 <ul>
-<li><a href="#org1bdf8af">Chapter 1.2.1</a></li>
-<li><a href="#org901e5d8">Chapter 1.2.2</a></li>
+<li><a href="#org57d3340">Install mit-scheme</a></li>
+<li><a href="#org9376a0d">IDE/Editor</a></li>
+<li><a href="#orgca4f3a3">The book</a></li>
+</ul>
+</li>
+<li><a href="#orgb28a99d">Chapter 1.1.x</a>
+<ul>
+<li><a href="#org2296376">Chapter 1.2.1</a></li>
+<li><a href="#orgb41519f">Chapter 1.2.2</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgf3fb545" class="outline-2">
-<h2 id="orgf3fb545">SICP workshop</h2>
-<div class="outline-text-2" id="text-orgf3fb545">
+<div id="outline-container-org6416366" class="outline-2">
+<h2 id="org6416366">SICP workshop</h2>
+<div class="outline-text-2" id="text-org6416366">
 <p>
-This exists because if you ask how to learn programming likely someone will shill this book due to it being a seminal text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately. In interviews the authors gave they explained they only used math because this was taught at MIT after 3 semesters of calculus so for that target audience it made sense to use some basic freshman calculus for assignments/examples. 
-</p>
-
-<p>
-I do this casually whenever I can usually with a phone over lunch while at work so there will be persistent spelling/grammar mistakes. 
+This exists because if you ask how to learn programming likely someone will shill this book due to it being a seminal text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately. In interviews the authors gave they explained they only used math because this was taught at MIT after 3 semesters of calculus so for that target audience it made sense to use some basic freshman calculus for assignments/examples. I do this casually whenever I can usually with a phone over lunch while at work so there will be spelling/grammar mistakes. 
 </p>
 </div>
 
-<div id="outline-container-orgb4484f0" class="outline-3">
-<h3 id="orgb4484f0">SICP in 2023</h3>
-<div class="outline-text-3" id="text-orgb4484f0">
+<div id="outline-container-org4c151e6" class="outline-3">
+<h3 id="org4c151e6">SICP in 2023</h3>
+<div class="outline-text-3" id="text-org4c151e6">
 <p>
 MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">change</a> implementations in later chapters to be much more complicated because of the limitations of JavaScript. If you want to do Sussman's other books may as well choose Scheme it's an easy language to pick up and that's what I'll use. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd5c8a9b" class="outline-3">
-<h3 id="orgd5c8a9b">Optional lectures</h3>
-<div class="outline-text-3" id="text-orgd5c8a9b">
+<div id="outline-container-org22ab972" class="outline-3">
+<h3 id="org22ab972">Optional lectures &amp; assignments</h3>
+<div class="outline-text-3" id="text-org22ab972">
 <p>
-There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent versions and countless hackathons or compsci reading groups have videos on working through the book.  
+There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures and countless hackathons or compsci reading groups have videos on working through the book. The original 6.001 course had many lengthy and difficult assignments in addition to the book exercises, <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/pages/projects/">here</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/index.html">here</a> is some examples, they are similar to the assignments done in <a href="https://learnaifromscratch.github.io/software.html">CS190</a>. Reminder the book was originally lecture notes for that course and students did a lot of programming some of it requiring going through existing scheme code and figuring it out themselves. 
+</p>
+</div>
+
+<div id="outline-container-orgfc04576" class="outline-4">
+<h4 id="orgfc04576">Scheme challenges</h4>
+<div class="outline-text-4" id="text-orgfc04576">
+<p>
+If you want to do extra scheme hacking in addition to the book and you've already done something like CS190 then try the <a href="https://cryptopals.com/">Crytopals challenges</a> in scheme which is perfect for something like prototyping a crypto breaking toolkit. 
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org49c6185" class="outline-3">
-<h3 id="org49c6185">SICP the sequels</h3>
-<div class="outline-text-3" id="text-org49c6185">
+<div id="outline-container-org0378cc0" class="outline-3">
+<h3 id="org0378cc0">SICP the sequels</h3>
+<div class="outline-text-3" id="text-org0378cc0">
 <p>
 You can do these after if interested:
 </p>
@@ -351,45 +360,50 @@ You can do these after if interested:
 </div>
 </div>
 
-<div id="outline-container-org799319a" class="outline-2">
-<h2 id="org799319a">BEGIN</h2>
-<div class="outline-text-2" id="text-org799319a">
+<div id="outline-container-org52a90cf" class="outline-2">
+<h2 id="org52a90cf">BEGIN</h2>
+<div class="outline-text-2" id="text-org52a90cf">
 </div>
-<div id="outline-container-orgd602b1b" class="outline-3">
-<h3 id="orgd602b1b">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-orgd602b1b">
+<div id="outline-container-org57d3340" class="outline-3">
+<h3 id="org57d3340">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-org57d3340">
 <p>
-To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's 2022 grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. 
+To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's 2022 grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>.
 </p>
 
 <p>
-I'm aware of #lang sicp in DrRacket and many other 3rd party implementations, you can start with those for the first few chapters but if you want to do Sussman's more recent books after you're going to have to use the latest mit-scheme anyway so we may as well begin using the language the book actually wants us to use. 
+I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you can start with those for the first few chapters but if you want to do Sussman's more recent books after you're going to have to use the latest mit-scheme anyway so we may as well begin with using the language the book actually wants us to use.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-org58e83a0" class="outline-3">
-<h3 id="org58e83a0">IDE/Editor</h3>
-<div class="outline-text-3" id="text-org58e83a0">
+<div id="outline-container-org9376a0d" class="outline-3">
+<h3 id="org9376a0d">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org9376a0d">
 <p>
-You can type scheme into any text editor, save is as a file.scm, run mit-scheme, and load your file.scm in the REPL you don't have to use anything else. 
+Whatever you use keep some kind of exercise versioning so you can refer to them later in future chapters when the book asks you to use code you've already written. You can type scheme into any text editor, save is as a filename.scm, run mit-scheme, and load your file in the REPL manipulating it there you don't have to use an IDE. This is trivial with (load "filename.scm"). 
 </p>
 
 <p>
-You could use emacs or edwin the editor that comes with mit-scheme. Edwin is what 6.001 and the graduate courses have used for decades and Sussman still it as per his 2022 course setup notes. You start edwin with <i>mit-scheme &#x2013;edit</i> but regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, a responsive REPL, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc. Edwin spits out the REPL results you can't interact with it (unless you spawn a shell of course).    
+The only IDEs I use are emacs and edwin the editor that comes with mit-scheme. Edwin is what 6.001 and the graduate courses have used for decades and Sussman still it as per his 2022 course setup notes. You start edwin with <i>mit-scheme &#x2013;edit</i> but regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc. 
 </p>
 
 <ul class="org-ul">
-<li>Editor <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/#org6d580b9">setup</a> from 6.945 for emacs or edwin</li>
+<li>Editor <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/#org6d580b9">setup</a> from 6.945 and <a href="http://groups.csail.mit.edu/mac/users/gjs/6946/">setup</a> from 6.946 for emacs or edwin</li>
 <li>Sussman's .edwin config file <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/.edwin">here</a> for better fonts (save in home directory as .edwin (with the period))</li>
 <li>Edwin specific docs <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">here</a> (it has a stepper too)
 <ul class="org-ul">
-<li>Edwin is a clone of Emacs 18 from the 1980s so find an old <a href="https://web.cs.dal.ca/~eem/info/emacsrefcard.pdf">refcard</a> for it.</li>
+<li>Edwin <a href="http://groups.csail.mit.edu/mac/users/gjs/6946/cheat-sheet.pdf">ref card</a></li>
+<li>MIT lab <a href="http://groups.csail.mit.edu/mac/projects/scheme/documentation/nwwyw_4.html#SEC32">doc</a> on Edwin commands and how to use the debugger</li>
 </ul></li>
 </ul>
 
 <p>
-If you choose emacs install the most current vanilla emacs not any of those 'spacemacs' or whatever preconfigured versions that remove the GUI and add a bunch of junk. Click Options-&gt;Customize Emacs-&gt;Custom Themes and change the colors around if you want. You won't need a config file everything like MELPA package install is already included (and scheme mode). I also wouldn't install <a href="https://paredit.org/screencast/fib-fact.gif">Paredit mode</a> or anything until you start writing programs in the later chapters because you learn scope in the beginning by seeing how all the parens close expressions and having something automatically shifting around parens when you don't have experience is going to be rage inducing.  
+If you choose emacs install vanilla emacs not any of those 'spacemacs' or whatever preconfigured versions that remove the GUI drop down menus. Click Options-&gt;Customize Emacs-&gt;Custom Themes and change the colors around if you want. You won't need a config file everything like MELPA package install is already included (and scheme mode) so you will automatically enter scheme mode when opening any file ending in .scm 
+</p>
+
+<p>
+I wouldn't recommend <a href="https://paredit.org/screencast/fib-fact.gif">Paredit mode</a> or anything until you start writing larger programs in the later chapters because you learn scope in the beginning by seeing how all the parens close blocks of expressions and having something automatically shifting around parens when you don't have experience is going to be rage inducing.    
 </p>
 
 <p>
@@ -410,7 +424,7 @@ Commands:
 </p>
 
 <p>
-In either edwin or emacs: use command C-x C-f and type test.scm to open or make a new file. Use C-x 3 and a new window should open to the right or if you want the new window below use C-x 2. Click on the new window and type C-x b and press enter to switch to the scheme REPL which was the buffer you saw when you first opened the editor. Now you have a screen to enter code with the output beside it. In emacs there is no default scheme buffer you have to 'run inferior scheme' or M-x mit-scheme. 
+In either edwin or emacs: use command C-x C-f and type test.scm to open or make a new file. Use C-x 3 and a new window should open to the right or if you want the new window below use C-x 2. Click on the new window and type C-x b and press enter to switch to the scheme REPL which was the buffer you saw when you first opened the editor. Now you have a screen to enter code with the output beside it. In emacs there is no default scheme buffer (unless you configure one) you have to 'run inferior scheme' or M-x mit-scheme. 
 </p>
 
 <p>
@@ -451,14 +465,14 @@ If you get something similar:
 ; (RESTART 1) =&gt; Return to read-eval-print level 1.
 </pre>
 <p>
-Then typing (restart 1) will return to the REPL or you can try option 3 and fix the typo, or break/kill it in emacs. 
+Then typing (restart 1) will return to the REPL or you can try option 3 and fix the typo, or break/kill it in emacs. The bulk of errors will be parens problems in the beginning but it's how you learn and after a few of them you're much more careful about code and what scope it's in. If you run the debugger type C-h m to get a list of commands (can run that in the REPL too). 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3ab92fe" class="outline-3">
-<h3 id="org3ab92fe">The book</h3>
-<div class="outline-text-3" id="text-org3ab92fe">
+<div id="outline-container-orgca4f3a3" class="outline-3">
+<h3 id="orgca4f3a3">The book</h3>
+<div class="outline-text-3" id="text-orgca4f3a3">
 <p>
 I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of the illicit <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdfs</a> floating around to see the figures which are impossible to read in the online html version. 
 </p>
@@ -466,9 +480,9 @@ I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyf
 </div>
 </div>
 
-<div id="outline-container-org32d5272" class="outline-2">
-<h2 id="org32d5272">Chapter 1.1.x</h2>
-<div class="outline-text-2" id="text-org32d5272">
+<div id="outline-container-orgb28a99d" class="outline-2">
+<h2 id="orgb28a99d">Chapter 1.1.x</h2>
+<div class="outline-text-2" id="text-orgb28a99d">
 <p>
 A computational process I would interpret as a running program or the act of computation itself. A procedure seems like it would be called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
 </p>
@@ -543,9 +557,9 @@ Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8
 </p>
 </div>
 
-<div id="outline-container-org1bdf8af" class="outline-3">
-<h3 id="org1bdf8af">Chapter 1.2.1</h3>
-<div class="outline-text-3" id="text-org1bdf8af">
+<div id="outline-container-org2296376" class="outline-3">
+<h3 id="org2296376">Chapter 1.2.1</h3>
+<div class="outline-text-3" id="text-org2296376">
 <p>
 I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
 </p>
@@ -572,7 +586,7 @@ Ex 1.9 addition is defined as a function that uses <i>a</i> as a counter and inc
 </p>
 
 <p>
-Ex 1.10 the 'concise math definitions' means turn (* 5 n n) into 5n<sup>2</sup> so f(n) = 2y. If you are using edwin you can run the stepper see the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user.pdf">manual</a> for mit-scheme. Otherwise hand step:
+Ex 1.10 'concise math definitions' means turn (* 5 n n) into 5n<sup>2</sup> so f(n) = 2y. If you are using edwin you can run the stepper see the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user.pdf">manual</a> for mit-scheme. Otherwise hand step:
 </p>
 
 <pre class="example">
@@ -614,16 +628,16 @@ Ex 1.10 the 'concise math definitions' means turn (* 5 n n) into 5n<sup>2</sup> 
 </pre>
 
 <p>
-G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536 so it's \(2^{2^2..}\)
+G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536&#x2026; or \(2^{2^2..}\)
 </p>
 </div>
 </div>
 
-<div id="outline-container-org901e5d8" class="outline-3">
-<h3 id="org901e5d8">Chapter 1.2.2</h3>
-<div class="outline-text-3" id="text-org901e5d8">
+<div id="outline-container-orgb41519f" class="outline-3">
+<h3 id="orgb41519f">Chapter 1.2.2</h3>
+<div class="outline-text-3" id="text-orgb41519f">
 <p>
-Tree recursive processes every element in the input we process requires doubling the amount of work on the rest of the input. Phi or \(\phi\) is a constant that is solely here to illustrate that the value of fib(n) grows exponentially with the input or the number returned by fib(n) is approximately \(\frac{\phi^n}{\sqrt 5}\). This sequence is some kind of exponential between \(\sqrt 2^n\) and \(2^n\) so is bounded by exponentials, thus is an exponential. 
+Tree recursive processes every element in the input we process requires doubling the amount of work on the rest of the input. Phi or \(\phi\) is a constant that is solely here to illustrate that the values of fib(n) grow exponentially with the input and fib(n) is approximately \(\frac{\phi^n}{\sqrt 5}\). This sequence is some kind of exponential between \(\sqrt 2^n\) and \(2^n\) so is bounded by exponentials, thus is an exponential. 
 </p>
 
 <p>
@@ -645,7 +659,7 @@ The change making algorithm is exactly what you would do if you had a pile of co
 </ul>
 
 <p>
-Ex 1.11 write examples 1, 2, 4, 11, 25, 59.. enter it into OEIS and there's actually a generating function solution a physicist figured out however the assignment wants us to create an iterable procedure. You can use the easy recursive procedure one to test your iterative one. I took eqv? from the mit-scheme reference manual.
+Ex 1.11 write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A100550">OEIS</a> and there's actually a generating function solution a physicist figured out however the assignment wants us to create an iterable procedure. You can use the easy recursive procedure to test your iterative one. I took eqv? from the mit-scheme reference manual.
 </p>
 
 <pre class="example">
@@ -693,14 +707,14 @@ For <a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle#/media/File:Sierp
 You can property test your program by noticing each element in a row of Pascal's array sums to \(2^{(row)}\): 
 </p>
 
-<div class="org-src-container">
-<pre class="src src-scheme">(define (pascal row col)
+<pre class="example">
+(define (pascal row col)
   (cond ((= row 0) 1)
 	((&gt; col row) 0)
-	((or (= col 0) (= col row)) 1)
-	((or (= col 1) (= col (- row 1))) row)  
-	(else (+ (pascal (- row 1) (- col 1))
-		 (pascal (- row 1) col)))))
+        ((or (= col 0) (= col row)) 1)
+        ((or (= col 1) (= col (- row 1))) row)  
+        (else (+ (pascal (- row 1) (- col 1))
+                 (pascal (- row 1) col)))))
 
 (define (ptest n)
   (define (row-sum count)
@@ -714,11 +728,9 @@ You can property test your program by noticing each element in a row of Pascal's
       (eqv? (ptest 3) (* 2 2 2))
       (eqv? (ptest 10) (* 2 2 2 2 2 2 2 2 2 2))))
 </pre>
-</div>
-
 
 <p>
-TODO
+Ex 1.13 TODO
 </p>
 
 <hr>
