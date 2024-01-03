@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-01-02 Tue 08:08 -->
+<!-- 2024-01-03 Wed 07:21 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A 2024 Computer Science Curriculum</title>
@@ -247,37 +247,37 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6ae1100">Welcome</a>
+<li><a href="#org73f4527">Welcome</a>
 <ul>
-<li><a href="#org8b23fc4">Basic Curriculum</a></li>
-<li><a href="#orgd2ccda5">Research</a></li>
-<li><a href="#org6f54141">Other curriculums</a></li>
+<li><a href="#org5ff7b9d">Basic Curriculum</a></li>
+<li><a href="#orgfe6286f">Research</a></li>
 </ul>
 </li>
-<li><a href="#orgaf68338">BEGIN</a>
+<li><a href="#orga3cc08b">BEGIN</a>
 <ul>
-<li><a href="#orgd79529e">Proving equalities</a></li>
+<li><a href="#org46c7b1e">Proving equalities</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org6ae1100" class="outline-2">
-<h2 id="org6ae1100">Welcome</h2>
-<div class="outline-text-2" id="text-org6ae1100">
+<div id="outline-container-org73f4527" class="outline-2">
+<h2 id="org73f4527">Welcome</h2>
+<div class="outline-text-2" id="text-org73f4527">
 <p>
-This is a deep dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">The Holy Trinity</a> of the theory of computation. Once familiar with this framework for research and discoveries anyone can publish their research in algorithms or other computer science topics without a formal degree since we can attach all the proofs as a running program in Agda, Coq, NuPRL or Lean. I modernized everything here for the 21 century including the short integration book we'll work though. I do this whenever I can, usually 1-2 hours per day. 
-</p>
-
-<p>
-If you want to learn this material with a community some anons have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
+This is a deep dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">The Holy Trinity</a> of the theory of computation. It gives you a framework for discovery and analysis of anything computer science related so this isn't only a programming language theory curriculum. I modernized everything here for the 21 century including the short integration book we'll work though. If you want to learn this material with a community some anons have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
 </p>
 </div>
 
-<div id="outline-container-org8b23fc4" class="outline-3">
-<h3 id="org8b23fc4">Basic Curriculum</h3>
-<div class="outline-text-3" id="text-org8b23fc4">
+<div id="outline-container-org5ff7b9d" class="outline-3">
+<h3 id="org5ff7b9d">Basic Curriculum</h3>
+<div class="outline-text-3" id="text-org5ff7b9d">
+<p>
+The categories course has recorded lectures but the lecture notes are high enough quality they can be used as a workbook
+</p>
+
+
 <ul class="org-ul">
 <li>15-150 <a href="https://brandonspark.github.io/150/">Principles of Functional Programming</a> and <a href="http://brendanfong.com/programmingcats.html">Programming with Categories</a>
 <ul class="org-ul">
@@ -287,6 +287,9 @@ If you want to learn this material with a community some anons have started a Di
 </ul></li>
 </ul>
 
+<p>
+They are going to fully mechanize 15-210 soon using <a href="https://github.com/jonsterling/agda-calf">calf</a>/decalf to prove costs. We can try it ourselves. 
+</p>
 
 <ul class="org-ul">
 <li>15-210 <a href="https://www.diderot.one/courses/121">Parallel &amp; Sequential Algorithms</a>
@@ -300,21 +303,18 @@ If you want to learn this material with a community some anons have started a Di
 </ul></li>
 </ul>
 
+<p>
+Classic mathematics is 'element oriented' studying everything through the lens of sets while category theory is 'function oriented' studying functions and their transformations
+</p>
 
 <ul class="org-ul">
-<li>Math
-<ul class="org-ul">
-<li>Discrete Math using <a href="https://hrmacbeth.github.io/math2001/">Lean</a> to do all the exercises</li>
+<li>Discrete Math using <a href="https://hrmacbeth.github.io/math2001/">Lean</a></li>
 <li><a href="http://classicalrealanalysis.info/resources-drip.php">DRIP</a> (Dump the Riemann Integral Project) modernized calculus integral <a href="http://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">book</a>
 <ul class="org-ul">
-<li>Needed for category theory/logic proofs and understanding asymptotics</li>
+<li>Basic understanding of integration is needed for probability</li>
+<li>Can also be defined with <a href="https://arxiv.org/abs/2312.05228">category theory</a></li>
 </ul></li>
-<li>MIT course <a href="https://ocw.mit.edu/courses/18-s097-applied-category-theory-january-iap-2019/">Applied Category Theory</a> 
-<ul class="org-ul">
-<li>We just keep going after following all the references</li>
-<li>Also categorical logic (an algebra of logic)</li>
-</ul></li>
-</ul></li>
+<li>MIT course <a href="https://ocw.mit.edu/courses/18-s097-applied-category-theory-january-iap-2019/">Applied Category Theory</a> and <a href="https://jonsterling.github.io/courses/ct-fall-2022/">this</a> reading for some categorical logic</li>
 </ul>
 
 <p>
@@ -343,26 +343,31 @@ Some optional topics:
 </div>
 
 
-<div id="outline-container-orgd2ccda5" class="outline-3">
-<h3 id="orgd2ccda5">Research</h3>
-<div class="outline-text-3" id="text-orgd2ccda5">
+<div id="outline-container-orgfe6286f" class="outline-3">
+<h3 id="orgfe6286f">Research</h3>
+<div class="outline-text-3" id="text-orgfe6286f">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into every technical detail. 
 </p>
 
 <p>
-Draft plan that will change of what I'll work through here:
+This is research so if something doesn't make sense you follow all the citations and references to figure it out there's no magic solution guide. 
 </p>
 
 <p>
-What we need to know is:
+What we need to know:
 </p>
 <ul class="org-ul">
-<li>The <a href="https://www.plai.org/">plai.org</a> workbook to learn the standard model of most languages you've heard about
+<li>The <a href="https://www.plai.org/">PLAi</a> workbook to learn the standard model of most languages you've heard about
 <ul class="org-ul">
 <li>There's lectures for this too I can post but the core is all in the book</li>
 </ul></li>
-<li>The Edinburgh Logical Framework or <a href="https://homepages.inf.ed.ac.uk/gdp/publications/Framework_Def_Log.pdf">LF</a></li>
+<li>How to use <a href="https://cs.uwaterloo.ca/~plragde/747/notes/index.html">Agda</a></li>
+<li>The Edinburgh Logical Framework or <a href="https://homepages.inf.ed.ac.uk/gdp/publications/Framework_Def_Log.pdf">LF</a>
+<ul class="org-ul">
+<li>One of those mandatory technical details we have to know</li>
+<li>Created to make it easier to mechanize proofs in an assistant and for more readable notation</li>
+</ul></li>
 <li>A few Per Martin-Lof <a href="https://github.com/michaelt/martin-lof">papers</a> and <a href="https://www.cse.chalmers.se/research/group/logic/book/">Programming in MLTT</a></li>
 <li>Most of the seminars from <a href="https://www.cs.uoregon.edu/research/summerschool/summer15/curriculum.html">OPLSS</a> 2015 curriculum combined with the <a href="https://www.cs.uoregon.edu/research/summerschool/summer12/curriculum.html">OPLSS</a> 2012 lectures
 <ul class="org-ul">
@@ -372,54 +377,42 @@ What we need to know is:
 <ul class="org-ul">
 <li>There's now logical relations as types or ParamTT they are highly versatile</li>
 </ul></li>
+</ul>
 
+<p>
+We can take the PFPL book with the HoTT book/course the first 2 chapters of HoTT will be especially helpful
+</p>
+
+<ul class="org-ul">
 <li><i>Practical Foundations for Programming Languages</i> <a href="http://www.cs.cmu.edu/~rwh/pfpl.html">book</a> and supplementary materials</li>
 <li>Robert Harper <a href="https://www.cs.uoregon.edu/research/summerschool/summer21/topics.php">OPLSS</a> 2021 lectures and some earlier OPLSS lectures for his book, many cover different topics  
 <ul class="org-ul">
 <li>We have access to some 15-312 <a href="https://www.cs.cmu.edu/~rjsimmon/15312-s14/">assignments</a> but the exercises in PFPL are hard enough</li>
 </ul></li>
+</ul>
 
+
+<ul class="org-ul">
 <li>15-819 <a href="http://www.cs.cmu.edu/~rwh/courses/hott/#schedule">Homotopy Type Theory</a> and book 
 <ul class="org-ul">
-<li>Described as a 'misadventure in formalisms' but explains how univalence works, higher types and some category theory
+<li>Described as a 'misadventure in formalisms' but explains how univalence works, higher types
 <ul class="org-ul">
 <li>Univalence is a way to show something is equal in all contexts and has released a flood of new research/type theories</li>
 </ul></li>
 </ul></li>
-
-<li><a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lectures/draft book on Computational Type Theory, calf/decalf typed frameworks that are cost-aware type theories for proving asymptotic bounds of programs, and whatever else is going on these days like cartesian <a href="https://www.youtube.com/watch?v=VbBDxVEu_bA">cubical type theory</a> an attempt to replace the foundations of mathematics from sets to types.</li>
 </ul>
 
+
 <p>
-There's other research if you prefer for example OPLSS is filled with session-typed concurrent programming seminars by Stephanie Balzer (Rust, Erlang) and you can read the Brown University experimental rewrite of the <a href="https://rust-book.cs.brown.edu/">Rust book</a> to make the often confused concept of ownership easier to understand. 
+Finally <a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lectures/draft book on Computational Type Theory and whatever research is going on these days like cartesian <a href="https://www.youtube.com/watch?v=VbBDxVEu_bA">cubical type theory</a>. There's other research if you prefer for example OPLSS is filled with session-typed concurrent programming seminars by Stephanie Balzer (Rust, Erlang) and you can read the Brown University experimental rewrite of the <a href="https://rust-book.cs.brown.edu/">Rust book</a> to make the often confused concept of ownership easier to understand. 
 </p>
 </div>
 </div>
-
-<div id="outline-container-org6f54141" class="outline-3">
-<h3 id="org6f54141">Other curriculums</h3>
-<div class="outline-text-3" id="text-org6f54141">
-<p>
-I will update all of these weekly, many are unfinished or need to be rebooted. All these topics are really just type theory as we'll learn here:
-</p>
-
-
-<ul class="org-ul">
-<li><a href="https://learnaifromscratch.github.io/software.html">Algorithms</a> research and writing software to be a freelancer</li>
-<li><a href="https://learnaifromscratch.github.io/accelerated.html">Accelerated CS</a> Brown's 2 semester in 1 CS19 course (mainly functional)</li>
-<li><a href="https://functionalcs.github.io/curriculum/sicp.html">SICP</a> classic book and eventually Sussman's new book SDF</li>
-<li><a href="https://learnaifromscratch.github.io/taocp.html">TAOCP</a> Don Knuth text and full calculus course</li>
-<li><a href="https://learnaifromscratch.github.io/math.html">Math</a> from scratch which points to all other workshops as a centralized resource</li>
-<li><a href="https://learnaifromscratch.github.io/theabsolutestateofsoftware.html">Security</a> curriculum</li>
-<li><a href="https://learnaifromscratch.github.io/ai.html">AI</a> curriculum</li>
-</ul>
-</div>
-</div>
 </div>
 
-<div id="outline-container-orgaf68338" class="outline-2">
-<h2 id="orgaf68338">BEGIN</h2>
-<div class="outline-text-2" id="text-orgaf68338">
+<div id="outline-container-orga3cc08b" class="outline-2">
+<h2 id="orga3cc08b">BEGIN</h2>
+<div class="outline-text-2" id="text-orga3cc08b">
 <p>
 I'm going to start with a chapter from <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this.   
 </p>
@@ -459,9 +452,9 @@ I use emacs instead so if you're interested install lean as before, git clone <a
 </p>
 </div>
 
-<div id="outline-container-orgd79529e" class="outline-3">
-<h3 id="orgd79529e">Proving equalities</h3>
-<div class="outline-text-3" id="text-orgd79529e">
+<div id="outline-container-org46c7b1e" class="outline-3">
+<h3 id="org46c7b1e">Proving equalities</h3>
+<div class="outline-text-3" id="text-org46c7b1e">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Do you get the first example? Expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) is 4 so (a - b)<sup>2</sup> is 16 after substitution. 
 </p>
