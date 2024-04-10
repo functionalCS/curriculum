@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-09 Tue 17:10 -->
+<!-- 2024-04-09 Tue 18:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A 2024 Computer Science Curriculum</title>
@@ -248,33 +248,33 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge91e6c8">Welcome</a>
+<li><a href="#orgcae8a1f">Welcome</a>
 <ul>
-<li><a href="#org796dd14">Basic Curriculum</a></li>
-<li><a href="#orgf654d64">Research</a></li>
+<li><a href="#org707cf1c">Basic Curriculum</a></li>
+<li><a href="#org9f349e6">Research</a></li>
 </ul>
 </li>
-<li><a href="#org9c70374">BEGIN</a>
+<li><a href="#orgf8199e4">BEGIN</a>
 <ul>
-<li><a href="#org04c57e3">Proving equalities</a></li>
-<li><a href="#orgfd887d4">Tips and tricks</a></li>
+<li><a href="#org66a14de">Proving equalities</a></li>
+<li><a href="#orgb3a3bc5">Tips and tricks</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge91e6c8" class="outline-2">
-<h2 id="orge91e6c8">Welcome</h2>
-<div class="outline-text-2" id="text-orge91e6c8">
+<div id="outline-container-orgcae8a1f" class="outline-2">
+<h2 id="orgcae8a1f">Welcome</h2>
+<div class="outline-text-2" id="text-orgcae8a1f">
 <p>
 This is a deep dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">The Holy Trinity</a> of the theory of computation. It gives you a framework for discovery and analysis of anything computer science related so this isn't only a programming language theory curriculum. If you want to learn this material with a community some anons have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
 </p>
 </div>
 
-<div id="outline-container-org796dd14" class="outline-3">
-<h3 id="org796dd14">Basic Curriculum</h3>
-<div class="outline-text-3" id="text-org796dd14">
+<div id="outline-container-org707cf1c" class="outline-3">
+<h3 id="org707cf1c">Basic Curriculum</h3>
+<div class="outline-text-3" id="text-org707cf1c">
 <p>
 The categories course has recorded lectures but the lecture notes are high enough quality they can be used as a workbook
 </p>
@@ -317,9 +317,9 @@ Classic mathematics is 'element oriented' studying everything through the lens o
 </ul>
 </div>
 
-<div id="outline-container-org11d02c9" class="outline-4">
-<h4 id="org11d02c9">Some optional topics:</h4>
-<div class="outline-text-4" id="text-org11d02c9">
+<div id="outline-container-org2a3166d" class="outline-4">
+<h4 id="org2a3166d">Some optional topics:</h4>
+<div class="outline-text-4" id="text-org2a3166d">
 <p>
 Networks
 </p>
@@ -339,9 +339,9 @@ Program transformation
 </div>
 
 
-<div id="outline-container-orgf654d64" class="outline-3">
-<h3 id="orgf654d64">Research</h3>
-<div class="outline-text-3" id="text-orgf654d64">
+<div id="outline-container-org9f349e6" class="outline-3">
+<h3 id="org9f349e6">Research</h3>
+<div class="outline-text-3" id="text-org9f349e6">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into every technical detail. 
 </p>
@@ -399,11 +399,11 @@ Finally <a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lec
 </div>
 </div>
 
-<div id="outline-container-org9c70374" class="outline-2">
-<h2 id="org9c70374">BEGIN</h2>
-<div class="outline-text-2" id="text-org9c70374">
+<div id="outline-container-orgf8199e4" class="outline-2">
+<h2 id="orgf8199e4">BEGIN</h2>
+<div class="outline-text-2" id="text-orgf8199e4">
 <p>
-I'm going to start with a chapter from <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this.   
+I'm going to start with the book <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this as most CMU students will be taking <a href="https://www.math.cmu.edu/~jmackey/151_128/welcome.html">15-151</a> at the same time as 15-150.   
 </p>
 
 <ul class="org-ul">
@@ -433,13 +433,13 @@ Gitpod free tier is easiest. To install it locally w/Visual Studio:
 </ul>
 
 <p>
-Click on 01 Proofs by Calculation the first .lean file. You should get a right panel opening up in VS code called 'Lean Infoview' that displays tactic state goals and all messages. 
+Click on 01ProofsbyCalculation.lean you should get a right panel opening up in VS code called 'Lean Infoview' that displays tactic state goals and all messages. 
 </p>
 </div>
 
-<div id="outline-container-orgd731812" class="outline-4">
-<h4 id="orgd731812">Emacs</h4>
-<div class="outline-text-4" id="text-orgd731812">
+<div id="outline-container-org8e67676" class="outline-4">
+<h4 id="org8e67676">Emacs</h4>
+<div class="outline-text-4" id="text-org8e67676">
 <p>
 Install everything as before then git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals.
 </p>
@@ -487,45 +487,24 @@ gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver hkps://keys.openpgp.org --recv-k
 </div>
 
 
-<div id="outline-container-org6b7404c" class="outline-4">
-<h4 id="org6b7404c">Lean libraries</h4>
-<div class="outline-text-4" id="text-org6b7404c">
+<div id="outline-container-orgdd3aa3c" class="outline-4">
+<h4 id="orgdd3aa3c">Lean libraries</h4>
+<div class="outline-text-4" id="text-orgdd3aa3c">
 <p>
-We are doing some extra manual work here for the purpose of actually understanding how proofs work that normally is all done for you through the magic of the Lean math libraries using techniques from abstract/commutative algebra, representation theory, category theory and other math we haven't learned yet. Much later when we learn more abstract math we can use Lean as it was intended as a framework chaining together lemmas and theorems that are already written and manipulating rings and fields with built-in abstract algebra libraries.   
+We are doing some extra manual work here for the purpose of actually understanding how proofs work that normally is all done for you through the magic of the Lean math libraries using techniques from abstract/commutative algebra, representation theory, category theory and other math we haven't learned yet. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org04c57e3" class="outline-3">
-<h3 id="org04c57e3">Proving equalities</h3>
-<div class="outline-text-3" id="text-org04c57e3">
+<div id="outline-container-org66a14de" class="outline-3">
+<h3 id="org66a14de">Proving equalities</h3>
+<div class="outline-text-3" id="text-org66a14de">
 <p>
-Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Do you get the first example? Expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) is 4 so (a - b)<sup>2</sup> is 16 after substitution. 
+Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) = 4 so (a - b)<sup>2</sup> is 16 after substitution. 1.1.3 example if you don't understand it you will once you finish this chapter and begin using Lean to write proofs. 
 </p>
 
 <p>
-1.1.2 you were probably programmed from high school that r + 6 = -1 so solve for r but she did the proof a completely different way where r = r + 2s - 2s is valid since r = r. This style of proof is exactly what you see in a real analysis book. 
-</p>
-
-<p>
-1.1.3 Looking at the second line, she swapped the m and n and dropped/added a factor of 2 to get that into the form 2(am + bn)<sup>2</sup> and the other expressions on the right are to make up for the dropping/adding/rearranging. What's left over can be rearranged to the Brahmagupta identity of (sqr + n(sqr))(sqr + n(sqr)).  
-</p>
-
-<p>
-1.1.4 Can do it another way:
-</p>
-
-<ul class="org-ul">
-<li>= daf - dbe</li>
-<li>= daf - b(de)</li>
-<li>= daf - bcf</li>
-<li>= daf - (bc)f</li>
-<li>= daf - adf</li>
-<li>= daf - daf</li>
-</ul>
-
-<p>
-1.2.x exercises in Lean are easy. I had to fight with Lean to get it to accept 1.2.4 so rewrote it exactly like she did with parens:
+1.2.x <i>Proving equalities in Lean</i> the .lean files are all included in the Math2001 directory you cloned from github. I had to fight with Lean to get it to accept 1.2.4 so rewrote it exactly like she did with parens:
 </p>
 
 <pre class="example">
@@ -534,7 +513,8 @@ Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/
 example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
     d * (a * f - b * e) = 0 := 
    calc
-    d * (a * f - b * e) = d * a * f - d * b * e := by ring
+    d * (a * f - b * e)
+      = d * a * f - d * b * e := by ring
     _ = (a * d) * f - d * b * e := by ring
     _ = (b * c) * f - d * b * e := by rw [h1]
     _ = b * (c * f) - d * b * e := by ring
@@ -543,11 +523,11 @@ example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
 </pre>
 
 <p>
-I assume the underscore represents the entire left hand side of the equation indicating to the rw pattern matcher to ignore it. There's nothing in the documentation I could easily find but Terence Tao describes the underscore <a href="https://terrytao.wordpress.com/2023/12/05/a-slightly-longer-lean-4-proof-tour/">here</a> same way.  
+Reading the Lean signature left to right: (name)(type)(h1)(h2): (goal) := (proof by calculation). We are using 'calc' hence the name proof by calculation. Note the goal field this is what you are trying to prove, h1 and h2 are our assumptions or hypotheses. I'm guessing the underscore represents the entire left hand side of the equation indicating to the rw (rewrite) pattern matcher to ignore it. There's nothing in the documentation I could easily find but Terence Tao describes the underscore <a href="https://terrytao.wordpress.com/2023/12/05/a-slightly-longer-lean-4-proof-tour/">here</a> same way.  
 </p>
 
 <p>
-Open the other file 03 Tips and Tricks and try some proofs they are programmed exactly as exampled in the text. Look at the infoview/goals it will tell you when that stage is done by 'goals accomplished':
+Look at the infoview/goals it will tell you when that stage is done by 'goals accomplished', also click around various parts of the proof to see how the infoview changes:
 </p>
 
 <pre class="example">
@@ -594,7 +574,7 @@ example {w : ℚ} (h1 : 3 * w + 1 = 4) : w = 1 :=
 </pre>
 
 <p>
-1.3.11 you can use Lean to tell you when the sides have been balanced. You did it correctly if goals panel or infoview shows goals accomplished, and the linter hasn't added any red squiggle lines or other errors. Look at the infoview in VScode or C-c C-i in emacs while you click around the Lean source. These are some of the exercises I tried: 
+1.3.11 you can use Lean to tell you when the sides have been balanced. You did it correctly if goals panel or infoview shows goals accomplished and the linter hasn't added any red squiggle lines or other errors. Some exercises I tried:
 </p>
 
 <pre class="example">
@@ -681,9 +661,9 @@ example {u v : ℝ} (h1 : u + 1 = v) : u ^ 2 + 3 * u + 1 = v ^ 2 + v - 1 :=
 </div>
 </div>
 
-<div id="outline-container-orgfd887d4" class="outline-3">
-<h3 id="orgfd887d4">Tips and tricks</h3>
-<div class="outline-text-3" id="text-orgfd887d4">
+<div id="outline-container-orgb3a3bc5" class="outline-3">
+<h3 id="orgb3a3bc5">Tips and tricks</h3>
+<div class="outline-text-3" id="text-orgb3a3bc5">
 <p>
 1.3.2 once again we first establish x = x then use the hypothesis to rewrite it
 </p>
@@ -726,32 +706,11 @@ example {x : ℤ} (h1 : 2 * x + 3 = x) : x = -3 :=
 </pre>
 
 <p>
-1.3.9 I had a similar solution to hers by working it out in full then seeing what lines I could delete after:
+(╯°□°)╯︵ ┻━┻ if you see calc underlined with a red error it means you forgot an equal sign or _ sign in your chain of rewrites it took me forever to figure that out as Lean kept giving some cryptic message and I was looking at the signature.  
 </p>
 
-<pre class="example">
--- Example 1.3.9
-example {a b : ℚ} (h1 : a - 3 = 2 * b) : a ^ 2 - a + 3 = 4 * b ^ 2 + 10 * b + 9 :=
-  calc
-  a ^ 2 - a + 3 
-    = a^2 - 6*a + 9 + 5*a - 6 := by ring
-  _ = (a - 3) * (a - 3) + 5*(a - 3) + 9 := by ring
-  _ = (2 * b) * (2 * b) + 5 * (2 * b) + 9 := by rw [h1]
-  _ = 4 * b ^ 2 + 10 * b + 9 := by ring
-
--- Better version like the book
-example {a b : ℚ} (h1 : a - 3 = 2 * b) : a ^ 2 - a + 3 = 4 * b ^ 2 + 10 * b + 9 :=
-  calc
-  a ^ 2 - a + 3 
-    = (a - 3) * (a - 3) + 5*(a - 3) + 9 := by ring
-  _ = (2 * b) * (2 * b) + 5 * (2 * b) + 9 := by rw [h1]
-  _ = 4 * b ^ 2 + 10 * b + 9 := by ring
-
-</pre>
-
-
 <p>
-(╯°□°)╯︵ ┻━┻ if you see calc underlined with a red error it means you forgot an equal sign or _ sign in your chain of rewrites it took me forever to figure that out as Lean kept giving some cryptic message and I was looking at the signature.  
+1.3.11 exercises TODO
 </p>
 </div>
 </div>
