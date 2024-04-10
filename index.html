@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-01-03 Wed 07:21 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2024-04-09 Tue 17:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A 2024 Computer Science Curriculum</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="jbh">
+<meta name="generator" content="Org mode" />
+<meta name="author" content="jbh" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -241,38 +243,38 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<header>
 <h1 class="title">A 2024 Computer Science Curriculum</h1>
-</header><nav id="table-of-contents">
+<div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org73f4527">Welcome</a>
+<li><a href="#org5c56fb5">Welcome</a>
 <ul>
-<li><a href="#org5ff7b9d">Basic Curriculum</a></li>
-<li><a href="#orgfe6286f">Research</a></li>
+<li><a href="#org0f3e353">Basic Curriculum</a></li>
+<li><a href="#org6c3efc2">Research</a></li>
 </ul>
 </li>
-<li><a href="#orga3cc08b">BEGIN</a>
+<li><a href="#orgfa1c432">BEGIN</a>
 <ul>
-<li><a href="#org46c7b1e">Proving equalities</a></li>
+<li><a href="#orgf1af63b">Proving equalities</a></li>
+<li><a href="#orgdb570be">Tips and tricks</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</nav>
+</div>
 
-<div id="outline-container-org73f4527" class="outline-2">
-<h2 id="org73f4527">Welcome</h2>
-<div class="outline-text-2" id="text-org73f4527">
+<div id="outline-container-org5c56fb5" class="outline-2">
+<h2 id="org5c56fb5">Welcome</h2>
+<div class="outline-text-2" id="text-org5c56fb5">
 <p>
-This is a deep dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">The Holy Trinity</a> of the theory of computation. It gives you a framework for discovery and analysis of anything computer science related so this isn't only a programming language theory curriculum. I modernized everything here for the 21 century including the short integration book we'll work though. If you want to learn this material with a community some anons have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
+This is a deep dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">The Holy Trinity</a> of the theory of computation. It gives you a framework for discovery and analysis of anything computer science related so this isn't only a programming language theory curriculum. If you want to learn this material with a community some anons have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
 </p>
 </div>
 
-<div id="outline-container-org5ff7b9d" class="outline-3">
-<h3 id="org5ff7b9d">Basic Curriculum</h3>
-<div class="outline-text-3" id="text-org5ff7b9d">
+<div id="outline-container-org0f3e353" class="outline-3">
+<h3 id="org0f3e353">Basic Curriculum</h3>
+<div class="outline-text-3" id="text-org0f3e353">
 <p>
 The categories course has recorded lectures but the lecture notes are high enough quality they can be used as a workbook
 </p>
@@ -282,13 +284,14 @@ The categories course has recorded lectures but the lecture notes are high enoug
 <li>15-150 <a href="https://brandonspark.github.io/150/">Principles of Functional Programming</a> and <a href="http://brendanfong.com/programmingcats.html">Programming with Categories</a>
 <ul class="org-ul">
 <li>We finally have access to the recorded <a href="https://www.youtube.com/playlist?list=PLsydD1kw8jng2t2G8USQNLz0faYZetPnH">lectures</a></li>
-<li>Assignments &amp; labs can be grabbed from <a href="https://github.com/zhengguan/15150-2">here</a> and <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s21/assign.html">here</a></li>
-<li>Whatever current version of <a href="https://hypefortypes.github.io/">hype for types</a></li>
+<li>Older Assignments &amp; labs can be grabbed from <a href="https://github.com/zhengguan/15150-2">here</a> and <a href="https://github.com/zh3036/15150">here</a></li>
+<li>TAs also wrote helpful <a href="https://smlhelp.github.io/book/docs/">docs</a> for the course</li>
+<li>We can also try whatever current version of <a href="https://hypefortypes.github.io/">hype for types</a></li>
 </ul></li>
 </ul>
 
 <p>
-They are going to fully mechanize 15-210 soon using <a href="https://github.com/jonsterling/agda-calf">calf</a>/decalf to prove costs. We can try it ourselves. 
+They are going to fully mechanize 15-210 soon using <a href="https://github.com/jonsterling/agda-calf">calf</a>/decalf to prove costs. 
 </p>
 
 <ul class="org-ul">
@@ -304,65 +307,51 @@ They are going to fully mechanize 15-210 soon using <a href="https://github.com/
 </ul>
 
 <p>
-Classic mathematics is 'element oriented' studying everything through the lens of sets while category theory is 'function oriented' studying functions and their transformations
+Classic mathematics is 'element oriented' studying everything through the lens of sets while category theory is 'function oriented' zooming out to the big picture and studying functions and their transformations 
 </p>
 
 <ul class="org-ul">
 <li>Discrete Math using <a href="https://hrmacbeth.github.io/math2001/">Lean</a></li>
-<li><a href="http://classicalrealanalysis.info/resources-drip.php">DRIP</a> (Dump the Riemann Integral Project) modernized calculus integral <a href="http://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">book</a>
-<ul class="org-ul">
-<li>Basic understanding of integration is needed for probability</li>
-<li>Can also be defined with <a href="https://arxiv.org/abs/2312.05228">category theory</a></li>
-</ul></li>
-<li>MIT course <a href="https://ocw.mit.edu/courses/18-s097-applied-category-theory-january-iap-2019/">Applied Category Theory</a> and <a href="https://jonsterling.github.io/courses/ct-fall-2022/">this</a> reading for some categorical logic</li>
+<li>MIT course <a href="https://ocw.mit.edu/courses/18-s097-applied-category-theory-january-iap-2019/">Applied Category Theory</a></li>
+<li><a href="https://symbolaris.com/course/constlog21-schedule.html">Constructive Logic</a> w/assignments in SML</li>
 </ul>
+</div>
 
+<div id="outline-container-org6528b07" class="outline-4">
+<h4 id="org6528b07">Some optional topics:</h4>
+<div class="outline-text-4" id="text-org6528b07">
 <p>
-Some optional topics:
+Networks
 </p>
-
-<ul class="org-ul">
-<li>Networks
 <ul class="org-ul">
 <li><a href="https://kilthub.cmu.edu/articles/journal_contribution/A_Network_Protocol_Stack_in_Standard_ML/6591089">Project</a> that Robert Harper calls the greatest and most ignored idea how they designed a network protocol stack in SML by combining two modules that share specs/cohere (a <a href="https://ncatlab.org/nlab/show/pullback">pullback</a>)</li>
-<li><a href="https://www.cs.uoregon.edu/research/summerschool/summer16/curriculum.php">Network Programming</a> OPLSS lectures by Nate Foster a comprehensive intro to network programming 
-<ul class="org-ul">
-<li>For future decentralized protocols/networks (web3)</li>
-</ul></li>
-</ul></li>
+<li><a href="https://www.cs.uoregon.edu/research/summerschool/summer16/curriculum.php">Network Programming</a> OPLSS lectures by Nate Foster a comprehensive intro to network programming</li>
 </ul>
 
-
+<p>
+Program transformation 
+</p>
 <ul class="org-ul">
-<li>Program transformation 
-<ul class="org-ul">
-<li>A very <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/proofdirected-program-transformation-a-functional-account-of-efficient-regular-expression-matching/454BB5CD9B0B056FA91957F2F9CC3EC5?utm_campaign=shareaholic&amp;utm_medium=copy_link&amp;utm_source=bookmark">detailed</a> rewrite of the regex matcher we used in 15-150 for proof directed debugging but now with efficient backtracking</li>
-</ul></li>
+<li>A very <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/proofdirected-program-transformation-a-functional-account-of-efficient-regular-expression-matching/454BB5CD9B0B056FA91957F2F9CC3EC5?utm_campaign=shareaholic&amp;utm_medium=copy_link&amp;utm_source=bookmark">detailed</a> rewrite of the regex matcher we use in 15-150 for proof directed debugging but now with efficient backtracking</li>
 </ul>
+</div>
 </div>
 </div>
 
 
-<div id="outline-container-orgfe6286f" class="outline-3">
-<h3 id="orgfe6286f">Research</h3>
-<div class="outline-text-3" id="text-orgfe6286f">
+<div id="outline-container-org6c3efc2" class="outline-3">
+<h3 id="org6c3efc2">Research</h3>
+<div class="outline-text-3" id="text-org6c3efc2">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into every technical detail. 
-</p>
-
-<p>
-This is research so if something doesn't make sense you follow all the citations and references to figure it out there's no magic solution guide. 
 </p>
 
 <p>
 What we need to know:
 </p>
 <ul class="org-ul">
-<li>The <a href="https://www.plai.org/">PLAi</a> workbook to learn the standard model of most languages you've heard about
-<ul class="org-ul">
-<li>There's lectures for this too I can post but the core is all in the book</li>
-</ul></li>
-<li>How to use <a href="https://cs.uwaterloo.ca/~plragde/747/notes/index.html">Agda</a></li>
+<li>The <a href="https://www.plai.org/">PLAi</a> workbook to learn the standard model of most languages you've heard about</li>
+<li>How to use <a href="https://cs.uwaterloo.ca/~plragde/747/notes/index.html">Agda</a> though practicing with Lean will make this easier</li>
 <li>The Edinburgh Logical Framework or <a href="https://homepages.inf.ed.ac.uk/gdp/publications/Framework_Def_Log.pdf">LF</a>
 <ul class="org-ul">
 <li>One of those mandatory technical details we have to know</li>
@@ -404,15 +393,15 @@ We can take the PFPL book with the HoTT book/course the first 2 chapters of HoTT
 
 
 <p>
-Finally <a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lectures/draft book on Computational Type Theory and whatever research is going on these days like cartesian <a href="https://www.youtube.com/watch?v=VbBDxVEu_bA">cubical type theory</a>. There's other research if you prefer for example OPLSS is filled with session-typed concurrent programming seminars by Stephanie Balzer (Rust, Erlang) and you can read the Brown University experimental rewrite of the <a href="https://rust-book.cs.brown.edu/">Rust book</a> to make the often confused concept of ownership easier to understand. 
+Finally <a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lectures/draft book on Computational Type Theory and whatever research is going on these days like cartesian <a href="https://www.youtube.com/watch?v=VbBDxVEu_bA">cubical type theory</a> and dive into <a href="https://jonsterling.github.io/courses/ct-fall-2022/">this</a> reading for some categorical logic. There's other research if you prefer for example OPLSS is filled with session-typed concurrent programming seminars by Stephanie Balzer (Rust, Erlang) and you can read the Brown University experimental rewrite of the <a href="https://rust-book.cs.brown.edu/">Rust book</a> to make the often confused concept of ownership easier to understand. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga3cc08b" class="outline-2">
-<h2 id="orga3cc08b">BEGIN</h2>
-<div class="outline-text-2" id="text-orga3cc08b">
+<div id="outline-container-orgfa1c432" class="outline-2">
+<h2 id="orgfa1c432">BEGIN</h2>
+<div class="outline-text-2" id="text-orgfa1c432">
 <p>
 I'm going to start with a chapter from <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this.   
 </p>
@@ -426,13 +415,13 @@ I'm going to start with a chapter from <i>The Mechanics of Proof</i> because 15-
 </ul>
 
 <p>
-Gitpod free tier is easiest. To install it locally w/VS code:
+Gitpod free tier is easiest. To install it locally w/Visual Studio:
 </p>
 
 <ul class="org-ul">
 <li>install <a href="https://leanprover-community.github.io/get_started.html">Lean</a></li>
 <li>install git</li>
-<li>install code (VS code)</li>
+<li>install code (Visual Studio code) though I use emacs see below</li>
 <li>in terminal type: git clone <a href="https://github.com/hrmacbeth/math2001.git">https://github.com/hrmacbeth/math2001.git</a></li>
 <li>cd math2001</li>
 <li>in terminal: lake exe cache get
@@ -446,25 +435,80 @@ Gitpod free tier is easiest. To install it locally w/VS code:
 <p>
 Click on 01 Proofs by Calculation the first .lean file. You should get a right panel opening up in VS code called 'Lean Infoview' that displays tactic state goals and all messages. 
 </p>
-
-<p>
-I use emacs instead so if you're interested install lean as before, git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals.
-</p>
 </div>
 
-<div id="outline-container-org46c7b1e" class="outline-3">
-<h3 id="org46c7b1e">Proving equalities</h3>
-<div class="outline-text-3" id="text-org46c7b1e">
+<div id="outline-container-org3283c36" class="outline-4">
+<h4 id="org3283c36">Emacs</h4>
+<div class="outline-text-4" id="text-org3283c36">
+<p>
+Install everything as before then git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals.
+</p>
+
+<p>
+If you use vanilla emacs from some distros like Ubuntu you'll have some 'can't verify signature' error which is fixed by <a href="http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html">updating elpa keyring</a>: 
+</p>
+
+<ul class="org-ul">
+<li>M-x package-install RET gnu-elpa-keyring-update RET</li>
+<li>M-x package-refresh-contents RET</li>
+<li>Restart emacs or you may have to manually run M-x gnu-elpa-keyring-update</li>
+</ul>
+
+<p>
+Another way is with gpg: 
+</p>
+
+<pre class="example">
+gpg --homedir ~/.emacs.d/elpa/gnupg --list-keys 
+
+/home/x/.emacs.d/elpa/gnupg/pubring.kbx
+-----------------------------------------
+pub   dsa2048 2014-09-24 [SC] [expired: 2019-09-23]
+      CA442C00F91774F17F59D9B0474F05837FBDEF9B
+uid           [ expired] GNU ELPA Signing Agent (2014) &lt;elpasign@elpa.gnu.org&gt;
+
+pub   rsa3072 2019-04-23 [SC] [expires: 2024-04-21]
+      C433554766D3DDC64221BFAA066DAFCB81E42C40
+uid           [ unknown] GNU ELPA Signing Agent (2019) &lt;elpasign@elpa.gnu.org&gt;
+
+pub   ed25519 2022-12-28 [C] [expires: 2032-12-25]
+      AC49B8A5FDED6931F40EE78BF993C03786DE7ECA
+uid           [ unknown] GNU ELPA Signing Agent (2023) &lt;elpasign@elpa.gnu.org&gt;
+sub   ed25519 2022-12-28 [S] [expires: 2027-12-27]
+</pre>
+<p>
+Mine is already updated, if yours isn't import a new key:
+</p>
+
+<pre class="example">
+gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver hkps://keys.openpgp.org --recv-keys 066DAFCB81E42C40
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org6e9c26e" class="outline-4">
+<h4 id="org6e9c26e">Lean libraries</h4>
+<div class="outline-text-4" id="text-org6e9c26e">
+<p>
+We are doing some extra manual work here for the purpose of actually understanding how proofs work that normally is all done for you through the magic of the Lean math libraries using techniques from abstract/commutative algebra, representation theory, category theory and other math we haven't learned yet. Much later when we learn more abstract math we can use Lean as it was intended as a framework chaining together lemmas and theorems that are already written and manipulating rings and fields with built-in abstract algebra libraries.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1af63b" class="outline-3">
+<h3 id="orgf1af63b">Proving equalities</h3>
+<div class="outline-text-3" id="text-orgf1af63b">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Do you get the first example? Expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) is 4 so (a - b)<sup>2</sup> is 16 after substitution. 
 </p>
 
 <p>
-1.1.2 you were probably programmed from high school that r + 6 = -1 so solve for r but she did the proof a completely different way where r = r + 2s - 2s is valid since r = r. This style of proof is exactly what you see in a real analysis book/course. 
+1.1.2 you were probably programmed from high school that r + 6 = -1 so solve for r but she did the proof a completely different way where r = r + 2s - 2s is valid since r = r. This style of proof is exactly what you see in a real analysis book. 
 </p>
 
 <p>
-1.1.3 Looking at the second line, she swapped the m and n and dropped/added a factor of 2 to get that into the form 2(am + bn)<sup>2</sup> and the other expressions on the right are to make up for the dropping/adding/rearranging. What's left over can be rearranged to the Brahmagupta identiy of (sqr + n(sqr))(sqr + n(sqr)).  
+1.1.3 Looking at the second line, she swapped the m and n and dropped/added a factor of 2 to get that into the form 2(am + bn)<sup>2</sup> and the other expressions on the right are to make up for the dropping/adding/rearranging. What's left over can be rearranged to the Brahmagupta identity of (sqr + n(sqr))(sqr + n(sqr)).  
 </p>
 
 <p>
@@ -550,7 +594,7 @@ example {w : ℚ} (h1 : 3 * w + 1 = 4) : w = 1 :=
 </pre>
 
 <p>
-1.3.11 you can use Lean to tell you when the sides have been balanced. You did it correctly if goals panel or infoview shows goals accomplished, and the linter hasn't added any red squiggle lines or other errors. Look at the infoview in code or C-c C-i in emacs while you click around the Lean source. These are some of the exercises I tried: 
+1.3.11 you can use Lean to tell you when the sides have been balanced. You did it correctly if goals panel or infoview shows goals accomplished, and the linter hasn't added any red squiggle lines or other errors. Look at the infoview in VScode or C-c C-i in emacs while you click around the Lean source. These are some of the exercises I tried: 
 </p>
 
 <pre class="example">
@@ -634,10 +678,80 @@ example {u v : ℝ} (h1 : u + 1 = v) : u ^ 2 + 3 * u + 1 = v ^ 2 + v - 1 :=
   _ = v * v + v - 1 := by rw [h1]
   _ = v ^ 2 + v - 1 := by ring
 </pre>
+</div>
+</div>
+
+<div id="outline-container-orgdb570be" class="outline-3">
+<h3 id="orgdb570be">Tips and tricks</h3>
+<div class="outline-text-3" id="text-orgdb570be">
+<p>
+1.3.2 once again we first establish x = x then use the hypothesis to rewrite it because if x + 4 = 2 then x = 2 - 4
+</p>
+
+<pre class="example">
+-- Example 1.3.2
+example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
+  calc
+  x = (x + 4) - 4 := by ring
+  _ = 2 - 4 := by rw [h1]
+  _ = -2 := by ring
+</pre>
+
+<p>
+1.3.3 establish a = a as usual, by [h1] substitute (a - 5b) for 4, create a 5(b + 2) but take into account we just added 5b + 10 so subtract 6 to balance. Rewrite by [h2] then rewrite by ring to get a = 9.  
+</p>
+
+<pre class="example">
+-- Example 1.3.3
+example {a b : ℝ} (h1 : a - 5 * b = 4) (h2 : b + 2 = 3) : a = 9 :=
+  calc
+  a = (a - 5*b) + 5*b := by ring
+  _ = 4 + 5*b := by rw [h1]
+  _ = -6 + 5*(b + 2) := by ring
+  _ = -6 + 5*3 := by rw [h2]
+  _ = 9 := by ring
+</pre>
+
+<p>
+For the rest of these examples try them yourself going through the 03TipsandTricks.lean file before looking at the solution it's the only way you learn. Proof by calculation is make everything balance so if the goal in Lean shows : x = (thing) then start by x = x. If the goal shows : 2x + 3 = (thing) then start by balancing 2x + 3 = 2x + 3. 
+</p>
+
+<pre class="example">
+-- Example 1.3.5
+example {x : ℤ} (h1 : 2 * x + 3 = x) : x = -3 :=
+  calc
+  x = (2 * x) - x  := by ring
+  _ = 2 * x - (2 * x + 3) := by rw [h1]
+  _ = -3 := by ring
+</pre>
+
+<p>
+1.3.9 I had a similar solution to hers by working it out in full then seeing what lines I could delete after:
+</p>
+
+<pre class="example">
+-- Example 1.3.9
+example {a b : ℚ} (h1 : a - 3 = 2 * b) : a ^ 2 - a + 3 = 4 * b ^ 2 + 10 * b + 9 :=
+  calc
+  a ^ 2 - a + 3 
+    = a^2 - 6*a + 9 + 5*a - 6 := by ring
+  _ = (a - 3) * (a - 3) + 5*(a - 3) + 9 := by ring
+  _ = (2 * b) * (2 * b) + 5 * (2 * b) + 9 := by rw [h1]
+  _ = 4 * b ^ 2 + 10 * b + 9 := by ring
+
+-- Better version like the book
+example {a b : ℚ} (h1 : a - 3 = 2 * b) : a ^ 2 - a + 3 = 4 * b ^ 2 + 10 * b + 9 :=
+  calc
+  a ^ 2 - a + 3 
+    = (a - 3) * (a - 3) + 5*(a - 3) + 9 := by ring
+  _ = (2 * b) * (2 * b) + 5 * (2 * b) + 9 := by rw [h1]
+  _ = 4 * b ^ 2 + 10 * b + 9 := by ring
+
+</pre>
 
 
 <p>
-TODO
+(╯°□°)╯︵ ┻━┻ if you see calc underlined with a red error it means you forgot an equal sign or _ sign in your chain of rewrites it took me forever to figure that out as Lean kept giving some cryptic message and I was looking at the signature.  
 </p>
 </div>
 </div>
