@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-09 Tue 17:01 -->
+<!-- 2024-04-09 Tue 17:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A 2024 Computer Science Curriculum</title>
@@ -248,33 +248,33 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5c56fb5">Welcome</a>
+<li><a href="#orge91e6c8">Welcome</a>
 <ul>
-<li><a href="#org0f3e353">Basic Curriculum</a></li>
-<li><a href="#org6c3efc2">Research</a></li>
+<li><a href="#org796dd14">Basic Curriculum</a></li>
+<li><a href="#orgf654d64">Research</a></li>
 </ul>
 </li>
-<li><a href="#orgfa1c432">BEGIN</a>
+<li><a href="#org9c70374">BEGIN</a>
 <ul>
-<li><a href="#orgf1af63b">Proving equalities</a></li>
-<li><a href="#orgdb570be">Tips and tricks</a></li>
+<li><a href="#org04c57e3">Proving equalities</a></li>
+<li><a href="#orgfd887d4">Tips and tricks</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5c56fb5" class="outline-2">
-<h2 id="org5c56fb5">Welcome</h2>
-<div class="outline-text-2" id="text-org5c56fb5">
+<div id="outline-container-orge91e6c8" class="outline-2">
+<h2 id="orge91e6c8">Welcome</h2>
+<div class="outline-text-2" id="text-orge91e6c8">
 <p>
 This is a deep dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">The Holy Trinity</a> of the theory of computation. It gives you a framework for discovery and analysis of anything computer science related so this isn't only a programming language theory curriculum. If you want to learn this material with a community some anons have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
 </p>
 </div>
 
-<div id="outline-container-org0f3e353" class="outline-3">
-<h3 id="org0f3e353">Basic Curriculum</h3>
-<div class="outline-text-3" id="text-org0f3e353">
+<div id="outline-container-org796dd14" class="outline-3">
+<h3 id="org796dd14">Basic Curriculum</h3>
+<div class="outline-text-3" id="text-org796dd14">
 <p>
 The categories course has recorded lectures but the lecture notes are high enough quality they can be used as a workbook
 </p>
@@ -317,9 +317,9 @@ Classic mathematics is 'element oriented' studying everything through the lens o
 </ul>
 </div>
 
-<div id="outline-container-org6528b07" class="outline-4">
-<h4 id="org6528b07">Some optional topics:</h4>
-<div class="outline-text-4" id="text-org6528b07">
+<div id="outline-container-org11d02c9" class="outline-4">
+<h4 id="org11d02c9">Some optional topics:</h4>
+<div class="outline-text-4" id="text-org11d02c9">
 <p>
 Networks
 </p>
@@ -339,9 +339,9 @@ Program transformation
 </div>
 
 
-<div id="outline-container-org6c3efc2" class="outline-3">
-<h3 id="org6c3efc2">Research</h3>
-<div class="outline-text-3" id="text-org6c3efc2">
+<div id="outline-container-orgf654d64" class="outline-3">
+<h3 id="orgf654d64">Research</h3>
+<div class="outline-text-3" id="text-orgf654d64">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into every technical detail. 
 </p>
@@ -399,9 +399,9 @@ Finally <a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lec
 </div>
 </div>
 
-<div id="outline-container-orgfa1c432" class="outline-2">
-<h2 id="orgfa1c432">BEGIN</h2>
-<div class="outline-text-2" id="text-orgfa1c432">
+<div id="outline-container-org9c70374" class="outline-2">
+<h2 id="org9c70374">BEGIN</h2>
+<div class="outline-text-2" id="text-org9c70374">
 <p>
 I'm going to start with a chapter from <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this.   
 </p>
@@ -437,9 +437,9 @@ Click on 01 Proofs by Calculation the first .lean file. You should get a right p
 </p>
 </div>
 
-<div id="outline-container-org3283c36" class="outline-4">
-<h4 id="org3283c36">Emacs</h4>
-<div class="outline-text-4" id="text-org3283c36">
+<div id="outline-container-orgd731812" class="outline-4">
+<h4 id="orgd731812">Emacs</h4>
+<div class="outline-text-4" id="text-orgd731812">
 <p>
 Install everything as before then git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals.
 </p>
@@ -487,18 +487,18 @@ gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver hkps://keys.openpgp.org --recv-k
 </div>
 
 
-<div id="outline-container-org6e9c26e" class="outline-4">
-<h4 id="org6e9c26e">Lean libraries</h4>
-<div class="outline-text-4" id="text-org6e9c26e">
+<div id="outline-container-org6b7404c" class="outline-4">
+<h4 id="org6b7404c">Lean libraries</h4>
+<div class="outline-text-4" id="text-org6b7404c">
 <p>
 We are doing some extra manual work here for the purpose of actually understanding how proofs work that normally is all done for you through the magic of the Lean math libraries using techniques from abstract/commutative algebra, representation theory, category theory and other math we haven't learned yet. Much later when we learn more abstract math we can use Lean as it was intended as a framework chaining together lemmas and theorems that are already written and manipulating rings and fields with built-in abstract algebra libraries.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf1af63b" class="outline-3">
-<h3 id="orgf1af63b">Proving equalities</h3>
-<div class="outline-text-3" id="text-orgf1af63b">
+<div id="outline-container-org04c57e3" class="outline-3">
+<h3 id="org04c57e3">Proving equalities</h3>
+<div class="outline-text-3" id="text-org04c57e3">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Do you get the first example? Expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) is 4 so (a - b)<sup>2</sup> is 16 after substitution. 
 </p>
@@ -681,11 +681,11 @@ example {u v : ℝ} (h1 : u + 1 = v) : u ^ 2 + 3 * u + 1 = v ^ 2 + v - 1 :=
 </div>
 </div>
 
-<div id="outline-container-orgdb570be" class="outline-3">
-<h3 id="orgdb570be">Tips and tricks</h3>
-<div class="outline-text-3" id="text-orgdb570be">
+<div id="outline-container-orgfd887d4" class="outline-3">
+<h3 id="orgfd887d4">Tips and tricks</h3>
+<div class="outline-text-3" id="text-orgfd887d4">
 <p>
-1.3.2 once again we first establish x = x then use the hypothesis to rewrite it because if x + 4 = 2 then x = 2 - 4
+1.3.2 once again we first establish x = x then use the hypothesis to rewrite it
 </p>
 
 <pre class="example">
