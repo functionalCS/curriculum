@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-10 Wed 01:16 -->
+<!-- 2024-04-10 Wed 02:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A 2024 Computer Science Curriculum</title>
@@ -248,38 +248,40 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1b29b47">Welcome</a>
+<li><a href="#org28ef45d">Welcome</a>
 <ul>
-<li><a href="#orgbf75d62">Basic Curriculum</a></li>
-<li><a href="#org056070f">Research</a></li>
+<li><a href="#orgb9e22fe">Basic Curriculum</a></li>
 </ul>
 </li>
-<li><a href="#org9319d28">BEGIN</a>
+<li><a href="#org20cd702">BEGIN</a>
 <ul>
-<li><a href="#org7ea35fb">Proving equalities</a></li>
-<li><a href="#orgce7a637">Tips and tricks</a></li>
+<li><a href="#orga64e5cf">Proving equalities</a></li>
+<li><a href="#org293400a">Tips and tricks</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1b29b47" class="outline-2">
-<h2 id="org1b29b47">Welcome</h2>
-<div class="outline-text-2" id="text-org1b29b47">
+<div id="outline-container-org28ef45d" class="outline-2">
+<h2 id="org28ef45d">Welcome</h2>
+<div class="outline-text-2" id="text-org28ef45d">
 <p>
 This is a deep dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">The Holy Trinity</a> of the theory of computation. It gives you a framework for discovery and analysis of anything computer science related so this isn't only a programming language theory curriculum. If you want to learn this material with a community some anons have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
 </p>
 </div>
 
-<div id="outline-container-orgbf75d62" class="outline-3">
-<h3 id="orgbf75d62">Basic Curriculum</h3>
-<div class="outline-text-3" id="text-orgbf75d62">
+<div id="outline-container-orgb9e22fe" class="outline-3">
+<h3 id="orgb9e22fe">Basic Curriculum</h3>
+<div class="outline-text-3" id="text-orgb9e22fe">
 <p>
 The categories course has recorded lectures but the lecture notes are high enough quality they can be used as a workbook
 </p>
+</div>
 
-
+<div id="outline-container-org4f1306a" class="outline-4">
+<h4 id="org4f1306a">Functional Programming</h4>
+<div class="outline-text-4" id="text-org4f1306a">
 <ul class="org-ul">
 <li>15-150 <a href="https://brandonspark.github.io/150/">Principles of Functional Programming</a> and <a href="http://brendanfong.com/programmingcats.html">Programming with Categories</a>
 <ul class="org-ul">
@@ -305,9 +307,14 @@ They are going to fully mechanize 15-210 soon using <a href="https://github.com/
 </ul></li>
 </ul></li>
 </ul>
+</div>
+</div>
 
+<div id="outline-container-org9672781" class="outline-4">
+<h4 id="org9672781">Math &amp; Constructive Logic</h4>
+<div class="outline-text-4" id="text-org9672781">
 <p>
-Classic mathematics is 'element oriented' studying everything through the lens of sets while category theory is 'function oriented' zooming out to the big picture and studying functions and their transformations 
+Classic mathematics is 'element oriented' studying everything through the lens of sets while category theory is 'function oriented' zooming out to the big picture and studying functions and their transformations. 
 </p>
 
 <ul class="org-ul">
@@ -316,10 +323,37 @@ Classic mathematics is 'element oriented' studying everything through the lens o
 <li><a href="https://symbolaris.com/course/constlog21-schedule.html">Constructive Logic</a> w/assignments in SML</li>
 </ul>
 </div>
+</div>
 
-<div id="outline-container-org77ab9de" class="outline-4">
-<h4 id="org77ab9de">Some optional topics:</h4>
-<div class="outline-text-4" id="text-org77ab9de">
+<div id="outline-container-org3842eb7" class="outline-4">
+<h4 id="org3842eb7">Type Theory</h4>
+<div class="outline-text-4" id="text-org3842eb7">
+<p>
+We can take the PFPL book with the HoTT book/course
+</p>
+
+<ul class="org-ul">
+<li><i>Practical Foundations for Programming Languages</i> <a href="http://www.cs.cmu.edu/~rwh/pfpl.html">book</a> and supplementary materials</li>
+<li>Robert Harper <a href="https://www.cs.uoregon.edu/research/summerschool/summer21/topics.php">OPLSS</a> 2021 lectures and some earlier OPLSS lectures for his book  
+<ul class="org-ul">
+<li>We have access to some 15-312 <a href="https://www.cs.cmu.edu/~rjsimmon/15312-s14/">assignments</a> but the exercises in PFPL are hard enough</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>15-819 <a href="http://www.cs.cmu.edu/~rwh/courses/hott/#schedule">Homotopy Type Theory</a> and book 
+<ul class="org-ul">
+<li>Described as a 'misadventure in formalisms' but explains how univalence works, higher types</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orga4594dc" class="outline-4">
+<h4 id="orga4594dc">Some optional topics:</h4>
+<div class="outline-text-4" id="text-orga4594dc">
 <p>
 Networks
 </p>
@@ -336,12 +370,11 @@ Program transformation
 </ul>
 </div>
 </div>
-</div>
 
 
-<div id="outline-container-org056070f" class="outline-3">
-<h3 id="org056070f">Research</h3>
-<div class="outline-text-3" id="text-org056070f">
+<div id="outline-container-org7cde734" class="outline-4">
+<h4 id="org7cde734">Research</h4>
+<div class="outline-text-4" id="text-org7cde734">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into every technical detail. 
 </p>
@@ -368,29 +401,6 @@ What we need to know:
 </ul></li>
 </ul>
 
-<p>
-We can take the PFPL book with the HoTT book/course the first 2 chapters of HoTT will be especially helpful
-</p>
-
-<ul class="org-ul">
-<li><i>Practical Foundations for Programming Languages</i> <a href="http://www.cs.cmu.edu/~rwh/pfpl.html">book</a> and supplementary materials</li>
-<li>Robert Harper <a href="https://www.cs.uoregon.edu/research/summerschool/summer21/topics.php">OPLSS</a> 2021 lectures and some earlier OPLSS lectures for his book, many cover different topics  
-<ul class="org-ul">
-<li>We have access to some 15-312 <a href="https://www.cs.cmu.edu/~rjsimmon/15312-s14/">assignments</a> but the exercises in PFPL are hard enough</li>
-</ul></li>
-</ul>
-
-
-<ul class="org-ul">
-<li>15-819 <a href="http://www.cs.cmu.edu/~rwh/courses/hott/#schedule">Homotopy Type Theory</a> and book 
-<ul class="org-ul">
-<li>Described as a 'misadventure in formalisms' but explains how univalence works, higher types
-<ul class="org-ul">
-<li>Univalence is a way to show something is equal in all contexts and has released a flood of new research/type theories</li>
-</ul></li>
-</ul></li>
-</ul>
-
 
 <p>
 Finally <a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lectures/draft book on Computational Type Theory and whatever research is going on these days like cartesian <a href="https://www.youtube.com/watch?v=VbBDxVEu_bA">cubical type theory</a> and dive into <a href="https://jonsterling.github.io/courses/ct-fall-2022/">this</a> reading for some categorical logic. There's other research if you prefer for example OPLSS is filled with session-typed concurrent programming seminars by Stephanie Balzer (Rust, Erlang) and you can read the Brown University experimental rewrite of the <a href="https://rust-book.cs.brown.edu/">Rust book</a> to make the often confused concept of ownership easier to understand. 
@@ -398,10 +408,11 @@ Finally <a href="https://www.youtube.com/watch?v=LE0SSLizYUI">OPLSS</a> 2018 lec
 </div>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org9319d28" class="outline-2">
-<h2 id="org9319d28">BEGIN</h2>
-<div class="outline-text-2" id="text-org9319d28">
+<div id="outline-container-org20cd702" class="outline-2">
+<h2 id="org20cd702">BEGIN</h2>
+<div class="outline-text-2" id="text-org20cd702">
 <p>
 I'm going to start with the book <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this as most CMU students will be taking <a href="https://www.math.cmu.edu/~jmackey/151_128/welcome.html">15-151</a> at the same time as 15-150.   
 </p>
@@ -413,9 +424,13 @@ I'm going to start with the book <i>The Mechanics of Proof</i> because 15-150 wi
 <li>There's many <a href="https://www.youtube.com/watch?v=YbntYOs8gUQ">demos</a> on YouTube by the author Heather Macbeth</li>
 </ul></li>
 </ul>
+</div>
 
+<div id="outline-container-org1c54583" class="outline-4">
+<h4 id="org1c54583">Local install</h4>
+<div class="outline-text-4" id="text-org1c54583">
 <p>
-Gitpod free tier is easiest. To install it locally w/Visual Studio:
+Gitpod free tier is easiest. To install Lean locally w/Visual Studio:
 </p>
 
 <ul class="org-ul">
@@ -436,23 +451,14 @@ Gitpod free tier is easiest. To install it locally w/Visual Studio:
 Click on 01ProofsbyCalculation.lean you should get a right panel opening up in VS code called 'Lean Infoview' that displays tactic state goals and all messages. 
 </p>
 </div>
+</div>
 
-<div id="outline-container-org2588c29" class="outline-4">
-<h4 id="org2588c29">Emacs</h4>
-<div class="outline-text-4" id="text-org2588c29">
+<div id="outline-container-org3648429" class="outline-4">
+<h4 id="org3648429">Emacs</h4>
+<div class="outline-text-4" id="text-org3648429">
 <p>
-Install everything as before then git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals.
+Install everything as before then git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals. If you use vanilla emacs from some distros like Ubuntu you'll have some 'can't verify signature' error which is fixed by <a href="http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html">updating elpa keyring</a>. 
 </p>
-
-<p>
-If you use vanilla emacs from some distros like Ubuntu you'll have some 'can't verify signature' error which is fixed by <a href="http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html">updating elpa keyring</a>: 
-</p>
-
-<ul class="org-ul">
-<li>M-x package-install RET gnu-elpa-keyring-update RET</li>
-<li>M-x package-refresh-contents RET</li>
-<li>Restart emacs or you may have to manually run M-x gnu-elpa-keyring-update</li>
-</ul>
 
 <p>
 Another way is with gpg: 
@@ -476,8 +482,9 @@ pub   ed25519 2022-12-28 [C] [expires: 2032-12-25]
 uid           [ unknown] GNU ELPA Signing Agent (2023) &lt;elpasign@elpa.gnu.org&gt;
 sub   ed25519 2022-12-28 [S] [expires: 2027-12-27]
 </pre>
+
 <p>
-Mine is already updated, if yours isn't import a new key:
+Update key if your second key is expired:
 </p>
 
 <pre class="example">
@@ -486,19 +493,9 @@ gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver hkps://keys.openpgp.org --recv-k
 </div>
 </div>
 
-
-<div id="outline-container-org19f1e52" class="outline-4">
-<h4 id="org19f1e52">Lean libraries</h4>
-<div class="outline-text-4" id="text-org19f1e52">
-<p>
-We are doing some extra manual work here for the purpose of actually understanding how proofs work that normally is all done for you through the magic of the Lean math libraries using techniques from abstract/commutative algebra, representation theory, category theory and other math we haven't learned yet. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org7ea35fb" class="outline-3">
-<h3 id="org7ea35fb">Proving equalities</h3>
-<div class="outline-text-3" id="text-org7ea35fb">
+<div id="outline-container-orga64e5cf" class="outline-3">
+<h3 id="orga64e5cf">Proving equalities</h3>
+<div class="outline-text-3" id="text-orga64e5cf">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Any examples you don't understand come back here after writing some Lean proofs you won't get them all immediately. First example expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) = 4 so (a - b)<sup>2</sup> is 16 after substitution.
 </p>
@@ -531,13 +528,6 @@ Look at the infoview/goals it will tell you when that stage is done by 'goals ac
 </p>
 
 <pre class="example">
--- Example 1.3.1
-example {a b : ℤ} (h1 : a = 2 * b + 5) (h2 : b = 3) : a = 11 :=
-  calc 
-  a = 2 * b + 5 := by rw [h1]
-  _ = 2 * 3 + 5 := by rw [h2]
-  _ = 11 := by ring
-
 -- Example 1.3.2
 example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
   calc
@@ -564,79 +554,11 @@ example {w : ℚ} (h1 : 3 * w + 1 = 4) : w = 1 :=
 </p>
 
 <pre class="example">
-example {x y : ℝ} (h1 : x = 3) (h2 : y = 4 * x - 3) : y = 9 :=
-  calc
-  y = 4 * x - 3 := by rw [h2]
-  _ = 4 * 3 - 3 := by rw [h1]
-  _ = 9 := by ring
-
 example {a b : ℤ} (h : a - b = 0) : a = b :=
   calc
   a = a - b + b := by ring
   _ = 0 + b := by rw [h]
   _ = b := by ring
-
-example {x y : ℤ} (h1 : x - 3 * y = 5) (h2 : y = 3) : x = 14 :=
-  calc
-  x = (x - 3 * y) + 3 * y := by ring
-  _ = (5) + (3 * 3) := by rw [h1, h2]
-  _ = 14 := by ring
-
-example {p q : ℚ} (h1 : p - 2 * q = 1) (h2 : q = -1) : p = -1 :=
-  calc
-  p = p - 2 * q + 2 * q := by ring
-  _ = (1) + (2 * - 1) := by rw [h1,h2]
-  _ = -1 := by ring
-
-example {x y : ℚ} (h1 : y + 1 = 3) (h2 : x + 2 * y = 3) : x = -1 :=
-  calc
-  x = (x + 2*y) - 2*(y + 1) + 2 := by ring
-  _ = 3 - 2*3 + 2 := by rw [h1, h2]
-  _ = -1 := by ring
-
-example {p q : ℤ} (h1 : p + 4 * q = 1) (h2 : q - 1 = 2) : p = -11 :=
-  calc
-  p = (p + 4 * q) - 4 * (q - 1) - 4 := by ring
-  _ = 1 - (4 * 2) - 4 := by rw [h1, h2]
-  _ = -11 := by ring
-
-example {a b c : ℝ} (h1 : a + 2 * b + 3 * c = 7) (h2 : b + 2 * c = 3)
-    (h3 : c = 1) : a = 2 :=
-  calc
-  a = (a + 2*b + 3*c) - 2*(b + 2*c) + c := by ring
-  _ = 7 - 2*3 + 1 := by rw [h1, h2, h3]
-  _ = 2 := by ring
-
-example {u v : ℚ} (h1 : 4 * u + v = 3) (h2 : v = 2) : u = 1 / 4 :=
-  calc
-  u = (4 * u + v - v)/4 := by ring
-  _ = (3 - 2)/4 := by rw [h1, h2]
-  _ = 1/4 := by ring 
-
-example {c : ℚ} (h1 : 4 * c + 1 = 3 * c - 2) : c = -3 :=
-  calc
-  c = (4 * c + 1) - 3*c - 1 := by ring
-  _ = 3*c - 2 - 3*c - 1 := by rw [h1]
-  _ = -3 := by ring
-
-example {p : ℝ} (h1 : 5 * p - 3 = 3 * p + 1) : p = 2 :=
-  calc
-   p = (5 * p - 3 - 3 * p + 3)/2 := by ring
-   _ = (3 * p + 1 - 3 * p + 3)/2 := by rw [h1]
-   _ = 4/2 := by ring
-   _ = 2 := by ring          
-
-example {x y : ℤ} (h1 : 2 * x + y = 4) (h2 : x + y = 1) : x = 3 :=
-  calc
-  x = (2 * x + y) - (x + y) := by ring
-  _ = 4 - 1 := by rw [h1, h2]
-  _ = 3 := by ring
-
-example {a b : ℝ} (h1 : a + 2 * b = 4) (h2 : a - b = 1) : a = 2 :=
-  calc
-  a = ((a + 2 * b) + (a - b) + (a - b))/3 := by ring
-  _ = (4 + 1 + 1)/3 := by rw [h1, h2]
-  _ = 2 := by ring
 
 example {u v : ℝ} (h1 : u + 1 = v) : u ^ 2 + 3 * u + 1 = v ^ 2 + v - 1 :=
   calc
@@ -647,9 +569,9 @@ example {u v : ℝ} (h1 : u + 1 = v) : u ^ 2 + 3 * u + 1 = v ^ 2 + v - 1 :=
 </div>
 </div>
 
-<div id="outline-container-orgce7a637" class="outline-3">
-<h3 id="orgce7a637">Tips and tricks</h3>
-<div class="outline-text-3" id="text-orgce7a637">
+<div id="outline-container-org293400a" class="outline-3">
+<h3 id="org293400a">Tips and tricks</h3>
+<div class="outline-text-3" id="text-org293400a">
 <p>
 1.3.2 once again we first establish x = x then use the hypothesis to rewrite it
 </p>
@@ -677,12 +599,28 @@ example {x : ℤ} (h1 : 2 * x + 3 = x) : x = -3 :=
 </pre>
 
 <p>
-(╯°□°)╯︵ ┻━┻ if you see calc underlined with a red error it means you forgot an equal sign or _ sign in your chain of rewrites, or there is an accidental character floating around in the scope somewhere it took me forever to figure that out as Lean kept giving some cryptic message and I was looking at the signature.  
+(╯°□°)╯︵ ┻━┻ if you see calc underlined with a red error it means you forgot an equal sign or _ sign in your chain of rewrites or there is an accidental character floating around in the scope out of view somewhere it took me forever to figure that out as Lean kept giving some cryptic message and I was looking at the signature.  
 </p>
 
 <p>
-1.3.11 exercises all use the examples we just saw. Look at 1.3.7 example when you try exercise 10 notice that 5p - 3p is 2p. Look at 1.3.8 example when you try exercise 11 and manipulate it so a = (4 + 2) / 3. 
+1.3.11 exercises all use the examples we just saw. Look at 1.3.8 example when you try exercise 11 and manipulate it so a = (4 + 2) / 3.  
 </p>
+
+<pre class="example">
+example {x y : ℝ} (h1 : x = 3) (h2 : y = 4 * x - 3) : y = 9 :=
+  calc
+  y = y := by ring
+  _ = 4*x - 3 := by rw [h2]
+  _ = 4*3 - 3 := by rw [h1]
+  _ = 9 := by ring
+
+example {p : ℝ} (h1 : 5 * p - 3 = 3 * p + 1) : p = 2 :=
+  calc
+  p = (5*p -3 - 3*p + 1)/2 + 1 := by ring
+  _ = (3*p + 1 - 3*p + 1)/2 + 1 := by rw [h1]
+  _ = 2/2 + 1 := by ring
+  _ = 2 := by ring
+</pre>
 
 <p>
 TODO 
