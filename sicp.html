@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-11 Thu 21:11 -->
+<!-- 2024-04-11 Thu 21:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to do Structure and Interpretation of Computer Programs (SICP)</title>
@@ -270,30 +270,30 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7984cb4">SICP (and SDF) Workshop</a>
+<li><a href="#org366d3cd">SICP (and SDF) Workshop</a>
 <ul>
-<li><a href="#org33e7afb">SICP in 2024</a></li>
-<li><a href="#orga474f4a">Optional lectures</a></li>
+<li><a href="#org932c61b">SICP in 2024</a></li>
+<li><a href="#orgc67f33c">Optional lectures</a></li>
 </ul>
 </li>
-<li><a href="#org907e4d7">BEGIN</a>
+<li><a href="#org6d74d5d">BEGIN</a>
 <ul>
-<li><a href="#org3e3d1a1">Install mit-scheme</a></li>
-<li><a href="#org4770b5c">IDE/Editor</a></li>
-<li><a href="#org6ab2ffa">Begin</a></li>
-<li><a href="#org3313d0a">Chapter 1.x</a></li>
-<li><a href="#orge2f1cda">Chapter 1.2.1</a></li>
-<li><a href="#orgec1eff8">Chapter 1.2.2</a></li>
-<li><a href="#org8c737e1">Chapter 1.2.3</a></li>
+<li><a href="#org5965e98">Install mit-scheme</a></li>
+<li><a href="#org3984a8b">IDE/Editor</a></li>
+<li><a href="#org6dd2089">Begin</a></li>
+<li><a href="#org3cd34f9">Chapter 1.x</a></li>
+<li><a href="#org72dfd25">Chapter 1.2.1</a></li>
+<li><a href="#org251a6f5">Chapter 1.2.2</a></li>
+<li><a href="#orgebfc624">Chapter 1.2.3</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7984cb4" class="outline-2">
-<h2 id="org7984cb4">SICP (and SDF) Workshop</h2>
-<div class="outline-text-2" id="text-org7984cb4">
+<div id="outline-container-org366d3cd" class="outline-2">
+<h2 id="org366d3cd">SICP (and SDF) Workshop</h2>
+<div class="outline-text-2" id="text-org366d3cd">
 <p>
 This exists because if you ask how to learn programming likely someone will shill this book to you due to it being a seminal CS text that's been used for decades. It's easier to do this after you have at least some programming experience because then you won't miss as many details as SICP almost gives you everything at once. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately but they are only examples and not the core of the text so don't give up so easily. We'll figure out all the math. In interviews the authors explained this course was taught at MIT after 2 or 3 semesters of calculus so for that target audience it made sense to use math examples. 
 </p>
@@ -303,18 +303,18 @@ SICP is lecture notes that became a book the original 6.001 course had many addi
 </p>
 </div>
 
-<div id="outline-container-org33e7afb" class="outline-3">
-<h3 id="org33e7afb">SICP in 2024</h3>
-<div class="outline-text-3" id="text-org33e7afb">
+<div id="outline-container-org932c61b" class="outline-3">
+<h3 id="org932c61b">SICP in 2024</h3>
+<div class="outline-text-3" id="text-org932c61b">
 <p>
 MIT taught some form of this book in their 6.001 course from 1980 (as lecture notes) until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to make significant <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">changes</a> in chapter 4 because of the limitations of JavaScript.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga474f4a" class="outline-3">
-<h3 id="orga474f4a">Optional lectures</h3>
-<div class="outline-text-3" id="text-orga474f4a">
+<div id="outline-container-orgc67f33c" class="outline-3">
+<h3 id="orgc67f33c">Optional lectures</h3>
+<div class="outline-text-3" id="text-orgc67f33c">
 <p>
 There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures from Berkeley and countless hackathons or compsci reading groups have videos on working through the book. 
 </p>
@@ -322,13 +322,13 @@ There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18
 </div>
 </div>
 
-<div id="outline-container-org907e4d7" class="outline-2">
-<h2 id="org907e4d7">BEGIN</h2>
-<div class="outline-text-2" id="text-org907e4d7">
+<div id="outline-container-org6d74d5d" class="outline-2">
+<h2 id="org6d74d5d">BEGIN</h2>
+<div class="outline-text-2" id="text-org6d74d5d">
 </div>
-<div id="outline-container-org3e3d1a1" class="outline-3">
-<h3 id="org3e3d1a1">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-org3e3d1a1">
+<div id="outline-container-org5965e98" class="outline-3">
+<h3 id="org5965e98">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-org5965e98">
 <p>
 To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. Guile scheme may work for the entire book too but I have no idea, it has a <a href="https://elephly.net/guile-picture-language/manual.html">picture language</a> at least. 
 </p>
@@ -339,9 +339,9 @@ I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you
 </div>
 </div>
 
-<div id="outline-container-org4770b5c" class="outline-3">
-<h3 id="org4770b5c">IDE/Editor</h3>
-<div class="outline-text-3" id="text-org4770b5c">
+<div id="outline-container-org3984a8b" class="outline-3">
+<h3 id="org3984a8b">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org3984a8b">
 <p>
 Whatever you use keep some kind of exercise versioning so you can refer to them later in future chapters when the book asks you to use code you've already written. This can be simply saving them as their numbered identifier in the book or however you want. You can type scheme into any text editor, save as filename.scm, run mit-scheme, and load your file in the REPL manipulating it there you don't have to use an IDE. This is trivial with (load "filename.scm"). 
 </p>
@@ -431,9 +431,9 @@ Then typing (restart 1) will return to the REPL or you can try option 3 and fix 
 </p>
 </div>
 
-<div id="outline-container-orga8594d9" class="outline-4">
-<h4 id="orga8594d9">Edwin demo in Lecture 1</h4>
-<div class="outline-text-4" id="text-orga8594d9">
+<div id="outline-container-org5cca9e4" class="outline-4">
+<h4 id="org5cca9e4">Edwin demo in Lecture 1</h4>
+<div class="outline-text-4" id="text-org5cca9e4">
 <p>
 First <a href="https://www.youtube.com/watch?v=-J_xL4IGhJA">lecture</a> from the 1986 series if you want to follow him with edwin like @35:40 in the video:
 </p>
@@ -455,18 +455,18 @@ In either the scheme buffer or editor window type C-h m to see all the scheme mo
 </div>
 </div>
 
-<div id="outline-container-org6ab2ffa" class="outline-3">
-<h3 id="org6ab2ffa">Begin</h3>
-<div class="outline-text-3" id="text-org6ab2ffa">
+<div id="outline-container-org6dd2089" class="outline-3">
+<h3 id="org6dd2089">Begin</h3>
+<div class="outline-text-3" id="text-org6dd2089">
 <p>
 I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of the illicit <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdfs</a> floating around to see the figures which are impossible to read in the online html version.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3313d0a" class="outline-3">
-<h3 id="org3313d0a">Chapter 1.x</h3>
-<div class="outline-text-3" id="text-org3313d0a">
+<div id="outline-container-org3cd34f9" class="outline-3">
+<h3 id="org3cd34f9">Chapter 1.x</h3>
+<div class="outline-text-3" id="text-org3cd34f9">
 <p>
 A computational process I would interpret as a running program or the act of computation itself. A procedure is sometimes called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
 </p>
@@ -542,9 +542,9 @@ Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8
 </div>
 </div>
 
-<div id="outline-container-orge2f1cda" class="outline-3">
-<h3 id="orge2f1cda">Chapter 1.2.1</h3>
-<div class="outline-text-3" id="text-orge2f1cda">
+<div id="outline-container-org72dfd25" class="outline-3">
+<h3 id="org72dfd25">Chapter 1.2.1</h3>
+<div class="outline-text-3" id="text-org72dfd25">
 <p>
 I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
 </p>
@@ -618,9 +618,9 @@ G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536&#x20
 </div>
 </div>
 
-<div id="outline-container-orgec1eff8" class="outline-3">
-<h3 id="orgec1eff8">Chapter 1.2.2</h3>
-<div class="outline-text-3" id="text-orgec1eff8">
+<div id="outline-container-org251a6f5" class="outline-3">
+<h3 id="org251a6f5">Chapter 1.2.2</h3>
+<div class="outline-text-3" id="text-org251a6f5">
 <p>
 Phi or \(\phi\) is a constant like e that is solely here to illustrate (fib n) process is exponential.  
 </p>
@@ -648,9 +648,9 @@ The computations are delayed as (+) needs two arguments so recursion is unrolled
 </p>
 </div>
 
-<div id="outline-container-org6e2260b" class="outline-4">
-<h4 id="org6e2260b">Ex 1.11</h4>
-<div class="outline-text-4" id="text-org6e2260b">
+<div id="outline-container-org6aac42e" class="outline-4">
+<h4 id="org6aac42e">Ex 1.11</h4>
+<div class="outline-text-4" id="text-org6aac42e">
 <p>
 Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A100550">OEIS</a> and there's actually a generating function solution a physicist figured out however the assignment wants us to create an iterable procedure. You can use the recursive procedure we learned to test your iterative one. I took eqv? from the mit-scheme reference manual.
 </p>
@@ -680,9 +680,9 @@ Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A10
 </div>
 </div>
 
-<div id="outline-container-orgf3417ed" class="outline-4">
-<h4 id="orgf3417ed">Ex 1.12</h4>
-<div class="outline-text-4" id="text-orgf3417ed">
+<div id="outline-container-org5f32805" class="outline-4">
+<h4 id="org5f32805">Ex 1.12</h4>
+<div class="outline-text-4" id="text-org5f32805">
 <p>
 Pascal's triangle or array is explained <a href="https://www.youtube.com/watch?v=h0Woqc_5qUE%20">here</a> as the number of paths you can take to get to that number in the array or the number of coefficients in (a + b)<sup>n</sup>
 </p>
@@ -728,9 +728,9 @@ You can property test your program by noticing each element in a row of Pascal's
 </div>
 </div>
 
-<div id="outline-container-org2983a3f" class="outline-4">
-<h4 id="org2983a3f">Ex 1.13</h4>
-<div class="outline-text-4" id="text-org2983a3f">
+<div id="outline-container-org5dcf269" class="outline-4">
+<h4 id="org5dcf269">Ex 1.13</h4>
+<div class="outline-text-4" id="text-org5dcf269">
 <p>
 Try some examples in scheme:
 </p>
@@ -765,9 +765,9 @@ Then it's a matter of manipulating using algebra to get it to the form where phi
 </div>
 </div>
 
-<div id="outline-container-org8c737e1" class="outline-3">
-<h3 id="org8c737e1">Chapter 1.2.3</h3>
-<div class="outline-text-3" id="text-org8c737e1">
+<div id="outline-container-orgebfc624" class="outline-3">
+<h3 id="orgebfc624">Chapter 1.2.3</h3>
+<div class="outline-text-3" id="text-orgebfc624">
 <p>
 Watch the <a href="https://www.youtube.com/watch?v=V_7mmwpgJHU">lecture</a> for this chapter where he explains what time and space means the whole lecture is worth watching but the specific time/space explanation starts around 17:09. Time is the amount of steps that are evaluated and space is the amount of data needing to be stored. The numbers 16 and 8 differ by a constant factor of 2 and by a constant factor of 8 but as he says in this analysis we don't care what the constant is just that it is a constant and not changing with the input. Try the iterative procedure in the lecture that uses '1+' and '-1+' both built-in increment/decrement functions. He redefines '+' procedure which you can do in lisp you can rename or redefine anything you want. That iterative procedure uses an accumulator the y parameter keeps incrementing until x is 0 and y is returned.
 </p>
@@ -802,13 +802,13 @@ Since phi is equal to 1.6180.. and (1.6)<sup>n</sup> won't grow faster than 2<su
 </p>
 
 <p>
-The last two inequalites use \(\in\) on 'is in' because there's an order hierarchy for asymptotics where big-theta means roughly equal, big-O means greater than or equal, little-o is strictly less than, big-Omega is strictly greater, etc. To be precise the function inside O() or any other asymptotic bound represents a 'family of functions' so means <i>every function</i> that has the growth bounded by whatever function is inside O(). 
+The last two inequalites use \(\in\) or 'is in' because there's an order hierarchy for asymptotics where big-theta means roughly equal, big-O means greater than or equal, little-o is strictly less than, big-Omega is strictly greater, etc. To be precise the function inside O() or any other asymptotic bound represents a 'family of functions' so means <i>every function</i> that has the growth bounded by whatever function is inside O(). Watch <a href="https://youtu.be/_gKb855_3bk?si=IOQF3DAvcbRfCHrB">this</a> to learn more like O-tilde, poly(), and what exactly are the standard form functions that are 'chosen from a list' in O(f(n)).
 </p>
 </div>
 
-<div id="outline-container-org5e8aa37" class="outline-4">
-<h4 id="org5e8aa37">Ex 1.14</h4>
-<div class="outline-text-4" id="text-org5e8aa37">
+<div id="outline-container-org5ebd0de" class="outline-4">
+<h4 id="org5ebd0de">Ex 1.14</h4>
+<div class="outline-text-4" id="text-org5ebd0de">
 <p>
 There is a nice graphic <a href="https://sicp-solutions.net/post/sicp-solution-exercise-1-14/">here</a> showing the full (cc 11 5) tree. He used (display) to generate the data to plug into graphviz and we can do the same while adjusting the procedure to count the number of calls or nodes in the process tree. Zero out the cond then in the else add 2 for 2 calls to cc:
 </p>
@@ -940,9 +940,9 @@ You can see for up to 900 inputs it's bounded by x<sup>3</sup> growth but if you
 </div>
 </div>
 
-<div id="outline-container-org18fd5ec" class="outline-4">
-<h4 id="org18fd5ec">Ex 1.15</h4>
-<div class="outline-text-4" id="text-org18fd5ec">
+<div id="outline-container-orgebd2c34" class="outline-4">
+<h4 id="orgebd2c34">Ex 1.15</h4>
+<div class="outline-text-4" id="text-orgebd2c34">
 <p>
 Build another step counter
 </p>
