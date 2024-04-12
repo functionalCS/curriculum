@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-11 Thu 14:49 -->
+<!-- 2024-04-11 Thu 18:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to do Structure and Interpretation of Computer Programs (SICP)</title>
@@ -270,40 +270,32 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org653b8c0">SICP (and SDF) Workshop</a>
+<li><a href="#orgce8b65a">SICP (and SDF) Workshop</a>
 <ul>
-<li><a href="#org9970dd2">SICP in 2024</a></li>
-<li><a href="#orgefc40c3">Optional lectures</a></li>
+<li><a href="#orgefc6f3e">SICP in 2024</a></li>
+<li><a href="#org0950c86">Optional lectures</a></li>
 </ul>
 </li>
-<li><a href="#org4e2beeb">BEGIN</a>
+<li><a href="#orgbd0f8dc">BEGIN</a>
 <ul>
-<li><a href="#org1b02d3a">Install mit-scheme</a></li>
-<li><a href="#org4942193">IDE/Editor</a>
-<ul>
-<li><a href="#orgf4a0c87">Edwin demo in Lecture 1</a></li>
-</ul>
-</li>
-<li><a href="#orga90fd17">Begin</a></li>
-<li><a href="#org9bf5451">Chapter 1.x</a></li>
-<li><a href="#orge704a3c">Chapter 1.2.1</a></li>
-<li><a href="#org089bfb5">Chapter 1.2.2</a></li>
-<li><a href="#org28e2a81">Chapter 1.2.3</a>
-<ul>
-<li><a href="#orgc3d714c">Ex 1.14</a></li>
-</ul>
-</li>
+<li><a href="#orgb520a2c">Install mit-scheme</a></li>
+<li><a href="#org6d93566">IDE/Editor</a></li>
+<li><a href="#orga182b09">Begin</a></li>
+<li><a href="#org0de2e8f">Chapter 1.x</a></li>
+<li><a href="#orgab97d15">Chapter 1.2.1</a></li>
+<li><a href="#org2d6d053">Chapter 1.2.2</a></li>
+<li><a href="#orgda63912">Chapter 1.2.3</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org653b8c0" class="outline-2">
-<h2 id="org653b8c0">SICP (and SDF) Workshop</h2>
-<div class="outline-text-2" id="text-org653b8c0">
+<div id="outline-container-orgce8b65a" class="outline-2">
+<h2 id="orgce8b65a">SICP (and SDF) Workshop</h2>
+<div class="outline-text-2" id="text-orgce8b65a">
 <p>
-This exists because if you ask how to learn programming likely someone will shill this book to you due to it being a seminal CS text that's been used for decades. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately but they are only examples and not the core of the text so don't give up so easily. We'll figure out all the math. In interviews the authors explained this course was taught at MIT after 2 or 3 semesters of calculus so for that target audience it made sense to use math examples. 
+This exists because if you ask how to learn programming likely someone will shill this book to you due to it being a seminal CS text that's been used for decades. It's easier to do this after you have at least some programming experience because then you won't miss as many details as SICP almost gives you everything at once. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately but they are only examples and not the core of the text so don't give up so easily. We'll figure out all the math. In interviews the authors explained this course was taught at MIT after 2 or 3 semesters of calculus so for that target audience it made sense to use math examples. 
 </p>
 
 <p>
@@ -311,18 +303,18 @@ SICP is lecture notes that became a book the original 6.001 course had many addi
 </p>
 </div>
 
-<div id="outline-container-org9970dd2" class="outline-3">
-<h3 id="org9970dd2">SICP in 2024</h3>
-<div class="outline-text-3" id="text-org9970dd2">
+<div id="outline-container-orgefc6f3e" class="outline-3">
+<h3 id="orgefc6f3e">SICP in 2024</h3>
+<div class="outline-text-3" id="text-orgefc6f3e">
 <p>
 MIT taught some form of this book in their 6.001 course from 1980 (as lecture notes) until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to make significant <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">changes</a> in chapter 4 because of the limitations of JavaScript.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgefc40c3" class="outline-3">
-<h3 id="orgefc40c3">Optional lectures</h3>
-<div class="outline-text-3" id="text-orgefc40c3">
+<div id="outline-container-org0950c86" class="outline-3">
+<h3 id="org0950c86">Optional lectures</h3>
+<div class="outline-text-3" id="text-org0950c86">
 <p>
 There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures from Berkeley and countless hackathons or compsci reading groups have videos on working through the book. 
 </p>
@@ -330,13 +322,13 @@ There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18
 </div>
 </div>
 
-<div id="outline-container-org4e2beeb" class="outline-2">
-<h2 id="org4e2beeb">BEGIN</h2>
-<div class="outline-text-2" id="text-org4e2beeb">
+<div id="outline-container-orgbd0f8dc" class="outline-2">
+<h2 id="orgbd0f8dc">BEGIN</h2>
+<div class="outline-text-2" id="text-orgbd0f8dc">
 </div>
-<div id="outline-container-org1b02d3a" class="outline-3">
-<h3 id="org1b02d3a">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-org1b02d3a">
+<div id="outline-container-orgb520a2c" class="outline-3">
+<h3 id="orgb520a2c">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-orgb520a2c">
 <p>
 To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. Guile scheme may work for the entire book too but I have no idea, it has a <a href="https://elephly.net/guile-picture-language/manual.html">picture language</a> at least. 
 </p>
@@ -347,9 +339,9 @@ I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you
 </div>
 </div>
 
-<div id="outline-container-org4942193" class="outline-3">
-<h3 id="org4942193">IDE/Editor</h3>
-<div class="outline-text-3" id="text-org4942193">
+<div id="outline-container-org6d93566" class="outline-3">
+<h3 id="org6d93566">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org6d93566">
 <p>
 Whatever you use keep some kind of exercise versioning so you can refer to them later in future chapters when the book asks you to use code you've already written. This can be simply saving them as their numbered identifier in the book or however you want. You can type scheme into any text editor, save as filename.scm, run mit-scheme, and load your file in the REPL manipulating it there you don't have to use an IDE. This is trivial with (load "filename.scm"). 
 </p>
@@ -439,9 +431,9 @@ Then typing (restart 1) will return to the REPL or you can try option 3 and fix 
 </p>
 </div>
 
-<div id="outline-container-orgf4a0c87" class="outline-4">
-<h4 id="orgf4a0c87">Edwin demo in Lecture 1</h4>
-<div class="outline-text-4" id="text-orgf4a0c87">
+<div id="outline-container-org44c89dc" class="outline-4">
+<h4 id="org44c89dc">Edwin demo in Lecture 1</h4>
+<div class="outline-text-4" id="text-org44c89dc">
 <p>
 First <a href="https://www.youtube.com/watch?v=-J_xL4IGhJA">lecture</a> from the 1986 series if you want to follow him with edwin like @35:40 in the video:
 </p>
@@ -463,18 +455,18 @@ In either the scheme buffer or editor window type C-h m to see all the scheme mo
 </div>
 </div>
 
-<div id="outline-container-orga90fd17" class="outline-3">
-<h3 id="orga90fd17">Begin</h3>
-<div class="outline-text-3" id="text-orga90fd17">
+<div id="outline-container-orga182b09" class="outline-3">
+<h3 id="orga182b09">Begin</h3>
+<div class="outline-text-3" id="text-orga182b09">
 <p>
 I'm using the <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of the illicit <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdfs</a> floating around to see the figures which are impossible to read in the online html version.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9bf5451" class="outline-3">
-<h3 id="org9bf5451">Chapter 1.x</h3>
-<div class="outline-text-3" id="text-org9bf5451">
+<div id="outline-container-org0de2e8f" class="outline-3">
+<h3 id="org0de2e8f">Chapter 1.x</h3>
+<div class="outline-text-3" id="text-org0de2e8f">
 <p>
 A computational process I would interpret as a running program or the act of computation itself. A procedure is sometimes called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
 </p>
@@ -550,9 +542,9 @@ Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8
 </div>
 </div>
 
-<div id="outline-container-orge704a3c" class="outline-3">
-<h3 id="orge704a3c">Chapter 1.2.1</h3>
-<div class="outline-text-3" id="text-orge704a3c">
+<div id="outline-container-orgab97d15" class="outline-3">
+<h3 id="orgab97d15">Chapter 1.2.1</h3>
+<div class="outline-text-3" id="text-orgab97d15">
 <p>
 I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
 </p>
@@ -626,9 +618,9 @@ G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536&#x20
 </div>
 </div>
 
-<div id="outline-container-org089bfb5" class="outline-3">
-<h3 id="org089bfb5">Chapter 1.2.2</h3>
-<div class="outline-text-3" id="text-org089bfb5">
+<div id="outline-container-org2d6d053" class="outline-3">
+<h3 id="org2d6d053">Chapter 1.2.2</h3>
+<div class="outline-text-3" id="text-org2d6d053">
 <p>
 Tree recursive processes every element in the input we process requires doubling the amount of work on the rest of the input. Phi or \(\phi\) is a constant like e that is solely here to illustrate that the values of fib(n) grow exponentially with the input and fib(n) is approximately \(\frac{\phi^n}{\sqrt 5}\). This sequence is some kind of exponential between \(\sqrt 2^n\) and \(2^n\) so is bounded by exponentials, thus is an exponential. 
 </p>
@@ -753,14 +745,14 @@ Notice phi can accept '-' or '+' as a parameter the benefits of symbolic program
 </p>
 
 <p>
-Then it's a matter of manipulating using algebra to get it to the form where phi \(\phi\) and varphi \(\varphi\) can be substituted back in, as done in <a href="https://web.archive.org/web/20230330004617/https://sicp-solutions.net/post/sicp-solution-exercise-1-13/">this solution</a> and you could also take advantage of the fact that phi squared is phi + 1 and varphi squared is varphi - 1. First they multiplied everything by \(\frac{\sqrt 5}{1}\) to clear fractions, rewrote what was left into equivalent ratios, distributed out phi and varphi, then some arithmetic after substituting back in the concrete values of phi and varphi to show both sides are equal. The book asks to prove it is the closest <i>integer</i> to fib(n) meaning a number such as -1 or 1 not 1.5 or any rational. The solution shows how you would take the information of \(\varphi^n\) tending towards 0 and create an inequality showing -1 &lt; (fib n) &lt; 1. You can verify this in the scheme buffer for the above program: (expt (phi -) 3), (expt (phi -) 4), etc. Knowing how to prove this wasn't the point of the chapter which was tree shaped processes are expensive to compute. 
+Then it's a matter of manipulating using algebra to get it to the form where phi \(\phi\) and varphi \(\varphi\) can be substituted back in, as done in <a href="https://web.archive.org/web/20230330004617/https://sicp-solutions.net/post/sicp-solution-exercise-1-13/">this solution</a> and you could also take advantage of the fact that phi squared is phi + 1 and varphi squared is varphi - 1. First they multiplied everything by \(\frac{\sqrt 5}{1}\) to clear fractions, rewrote what was left into equivalent ratios, distributed out phi and varphi, then some arithmetic after substituting back in the concrete values of phi and varphi to show both sides are equal. The book asks to prove it is the closest <i>integer</i> to fib(n) meaning a number such as -1 or 1 not 1.5 or any rational. The solution shows how you would take the information of \(\varphi^n\) tending towards 0 and create an inequality showing -1 &lt; (fib n) &lt; 1. You can verify this in the scheme REPL for the above program: (expt (phi -) 3), (expt (phi -) 4), etc. Knowing how to prove this wasn't the point of the chapter which was tree shaped processes can have enormous growth in steps.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org28e2a81" class="outline-3">
-<h3 id="org28e2a81">Chapter 1.2.3</h3>
-<div class="outline-text-3" id="text-org28e2a81">
+<div id="outline-container-orgda63912" class="outline-3">
+<h3 id="orgda63912">Chapter 1.2.3</h3>
+<div class="outline-text-3" id="text-orgda63912">
 <p>
 Watch the <a href="https://www.youtube.com/watch?v=V_7mmwpgJHU">lecture</a> for this chapter where he explains what time and space means the whole lecture is worth watching but the specific time/space explanation starts around 17:09. Time is the amount of steps that are evaluated and space is the amount of data needing to be stored. The numbers 16 and 8 differ by a constant factor of 2 and by a constant factor of 8 but as he says in this analysis we don't care what the constant is just that it is a constant and not changing with the input. Try the iterative procedure in the lecture that uses '1+' and '-1+' both built-in increment/decrement functions. He redefines '+' procedure which you can do in lisp you can rename or redefine anything you want. That iterative procedure uses an accumulator the y parameter keeps incrementing until x is 0 and y is returned.
 </p>
@@ -795,9 +787,9 @@ Since phi is equal to 1.6180.. and (1.6)<sup>n</sup> won't grow faster than 2<su
 </p>
 </div>
 
-<div id="outline-container-orgc3d714c" class="outline-4">
-<h4 id="orgc3d714c">Ex 1.14</h4>
-<div class="outline-text-4" id="text-orgc3d714c">
+<div id="outline-container-org2b929dd" class="outline-4">
+<h4 id="org2b929dd">Ex 1.14</h4>
+<div class="outline-text-4" id="text-org2b929dd">
 <p>
 There is a nice graphic <a href="https://sicp-solutions.net/post/sicp-solution-exercise-1-14/">here</a> showing the full (cc 11 5) tree. He used (display) to generate the data to plug into graphviz and we can do the same while adjusting the procedure to count the number of calls or nodes in the process tree. Zero out the cond then in the else add 2 for 2 calls to cc:
 </p>
@@ -867,15 +859,11 @@ We can see count-change grows much less than fib:
 </pre>
 
 <p>
-Space is defined as the max depth of the longest tree branch because we only have to keep track of the nodes above us and count-change longest branch is whatever the input is since if there's a coin size of 1 it will take as a minimum n nodes of space of n-sized input so space's lowest bound is n. We can always find some constant to multiply n by in order to represent the rest of the space used in the tree other coin denominations meaning space is \(\theta(n)\) it won't grow more than n (times a constant) and grows at least the same size of the input. 
+Space is defined as the max depth of the longest tree branch because we only have to keep track of the nodes above us and count-change longest branch is whatever the input is since if there's a coin size of 1 it will take as a minimum n nodes of space of n-sized input so space's lowest bound is n. We can always find some constant to multiply n by in order to represent the rest of the space used in the tree for the other coin denominations meaning space is \(\theta(n)\) it won't grow more than n (times a constant) and grows at least the same size of the input. 
 </p>
 
 <p>
-To estimate the growth in the amount of steps looking at the code we can tell this is going to be something like n<sup>5</sup> because the process invokes 5 processes (the number of coins) passing the entire input each time so (* n n n n n) or n<sup>5</sup> at least. The quick and dirty way to guestimate big-O is multiply everything in a loop body by the amount of times you loop and a recursive function is in a way the entire body of a loop. The process loops n times with 4 calls to itself with n sized inputs so n * n<sup>4</sup>
-</p>
-
-<p>
-We can see this plotting data:   
+To estimate the growth in the amount of steps try gathering data and plot it:   
 </p>
 
 <p>
@@ -926,9 +914,48 @@ We can see this plotting data:
 <p>
 Plug it into a desmos like I did <a href="https://www.desmos.com/calculator/2l7d4qebm8">here</a> you can see for up to 900 inputs it's bounded by x<sup>3</sup> growth but if you keep going then the points approach the y-axis quickly. As you add 100 to the input the nodes appear to double in size from input 600 to 900 so we can can just keep approximating and doubling the last value of nodes and see by the time you hit x = 1100 then the x<sup>3</sup> curve is already no longer bounding. If you keep going then it eventually passes x<sup>4</sup> too but it will always be bounded by x<sup>5</sup> and that is the critical insight to big-O or big theta the inputs are supposed to be approaching infinity so no matter how big of an input you can guarantee the bound. 
 </p>
+</div>
+</div>
 
+<div id="outline-container-orgb2dd323" class="outline-4">
+<h4 id="orgb2dd323">Ex 1.15</h4>
+<div class="outline-text-4" id="text-orgb2dd323">
+<p>
+Build another step counter
+</p>
 
+<pre class="example">
+(define (count c angle)
+  (display c) (display " ") (display angle) (newline)
+  (if (not (&gt; (abs angle) 0.1))
+      c 
+      (count (+ c 1) (/ angle 3.0))))
+(count 0 12.5)
 
+1 ]=&gt;
+1 4.166666666666667
+2 1.388888888888889
+3 .462962962962963
+4 .154320987654321
+5 5.1440329218107005e-2
+;Value: 5
+
+(count 0 100)
+1 ]=&gt; 
+;Value: 7
+
+(count 0 1000)
+1 ]=&gt; 
+;Value: 9
+</pre>
+
+<p>
+(p (p (p (p (p 0.05144))))) once the recursion stops and angle is returned then p can start to reduce. Try log<sub>2</sub>(100) and log<sub>2</sub>(1000) and (sine a) is logarithmic in steps. We multiplied the steps by 10 and only added 2 more. Space is the bookkeeping we have to save and is the depth of p so also \(\theta\)(log(a)) as the assignment wants us to express it as a function of <i>a</i>.
+</p>
+
+<p>
+TODO
+</p>
 <hr />
 </div>
 </div>
