@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-08 Sat 23:10 -->
+<!-- 2024-06-08 Sat 23:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A 2024 Computer Science Curriculum</title>
@@ -270,41 +270,39 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org734ff85">What is this</a></li>
-<li><a href="#org1807f39">Basics</a>
+<li><a href="#orgdb44cc8">What is this</a></li>
+<li><a href="#org0cf74f7">Curriculum</a>
 <ul>
-<li><a href="#org7999028">Discrete Math</a></li>
-<li><a href="#org74df0c4">Programming</a></li>
+<li><a href="#org8656235">Basics</a></li>
+<li><a href="#org9b77852">Discrete Math</a></li>
+<li><a href="#org7d49945">Intro to Programming</a></li>
+<li><a href="#orge2696e7">Programming Languages</a></li>
+<li><a href="#orgf679183">Logic</a></li>
+<li><a href="#orgd0b8fd5">Categories</a></li>
+<li><a href="#org1b9bb40">Applications</a></li>
+<li><a href="#org116fd38">Research</a></li>
 </ul>
 </li>
-<li><a href="#org4d53333">Programming Languages</a></li>
-<li><a href="#orga6524e1">Logic</a></li>
-<li><a href="#org512df8e">Categories</a></li>
-<li><a href="#orgaeee54a">Applications</a>
+<li><a href="#org5bb8748">BEGIN</a>
 <ul>
-<li><a href="#org12eb306">Research</a></li>
+<li><a href="#orgc1ceb69">Proving equalities</a></li>
+<li><a href="#orga7706a3">Tips and tricks</a></li>
+<li><a href="#org73f53a1">Proving inequalities</a></li>
+<li><a href="#org5d24cf9">Proofs with structure TODO</a></li>
 </ul>
 </li>
-<li><a href="#org0ab45c7">BEGIN</a>
+<li><a href="#org3c4cbc5">Principles of Functional Programming</a>
 <ul>
-<li><a href="#org48d7391">Proving equalities</a></li>
-<li><a href="#org3fed2ac">Tips and tricks</a></li>
-<li><a href="#org87563f3">Proving inequalities</a></li>
-<li><a href="#org65c6888">Proofs with structure TODO</a></li>
-</ul>
-</li>
-<li><a href="#org15bdaf0">Principles of Functional Programming</a>
-<ul>
-<li><a href="#orgc20c593">Lecture 1</a></li>
+<li><a href="#orge039ce1">Lecture 1</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org734ff85" class="outline-2">
-<h2 id="org734ff85">What is this</h2>
-<div class="outline-text-2" id="text-org734ff85">
+<div id="outline-container-orgdb44cc8" class="outline-2">
+<h2 id="orgdb44cc8">What is this</h2>
+<div class="outline-text-2" id="text-orgdb44cc8">
 <p>
 This is a dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">computational trinitarianism</a> where the theory of computation manifests itself in three forms: Logic, Languages and Categories. Any route can get you to the 'divine notion of computation'. This is the framework for discovery and analysis in 21st century computer science so you haven't stumbled upon only a programming language theory curriculum it's the theory of everything curriculum since Harper considers math to be just another special case of computer science. Is he right? Let's find out ourselves. If you want to learn this material with a community some have started a Discord <a href="https://discord.gg/V34pTzY">channel</a>. 
 </p>
@@ -315,9 +313,13 @@ We only have access to nice things like old exams, labs, and assignments if you 
 </div>
 </div>
 
-<div id="outline-container-org1807f39" class="outline-2">
-<h2 id="org1807f39">Basics</h2>
-<div class="outline-text-2" id="text-org1807f39">
+<div id="outline-container-org0cf74f7" class="outline-2">
+<h2 id="org0cf74f7">Curriculum</h2>
+<div class="outline-text-2" id="text-org0cf74f7">
+</div>
+<div id="outline-container-org8656235" class="outline-3">
+<h3 id="org8656235">Basics</h3>
+<div class="outline-text-3" id="text-org8656235">
 <p>
 We are expected to know
 </p>
@@ -326,10 +328,11 @@ We are expected to know
 <li>how to program</li>
 </ul>
 </div>
+</div>
 
-<div id="outline-container-org7999028" class="outline-3">
-<h3 id="org7999028">Discrete Math</h3>
-<div class="outline-text-3" id="text-org7999028">
+<div id="outline-container-org9b77852" class="outline-3">
+<h3 id="org9b77852">Discrete Math</h3>
+<div class="outline-text-3" id="text-org9b77852">
 <p>
 This is a benefit of dependently typed languages we get to program proofs in an assistant that tells us if what we did is reasonably correct or not. 
 </p>
@@ -340,9 +343,9 @@ This is a benefit of dependently typed languages we get to program proofs in an 
 </div>
 </div>
 
-<div id="outline-container-org74df0c4" class="outline-3">
-<h3 id="org74df0c4">Programming</h3>
-<div class="outline-text-3" id="text-org74df0c4">
+<div id="outline-container-org7d49945" class="outline-3">
+<h3 id="org7d49945">Intro to Programming</h3>
+<div class="outline-text-3" id="text-org7d49945">
 <ul class="org-ul">
 <li>15-150 <a href="https://brandonspark.github.io/150/">Principles of Functional Programming</a> (SML)
 <ul class="org-ul">
@@ -368,11 +371,10 @@ They are going to fully mechanize 15-210 soon using <a href="https://github.com/
 </ul>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org4d53333" class="outline-2">
-<h2 id="org4d53333">Programming Languages</h2>
-<div class="outline-text-2" id="text-org4d53333">
+<div id="outline-container-orge2696e7" class="outline-3">
+<h3 id="orge2696e7">Programming Languages</h3>
+<div class="outline-text-3" id="text-orge2696e7">
 <p>
 We almost have to take the HoTT grad seminar with PFPL to understand it so it's here too.
 </p>
@@ -395,9 +397,9 @@ We almost have to take the HoTT grad seminar with PFPL to understand it so it's 
 </div>
 
 
-<div id="outline-container-orga6524e1" class="outline-2">
-<h2 id="orga6524e1">Logic</h2>
-<div class="outline-text-2" id="text-orga6524e1">
+<div id="outline-container-orgf679183" class="outline-3">
+<h3 id="orgf679183">Logic</h3>
+<div class="outline-text-3" id="text-orgf679183">
 <ul class="org-ul">
 <li><a href="https://symbolaris.com/course/constlog21-schedule.html">Constructive Logic</a> (SML)</li>
 <li>How to read/use The Edinburgh Logical Framework or <a href="https://homepages.inf.ed.ac.uk/gdp/publications/Framework_Def_Log.pdf">LF</a>
@@ -412,9 +414,9 @@ We almost have to take the HoTT grad seminar with PFPL to understand it so it's 
 </div>
 
 
-<div id="outline-container-org512df8e" class="outline-2">
-<h2 id="org512df8e">Categories</h2>
-<div class="outline-text-2" id="text-org512df8e">
+<div id="outline-container-orgd0b8fd5" class="outline-3">
+<h3 id="orgd0b8fd5">Categories</h3>
+<div class="outline-text-3" id="text-orgd0b8fd5">
 <ul class="org-ul">
 <li>MIT course <a href="https://ocw.mit.edu/courses/18-s097-applied-category-theory-january-iap-2019/">Applied Category Theory</a> 
 <ul class="org-ul">
@@ -426,9 +428,9 @@ We almost have to take the HoTT grad seminar with PFPL to understand it so it's 
 </div>
 
 
-<div id="outline-container-orgaeee54a" class="outline-2">
-<h2 id="orgaeee54a">Applications</h2>
-<div class="outline-text-2" id="text-orgaeee54a">
+<div id="outline-container-org1b9bb40" class="outline-3">
+<h3 id="org1b9bb40">Applications</h3>
+<div class="outline-text-3" id="text-org1b9bb40">
 <p>
 See the <a href="https://topos.institute/collaborative-modelling">Topos Institute</a> for more. 
 </p>
@@ -438,11 +440,12 @@ See the <a href="https://topos.institute/collaborative-modelling">Topos Institut
 <li><a href="https://www.cs.uoregon.edu/research/summerschool/summer16/curriculum.php">Network Programming</a> OPLSS lectures provide a comprehensive intro to the theory and practice of network programming (OCaml)</li>
 </ul>
 </div>
+</div>
 
 
-<div id="outline-container-org12eb306" class="outline-3">
-<h3 id="org12eb306">Research</h3>
-<div class="outline-text-3" id="text-org12eb306">
+<div id="outline-container-org116fd38" class="outline-3">
+<h3 id="org116fd38">Research</h3>
+<div class="outline-text-3" id="text-org116fd38">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into the seemingly impossible technical details. 
 </p>
@@ -455,9 +458,9 @@ Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/jou
 </div>
 </div>
 
-<div id="outline-container-org0ab45c7" class="outline-2">
-<h2 id="org0ab45c7">BEGIN</h2>
-<div class="outline-text-2" id="text-org0ab45c7">
+<div id="outline-container-org5bb8748" class="outline-2">
+<h2 id="org5bb8748">BEGIN</h2>
+<div class="outline-text-2" id="text-org5bb8748">
 <p>
 I'm going to start with the book <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this as most CMU students will be taking <a href="https://www.math.cmu.edu/~jmackey/151_128/welcome.html">15-151</a> at the same time as 15-150.   
 </p>
@@ -471,9 +474,9 @@ I'm going to start with the book <i>The Mechanics of Proof</i> because 15-150 wi
 </ul>
 </div>
 
-<div id="outline-container-org05b2b15" class="outline-4">
-<h4 id="org05b2b15">Local install</h4>
-<div class="outline-text-4" id="text-org05b2b15">
+<div id="outline-container-org51ecabd" class="outline-4">
+<h4 id="org51ecabd">Local install</h4>
+<div class="outline-text-4" id="text-org51ecabd">
 <p>
 Gitpod free tier is easiest. To install Lean locally w/Visual Studio:
 </p>
@@ -498,9 +501,9 @@ Click on 01ProofsbyCalculation.lean you should get a right panel opening up in V
 </div>
 </div>
 
-<div id="outline-container-org62e7316" class="outline-4">
-<h4 id="org62e7316">Emacs</h4>
-<div class="outline-text-4" id="text-org62e7316">
+<div id="outline-container-org73c816e" class="outline-4">
+<h4 id="org73c816e">Emacs</h4>
+<div class="outline-text-4" id="text-org73c816e">
 <p>
 Install everything as before then git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals. If you use vanilla emacs from some distros like Ubuntu you'll have some 'can't verify signature' error which is fixed by <a href="http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html">updating elpa keyring</a>. 
 </p>
@@ -538,9 +541,9 @@ gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver hkps://keys.openpgp.org --recv-k
 </div>
 </div>
 
-<div id="outline-container-org48d7391" class="outline-3">
-<h3 id="org48d7391">Proving equalities</h3>
-<div class="outline-text-3" id="text-org48d7391">
+<div id="outline-container-orgc1ceb69" class="outline-3">
+<h3 id="orgc1ceb69">Proving equalities</h3>
+<div class="outline-text-3" id="text-orgc1ceb69">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Any examples you don't understand come back here after writing some Lean proofs you won't get them all immediately. First example expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) = 4 so (a - b)<sup>2</sup> is 16 after substitution.
 </p>
@@ -614,9 +617,9 @@ example {u v : ℝ} (h1 : u + 1 = v) : u ^ 2 + 3 * u + 1 = v ^ 2 + v - 1 :=
 </div>
 </div>
 
-<div id="outline-container-org3fed2ac" class="outline-3">
-<h3 id="org3fed2ac">Tips and tricks</h3>
-<div class="outline-text-3" id="text-org3fed2ac">
+<div id="outline-container-orga7706a3" class="outline-3">
+<h3 id="orga7706a3">Tips and tricks</h3>
+<div class="outline-text-3" id="text-orga7706a3">
 <p>
 1.3.2 once again we first establish x = x then use the hypothesis to rewrite it
 </p>
@@ -669,9 +672,9 @@ example {p : ℝ} (h1 : 5 * p - 3 = 3 * p + 1) : p = 2 :=
 </div>
 </div>
 
-<div id="outline-container-org87563f3" class="outline-3">
-<h3 id="org87563f3">Proving inequalities</h3>
-<div class="outline-text-3" id="text-org87563f3">
+<div id="outline-container-org73f53a1" class="outline-3">
+<h3 id="org73f53a1">Proving inequalities</h3>
+<div class="outline-text-3" id="text-org73f53a1">
 <p>
 We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-inequalities">proofs by calc</a> chapter.
 </p>
@@ -804,9 +807,9 @@ Exercise 6 I couldn't figure it out in lean as I don't know enough of the standa
 </div>
 
 
-<div id="outline-container-org65c6888" class="outline-3">
-<h3 id="org65c6888">Proofs with structure TODO</h3>
-<div class="outline-text-3" id="text-org65c6888">
+<div id="outline-container-org5d24cf9" class="outline-3">
+<h3 id="org5d24cf9">Proofs with structure TODO</h3>
+<div class="outline-text-3" id="text-org5d24cf9">
 <p>
 Reading the <a href="https://hrmacbeth.github.io/math2001/02_Proofs_with_Structure.html">second</a> chapter. TODO 
 </p>
@@ -814,17 +817,17 @@ Reading the <a href="https://hrmacbeth.github.io/math2001/02_Proofs_with_Structu
 </div>
 </div>
 
-<div id="outline-container-org15bdaf0" class="outline-2">
-<h2 id="org15bdaf0">Principles of Functional Programming</h2>
-<div class="outline-text-2" id="text-org15bdaf0">
+<div id="outline-container-org3c4cbc5" class="outline-2">
+<h2 id="org3c4cbc5">Principles of Functional Programming</h2>
+<div class="outline-text-2" id="text-org3c4cbc5">
 <p>
 There's no programming prereqs. 15-150 was designed so students who already had some background in high school CS or who took <a href="https://www.cs.cmu.edu/~15122/schedule.shtml">15-122</a> <i>Principles of Imperative Computation</i> wouldn't have any kind of advantage. If they didn't have high school CS they would likely take 15-110/112 which is now some kind of <a href="https://academy.cs.cmu.edu/">CS academy</a> but those legacy courses aren't needed. 
 </p>
 </div>
 
-<div id="outline-container-orgc20c593" class="outline-3">
-<h3 id="orgc20c593">Lecture 1</h3>
-<div class="outline-text-3" id="text-orgc20c593">
+<div id="outline-container-orge039ce1" class="outline-3">
+<h3 id="orge039ce1">Lecture 1</h3>
+<div class="outline-text-3" id="text-orge039ce1">
 <p>
 Watching the <a href="https://brandonspark.github.io/prologue/">first lecture</a>. According to <a href="https://www.cs.cmu.edu/~rwh/papers/paradigms/paradigm.pdf">Robert Harper</a> and <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/sk-teach-pl-post-linnaean/">Shriram Krishnamurthi</a> so-called 'programming paradigms' like imperative, object-oriented or functional are vague descriptors of the same thing which is just programming. We'll work through both their books PFPL and PLAI after this course. The professor he talks about ~45m we're doing his constructive logic <a href="https://symbolaris.com/course/constlog21-schedule.html">course</a> after this too. @51m LaTeX is how you generate symbols like \(\implies\) for books/papers. Don Knuth invented the original program TeX (annoyingly pronounced 'tek') to write <a href="https://learnaifromscratch.github.io/taocp.html">TAOCP</a>.   
 </p>
@@ -834,9 +837,9 @@ If you want to follow what he's doing in the REPL try <a href="https://sosml.org
 </p>
 </div>
 
-<div id="outline-container-org0023986" class="outline-4">
-<h4 id="org0023986">PSML</h4>
-<div class="outline-text-4" id="text-org0023986">
+<div id="outline-container-orgd5e6fb4" class="outline-4">
+<h4 id="orgd5e6fb4">PSML</h4>
+<div class="outline-text-4" id="text-orgd5e6fb4">
 <p>
 Go to Robert Harper's <a href="https://www.cs.cmu.edu/~rwh/">CMU page</a> and get <a href="http://www.cs.cmu.edu/~rwh/isml/book.pdf">Programming in Standard ML</a>. Skip the overview (we'll do that regex debugging later) and start at Chapter 2 <i>Types, Values, and Effects</i>. In 2.1 if you don't remember what a <a href="https://topos.site/events/poly-course/">polynomial</a> is: f(x) = x<sup>2</sup> + x<sup>1</sup> + .. you bind x to an input value like x=1 then evaluate by rules of arithmetic the value of the polynomial at that given input f(1) = 1<sup>2</sup> + 1<sup>1</sup> + &#x2026;
 </p>
