@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-17 Mon 20:08 -->
+<!-- 2024-06-17 Mon 20:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to do Structure and Interpretation of Computer Programs (SICP)</title>
@@ -270,33 +270,34 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7ff7bcc">SICP (and SDF) Workshop</a>
+<li><a href="#orgaf631fe">SICP (and SDF) Workshop</a>
 <ul>
-<li><a href="#orga32b0cf">SICP in 2024</a></li>
-<li><a href="#org7b621c7">Optional lectures</a></li>
+<li><a href="#org32b31f3">SICP in 2024</a></li>
+<li><a href="#orgc8c8d48">Optional lectures</a></li>
 </ul>
 </li>
-<li><a href="#org26e8e15">BEGIN</a>
+<li><a href="#org396f1d7">BEGIN</a>
 <ul>
-<li><a href="#org2d69483">Install mit-scheme</a></li>
-<li><a href="#orgf1e7bfc">IDE/Editor</a></li>
-<li><a href="#org7aff1e9">Book versions</a></li>
-<li><a href="#orgbb1709e">SICP 1.x</a></li>
-<li><a href="#org535b9e6">SICP 1.2.1</a></li>
-<li><a href="#orgcabe30c">SICP 1.2.2</a></li>
-<li><a href="#org87f9149">SICP 1.2.3</a></li>
-<li><a href="#orge9d4656">SICP 1.2.4</a></li>
-<li><a href="#orgcb6d7b0">SICP 1.2.5</a></li>
-<li><a href="#org6e29274">SICP 1.2.6</a></li>
+<li><a href="#org528781d">Install mit-scheme</a></li>
+<li><a href="#org377dd6f">IDE/Editor</a></li>
+<li><a href="#org76c3d6d">Book versions</a></li>
+<li><a href="#org8149a97">SICP 1.x</a></li>
+<li><a href="#org75994e2">SICP 1.2.1</a></li>
+<li><a href="#org18f06eb">SICP 1.2.2</a></li>
+<li><a href="#org453dc00">SICP 1.2.3</a></li>
+<li><a href="#org0e8a59b">SICP 1.2.4</a></li>
+<li><a href="#orga85592e">SICP 1.2.5</a></li>
+<li><a href="#org70f7c70">SICP 1.2.6 TODO</a></li>
 </ul>
 </li>
+<li><a href="#orgdb6f7d1">SDF 0</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7ff7bcc" class="outline-2">
-<h2 id="org7ff7bcc">SICP (and SDF) Workshop</h2>
-<div class="outline-text-2" id="text-org7ff7bcc">
+<div id="outline-container-orgaf631fe" class="outline-2">
+<h2 id="orgaf631fe">SICP (and SDF) Workshop</h2>
+<div class="outline-text-2" id="text-orgaf631fe">
 <p>
 This exists because if you ask how to learn programming likely someone will shill this book to you due to it being a seminal CS text that's been used for decades. It's easier to do this after you have at least some programming experience because then you won't miss as many details as SICP almost gives you everything at once. Most readers will get hung up on the first few chapters because of the math examples thus give up immediately but they are only examples and not the core of the text so don't give up so easily. We'll figure out all the math. In interviews the authors explained this course was taught at MIT after 2 or 3 semesters of calculus so for that target audience it made sense to use math examples. 
 </p>
@@ -306,9 +307,9 @@ SICP is lecture notes that became a book the original 6.001 course had many addi
 </p>
 </div>
 
-<div id="outline-container-orga32b0cf" class="outline-3">
-<h3 id="orga32b0cf">SICP in 2024</h3>
-<div class="outline-text-3" id="text-orga32b0cf">
+<div id="outline-container-org32b31f3" class="outline-3">
+<h3 id="org32b31f3">SICP in 2024</h3>
+<div class="outline-text-3" id="text-org32b31f3">
 <p>
 MIT taught some form of this book in their 6.001 course from 1980 (as lecture notes) until 2007 and I think <a href="https://web.mit.edu/6.001/6.037/">still teaches it</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to make significant <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">changes</a> in chapter 4 because of the limitations of JavaScript.
 </p>
@@ -316,9 +317,9 @@ MIT taught some form of this book in their 6.001 course from 1980 (as lecture no
 </div>
 
 
-<div id="outline-container-org7b621c7" class="outline-3">
-<h3 id="org7b621c7">Optional lectures</h3>
-<div class="outline-text-3" id="text-org7b621c7">
+<div id="outline-container-orgc8c8d48" class="outline-3">
+<h3 id="orgc8c8d48">Optional lectures</h3>
+<div class="outline-text-3" id="text-orgc8c8d48">
 <p>
 There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures from Berkeley and countless hackathons or compsci reading groups have videos on working through the book. 
 </p>
@@ -326,13 +327,13 @@ There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18
 </div>
 </div>
 
-<div id="outline-container-org26e8e15" class="outline-2">
-<h2 id="org26e8e15">BEGIN</h2>
-<div class="outline-text-2" id="text-org26e8e15">
+<div id="outline-container-org396f1d7" class="outline-2">
+<h2 id="org396f1d7">BEGIN</h2>
+<div class="outline-text-2" id="text-org396f1d7">
 </div>
-<div id="outline-container-org2d69483" class="outline-3">
-<h3 id="org2d69483">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-org2d69483">
+<div id="outline-container-org528781d" class="outline-3">
+<h3 id="org528781d">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-org528781d">
 <p>
 To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. Guile scheme may work for the entire book too but I have no idea, it has a <a href="https://elephly.net/guile-picture-language/manual.html">picture language</a> at least. 
 </p>
@@ -343,9 +344,9 @@ I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you
 </div>
 </div>
 
-<div id="outline-container-orgf1e7bfc" class="outline-3">
-<h3 id="orgf1e7bfc">IDE/Editor</h3>
-<div class="outline-text-3" id="text-orgf1e7bfc">
+<div id="outline-container-org377dd6f" class="outline-3">
+<h3 id="org377dd6f">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org377dd6f">
 <p>
 You can type scheme into any text editor, save as filename.scm, run mit-scheme, and load your file in the REPL manipulating it there you don't have to use an IDE. This is trivial with (load "filename.scm"). 
 </p>
@@ -435,9 +436,9 @@ Then typing (restart 1) will return to the REPL or you can try option 3 and fix 
 </p>
 </div>
 
-<div id="outline-container-orgce6b8a0" class="outline-4">
-<h4 id="orgce6b8a0">Edwin demo in Lecture 1</h4>
-<div class="outline-text-4" id="text-orgce6b8a0">
+<div id="outline-container-orge2dfb86" class="outline-4">
+<h4 id="orge2dfb86">Edwin demo in Lecture 1</h4>
+<div class="outline-text-4" id="text-orge2dfb86">
 <p>
 First <a href="https://www.youtube.com/watch?v=-J_xL4IGhJA">lecture</a> from the 1986 series if you want to follow him with edwin like @35:40 in the video:
 </p>
@@ -459,18 +460,18 @@ In either the scheme buffer or editor window type C-h m to see all the scheme mo
 </div>
 </div>
 
-<div id="outline-container-org7aff1e9" class="outline-3">
-<h3 id="org7aff1e9">Book versions</h3>
-<div class="outline-text-3" id="text-org7aff1e9">
+<div id="outline-container-org76c3d6d" class="outline-3">
+<h3 id="org76c3d6d">Book versions</h3>
+<div class="outline-text-3" id="text-org76c3d6d">
 <p>
 I'm using the official <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of unofficial <a href="https://web.mit.edu/6.001/6.037/sicp.pdf">PDFs</a> floating around to see the figures which can be impossible to read in the online html version. There's also an <a href="https://www.neilvandyke.org/sicp-texi/%20">info version</a> you can run in the terminal or in another emacs window. Remember those are unofficial so there could be extra errata introduced so I would recommend using the official online version.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbb1709e" class="outline-3">
-<h3 id="orgbb1709e">SICP 1.x</h3>
-<div class="outline-text-3" id="text-orgbb1709e">
+<div id="outline-container-org8149a97" class="outline-3">
+<h3 id="org8149a97">SICP 1.x</h3>
+<div class="outline-text-3" id="text-org8149a97">
 <p>
 A computational process I would interpret as a running program or the act of computation itself. A procedure is sometimes called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
 </p>
@@ -546,9 +547,9 @@ Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8
 </div>
 </div>
 
-<div id="outline-container-org535b9e6" class="outline-3">
-<h3 id="org535b9e6">SICP 1.2.1</h3>
-<div class="outline-text-3" id="text-org535b9e6">
+<div id="outline-container-org75994e2" class="outline-3">
+<h3 id="org75994e2">SICP 1.2.1</h3>
+<div class="outline-text-3" id="text-org75994e2">
 <p>
 I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
 </p>
@@ -622,9 +623,9 @@ G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536&#x20
 </div>
 </div>
 
-<div id="outline-container-orgcabe30c" class="outline-3">
-<h3 id="orgcabe30c">SICP 1.2.2</h3>
-<div class="outline-text-3" id="text-orgcabe30c">
+<div id="outline-container-org18f06eb" class="outline-3">
+<h3 id="org18f06eb">SICP 1.2.2</h3>
+<div class="outline-text-3" id="text-org18f06eb">
 <p>
 Phi or \(\phi\) is a constant like e that is solely here to illustrate (fib n) process is exponential.  
 </p>
@@ -652,9 +653,9 @@ The computations are delayed as (+) needs two arguments so recursion is unrolled
 </p>
 </div>
 
-<div id="outline-container-org89882ed" class="outline-4">
-<h4 id="org89882ed">Ex 1.11</h4>
-<div class="outline-text-4" id="text-org89882ed">
+<div id="outline-container-orgcb14841" class="outline-4">
+<h4 id="orgcb14841">Ex 1.11</h4>
+<div class="outline-text-4" id="text-orgcb14841">
 <p>
 Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A100550">OEIS</a> and there's actually a generating function solution a physicist figured out however the assignment wants us to create an iterable procedure. You can use the recursive procedure we learned to test your iterative one. I took eqv? from the mit-scheme reference manual.
 </p>
@@ -684,9 +685,9 @@ Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A10
 </div>
 </div>
 
-<div id="outline-container-org6e7de39" class="outline-4">
-<h4 id="org6e7de39">Ex 1.12</h4>
-<div class="outline-text-4" id="text-org6e7de39">
+<div id="outline-container-org46b600d" class="outline-4">
+<h4 id="org46b600d">Ex 1.12</h4>
+<div class="outline-text-4" id="text-org46b600d">
 <p>
 Pascal's triangle or array is explained <a href="https://www.youtube.com/watch?v=h0Woqc_5qUE%20">here</a> as the number of paths you can take to get to that number in the array or the number of coefficients in (a + b)<sup>n</sup>
 </p>
@@ -732,9 +733,9 @@ You can property test your program by noticing each element in a row of Pascal's
 </div>
 </div>
 
-<div id="outline-container-org79f03a1" class="outline-4">
-<h4 id="org79f03a1">Ex 1.13</h4>
-<div class="outline-text-4" id="text-org79f03a1">
+<div id="outline-container-org9305702" class="outline-4">
+<h4 id="org9305702">Ex 1.13</h4>
+<div class="outline-text-4" id="text-org9305702">
 <p>
 Try some examples in scheme:
 </p>
@@ -769,9 +770,9 @@ Then it's a matter of manipulating using algebra to get it to the form where phi
 </div>
 </div>
 
-<div id="outline-container-org87f9149" class="outline-3">
-<h3 id="org87f9149">SICP 1.2.3</h3>
-<div class="outline-text-3" id="text-org87f9149">
+<div id="outline-container-org453dc00" class="outline-3">
+<h3 id="org453dc00">SICP 1.2.3</h3>
+<div class="outline-text-3" id="text-org453dc00">
 <p>
 Watch the <a href="https://www.youtube.com/watch?v=V_7mmwpgJHU">lecture</a> for this chapter where he explains what time and space means the whole lecture is worth watching but the specific time/space explanation starts around 17:09. Time is the amount of steps that are evaluated and space is the amount of data needing to be stored. The numbers 16 and 8 differ by a constant factor of 2 and by a constant factor of 8 but as he says in this analysis we don't care what the constant is just that it is a constant and not changing with the input. Try the iterative procedure in the lecture that uses '1+' and '-1+' both built-in increment/decrement functions. He redefines '+' procedure which you can do in lisp you can rename or redefine anything you want. That iterative procedure uses an accumulator the y parameter keeps incrementing until x is 0 and y is returned.
 </p>
@@ -810,9 +811,9 @@ The last two inequalites use \(\in\) or 'is in' because an asymptotic bound repr
 </p>
 </div>
 
-<div id="outline-container-orgbeca7dd" class="outline-4">
-<h4 id="orgbeca7dd">Ex 1.14</h4>
-<div class="outline-text-4" id="text-orgbeca7dd">
+<div id="outline-container-orgdec1f60" class="outline-4">
+<h4 id="orgdec1f60">Ex 1.14</h4>
+<div class="outline-text-4" id="text-orgdec1f60">
 <p>
 There is a nice graphic <a href="https://sicp-solutions.net/post/sicp-solution-exercise-1-14/">here</a> showing the full (cc 11 5) tree. He used (display) to generate the data to plug into graphviz and we can do the same while adjusting the procedure to count the number of calls or nodes in the process tree. Zero out the cond then in the else add 2 for 2 calls to cc:
 </p>
@@ -944,9 +945,9 @@ You can see for up to 900 inputs it's bounded by x<sup>3</sup> growth but if you
 </div>
 </div>
 
-<div id="outline-container-orgb617648" class="outline-4">
-<h4 id="orgb617648">Ex 1.15</h4>
-<div class="outline-text-4" id="text-orgb617648">
+<div id="outline-container-org5fac8f4" class="outline-4">
+<h4 id="org5fac8f4">Ex 1.15</h4>
+<div class="outline-text-4" id="text-org5fac8f4">
 <p>
 Build another step counter
 </p>
@@ -983,9 +984,9 @@ The sine function calls (p (p (p (p (p 0.05144))))) and once the recursion stops
 </div>
 </div>
 
-<div id="outline-container-orge9d4656" class="outline-3">
-<h3 id="orge9d4656">SICP 1.2.4</h3>
-<div class="outline-text-3" id="text-orge9d4656">
+<div id="outline-container-org0e8a59b" class="outline-3">
+<h3 id="org0e8a59b">SICP 1.2.4</h3>
+<div class="outline-text-3" id="text-org0e8a59b">
 <p>
 Look up logs if you forgot them, log notation by convention 
 </p>
@@ -1001,9 +1002,9 @@ ln is almost always used or base 2 assumed in compsci books since they are nearl
 </p>
 </div>
 
-<div id="outline-container-org2bdf223" class="outline-4">
-<h4 id="org2bdf223">Ex 1.16</h4>
-<div class="outline-text-4" id="text-org2bdf223">
+<div id="outline-container-org7a80c7a" class="outline-4">
+<h4 id="org7a80c7a">Ex 1.16</h4>
+<div class="outline-text-4" id="text-org7a80c7a">
 <p>
 The book states the invariant here is ab<sup>n</sup> meaning it's value should not change each time we iterate/loop (change state). The hint/observation is a(b<sup>2</sup>)<sup>n/2</sup> is always going to be ab<sup>n</sup> since 2n/2 is just n and that is our even clause in the cond. The else clause or not even is bb<sup>n-1</sup> and abb<sup>n-1</sup> is of course ab<sup>n</sup> too. I wrote some tests here but this is Lisp at anytime you can manually enter tests into the REPL. 
 </p>
@@ -1036,9 +1037,9 @@ The book states the invariant here is ab<sup>n</sup> meaning it's value should n
 </div>
 </div>
 
-<div id="outline-container-org203255f" class="outline-4">
-<h4 id="org203255f">Ex 1.17</h4>
-<div class="outline-text-4" id="text-org203255f">
+<div id="outline-container-orgcefe67e" class="outline-4">
+<h4 id="orgcefe67e">Ex 1.17</h4>
+<div class="outline-text-4" id="text-orgcefe67e">
 <p>
 Try examples, ab is b amount of times a is added to itself so 3 x 4 is 4 groups of 3 added or (+ 3 3 3 3) or 4 addition steps. How would double/half help us here? Applying the even test to b: (+ (double 3) (double 3)) is (+ 6 6) or 2 steps and lg(4) is 2. An odd example is 3 x 5 or (+ 3 (double 3) (double 3)) and that's our procedure. Whenever we can halve the product b we double a, if we can't we add whatever a is and reduce b by 1. 
 </p>
@@ -1081,9 +1082,9 @@ We can count the number of arithmetic steps by altering our procedure then check
 </div>
 </div>
 
-<div id="outline-container-orgc7bdf49" class="outline-4">
-<h4 id="orgc7bdf49">Ex 1.19</h4>
-<div class="outline-text-4" id="text-orgc7bdf49">
+<div id="outline-container-orgd00a8af" class="outline-4">
+<h4 id="orgd00a8af">Ex 1.19</h4>
+<div class="outline-text-4" id="text-orgd00a8af">
 <p>
 Apply the first state change a &lt;- bq + aq + ap and b &lt;- bp + aq
 </p>
@@ -1130,9 +1131,9 @@ I only know this from <a href="https://learnaifromscratch.github.io/taocp.html">
 </div>
 </div>
 
-<div id="outline-container-orgcb6d7b0" class="outline-3">
-<h3 id="orgcb6d7b0">SICP 1.2.5</h3>
-<div class="outline-text-3" id="text-orgcb6d7b0">
+<div id="outline-container-orga85592e" class="outline-3">
+<h3 id="orga85592e">SICP 1.2.5</h3>
+<div class="outline-text-3" id="text-orga85592e">
 <p>
 This is 'integer division' or mod so the remainder 6 in GCD(206,40) is 200 with 6 remaining or 206 mod 40. 
 </p>
@@ -1150,24 +1151,36 @@ This is something else I only know from reading <a href="https://learnaifromscra
 </p>
 
 <p>
-Ex. 1.20 If you're wondering chapter 4 extensively covers this. Applicative-order all parameters are evaluated before being applied and normal-order is known as 'lazy' eval where nothing is evaluated until needed. This results in a ton of normal-order remainder operations that I gave up counting after 8 whereas applicative-order is only remainder ops.   
+Ex. 1.20 If you're wondering chapter 4 extensively covers this. Applicative-order all parameters are evaluated before being applied and normal-order is known as 'lazy' eval where nothing is evaluated until needed. This results in a ton of normal-order remainder operations that I gave up counting after 8 whereas applicative-order is only 4 remainder ops.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6e29274" class="outline-3">
-<h3 id="org6e29274">SICP 1.2.6</h3>
-<div class="outline-text-3" id="text-org6e29274">
+<div id="outline-container-org70f7c70" class="outline-3">
+<h3 id="org70f7c70">SICP 1.2.6 TODO</h3>
+<div class="outline-text-3" id="text-org70f7c70">
 <p>
-.. cont TODO
+.. cont 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdb6f7d1" class="outline-2">
+<h2 id="orgdb6f7d1">SDF 0</h2>
+<div class="outline-text-2" id="text-orgdb6f7d1">
+<p>
+Now that we've finished Chapter 1 we can do the first pset from Sussman's 2024 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/index.html">course</a> <i>Adventures in Advanced Symbolic Programming</i> and latest book <i>Software Design for Flexibiliy</i> (SDF). Let's try <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/assignments.html">Assignment 0</a> Diffie-Helman it's only prereq is SICP Chapter 1. TODO
 </p>
 
+<p>
+.. cont
+</p>
 
 <hr />
 <p>
 <a href="https://learnaifromscratch.github.io/">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>
