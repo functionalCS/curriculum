@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-07 Sun 23:31 -->
+<!-- 2024-07-09 Tue 16:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A 2024 Computer Science Curriculum</title>
@@ -270,40 +270,41 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org2fec108">What is this</a></li>
-<li><a href="#org22035e4">Intros</a>
+<li><a href="#org17c2af9">What is this</a></li>
+<li><a href="#org1e000c5">Intros</a>
 <ul>
-<li><a href="#orgf582fdb">How to write a proof</a></li>
-<li><a href="#orgf8036f5">Intro to Programming</a></li>
+<li><a href="#org7817ca5">How to write a proof</a></li>
+<li><a href="#org42b9847">Intro to Programming</a></li>
 </ul>
 </li>
-<li><a href="#org38f87ab">Computational Trinity</a>
+<li><a href="#orgea3c393">Computational Trinity</a>
 <ul>
-<li><a href="#org334a89f">Programming Languages</a></li>
-<li><a href="#org6d004c2">Logic</a></li>
-<li><a href="#orgc3e6ae9">Categories</a></li>
+<li><a href="#orgb2667fb">Programming Languages</a></li>
+<li><a href="#orgbc964bc">Logic</a></li>
+<li><a href="#org64bc844">Categories</a></li>
 </ul>
 </li>
-<li><a href="#orgf9d1b83">BEGIN</a>
+<li><a href="#org01fc7ea">BEGIN</a>
 <ul>
-<li><a href="#org505c090">Proving equalities</a></li>
-<li><a href="#org4f652e1">Tips and tricks</a></li>
-<li><a href="#org6c0386b">Proving inequalities</a></li>
-<li><a href="#org8a92999">Proofs with structure</a></li>
+<li><a href="#org9f5de3d">Proving equalities</a></li>
+<li><a href="#orgada33f1">Tips and tricks</a></li>
+<li><a href="#orgdfa5039">Proving inequalities</a></li>
+<li><a href="#org98f1150">Proofs with structure</a></li>
+<li><a href="#org02c6cbf">Invoking lemmas</a></li>
 </ul>
 </li>
-<li><a href="#org510c7a2">Principles of Functional Programming</a>
+<li><a href="#orgfa753bf">Principles of Functional Programming</a>
 <ul>
-<li><a href="#orgfb7f29b">Lecture 1</a></li>
+<li><a href="#org64b3a81">Lecture 1</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org2fec108" class="outline-2">
-<h2 id="org2fec108">What is this</h2>
-<div class="outline-text-2" id="text-org2fec108">
+<div id="outline-container-org17c2af9" class="outline-2">
+<h2 id="org17c2af9">What is this</h2>
+<div class="outline-text-2" id="text-org17c2af9">
 <p>
 This is a dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">computational trinitarianism</a> where the theory of computation manifests itself in three forms: Logic, Languages and Categories. Any route can get you to the 'divine notion of computation'. 
 </p>
@@ -314,13 +315,13 @@ We only have access to nice things old exams, labs, and assignments if you don't
 </div>
 </div>
 
-<div id="outline-container-org22035e4" class="outline-2">
-<h2 id="org22035e4">Intros</h2>
-<div class="outline-text-2" id="text-org22035e4">
+<div id="outline-container-org1e000c5" class="outline-2">
+<h2 id="org1e000c5">Intros</h2>
+<div class="outline-text-2" id="text-org1e000c5">
 </div>
-<div id="outline-container-orgf582fdb" class="outline-3">
-<h3 id="orgf582fdb">How to write a proof</h3>
-<div class="outline-text-3" id="text-orgf582fdb">
+<div id="outline-container-org7817ca5" class="outline-3">
+<h3 id="org7817ca5">How to write a proof</h3>
+<div class="outline-text-3" id="text-org7817ca5">
 <p>
 This is a benefit of dependently typed languages your future 'discrete math' intro course that every undergrad teaches can all be done with a proof assistant now.  
 </p>
@@ -331,9 +332,9 @@ This is a benefit of dependently typed languages your future 'discrete math' int
 </div>
 </div>
 
-<div id="outline-container-orgf8036f5" class="outline-3">
-<h3 id="orgf8036f5">Intro to Programming</h3>
-<div class="outline-text-3" id="text-orgf8036f5">
+<div id="outline-container-org42b9847" class="outline-3">
+<h3 id="org42b9847">Intro to Programming</h3>
+<div class="outline-text-3" id="text-org42b9847">
 <ul class="org-ul">
 <li>15-150 <a href="https://brandonspark.github.io/150/">Principles of Functional Programming</a> (SML)
 <ul class="org-ul">
@@ -361,13 +362,13 @@ They are going to fully mechanize 15-210 soon using <a href="https://github.com/
 </div>
 </div>
 
-<div id="outline-container-org38f87ab" class="outline-2">
-<h2 id="org38f87ab">Computational Trinity</h2>
-<div class="outline-text-2" id="text-org38f87ab">
+<div id="outline-container-orgea3c393" class="outline-2">
+<h2 id="orgea3c393">Computational Trinity</h2>
+<div class="outline-text-2" id="text-orgea3c393">
 </div>
-<div id="outline-container-org334a89f" class="outline-3">
-<h3 id="org334a89f">Programming Languages</h3>
-<div class="outline-text-3" id="text-org334a89f">
+<div id="outline-container-orgb2667fb" class="outline-3">
+<h3 id="orgb2667fb">Programming Languages</h3>
+<div class="outline-text-3" id="text-orgb2667fb">
 <ul class="org-ul">
 <li><i>Practical Foundations for Programming Languages</i> <a href="http://www.cs.cmu.edu/~rwh/pfpl.html">book</a> and supplementary materials</li>
 <li>Robert Harper <a href="https://www.cs.uoregon.edu/research/summerschool/summer21/topics.php">OPLSS</a> 2021 lectures and some earlier OPLSS lectures for his book  
@@ -392,9 +393,9 @@ The HoTT seminar explains how univalence works which will be needed to understan
 </div>
 
 
-<div id="outline-container-org6d004c2" class="outline-3">
-<h3 id="org6d004c2">Logic</h3>
-<div class="outline-text-3" id="text-org6d004c2">
+<div id="outline-container-orgbc964bc" class="outline-3">
+<h3 id="orgbc964bc">Logic</h3>
+<div class="outline-text-3" id="text-orgbc964bc">
 <p>
 Whatever proof theory and categorical logic we can get our hands on
 </p>
@@ -413,9 +414,9 @@ Whatever proof theory and categorical logic we can get our hands on
 </div>
 
 
-<div id="outline-container-orgc3e6ae9" class="outline-3">
-<h3 id="orgc3e6ae9">Categories</h3>
-<div class="outline-text-3" id="text-orgc3e6ae9">
+<div id="outline-container-org64bc844" class="outline-3">
+<h3 id="org64bc844">Categories</h3>
+<div class="outline-text-3" id="text-org64bc844">
 <p>
 Mac Lane's or Emily Riehl's <a href="https://math.jhu.edu/~eriehl/context/">book</a> is accessible too if we learn some insights into basic <a href="https://www.youtube.com/playlist?list=PL6763F57A61FE6FE8">algebraic topology</a>. 
 </p>
@@ -429,9 +430,9 @@ Mac Lane's or Emily Riehl's <a href="https://math.jhu.edu/~eriehl/context/">book
 </div>
 
 
-<div id="outline-container-orga5e7575" class="outline-4">
-<h4 id="orga5e7575">Applications</h4>
-<div class="outline-text-4" id="text-orga5e7575">
+<div id="outline-container-orgee14311" class="outline-4">
+<h4 id="orgee14311">Applications</h4>
+<div class="outline-text-4" id="text-orgee14311">
 <p>
 See the <a href="https://topos.institute/collaborative-modelling">Topos Institute</a> for more. 
 </p>
@@ -444,9 +445,9 @@ See the <a href="https://topos.institute/collaborative-modelling">Topos Institut
 </div>
 
 
-<div id="outline-container-org5240c71" class="outline-4">
-<h4 id="org5240c71">Research</h4>
-<div class="outline-text-4" id="text-org5240c71">
+<div id="outline-container-org2e4214b" class="outline-4">
+<h4 id="org2e4214b">Research</h4>
+<div class="outline-text-4" id="text-org2e4214b">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into the seemingly impossible technical details. 
 </p>
@@ -460,9 +461,9 @@ Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/jou
 </div>
 </div>
 
-<div id="outline-container-orgf9d1b83" class="outline-2">
-<h2 id="orgf9d1b83">BEGIN</h2>
-<div class="outline-text-2" id="text-orgf9d1b83">
+<div id="outline-container-org01fc7ea" class="outline-2">
+<h2 id="org01fc7ea">BEGIN</h2>
+<div class="outline-text-2" id="text-org01fc7ea">
 <p>
 I'm going to start with the book <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this as most CMU students will be taking <a href="https://www.math.cmu.edu/~jmackey/151_128/welcome.html">15-151</a> at the same time as 15-150.   
 </p>
@@ -476,9 +477,9 @@ I'm going to start with the book <i>The Mechanics of Proof</i> because 15-150 wi
 </ul>
 </div>
 
-<div id="outline-container-orge040d80" class="outline-4">
-<h4 id="orge040d80">Local install</h4>
-<div class="outline-text-4" id="text-orge040d80">
+<div id="outline-container-orgc9df1b4" class="outline-4">
+<h4 id="orgc9df1b4">Local install</h4>
+<div class="outline-text-4" id="text-orgc9df1b4">
 <p>
 Gitpod free tier is easiest. To install Lean locally w/Visual Studio:
 </p>
@@ -503,9 +504,9 @@ Click on 01ProofsbyCalculation.lean you should get a right panel opening up in V
 </div>
 </div>
 
-<div id="outline-container-orga51934b" class="outline-4">
-<h4 id="orga51934b">Emacs</h4>
-<div class="outline-text-4" id="text-orga51934b">
+<div id="outline-container-org8a98bcb" class="outline-4">
+<h4 id="org8a98bcb">Emacs</h4>
+<div class="outline-text-4" id="text-org8a98bcb">
 <p>
 Install everything as before then git clone <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a>, paste the readme elisp into .emacs or init.el file, restart and open any .lean file. Ctrl-c Ctrl-i opens the lean view in a new window showing goals. If you use vanilla emacs from some distros like Ubuntu you'll have some 'can't verify signature' error which is fixed by <a href="http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html">updating elpa keyring</a>. 
 </p>
@@ -543,9 +544,9 @@ gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver hkps://keys.openpgp.org --recv-k
 </div>
 </div>
 
-<div id="outline-container-org505c090" class="outline-3">
-<h3 id="org505c090">Proving equalities</h3>
-<div class="outline-text-3" id="text-org505c090">
+<div id="outline-container-org9f5de3d" class="outline-3">
+<h3 id="org9f5de3d">Proving equalities</h3>
+<div class="outline-text-3" id="text-org9f5de3d">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. Any examples you don't understand come back here after writing some Lean proofs you won't get them all immediately. First example expand out (a - b) and notice you need to add 4ab in order to balance both sides. The problem statement tells us (a - b) = 4 so (a - b)<sup>2</sup> is 16 after substitution.
 </p>
@@ -619,9 +620,9 @@ example {u v : ℝ} (h1 : u + 1 = v) : u ^ 2 + 3 * u + 1 = v ^ 2 + v - 1 :=
 </div>
 </div>
 
-<div id="outline-container-org4f652e1" class="outline-3">
-<h3 id="org4f652e1">Tips and tricks</h3>
-<div class="outline-text-3" id="text-org4f652e1">
+<div id="outline-container-orgada33f1" class="outline-3">
+<h3 id="orgada33f1">Tips and tricks</h3>
+<div class="outline-text-3" id="text-orgada33f1">
 <p>
 1.3.2 once again we first establish x = x then use the hypothesis to rewrite it
 </p>
@@ -674,9 +675,9 @@ example {p : ℝ} (h1 : 5 * p - 3 = 3 * p + 1) : p = 2 :=
 </div>
 </div>
 
-<div id="outline-container-org6c0386b" class="outline-3">
-<h3 id="org6c0386b">Proving inequalities</h3>
-<div class="outline-text-3" id="text-org6c0386b">
+<div id="outline-container-orgdfa5039" class="outline-3">
+<h3 id="orgdfa5039">Proving inequalities</h3>
+<div class="outline-text-3" id="text-orgdfa5039">
 <p>
 We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-inequalities">proofs by calc</a> chapter.
 </p>
@@ -809,9 +810,9 @@ Exercise 6 I couldn't figure it out in lean as I don't know enough of the standa
 </div>
 
 
-<div id="outline-container-org8a92999" class="outline-3">
-<h3 id="org8a92999">Proofs with structure</h3>
-<div class="outline-text-3" id="text-org8a92999">
+<div id="outline-container-org98f1150" class="outline-3">
+<h3 id="org98f1150">Proofs with structure</h3>
+<div class="outline-text-3" id="text-org98f1150">
 <p>
 Reading the <a href="https://hrmacbeth.github.io/math2001/02_Proofs_with_Structure.html">second</a> chapter. 
 </p>
@@ -825,7 +826,7 @@ Reading the <a href="https://hrmacbeth.github.io/math2001/02_Proofs_with_Structu
 </p>
 
 <p>
-Another example is 2.1.7 of extra since positive quantities (squares)
+Another example is 2.1.7 of extra since positive quantities
 </p>
 
 <pre class="example">
@@ -850,58 +851,81 @@ example (a b : ℝ) (h : a ≤ b) : a ^ 3 ≤ b ^ 3 := by
 </pre>
 
 <p>
-Doing the exercises, the cancel op may have a bug or I don't understand how it works. Neither of these were accepted despite x &gt; 1 being assumed. 
+The cancel tactic is defined as follows if you look at the code it's another tactic written for this book to simplify the regular lean libraries which are all abstract algebra we haven't learned yet. 
 </p>
-
-<pre class="example">
-have h3 := 
- calc x^2 = x ^ 2 := by ring
- _ = 4 := by rw [h1]
- _ = 2^2 := by ring
- cancel 2 at h3 (fails)
-
- have h3 := 
- calc x * (x + 2) = x ^ 2 + 2 * x := by ring
- _ = 4 + 2 * x := by rw [h1]
- _ = 2 * (x + 2) := by ring
- cancel (x + 2) at h3 (fails)
-</pre>
 
 <p>
-Looking at the code for Cancel.lean tactic we should be able to cancel entire terms like (x + 2) no prob. Alas I could only get this tactic to work with inequalities:
+'Cancel 2 at h' means
+</p>
+
+<ul class="org-ul">
+<li>2x = 2y cancel to x = y</li>
+<li>2x &lt; 2y cancel to x &lt; y</li>
+<li>x<sup>2</sup> = y<sup>2</sup> cancel to x = y</li>
+<li>0 &lt; 2x cancel to 0 &lt; x</li>
+<li>x<sup>2</sup> = 0 cancel to x = 0</li>
+</ul>
+
+<p>
+However in the exercises I couldn't get it work. 
+</p>
+
+<p>
+Example Ex 2.1.9 this is what I want to do but it won't let me despite x already being x &gt; 1 so no possible way (x + 2) could be (-2 + 2) or 0:
 </p>
 
 <pre class="example">
-example {a : ℝ} (h1 : a ^ 2 = 4) (h2 : a &gt; 1) : a ≥ 2 := by
+example {x : ℚ} (h1 : x ^ 2 = 4) (h2 : 1 &lt; x) : x = 2 := by
   have h3 :=
   calc
-    a ^ 2 = 4 := by rw [h1]
-    _ ≥ 4 := by extra
-    _ = 2 ^ 2 := by ring
-  cancel 2 at h3
+  x * (x + 2) = 2 * (x ^ 2 + 2 * x)/2 := by ring
+  _ = 2 * (4 + 2 * x)/2 := by rw [h1]
+  _ = 2 * (x + 2) := by ring
+  cancel (x + 2) at h3  
 </pre>
 
 <p>
-Reminder many of the tactics in this book are rewritten from abstract algebra libraries Lean normally uses for algebraic manipulation so we can do some basic proofs without having a bunch of magic happen with powerful libraries. A few bugs are no big deal I think I ended up understanding Lean better by having to read the library code when I ran into the problem.
+Another example from 2.1.9 that doesn't work, I tried after to manually add in (h : n &gt; 0) and still fails:
 </p>
 
+<pre class="example">
+example {n : ℤ} (hn : n ^ 2 + 4 = 4 * n) : n = 2 := by
+  have hm : 0 = n ^ 2 - 4 * n + 4 := by addarith [hn]
+  have h1 :=
+  calc
+  0 = n ^ 2 - 4 * n + 4 := by rw [hm]
+  _ = (n - 2)^2 := by ring
+  cancel 2 at h1 
+  addarith [h1]
+</pre>
+
 <p>
-&#x2026; cont todo
+Others have had problems too and filed an <a href="https://github.com/hrmacbeth/math2001/issues/17">issue</a> for a possible bug or maybe I don't understand how Lean4 tactics work we'll have to skip these and try them again later when the author replies. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02c6cbf" class="outline-3">
+<h3 id="org02c6cbf">Invoking lemmas</h3>
+<div class="outline-text-3" id="text-org02c6cbf">
+<p>
+TODO
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org510c7a2" class="outline-2">
-<h2 id="org510c7a2">Principles of Functional Programming</h2>
-<div class="outline-text-2" id="text-org510c7a2">
+
+<div id="outline-container-orgfa753bf" class="outline-2">
+<h2 id="orgfa753bf">Principles of Functional Programming</h2>
+<div class="outline-text-2" id="text-orgfa753bf">
 <p>
 There's no programming prereqs. 15-150 was designed so students who already had some background in high school CS or who took <a href="https://www.cs.cmu.edu/~15122/schedule.shtml">15-122</a> <i>Principles of Imperative Computation</i> wouldn't have any kind of advantage. If they didn't have high school CS they would likely take 15-110/112 which is now some kind of <a href="https://academy.cs.cmu.edu/">CS academy</a> but those legacy courses aren't needed. 
 </p>
 </div>
 
-<div id="outline-container-orgfb7f29b" class="outline-3">
-<h3 id="orgfb7f29b">Lecture 1</h3>
-<div class="outline-text-3" id="text-orgfb7f29b">
+<div id="outline-container-org64b3a81" class="outline-3">
+<h3 id="org64b3a81">Lecture 1</h3>
+<div class="outline-text-3" id="text-org64b3a81">
 <p>
 Watching the <a href="https://brandonspark.github.io/prologue/">first lecture</a>. According to <a href="https://www.cs.cmu.edu/~rwh/papers/paradigms/paradigm.pdf">Robert Harper</a> and <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/sk-teach-pl-post-linnaean/">Shriram Krishnamurthi</a> so-called 'programming paradigms' like imperative, object-oriented or functional are vague descriptors of the same thing which is just programming. We'll work through both their books PFPL and PLAI after this course. The professor he talks about ~45m we're doing his constructive logic <a href="https://symbolaris.com/course/constlog21-schedule.html">course</a> after this too. @51m LaTeX is how you generate symbols like \(\implies\) for books/papers. Don Knuth invented the original program TeX (annoyingly pronounced 'tek') to write <a href="https://learnaifromscratch.github.io/taocp.html">TAOCP</a>.   
 </p>
@@ -911,9 +935,9 @@ If you want to follow what he's doing in the REPL try <a href="https://sosml.org
 </p>
 </div>
 
-<div id="outline-container-org1ae2a6f" class="outline-4">
-<h4 id="org1ae2a6f">PSML</h4>
-<div class="outline-text-4" id="text-org1ae2a6f">
+<div id="outline-container-org0c84935" class="outline-4">
+<h4 id="org0c84935">PSML</h4>
+<div class="outline-text-4" id="text-org0c84935">
 <p>
 Go to Robert Harper's <a href="https://www.cs.cmu.edu/~rwh/">CMU page</a> and get <a href="http://www.cs.cmu.edu/~rwh/isml/book.pdf">Programming in Standard ML</a>. Skip the overview (we'll do that regex debugging later) and start at Chapter 2 <i>Types, Values, and Effects</i>. In 2.1 if you don't remember what a <a href="https://topos.site/events/poly-course/">polynomial</a> is: f(x) = x<sup>2</sup> + x<sup>1</sup> + .. you bind x to an input value like x=1 then evaluate by rules of arithmetic the value of the polynomial at that given input f(1) = 1<sup>2</sup> + 1<sup>1</sup> + &#x2026;
 </p>
