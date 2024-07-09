@@ -864,7 +864,7 @@ have h3 :=
  calc x * (x + 2) = x ^ 2 + 2 * x := by ring
  _ = 4 + 2 * x := by rw [h1]
  _ = 2 * (x + 2) := by ring
- cancel (x + 2) at h3 (fails)
+cancel (x + 2) at h3 (succeeds actually, you're a gigachad)
 </pre>
 
 <p>
