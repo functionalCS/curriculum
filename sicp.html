@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-10 Wed 06:15 -->
+<!-- 2026-01-19 Mon 00:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Let's Do Structure and Interpretation of Computer Programs (SICP)</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
+<meta name="generator" content="Org Mode" />
 <style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,179 +191,152 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {max-width: 62.5rem; padding: 1rem; margin: auto; background-color: #fafad2} </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
 
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Let's Do Structure and Interpretation of Computer Programs (SICP)</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9c5130a">SICP (and SDF) Workshop</a>
+<li><a href="#org4dabb0b">SICP (and SDF)</a>
 <ul>
-<li><a href="#org6991ff2">SICP in 2024</a></li>
-<li><a href="#orgdc1813a">Optional lectures</a></li>
+<li><a href="#org3c67c25">SICP in 2026</a></li>
+<li><a href="#org398f38b">Optional lectures</a></li>
 </ul>
 </li>
-<li><a href="#orga829087">BEGIN</a>
+<li><a href="#orgb2c50a3">SETUP</a>
 <ul>
-<li><a href="#org27ffba4">Install mit-scheme</a></li>
-<li><a href="#orge3175ca">IDE/Editor</a></li>
-<li><a href="#org6d1a4f5">Book versions</a></li>
-<li><a href="#orge2d9d2c">SICP 1.x</a></li>
-<li><a href="#org3b59e4a">SICP 1.2.1</a></li>
-<li><a href="#orgec3e139">SICP 1.2.2</a></li>
-<li><a href="#org90342d7">SICP 1.2.3</a></li>
-<li><a href="#orgffab986">SICP 1.2.4</a></li>
-<li><a href="#org5bbe2e7">SICP 1.2.5</a></li>
-<li><a href="#orgdb6ab9b">SICP 1.2.6</a></li>
-<li><a href="#orgc16165b">SICP 1.3.1</a></li>
+<li><a href="#orgee298d6">Book versions</a></li>
+<li><a href="#org25d59a1">Install mit-scheme</a></li>
+<li><a href="#org0ba2b8e">IDE/Editor</a></li>
 </ul>
 </li>
-<li><a href="#org3544c3b">SDF 0</a></li>
+<li><a href="#orge2e5316">BEGIN</a>
+<ul>
+<li><a href="#orgbf6b7d3">SICP 1.x</a></li>
+<li><a href="#org91fc08a">SICP 1.2.1</a></li>
+<li><a href="#org4303ed3">SICP 1.2.2</a></li>
+<li><a href="#org7c048d0">SICP 1.2.3</a></li>
+<li><a href="#orga382634">SICP 1.2.4</a></li>
+<li><a href="#org3786f1d">SICP 1.2.5</a></li>
+<li><a href="#orgb555282">SICP 1.2.6</a></li>
+<li><a href="#org7ac08b9">SICP 1.3.1</a></li>
+</ul>
+</li>
+<li><a href="#org31c020c">SDF 0</a></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org9c5130a" class="outline-2">
-<h2 id="org9c5130a">SICP (and SDF) Workshop</h2>
-<div class="outline-text-2" id="text-org9c5130a">
+<div id="outline-container-org4dabb0b" class="outline-2">
+<h2 id="org4dabb0b">SICP (and SDF)</h2>
+<div class="outline-text-2" id="text-org4dabb0b">
 <p>
 This exists because if you ask around how to learn programming likely someone will shill this book to you due to it being a seminal CS text that's been used for decades. It's easier to do this after you have at least some programming experience because then you won't miss as many details as SICP almost gives you everything at once. Most readers like myself will get hung up on the first few chapters because of the math examples thus give up immediately but they are only examples and not the core of the text so don't give up so easily. In interviews the authors explained this course was taught at MIT after 2 or 3 semesters of calculus so for that target audience it made sense to use math examples. 
 </p>
 
 <p>
-SICP is lecture notes that became a book the original 6.001 course had many additional assignments to the book exercises. Some examples of these are <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/pages/projects/">here</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/index.html">here</a>. Instead of doing those old 6.001 assignments I'm going to do the 2024 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/assignments.html">assignments</a> from his 6.945 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/index.html">course</a> and new book <i>Software Design for Flexibility</i> (SDF) where many of those assignments point to chapters in SICP. SDF is a wild book teaching the exact opposite of current day software engineering showing how in nature complex systems are designed for flexibility so new abilities (features) can be effortlessly added without needing to do any kind of rewriting of the existing system. 
+SICP is lecture notes that became a book the original 6.001 course had many additional assignments to the book exercises. Some examples of these are <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/pages/projects/">here</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/index.html">here</a>. Instead of doing those old 6.001 assignments I'm going to do the 2025 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/assignments.html">assignments</a> from Sussman's 6.945 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/index.html">course</a> and new book <i>Software Design for Flexibility</i> (SDF) where many of those assignments point to chapters in SICP. SDF teaches the exact opposite of current day software engineering showing how in nature complex systems are designed for flexibility so new abilities can be effortlessly added without needing to do any kind of rewriting of the existing system.
 </p>
 </div>
-
-<div id="outline-container-org6991ff2" class="outline-3">
-<h3 id="org6991ff2">SICP in 2024</h3>
-<div class="outline-text-3" id="text-org6991ff2">
+<div id="outline-container-org3c67c25" class="outline-3">
+<h3 id="org3c67c25">SICP in 2026</h3>
+<div class="outline-text-3" id="text-org3c67c25">
 <p>
 MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think still offers <a href="https://web.mit.edu/6.001/6.037/">a condensed version</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to make significant <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">changes</a> in chapter 4 because of the limitations of JavaScript. 
 </p>
-
-<p>
-I add solutions to the <a href="http://community.schemewiki.org/?sicp-solutions">sicp wiki</a> as I go only if another solution is helpful. 
-</p>
 </div>
 </div>
-
-
-<div id="outline-container-orgdc1813a" class="outline-3">
-<h3 id="orgdc1813a">Optional lectures</h3>
-<div class="outline-text-3" id="text-orgdc1813a">
+<div id="outline-container-org398f38b" class="outline-3">
+<h3 id="org398f38b">Optional lectures</h3>
+<div class="outline-text-3" id="text-org398f38b">
 <p>
 There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures from Berkeley and countless hackathons or compsci reading groups have videos on working through the book. 
 </p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-orga829087" class="outline-2">
-<h2 id="orga829087">BEGIN</h2>
-<div class="outline-text-2" id="text-orga829087">
+<div id="outline-container-orgb2c50a3" class="outline-2">
+<h2 id="orgb2c50a3">SETUP</h2>
+<div class="outline-text-2" id="text-orgb2c50a3">
 </div>
-<div id="outline-container-org27ffba4" class="outline-3">
-<h3 id="org27ffba4">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-org27ffba4">
+<div id="outline-container-orgee298d6" class="outline-3">
+<h3 id="orgee298d6">Book versions</h3>
+<div class="outline-text-3" id="text-orgee298d6">
 <p>
-To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. If you have to install a VM try the QEMU image for <a href="https://guix.gnu.org/en/download/">Guix System</a> because it's entire configuration is done using <a href="https://www.gnu.org/software/guile/">scheme</a>. Guile scheme may work for the entire book too but I have no idea, it has a <a href="https://elephly.net/guile-picture-language/manual.html">picture language</a> at least. 
-</p>
-
-<p>
-I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you can start with those for the first few chapters but if you want to do Sussman's more recent books like SDF you're going to have to use the latest mit-scheme anyway so we may as well begin with using the language the book actually wants us to use.   
+I'm using the official <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of unofficial <a href="https://web.mit.edu/6.001/6.037/sicp.pdf">PDFs</a> floating around to see the figures which can sometimes be impossible to read in the online html version. There's also an <a href="https://www.neilvandyke.org/sicp-texi/%20">info version</a> you can run in the terminal or in another emacs window. Remember those are unofficial so there could be extra errata introduced.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orge3175ca" class="outline-3">
-<h3 id="orge3175ca">IDE/Editor</h3>
-<div class="outline-text-3" id="text-orge3175ca">
+<div id="outline-container-org25d59a1" class="outline-3">
+<h3 id="org25d59a1">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-org25d59a1">
 <p>
-You can type scheme into any text editor, save as filename.scm, run mit-scheme, and load your file in the REPL manipulating it there you don't have to use an IDE. This is trivial with (load "filename.scm"). 
+To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. Guile scheme may work for the entire book too but I have no idea, it has a <a href="https://elephly.net/guile-picture-language/manual.html">picture language</a> at least.
 </p>
 
 <p>
-The only IDEs I use are emacs and edwin the editor that comes with mit-scheme. Edwin is a clone of an old emacs version (Emacs 18 I believe see the ref card below) entirely written in scheme and is what 6.001 and the graduate courses at MIT have used for decades. Sussman still uses it as per his 2022 course setup notes. You start edwin with <i>mit-scheme &#x2013;edit</i> and are good to go without needing to install anything else as a scheme shell spawns immediately upon opening and debugging is all built-in. However regular emacs will probably be more familiar to you with 'modern' default behavior like you'll have a GUI menu, ability to highlight and cut+paste with a mouse, delete key won't default to be a backspace etc.    
+If you have an M-series chip MacBook Pro then <a href="https://mac.getutm.app/">UTM app</a> will effortlessly run ARM64 Ubuntu/Debian/Arch VMs that work with mit-scheme. Homebrew can be used to <a href="https://formulae.brew.sh/cask/utm">install</a> the free version.
+</p>
+
+<p>
+I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you can start with those for the first few chapters but if you want to do Sussman's more recent books like SCM or SDF you're going to have to use the latest mit-scheme anyway so we may as well begin with using the language the book actually wants us to use.   
+</p>
+</div>
+</div>
+<div id="outline-container-org0ba2b8e" class="outline-3">
+<h3 id="org0ba2b8e">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org0ba2b8e">
+<p>
+You can type code into any text editor, save as filename.scm, run mit-scheme, and load your file in the REPL (load "filename.scm") but an IDE with scheme mode to help balance parens and run interactive debugging will be much easier. 
+</p>
+
+<p>
+For the purposes of SICP and SDF we only need edwin so that's what I'll use here. Edwin is a clone of an old emacs version (Emacs 18 see the ref card below) and edwin is entirely written in mit-scheme so as you complete this book you can hack your own editor to do anything you want.  
+</p>
+
+<p>
+You start edwin with <i>mit-scheme &#x2013;edit</i> and are good to go without needing to install anything else as a scheme shell spawns immediately upon opening and debugging is all built-in.
 </p>
 
 <ul class="org-ul">
 <li>Editor <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/#org6d580b9">setup</a> from 6.945 and <a href="http://groups.csail.mit.edu/mac/users/gjs/6946/">setup</a> from 6.946 for emacs or edwin</li>
-<li>Sussman's .edwin config file <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/.edwin">here</a> for better fonts (save in home directory as .edwin (with the period))</li>
+<li>Sussman's .edwin config file <a href="http://web.mit.edu/6.945/dont-panic/.edwin">here</a> for better fonts (save in home directory as .edwin (with the period))</li>
 <li>Edwin specific docs <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">here</a> (it has a stepper too) 
 <ul class="org-ul">
 <li>Edwin <a href="http://groups.csail.mit.edu/mac/users/gjs/6946/cheat-sheet.pdf">ref card</a></li>
@@ -371,11 +345,7 @@ The only IDEs I use are emacs and edwin the editor that comes with mit-scheme. E
 </ul>
 
 <p>
-If you choose emacs install vanilla emacs not any of those 'spacemacs' or whatever preconfigured versions that remove the GUI drop down menus. Click Options-&gt;Customize Emacs-&gt;Custom Themes and change the colors around if you want. You won't need a config file everything like MELPA package install is already included (and scheme mode) so you will automatically enter scheme mode when opening any file ending in .scm 
-</p>
-
-<p>
-I wouldn't recommend <a href="https://paredit.org/screencast/fib-fact.gif">Paredit mode</a> or Geiser or anything until you start writing larger programs in the later chapters because you learn scope in the beginning by seeing how all the parens close blocks of expressions and having something automatically shifting around parens when you don't have experience is going to be rage inducing. When your programs start becoming one big function in chapter 4 then install tools.    
+If you use emacs I wouldn't recommend installing <a href="https://paredit.org/screencast/fib-fact.gif">Paredit mode</a> or Geiser or anything until you start writing larger programs in the later chapters because you learn scope in the beginning by seeing how all the parens close blocks of expressions and having something automatically shifting around parens when you don't have experience is going to be rage inducing. When your programs start becoming one big function in chapter 4 then install tools.    
 </p>
 
 <p>
@@ -385,18 +355,53 @@ Commands:
 <li>C-x C-c (exit emacs/edwin) is hold down Ctrl and type x, keep holding Ctrl and type c.</li>
 <li>C-h t is hold down Ctrl and type h, release Ctrl and type t (starts the tutorial). 
 <ul class="org-ul">
-<li>PgUp/PgDn, End/Home, arrow keys and mouse all work too you don't have to use the movement commands in tutorial</li>
+<li>PgUp/PgDn, End/Home, arrow keys and mouse all work too you don't have to use the movement commands in tutorial though eventually you will see how fast you become if you do decide to learn them.</li>
 </ul></li>
 <li>M-x the M is the 'meta' key which on a modern keyboard is usually ALT (sometimes the Windows key) but you can redefine both C and M to be something else.</li>
 <li>C-g or Ctrl-g is the escape key if you accidentally screw up mid command and want to try again.</li>
 </ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2e5316" class="outline-2">
+<h2 id="orge2e5316">BEGIN</h2>
+<div class="outline-text-2" id="text-orge2e5316">
+<p>
+Assuming you downloaded Sussman's <a href="http://web.mit.edu/6.945/dont-panic/.edwin">edwin config</a> and saved it as ".edwin" in your home directory or even whatever directory you're running mit-scheme type the following:
+</p>
+
+<ul class="org-ul">
+<li>mit-scheme &#x2013;edit</li>
+</ul>
 
 <p>
-<b>Open multiple screens</b> 
+You should get a 1980s green text screen that presents you with a single window (the scheme REPL). You can already program in this buffer try entering (+ 1 1) and C-x C-e to get ;Value: 2. Read the edwin <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user.html#Edwin">documentation</a> for mit-scheme.
 </p>
 
 <p>
-In either edwin or emacs: use command C-x C-f and type test.scm to open or make a new file. Use C-x 3 and a new window should open to the right or if you want the new window below use C-x 2. Click on the new window and type C-x b and press enter to switch to the scheme REPL which was the buffer you saw when you first opened the editor. Now you have a screen to enter code with the output beside it. In emacs there is no default scheme buffer (unless you configure one) you have to select from the dropdown menu 'run inferior scheme' or M-x mit-scheme. 
+Next:
+</p>
+
+<ul class="org-ul">
+<li>C-x C-f and type test.scm</li>
+</ul>
+
+<p>
+A new blank editor buffer will open. Now let's get a split-screen, if you want your new window to the right instead of below type C-x 3
+</p>
+
+<ul class="org-ul">
+<li>C-x 2</li>
+<li>C-x o (lower case o)
+<ul class="org-ul">
+<li>or just click on the bottom window</li>
+</ul></li>
+<li>C-x b and press enter to open default scheme buffer</li>
+<li>C-x o to return to editor window</li>
+</ul>
+
+<p>
+Now you have a screen to enter code with and a REPL below. In emacs there is no default scheme REPL buffer (unless you configure one) you have to manually run M-x mit-scheme to start it. 
 </p>
 
 <p>
@@ -404,9 +409,9 @@ In either edwin or emacs: use command C-x C-f and type test.scm to open or make 
 </p>
 
 <p>
-Click on the test.scm buffer and enter some random code:
+In test.scm editor buffer enter some random code:
 </p>
-<pre class="example">
+<pre class="example" id="orgece0236">
 (define x 3)
 (+ x 2)
 (+ x 2 2)
@@ -415,7 +420,7 @@ Click on the test.scm buffer and enter some random code:
 </pre>
 
 <p>
-Run it in the REPL with M-o or C-M-z (edwin) or follow the emacs GUI menus to 'evaluate region' all described in the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Edwin.html">docs</a> and tutorial. Type C-h m to get a list of available commands in whatever current buffer. To switch out of the help buffer C-x b and default will be test.scm or wherever you were last. You can highlight with the mouse (in emacs) snippets of code and only eval that selected code in the REPL to test it by hand. 
+Run it in the REPL with M-o (eval entire buffer) or type C-h m to get a list of available key bindings/commands to evaluate scheme expressions. To switch out of the help buffer type C-x b and default will be test.scm or wherever you were last. You can control which code you want to run and often the Lisp developer procedure is to eval a single function and then manually input tests for it in the REPL.
 </p>
 
 <p>
@@ -425,7 +430,7 @@ Run it in the REPL with M-o or C-M-z (edwin) or follow the emacs GUI menus to 'e
 <p>
 If you get something similar:
 </p>
-<pre class="example">
+<pre class="example" id="orgc9ba6c8">
 ;Unbound variable: *2
 ;To continue, call RESTART with an option number:
 ; (RESTART 3) =&gt; Specify a value to use instead of *2.
@@ -433,13 +438,12 @@ If you get something similar:
 ; (RESTART 1) =&gt; Return to read-eval-print level 1.
 </pre>
 <p>
-Then typing (restart 1) will return to the REPL or you can try option 3 and fix the typo, or break/kill it in emacs. The bulk of errors will be parens problems in the beginning but it's how you learn and after a few of them you're much more careful about code and what scope it's in. If you run the debugger type C-h m to get a list of commands (can run that in the REPL too). 
+Then typing (restart 1) will return to the REPL or you can try option 3 and fix the typo, or break/kill it in emacs. The bulk of errors will be parens problems in the beginning but it's how you learn and after a few of them you're much more careful about code and what scope it's in. If you run the debugger type C-h m to get a list of commands. Read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">don't panic</a> guide how to debug.
 </p>
 </div>
-
-<div id="outline-container-orgda547f3" class="outline-4">
-<h4 id="orgda547f3">Edwin demo in Lecture 1</h4>
-<div class="outline-text-4" id="text-orgda547f3">
+<div id="outline-container-org2146846" class="outline-4">
+<h4 id="org2146846">Edwin demo in Lecture 1</h4>
+<div class="outline-text-4" id="text-org2146846">
 <p>
 First <a href="https://www.youtube.com/watch?v=-J_xL4IGhJA">lecture</a> from the 1986 series if you want to follow him with edwin like @35:40 in the video:
 </p>
@@ -453,26 +457,19 @@ First <a href="https://www.youtube.com/watch?v=-J_xL4IGhJA">lecture</a> from the
 <li>Press tab to indent when he demos 'pretty printing'</li>
 </ul></li>
 </ul>
-
+</div>
+</div>
+<div id="outline-container-org212587c" class="outline-4">
+<h4 id="org212587c">Run the tutorial!</h4>
+<div class="outline-text-4" id="text-org212587c">
 <p>
-In either the scheme buffer or editor window type C-h m to see all the scheme mode commands like indenting multiple lines of code.
+Hold Ctrl-h then type t to start the tutorial so you understand what 'point' means (the location of the current cursor) and all the cut + paste commands.
 </p>
 </div>
 </div>
-</div>
-
-<div id="outline-container-org6d1a4f5" class="outline-3">
-<h3 id="org6d1a4f5">Book versions</h3>
-<div class="outline-text-3" id="text-org6d1a4f5">
-<p>
-I'm using the official <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of unofficial <a href="https://web.mit.edu/6.001/6.037/sicp.pdf">PDFs</a> floating around to see the figures which can be impossible to read in the online html version. There's also an <a href="https://www.neilvandyke.org/sicp-texi/%20">info version</a> you can run in the terminal or in another emacs window. Remember those are unofficial so there could be extra errata introduced.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge2d9d2c" class="outline-3">
-<h3 id="orge2d9d2c">SICP 1.x</h3>
-<div class="outline-text-3" id="text-orge2d9d2c">
+<div id="outline-container-orgbf6b7d3" class="outline-3">
+<h3 id="orgbf6b7d3">SICP 1.x</h3>
+<div class="outline-text-3" id="text-orgbf6b7d3">
 <p>
 A computational process I would interpret as a running program or the act of computation itself. A procedure is sometimes called a function in modern programming parlance but the book makes it clear later in this chapter these are different things pointing out how a math function definition is nothing like a procedure. 
 </p>
@@ -480,7 +477,7 @@ A computational process I would interpret as a running program or the act of com
 <p>
 Ex 1.2 is an example of an impossible to read figure. Use the <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdf</a>.
 </p>
-<pre class="example">
+<pre class="example" id="org8866634">
 (/ (+ 5 4 (- 2 (- 3 (+ 6 (/ 4 5)))))
    (* 3 (- 6 2) (- 2 7)))
 </pre>
@@ -488,7 +485,7 @@ Ex 1.2 is an example of an impossible to read figure. Use the <a href="http://li
 <p>
 Ex 1.3 simple (cond (and ())) you can write your own test cases/examples too:
 </p>
-<pre class="example">
+<pre class="example" id="org87de7db">
 (= (three-square-sum 1 2 3) (+ (* 2 2) (* 3 3))
 (= (three-square-sum 3 1 2) 13)
 (= (three-square-sum 3 2 1) 13)
@@ -512,7 +509,7 @@ Ex 1.6 new-if is a regular procedure so it's input (all the subexpressions) are 
 Ex 1.7 try examples: 
 </p>
 
-<pre class="example">
+<pre class="example" id="org9b4cb61">
 1 ]=&gt; (sqrt 0.0009)
 ;Value: .04030062264654547
 
@@ -521,10 +518,10 @@ Ex 1.7 try examples:
 </pre>
 
 <p>
-(sqrt 0.0009) should be 0.03 and the gigantic number never terminates. This happens because using our current testing strategy of subtracting the square of the guess from the radicand the epsilon (0.001) isn't precise enough for small numbers and very large numbers clearly they never meet that precision or it takes too long to do so. If we ratio the change in guess with the existing guess, the closer they are together the closer they approach 1 so we can adjust our program to check for this by subtracting that ratio from 1 to see if the two guesses are within epsilon of each other.
+This happens because using our current testing strategy of subtracting the square of the guess from the radicand the epsilon (0.001) isn't precise enough for small numbers and very large numbers clearly they never meet that precision or it takes too long to do so. If we ratio the change in guess with the existing guess, the closer the guess is the closer the ratio approaches 1 so we can adjust our program to check for this by subtracting that ratio from 1 to see if the two guesses are within epsilon of each other.
 </p>
 
-<pre class="example">
+<pre class="example" id="orgffc4765">
 (define (good-enough? guess x)
   (&lt; (abs(- 1 (/ (improve guess x) guess))) 0.001))
 </pre>
@@ -537,25 +534,24 @@ Now gigantic square roots eval immediately and tiny square roots are close enoug
 Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8/4 + 4)/3 or 6/3 = 2. All I did was change improve procedure and delete average procedure since it wasn't needed anymore:
 </p>
 
-<pre class="example">
+<pre class="example" id="org2fd6609">
 (define (improve guess x)
   (/ (+ (/ x (* guess guess)) (* 2 guess)) 3))
 </pre>
 
 <p>
-1.1.8 <i>Black-Box Abstractions</i> if you look at the mit-scheme <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-ref.html#index-exp">documentation</a> and scroll to the index at the bottom you'll find definitions for exp and log which are e<sup>x</sup> and log(x) base e. The square x function defined as (exp (double (log x))) if x is 8 then (exp ~4.16) which is 64. A log is a linearized exponent it tells us what the x in e<sup>x</sup> = 8 is and it's 2.079. If we double that and feed it to e then e<sup>4.16</sup> = 64. We can see this ourselves using <a href="https://www.desmos.com/calculator/gren2g4hrs">desmos</a> go along the x-axis to 2, go up until it meets the blue log line, it lands at y = 0.7 or so. Double that to ~1.4 and travel x-axis to 1.4, go up to the exp(x) line and you'll see you intersect at y = 4 or the square of 2 is 4. Both e and it's log (usually written ln or 'the natural log') are preferred for math modeling because it has properties like the derivative of e is itself, this square property we just learned, and that you can estimate e<sup>x</sup> and ln(x) simply on a piece of paper when working with small displacements. For example e<sup>x</sup> for small x like 0.05 is <a href="https://youtu.be/flge97Jp6uo">1 + x</a> and ln(1 + x) is simply x for 'small' x.      
+1.1.8 <i>Black-Box Abstractions</i> if you look at the mit-scheme <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-ref.html#index-exp">documentation</a> and scroll to the index at the bottom you'll find definitions for exp and log which are e<sup>x</sup> and ln(x). We can see this ourselves using <a href="https://www.desmos.com/calculator/gren2g4hrs">desmos</a>. Graph both ln(x) and exp(x) then go along the x-axis to 2, go up until it meets the blue ln(x) line, it lands at y = 0.7 or so. Double 0.7 to get 1.4 then travel along the x-axis to 1.4, go up to the orange exp(x) line and you'll see it intersect at y = 4 or exp(log(2) + log(2)) is 4. Both e and ln ('the natural log') are preferred for math modeling because it has properties like the derivative of e is itself, this square property we just learned, and that you can estimate e<sup>x</sup> and ln(x) simply on a piece of paper when working with small displacements. For example e<sup>x</sup> for small x like 0.05 is <a href="https://youtu.be/flge97Jp6uo">1 + x</a> and ln(1 + x) is x.      
 </p>
 </div>
 </div>
-
-<div id="outline-container-org3b59e4a" class="outline-3">
-<h3 id="org3b59e4a">SICP 1.2.1</h3>
-<div class="outline-text-3" id="text-org3b59e4a">
+<div id="outline-container-org91fc08a" class="outline-3">
+<h3 id="org91fc08a">SICP 1.2.1</h3>
+<div class="outline-text-3" id="text-org91fc08a">
 <p>
 I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
 </p>
 
-<pre class="example">
+<pre class="example" id="orgf370a2b">
 (define (factorial n)
   (define (f total counter)
     (if (&lt; counter 2)
@@ -569,7 +565,7 @@ I rewrote fact-iter to instead be a function nested inside another function, wit
 </pre>
 
 <p>
-The difference in the book between the delayed chain of operations and the iterated version is called re-entry. The delayed chain has to re-enter the same function before returning a value so must keep all that accounting of state somewhere which we will eventually learn is the stack.
+The difference in the book between the delayed chain of operations and the iterated version is called re-entry. The delayed chain has to re-enter the same function before returning a value so must keep all that accounting of state somewhere which we will eventually learn is the stack.  
 </p>
 
 <p>
@@ -580,7 +576,7 @@ Ex 1.9 addition is defined as a function that uses <i>a</i> as a counter and inc
 Ex 1.10 'concise math definitions' means turn (* 5 n n) into 5n<sup>2</sup> and if you plug in some values to f then f(n) = 2y. If you are using edwin you can run the stepper see the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user.pdf">manual</a> for mit-scheme. Otherwise hand step:
 </p>
 
-<pre class="example">
+<pre class="example" id="org16eb820">
 (define (A x y)
   (cond ((= y 0) 0)
         ((= x 0) (* 2 y))
@@ -623,16 +619,11 @@ G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536&#x20
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgec3e139" class="outline-3">
-<h3 id="orgec3e139">SICP 1.2.2</h3>
-<div class="outline-text-3" id="text-orgec3e139">
+<div id="outline-container-org4303ed3" class="outline-3">
+<h3 id="org4303ed3">SICP 1.2.2</h3>
+<div class="outline-text-3" id="text-org4303ed3">
 <p>
-Phi or \(\phi\) is a constant like e that is solely here to illustrate (fib n) process is exponential.  
-</p>
-
-<p>
-The 'golden ratio' is anything satisfying \(\frac{a + b}{a} = \frac{b}{a}\) and is found in taking diagonals of pentagons and other geometry you can look up on YouTube and phi is this ratio. In case it wasn't clear in the book the iterative algorithm comes from the observation that 0, 1, 1, 2, 3, 5.. the next in the sequence is the sum of the previous 2 numbers.   
+Phi or \(\varphi\) is a constant like e and there's many articles and videos on <a href="https://www.goldennumber.net/math/">Phi</a>. In case it wasn't clear in the book the iterative algorithm comes from the observation that 0, 1, 1, 2, 3, 5.. the next in the sequence is the sum of the previous 2 numbers.   
 </p>
 
 <p>
@@ -653,15 +644,14 @@ Hand step the count-change procedure with only 2 coins and amount 1:
 The computations are delayed as (+) needs two arguments so recursion is unrolled fully then evaluation can begin once it stops with 0 or 1. 
 </p>
 </div>
-
-<div id="outline-container-orgaf2820a" class="outline-4">
-<h4 id="orgaf2820a">Ex 1.11</h4>
-<div class="outline-text-4" id="text-orgaf2820a">
+<div id="outline-container-org235d260" class="outline-4">
+<h4 id="org235d260">Ex 1.11</h4>
+<div class="outline-text-4" id="text-org235d260">
 <p>
 Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A100550">OEIS</a> and there's actually a generating function solution a physicist figured out however the assignment wants us to create an iterable procedure. You can use the recursive procedure we learned to test your iterative one. I took eqv? from the mit-scheme reference manual.
 </p>
 
-<pre class="example">
+<pre class="example" id="org6f4e7e4">
 (define (f n)
   (define (f-iter n1 n2 n3 counter)
     (cond ((&lt; n 3) n)
@@ -685,15 +675,14 @@ Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A10
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org6f623c1" class="outline-4">
-<h4 id="org6f623c1">Ex 1.12</h4>
-<div class="outline-text-4" id="text-org6f623c1">
+<div id="outline-container-org56f80af" class="outline-4">
+<h4 id="org56f80af">Ex 1.12</h4>
+<div class="outline-text-4" id="text-org56f80af">
 <p>
 Pascal's triangle or array is explained <a href="https://www.youtube.com/watch?v=h0Woqc_5qUE%20">here</a> as the number of paths you can take to get to that number in the array or the number of coefficients in (a + b)<sup>n</sup>
 </p>
 
-<pre class="example">
+<pre class="example" id="orga8832d9">
 (define (pascal row col)
   (cond ((= row 0) 1)
 	((&gt; col row) 0)
@@ -711,7 +700,7 @@ For <a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle#/media/File:Sierp
 You can property test your program by noticing each element in a row of Pascal's array sums to \(2^{(row)}\): 
 </p>
 
-<pre class="example">
+<pre class="example" id="org42a59d4">
 (define (pascal row col)
   (cond ((= row 0) 1)
 	((&gt; col row) 0)
@@ -733,15 +722,14 @@ You can property test your program by noticing each element in a row of Pascal's
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org3485821" class="outline-4">
-<h4 id="org3485821">Ex 1.13</h4>
-<div class="outline-text-4" id="text-org3485821">
+<div id="outline-container-org10217dc" class="outline-4">
+<h4 id="org10217dc">Ex 1.13</h4>
+<div class="outline-text-4" id="text-org10217dc">
 <p>
-Try some examples in scheme:
+Closest integer means a number like -1, 0, 1, 2, 3.. not a decimal/rational. Try some examples in scheme:
 </p>
 
-<pre class="example">
+<pre class="example" id="org63c2ca0">
 (define (fib n)
   (cond ((= n 0) 0)
         ((= n 1) 1)
@@ -757,11 +745,19 @@ Try some examples in scheme:
 </pre>
 
 <p>
-Notice phi can accept '-' or '+' as a parameter the benefits of symbolic programming. If you run this and compare (f n) and (fib n) you get exactly the same outputs. The book says to use the definition fib(n) = fib(n - 1) + fib(n - 2) and since fib(n) = \(\frac{\phi^n - \varphi^n}{\sqrt 5}\) we can substitute it wherever we see fib(n):
+Notation
+</p>
+<ul class="org-ul">
+<li>\(\varphi\) is phi or (1 + sqrt(5))/2</li>
+<li>\(\psi\) is psi or -1/phi or (1 - sqrt(5))/2</li>
+</ul>
+
+<p>
+The book says to use the definition fib(n) = fib(n - 1) + fib(n - 2) and since fib(n) = \(\frac{\varphi^n - \psi^n}{\sqrt 5}\) we can substitute it wherever we see fib(n):
 </p>
 
 <p>
-\[\frac{\phi^n - \varphi^n}{\sqrt 5} = \frac{\phi^{n-1} - \varphi^{n-1}}{\sqrt 5} + \frac{\phi^{n-2} - \varphi^{n-2}}{\sqrt 5}\]
+\[\frac{\varphi^n - \psi^n}{\sqrt 5} = \frac{\varphi^{n-1} - \psi^{n-1}}{\sqrt 5} + \frac{\varphi^{n-2} - \psi^{n-2}}{\sqrt 5}\]
 </p>
 
 <p>
@@ -769,100 +765,113 @@ Looking at this <a href="https://sicp-solutions.net/post/sicp-solution-exercise-
 </p>
 
 <ul class="org-ul">
-<li>Clear the fractions by multiplying everything by \(\frac{\sqrt 5}{1}\)</li>
+<li>Clear the fractions by multiplying everything by \(\frac{\sqrt 5}{1}\) though \(\sqrt 5\) is itself \(2\varphi - 1\)</li>
 </ul>
 
 <p>
-\[\phi^n - \varphi^n = \phi^{n-1} - \varphi^{n-1} + \phi^{n-2} - \varphi^{n-2}\]
+\[\varphi^n - \psi^n = \varphi^{n-1} - \psi^{n-1} + \varphi^{n-2} - \psi^{n-2}\]
 </p>
 
 <ul class="org-ul">
-<li>Rewrite exponents to n. If n = 3 then 2<sup>3</sup> is 2*2*2 and (2*2*2)/2 is 2*2 or 2<sup>n-1</sup></li>
+<li>Rewrite exponents to n. If n = 2 then 2<sup>2</sup> is 2*2 and (2*2)/2 is 2<sup>1</sup> or 2<sup>n-1</sup></li>
 </ul>
 
 <p>
-\[\varphi^n-\phi^n=\frac{\varphi^n}\varphi-\frac{\phi^n}\phi+\frac{\varphi^n}{\varphi^2}-\frac{\phi^n}{\phi^2}\]
+\[\varphi^n-\psi^n=\frac{\varphi^n}\varphi-\frac{\psi^n}\psi+\frac{\varphi^n}{\varphi^2}-\frac{\psi^n}{\psi^2}\]
 </p>
 
 <ul class="org-ul">
-<li>Distribute out phi and varphi numerators:</li>
+<li>Group similar together and distribute out phi and psi numerators:</li>
 </ul>
 
 <p>
-\[\varphi^n-\phi^n=\varphi^n\left(\frac1\varphi+\frac1{\varphi^2}\right)-\phi^n\left(\frac1\phi+\frac1{\phi^2}\right)\]
+\[\varphi^n-\psi^n=\varphi^n\left(\frac1\varphi+\frac1{\varphi^2}\right)-\psi^n\left(\frac1\psi+\frac1{\psi^2}\right)\]
 </p>
 
 <p>
-Here can take advantage of the fact that phi<sup>2</sup> = phi + 1 and 1/phi = phi – 1 or keep following the solution above to see how they end up plugging back in the definitions for phi and varphi given in the exercise and showing that phi<sup>n</sup> over root 5 is never further away than +/- a half of the value of fib(n) thus the closest integer. 
+You could keep following their solution or take advantage of the fact that phi<sup>2</sup> = phi + 1, 1/phi = phi – 1, 1/psi = 1/(-1/phi) or negative phi to end up with \(\varphi^n - \psi^n = \varphi^n - \psi^n\) then use the same inequality reasoning they did to get to -1/2 &lt; phi/sqrt(5) &lt; 1/2  
 </p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org90342d7" class="outline-3">
-<h3 id="org90342d7">SICP 1.2.3</h3>
-<div class="outline-text-3" id="text-org90342d7">
+<div id="outline-container-org7c048d0" class="outline-3">
+<h3 id="org7c048d0">SICP 1.2.3</h3>
+<div class="outline-text-3" id="text-org7c048d0">
 <p>
-Watch the <a href="https://www.youtube.com/watch?v=V_7mmwpgJHU">lecture</a> for this chapter where he explains what time and space means the whole lecture is worth watching but the specific time/space explanation starts around 17:09. Time is the amount of steps that are evaluated and space is the amount of data needing to be stored. The numbers 16 and 8 differ by a constant factor of 2 and by a constant factor of 8 but as he says in this analysis we don't care what the constant is just that it is a constant and not changing with the input. Try the iterative procedure in the lecture that uses '1+' and '-1+' both built-in increment/decrement functions. He redefines '+' procedure which you can do in lisp you can rename or redefine anything you want. That iterative procedure uses an accumulator the y parameter keeps incrementing until x is 0 and y is returned.
+Watch the <a href="https://www.youtube.com/watch?v=V_7mmwpgJHU">lecture</a> @17:09 where he explains what time and space means though the whole lecture is worth watching. Time is the amount of steps that are evaluated and space is the amount of data needing to be stored. The numbers 16 and 8 differ by a constant factor of 2 and by a constant factor of 8 but as he says in this analysis we don't care what the constant is just that it is a constant and not changing with the input. Try the iterative procedure in the lecture that uses '1+' and '-1+' both built-in increment/decrement functions. 
 </p>
 
 <p>
-He uses big-O in the lecture (and first edition) and big-theta in the second edition we're reading. O(n) is an upper bound and \(\theta\)(n) is a tighter bound of both a lower and an upper bound. 
+He uses big-O in the lecture (and the book's first edition) and big-theta in the second edition we're reading. O(n) is an upper bound and \(\theta(n)\) is both a lower and an upper bound or the resource (time/space) will at least as much as much big-theta but not more than big-theta. 
 </p>
 
 <p>
-In the book the definition for \(\theta\)(f(n)) is \(k_{1}f(n) \le R(n) \le k_{2}f(n)\) where the two k's represent constants that can be the same or different. R(n) is a function we define that represents the resources for a process (space or steps) and f(n) is the function inside \(\theta\)(f(n)) that is chosen from a list of existing math functions. A small detail, in the definition of big-O or big-theta the resource function R(n) is already in O(f(n)) meaning <i>it is</i> that function f(n) or belongs to the family or set of all of functions that are represented by f(n) it doesn't grow to be that function O(f(n)) it already is by definition. The computational process however can grow as described in the book but the function R(n) in asymptotics is derived from that process and isn't growing though you will see this all over YouTube tutorials.  
+In the book the definition for \(\theta(f(n))\) is \(k_{1}f(n) \le R(n) \le k_{2}f(n)\)
 </p>
-
-<p>
-You may have seen other books or tutorials where they analyze the code to come up with R(n) or create recurrence relations and solve them but here so far we are only looking at the computational process meaning the exact amount of steps generated for each run of the program and the storage needed to store the steps in memory. A good example is going back to the chapter on linear recursion and looking at the recursive factorial process. It acts like a line being scaled out then scaled back or in other words linear. No matter what input we give it will do this linear process so it is at least linear and at most linear. You can check this by seeing that given an input of 6 it expands out to 5 multiplication operations. It needs to hold space for delayed computations for 5 operations as well. Given 100 as an input it expands out to 99 multiplication ops. 
-</p>
-
 <ul class="org-ul">
-<li>Factorial resource function R(n) = n - 1 and the constants here can be k<sub>1</sub> = 0.5 or k<sub>2</sub> = 1 it only matters that this inequality holds up to any constant factor(s). The \(\in\) symbol means 'is in':</li>
+<li>the two k's represent constants that can be the same or different</li>
+<li>R(n) is a function we define that represents the resources for a process (space or steps) when given an input of size n.</li>
+<li>f(n) are the same functions and chosen from a list of existing math function
+<ul class="org-ul">
+<li>f(n) = n</li>
+<li>f(n) = n<sup>2</sup></li>
+<li>f(n) = (log n)</li>
+<li>there actually is a specific list with more</li>
+</ul></li>
 </ul>
 
 <p>
-\[k_{1}\cdot n \le n - 1 \le k_{2}\cdot n \in \theta(n)\] 
+If R(n) = n100 meaning for every input 100 steps are processed or n100 steps then R(n) is within a constant factor of f(n) = n so by the big-theta definition in the book cf(n) &lt;= n100 &lt;= kf(n) because both c and k can be chosen so that inequality holds. This then means R(n) belongs to the set of all functions f(n) = n or linear functions so it will perform at least linear work and at most linear work. 
+</p>
+
+<p>
+So far we are only looking at the computational process meaning the exact amount of steps generated for each run of the program and the storage needed to store the steps in memory.
+</p>
+
+<p>
+The \(\in\) symbol means 'is in' as is in the set of all functions represented by inside the brackets of big-O or big-theta: 
 </p>
 
 <ul class="org-ul">
-<li>Fib(n) is R(n) = \(\frac{\phi^n}{\sqrt 5}\)</li>
+<li>Fib(n) is steps take R(n) = \(\frac{\varphi^n}{\sqrt 5}\)</li>
 </ul>
 
 <p>
-\[\frac{1}{\sqrt 5}\cdot\phi^n \le  \frac{\phi^n}{\sqrt 5} \le \frac{1}{\sqrt 5}\cdot\phi^n \in \theta(\phi^{n})\]  
+\[\frac{1}{\sqrt 5}\cdot\varphi^n \le  \frac{\varphi^n}{\sqrt 5} \le \frac{1}{\sqrt 5}\cdot\varphi^n \in \theta(\varphi^{n})\]  
 </p>
 
 <ul class="org-ul">
-<li>The definition of big-O is \(R(n) \le kf(n)\) so fib(n) is:</li>
+<li>The definition of big-O is \(R(n) \le kf(n)\) so any positive constant will work for fib(n) :</li>
 </ul>
 
 <p>
-\[\frac{\phi^n}{\sqrt 5} \le \frac{1}{\sqrt 5}\cdot\phi^n \in O(\phi^{n})\]  
+\[\frac{\varphi^n}{\sqrt 5} \le 1\cdot\varphi^n \in O(\varphi^{n})\]  
 </p>
 
 <ul class="org-ul">
-<li>Phi is a constant 1.6180.. and (1.6)<sup>n</sup> &lt; 2<sup>n</sup> this is another upper bound though not as tight fitting thus less descriptive:</li>
+<li>Phi is a constant 1.6180.. and (1.6)<sup>n</sup> &lt; 2<sup>n</sup> this is another upper bound though not as tight fitting but still fine according to the definition of big-O:</li>
 </ul>
 
 <p>
-\[\frac{\phi^n}{\sqrt 5} \le \frac{1}{\sqrt 5}\cdot\phi^n \in O(2^{n})\]  
+\[\frac{\varphi^n}{\sqrt 5} \le 1\cdot\varphi^n \in O(2^{n})\]  
 </p>
 
 <p>
-Watch <a href="https://youtu.be/_gKb855_3bk?si=IOQF3DAvcbRfCHrB">this</a> to learn more like O-tilde, poly(), and what exactly are the standard form functions that are 'chosen from a list' in O(f(n)). That same lecture also explains why 'n' is used in O(f(n)) instead of O(f(x)) because in this analysis inputs are supposed to grow to infinity so n is used as a convention to represent near infinite inputs. 
+Watch <a href="https://youtu.be/_gKb855_3bk?si=IOQF3DAvcbRfCHrB">this</a> to learn more like O-tilde, poly(), and what exactly are the standard form functions that are 'chosen from a list' in O(f(n)). That same lecture also explains why 'n' is used in O(f(n)) instead of O(f(x)) because in this analysis inputs are supposed to grow to infinity so n is used as a convention to represent near infinite inputs.
+</p>
+
+<p>
+The formal definition of big-O and big-theta is that there exists some specific input n<sub>0</sub> where for every input n larger than n<sub>0</sub> the constants will always hold so you don't have to worry about tiny edge cases where inputs are small so long as the constant(s) hold eventually for all future inputs. 
 </p>
 </div>
-
-<div id="outline-container-org8e0795e" class="outline-4">
-<h4 id="org8e0795e">Ex 1.14</h4>
-<div class="outline-text-4" id="text-org8e0795e">
+<div id="outline-container-orgbead39b" class="outline-4">
+<h4 id="orgbead39b">Ex 1.14</h4>
+<div class="outline-text-4" id="text-orgbead39b">
 <p>
 There is a nice graphic <a href="https://sicp-solutions.net/post/sicp-solution-exercise-1-14/">here</a> showing the full (cc 11 5) tree. He used (display) to generate the data to plug into graphviz and we can do the same while adjusting the procedure to count the number of calls or nodes in the process tree. Zero out the cond then in the else add 2 for 2 calls to cc:
 </p>
 
-<pre class="example">
+<pre class="example" id="orgc68fbf4">
 (define (count-nodes amount)
   (cc amount 5))
 (define (cc amount kinds-of-coins)
@@ -897,7 +906,7 @@ There is a nice graphic <a href="https://sicp-solutions.net/post/sicp-solution-e
 We can do the same for the fib function and compare the result to the tree in the book (14 nodes not including the root) 
 </p>
 
-<pre class="example">
+<pre class="example" id="org900c214">
 (define (fib-nodes n)
   (cond ((= n 0) 0)
         ((= n 1) 0)
@@ -912,7 +921,7 @@ We can do the same for the fib function and compare the result to the tree in th
 We can see count-change process steps are much less than fib:
 </p>
 
-<pre class="example">
+<pre class="example" id="org32d9e59">
 1 ]=&gt; (fib-nodes 20)
 ;Value: 21890
 
@@ -988,15 +997,14 @@ You can see for up to 900 inputs it's bounded by x<sup>3</sup> but if you keep g
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgc5a1c12" class="outline-4">
-<h4 id="orgc5a1c12">Ex 1.15</h4>
-<div class="outline-text-4" id="text-orgc5a1c12">
+<div id="outline-container-org0bf6568" class="outline-4">
+<h4 id="org0bf6568">Ex 1.15</h4>
+<div class="outline-text-4" id="text-org0bf6568">
 <p>
 Build another step counter
 </p>
 
-<pre class="example">
+<pre class="example" id="org7df2111">
 (define (count c angle)
   (display c) (display " ") (display angle) (newline)
   (if (not (&gt; (abs angle) 0.1))
@@ -1027,33 +1035,21 @@ The sine function calls (p (p (p (p (p 0.05144))))) and once the recursion stops
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgffab986" class="outline-3">
-<h3 id="orgffab986">SICP 1.2.4</h3>
-<div class="outline-text-3" id="text-orgffab986">
+<div id="outline-container-orga382634" class="outline-3">
+<h3 id="orga382634">SICP 1.2.4</h3>
+<div class="outline-text-3" id="text-orga382634">
 <p>
-Look up logs if you forgot them, log notation by convention 
-</p>
-
-<ul class="org-ul">
-<li>log (base 10)</li>
-<li>lg (base 2)</li>
-<li>ln (base e)</li>
-</ul>
-
-<p>
-ln is almost always used or base 2 assumed in compsci as ln has many nice properties for approximating on the fly like it's derivative is itself. A log (base 10) is the number of zeros in a number so if your program is logarithmic in steps and inputs to your web app spike to a million you only pay an additional cost factor of 6. 
+A log (base 10) is the number of zeros in a number so if your program is logarithmic in steps and inputs to your app spike to a million you only pay an additional cost factor of 6. 
 </p>
 </div>
-
-<div id="outline-container-org07cd8b2" class="outline-4">
-<h4 id="org07cd8b2">Ex 1.16</h4>
-<div class="outline-text-4" id="text-org07cd8b2">
+<div id="outline-container-org644c46d" class="outline-4">
+<h4 id="org644c46d">Ex 1.16</h4>
+<div class="outline-text-4" id="text-org644c46d">
 <p>
 The book states the invariant here is ab<sup>n</sup> meaning it's value should not change each time we iterate/loop (change state). The hint/observation is a(b<sup>2</sup>)<sup>n/2</sup> is always going to be ab<sup>n</sup> since 2n/2 is n and that is our even clause in the cond. The else clause or not even is bb<sup>n-1</sup> and abb<sup>n-1</sup> is of course ab<sup>n</sup> too. I wrote some tests here but this is Lisp at anytime you can manually enter tests into the REPL. 
 </p>
 
-<pre class="example">
+<pre class="example" id="orga143061">
 (define (even? n)
   (= (remainder n 2) 0))
 
@@ -1080,15 +1076,14 @@ The book states the invariant here is ab<sup>n</sup> meaning it's value should n
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org00ce3c6" class="outline-4">
-<h4 id="org00ce3c6">Ex 1.17</h4>
-<div class="outline-text-4" id="text-org00ce3c6">
+<div id="outline-container-org0e94af5" class="outline-4">
+<h4 id="org0e94af5">Ex 1.17</h4>
+<div class="outline-text-4" id="text-org0e94af5">
 <p>
 Try examples, ab is b amount of times a is added to itself so 3 x 4 is 4 groups of 3 added or (+ 3 3 3 3) or 4 addition steps. How would double/half help us here? Applying the even test to b: (+ (double 3) (double 3)) is (+ 6 6) or 2 steps and lg(4) is 2. An odd example is 3 x 5 or (+ 3 (double 3) (double 3)) and that's our procedure. Whenever we can halve the product b we double a, if we can't we add whatever a is and reduce b by 1. 
 </p>
 
-<pre class="example">
+<pre class="example" id="org34acd35">
 (define (even? n)
   (= (remainder n 2) 0))
 
@@ -1108,7 +1103,7 @@ Try examples, ab is b amount of times a is added to itself so 3 x 4 is 4 groups 
 We can count the number of arithmetic steps by altering our procedure then check it against log (base e) a built-in procedure to make sure our number of steps are logarithmic. The book so far is only concerned with the actual steps for arithmetic they aren't concerned with what is the cost of calling halve and double so I assume those are constant step operations thus ignored:
 </p>
 
-<pre class="example">
+<pre class="example" id="org0491eec">
 (define (* a b)
   (cond ((= b 0) 0)
 	((even? b) (* (double a) (halve b)))
@@ -1125,10 +1120,9 @@ We can count the number of arithmetic steps by altering our procedure then check
 </pre>
 </div>
 </div>
-
-<div id="outline-container-orgb46ba96" class="outline-4">
-<h4 id="orgb46ba96">Ex 1.19</h4>
-<div class="outline-text-4" id="text-orgb46ba96">
+<div id="outline-container-orgb032466" class="outline-4">
+<h4 id="orgb032466">Ex 1.19</h4>
+<div class="outline-text-4" id="text-orgb032466">
 <p>
 Apply the first state change a &lt;- bq + aq + ap and b &lt;- bp + aq
 </p>
@@ -1174,10 +1168,9 @@ I only know this from <a href="https://learnaifromscratch.github.io/taocp.html">
 </div>
 </div>
 </div>
-
-<div id="outline-container-org5bbe2e7" class="outline-3">
-<h3 id="org5bbe2e7">SICP 1.2.5</h3>
-<div class="outline-text-3" id="text-org5bbe2e7">
+<div id="outline-container-org3786f1d" class="outline-3">
+<h3 id="org3786f1d">SICP 1.2.5</h3>
+<div class="outline-text-3" id="text-org3786f1d">
 <p>
 This is 'integer division' or mod so the remainder 6 in GCD(206,40) is 200 with 6 remaining or 206 mod 40. 
 </p>
@@ -1187,7 +1180,7 @@ The number of steps of GCD(206,40) is bounded by the log of the smaller of the t
 </p>
 
 <p>
-You don't need to know this but if you were curious about Lame's theorem first we notice in each step of Euclid's algorithm it will have to find the gcd of two inputs that are smaller than the previous input. When you unroll the steps of the algorithm out like a recurrence (which we haven't yet learned) and you compare n the second smaller input to each step then the first step is n &gt;= 1 step, the second will be a sum of the last step which is n &gt;= 1 step, the third will be a sum of the last 2 steps which is n &gt;= 2 steps&#x2026; you see where this is going you eventually get the fib sequence: n \(\ge \frac{\phi^k}{\sqrt 5}\) and take log of both sides log(n) \(\ge\) k * log(\(\phi\)) + log(\(\sqrt 5\)) or log(n) \(\ge\) kc + c where c is some constant factors we don't care about. Now it's clear that the number of steps k are logarithmic in the size of the input n. Another way to tell this was logarithmic was to notice the input is tossed by half or more at each loop and in a log(input) number of steps we exhausted the input. 
+You don't need to know this but if you were curious about Lame's theorem first we notice in each step of Euclid's algorithm it will have to find the gcd of two inputs that are smaller than the previous input. When you unroll the steps of the algorithm out like a recurrence (which we haven't yet learned) and you compare n, the second smaller input to each step, then the first step is n &gt;= 1 step, the second will be a sum of the last step which is n &gt;= 1 step, the third will be a sum of the last 2 steps which is n &gt;= 2 steps&#x2026; you see where this is going you eventually get the fib sequence: n \(\ge \frac{\varphi^k}{\sqrt 5}\) and take log of both sides log(n) \(\ge\) k * log(\(\varphi\)) + log(\(\sqrt 5\)) or log(n) \(\ge\) kc + c where c is some constant factors we don't care about. Now it's clear that the number of steps k are logarithmic in the size of the input n. Another way to tell this was logarithmic was to notice the input is tossed by half or more at each loop and in a log(input) number of steps we exhausted the input. 
 </p>
 
 <p>
@@ -1199,19 +1192,18 @@ Ex. 1.20 chapter 4 extensively covers this. Applicative-order all parameters are
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgdb6ab9b" class="outline-3">
-<h3 id="orgdb6ab9b">SICP 1.2.6</h3>
-<div class="outline-text-3" id="text-orgdb6ab9b">
+<div id="outline-container-orgb555282" class="outline-3">
+<h3 id="orgb555282">SICP 1.2.6</h3>
+<div class="outline-text-3" id="text-orgb555282">
 <p>
-Let's write search-for-primes. There is 2 problems with this exercise. First if you are using a language that isn't mit-scheme you will have to find an equivalent runtime procedure in that language's libraries. Second the modern desktop or laptop can execute about 100m commands per second so there is no point testing the times unless you start at enormous inputs of 1 trillion or more. Since this is a ridiculous gigantic number I modified my version to give me the first 3 primes with hardcoded numbers. 
+Let's write search-for-primes. There is 2 problems with this exercise. First if you are using a language that isn't mit-scheme you will have to find an equivalent runtime procedure in that language's libraries. Second the modern x86 desktop or laptop can execute about 100m commands per second so there is no point testing the times unless you start at enormous inputs of 1 trillion or more. Since this is a ridiculous gigantic number I modified my version to give me the first 3 primes with hardcoded numbers. 
 </p>
 
 <p>
 I changed timed-prime-test to produce false if not prime so I could test it for carmichael numbers, changed some displays around but the range parameter is probably pointless as we have to use huge numbers.  
 </p>
 
-<pre class="example">
+<pre class="example" id="orgd9e6c1a">
 (define (timed-prime-test n)
   (start-prime-test n (runtime)))
 (define (start-prime-test n start-time)
@@ -1270,7 +1262,7 @@ Adding a factor of 10 increases runtime by about 3 which is the sqrt of 10.
 Ex 1.23 after you discover that the repeated calling of the next function and needless testing with an if predicate every loop produces a ratio of 1.6 improvement try the following:
 </p>
 
-<pre class="example">
+<pre class="example" id="org6bf02e4">
 (define (bytwo? n)
   (divides? n 2))
 
@@ -1310,18 +1302,16 @@ If you enjoy the strange world of number theory we'll be doing more of it when w
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgc16165b" class="outline-3">
-<h3 id="orgc16165b">SICP 1.3.1</h3>
-<div class="outline-text-3" id="text-orgc16165b">
+<div id="outline-container-org7ac08b9" class="outline-3">
+<h3 id="org7ac08b9">SICP 1.3.1</h3>
+<div class="outline-text-3" id="text-org7ac08b9">
 <p>
-I go through basic calculus <a href="https://learnaifromscratch.github.io/taocp.html">here</a> if interested but we don't need to know it to finish this chapter only how to translate notation into a procedure.
+TODO
 </p>
 </div>
-
-<div id="outline-container-org2e56d32" class="outline-4">
-<h4 id="org2e56d32">Ex 1.29</h4>
-<div class="outline-text-4" id="text-org2e56d32">
+<div id="outline-container-org8caa95b" class="outline-4">
+<h4 id="org8caa95b">Ex 1.29</h4>
+<div class="outline-text-4" id="text-org8caa95b">
 <p>
 The Simpson's rule is explained <a href="https://www.intmath.com/integration/6-simpsons-rule.php">here</a> (click on show answer) 
 </p>
@@ -1330,7 +1320,7 @@ The Simpson's rule is explained <a href="https://www.intmath.com/integration/6-s
 We're asked to define a procedure that takes arguments f, a, b, n and given a formula for h which reuses the inputs to the procedure so we may as well place it inside so it has access to the outer parameter bindings. 
 </p>
 
-<pre class="example">
+<pre class="example" id="orgf353398">
 (define (srule f a b n)
 
   (define (h)
@@ -1342,7 +1332,7 @@ We're asked to define a procedure that takes arguments f, a, b, n and given a fo
 We're given the inputs to f where every even and odd n is scaled except for the first and last term:
 </p>
 
-<pre class="example">
+<pre class="example" id="org5b9355a">
 (define (input k)
   (* (scale k)
      (f (+ a (* k (h))))))
@@ -1357,7 +1347,7 @@ We're given the inputs to f where every even and odd n is scaled except for the 
 The book chapter already gave us sum and an incrementer for next, all that is left to do is write out that formula at the bottom of srule procedure exactly how it appears in the book:
 </p>
 
-<pre class="example">
+<pre class="example" id="org44917a4">
 (* (/ (h) 3) (sum input 0 incr n)))
 </pre>
 
@@ -1365,7 +1355,7 @@ The book chapter already gave us sum and an incrementer for next, all that is le
 I rewrote this to take of advantage of the parameters to sum and added a scalar to sum since if we can control the incrementer why not have it skip even/odds:
 </p>
 
-<pre class="example">
+<pre class="example" id="org96bb137">
 (define (sum term a next b scale)
   (if (&gt; a b)
       0
@@ -1386,10 +1376,9 @@ I rewrote this to take of advantage of the parameters to sum and added a scalar 
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org956b500" class="outline-4">
-<h4 id="org956b500">Ex 1.30</h4>
-<div class="outline-text-4" id="text-org956b500">
+<div id="outline-container-orgabdbcf1" class="outline-4">
+<h4 id="orgabdbcf1">Ex 1.30</h4>
+<div class="outline-text-4" id="text-orgabdbcf1">
 <p>
 &#x2026; cont TODO
 </p>
@@ -1397,10 +1386,9 @@ I rewrote this to take of advantage of the parameters to sum and added a scalar 
 </div>
 </div>
 </div>
-
-<div id="outline-container-org3544c3b" class="outline-2">
-<h2 id="org3544c3b">SDF 0</h2>
-<div class="outline-text-2" id="text-org3544c3b">
+<div id="outline-container-org31c020c" class="outline-2">
+<h2 id="org31c020c">SDF 0</h2>
+<div class="outline-text-2" id="text-org31c020c">
 <p>
 Now that we've finished Chapter 1 we can do the first pset from Sussman's 2024 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/index.html">course</a> <i>Adventures in Advanced Symbolic Programming</i> and latest book <i>Software Design for Flexibiliy</i> (SDF). Let's try <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/assignments.html">Assignment 0</a> Diffie-Helman it's only prereq is SICP Chapter 1. TODO
 </p>
