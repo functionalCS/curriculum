@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-01-19 Mon 15:25 -->
+<!-- 2026-01-19 Mon 18:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Let's Do Structure and Interpretation of Computer Programs (SICP)</title>
@@ -234,40 +234,40 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdc6f7ff">SICP (and SDF)</a>
+<li><a href="#orgc1f1c84">SICP (and SDF)</a>
 <ul>
-<li><a href="#org07b2845">SICP in 2026</a></li>
-<li><a href="#org0cc3a61">Optional lectures</a></li>
+<li><a href="#org409215a">SICP in 2026</a></li>
+<li><a href="#orgfcd2780">Optional lectures</a></li>
 </ul>
 </li>
-<li><a href="#orgd6ae56d">SETUP</a>
+<li><a href="#org053388a">SETUP</a>
 <ul>
-<li><a href="#org0c06b4a">Book versions</a></li>
-<li><a href="#org65b102e">Install mit-scheme</a></li>
-<li><a href="#org0392657">IDE/Editor</a></li>
+<li><a href="#org689fc52">Book versions</a></li>
+<li><a href="#orgb91fc34">Install mit-scheme</a></li>
+<li><a href="#org61f8bab">IDE/Editor</a></li>
 </ul>
 </li>
-<li><a href="#org1088e50">BEGIN</a>
+<li><a href="#orgfb481ef">BEGIN</a>
 <ul>
-<li><a href="#org31ee75c">SICP 1.x</a></li>
-<li><a href="#org11a46dc">SICP 1.2.1</a></li>
-<li><a href="#org0d01ad6">SICP 1.2.2</a></li>
-<li><a href="#org7be7cfa">SICP 1.2.3</a></li>
-<li><a href="#orga887a03">SICP 1.2.4</a></li>
-<li><a href="#org974467f">SICP 1.2.5</a></li>
-<li><a href="#orgc977b00">SICP 1.2.6</a></li>
-<li><a href="#org64fb1ca">SICP 1.3.1</a></li>
+<li><a href="#orgb5bc66d">SICP 1.x</a></li>
+<li><a href="#org0e62140">SICP 1.2.1</a></li>
+<li><a href="#orgc516319">SICP 1.2.2</a></li>
+<li><a href="#orgafe7147">SICP 1.2.3</a></li>
+<li><a href="#org3246790">SICP 1.2.4</a></li>
+<li><a href="#org998830a">SICP 1.2.5</a></li>
+<li><a href="#org12ca6d3">SICP 1.2.6</a></li>
+<li><a href="#org44c03c5">SICP 1.3.1</a></li>
 </ul>
 </li>
-<li><a href="#org30943b7">SDF 0</a></li>
+<li><a href="#orgae21844">SDF 0</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdc6f7ff" class="outline-2">
-<h2 id="orgdc6f7ff">SICP (and SDF)</h2>
-<div class="outline-text-2" id="text-orgdc6f7ff">
+<div id="outline-container-orgc1f1c84" class="outline-2">
+<h2 id="orgc1f1c84">SICP (and SDF)</h2>
+<div class="outline-text-2" id="text-orgc1f1c84">
 <p>
-This exists because if you ask around how to learn programming likely someone will shill this book to you due to it being a seminal CS text that's been used for decades and is still very relevant even in the Gemini/ChatGPT and Claude Code AI world of development as we will learn all about procedural abstraction and that's what AI code to me is some black-box who's properties we have to test. 
+This exists because if you ask around how to learn programming likely someone will shill this book to you due to it being a seminal CS text that's been used for decades and is now even more relevant in the Gemini/ChatGPT and Claude Code AI world of development tools as we will learn all about procedural abstraction something that AI is still very poor at doing.
 </p>
 
 <p>
@@ -275,41 +275,45 @@ It's easier to do this after you have at least some programming experience becau
 </p>
 
 <p>
-SICP is lecture notes that became a book the original 6.001 course had many additional assignments to the book exercises. Some examples of these are <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/pages/projects/">here</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/index.html">here</a>. Instead of doing those old 6.001 assignments I'm going to do the 2025 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/assignments.html">assignments</a> from Sussman's 6.945 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/index.html">course</a> and new book <i>Software Design for Flexibility</i> (SDF) where many of those assignments point to chapters in SICP. SDF teaches the exact opposite of current day software engineering showing how in nature complex systems are designed for flexibility so new abilities can be effortlessly added without needing to do any kind of rewriting of the existing system. 
+SICP is lecture notes that became a book the original 6.001 course had many additional assignments to the book exercises. Some examples of these are <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/pages/projects/">here</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/index.html">here</a>. Instead of doing those old 6.001 assignments I'm going to do the 2025 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/assignments.html">assignments</a> from Sussman's 6.945 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/index.html">course</a> and new book <i>Software Design for Flexibility</i> (SDF) where many of those assignments point to chapters in SICP.
 </p>
-</div>
-<div id="outline-container-org07b2845" class="outline-3">
-<h3 id="org07b2845">SICP in 2026</h3>
-<div class="outline-text-3" id="text-org07b2845">
+
 <p>
-This is still probably the best book for learning the abstract art of programming. MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think still offers <a href="https://web.mit.edu/6.001/6.037/">a condensed version</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to make significant <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">changes</a> in chapter 4 because of the limitations of JavaScript. 
+SDF teaches the exact opposite of current day software engineering showing how in nature complex systems are designed for flexibility so new abilities can be effortlessly added without needing to do any kind of rewriting of the existing system. This is exactly what you would want if using some AI to generate code. 
+</p>
+</div>
+<div id="outline-container-org409215a" class="outline-3">
+<h3 id="org409215a">SICP in 2026</h3>
+<div class="outline-text-3" id="text-org409215a">
+<p>
+This is still the best book for learning the abstract art of programming. MIT taught some form of this book in their 6.001 course from 1980 until 2007 and I think still offers <a href="https://web.mit.edu/6.001/6.037/">a condensed version</a> in 6.037 (now 6.9550). UC Berkeley teaches a <a href="https://cs61a.org/">Python</a> derivative of the book and there is an authorized <a href="https://sourceacademy.org/sicpjs">JavaScript</a> 2022 version taught at the National University of Singapore but the authors have had to make significant <a href="https://sicp.sourceacademy.org/chapters/prefaces03.html">changes</a> in chapter 4 because of the limitations of JavaScript.
 </p>
 </div>
 </div>
-<div id="outline-container-org0cc3a61" class="outline-3">
-<h3 id="org0cc3a61">Optional lectures</h3>
-<div class="outline-text-3" id="text-org0cc3a61">
+<div id="outline-container-orgfcd2780" class="outline-3">
+<h3 id="orgfcd2780">Optional lectures</h3>
+<div class="outline-text-3" id="text-orgfcd2780">
 <p>
 There is lectures from 1986 <a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">here</a> and if you search YouTube many more recent lectures from Berkeley and countless hackathons or compsci reading groups have videos on working through the book. 
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd6ae56d" class="outline-2">
-<h2 id="orgd6ae56d">SETUP</h2>
-<div class="outline-text-2" id="text-orgd6ae56d">
+<div id="outline-container-org053388a" class="outline-2">
+<h2 id="org053388a">SETUP</h2>
+<div class="outline-text-2" id="text-org053388a">
 </div>
-<div id="outline-container-org0c06b4a" class="outline-3">
-<h3 id="org0c06b4a">Book versions</h3>
-<div class="outline-text-3" id="text-org0c06b4a">
+<div id="outline-container-org689fc52" class="outline-3">
+<h3 id="org689fc52">Book versions</h3>
+<div class="outline-text-3" id="text-org689fc52">
 <p>
 I'm using the official <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">online version</a> and one of unofficial <a href="https://web.mit.edu/6.001/6.037/sicp.pdf">PDFs</a> floating around to see the figures which can sometimes be impossible to read in the online html version. There's also an <a href="https://www.neilvandyke.org/sicp-texi/%20">info version</a> you can run in the terminal or in another emacs window. Remember those are unofficial so there could be extra errata introduced.
 </p>
 </div>
 </div>
-<div id="outline-container-org65b102e" class="outline-3">
-<h3 id="org65b102e">Install mit-scheme</h3>
-<div class="outline-text-3" id="text-org65b102e">
+<div id="outline-container-orgb91fc34" class="outline-3">
+<h3 id="orgb91fc34">Install mit-scheme</h3>
+<div class="outline-text-3" id="text-orgb91fc34">
 <p>
 To do the book read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">setup instructions</a> from Sussman's grad course and only use <a href="https://www.gnu.org/software/mit-scheme/">mit-scheme</a> or you may have problems in later chapters when we need to use the picture language or <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/psets/ps7/readme.html">parallel.scm</a> or mutable lists. Guile scheme may work for the entire book too but I have no idea, it has a <a href="https://elephly.net/guile-picture-language/manual.html">picture language</a> at least.
 </p>
@@ -323,9 +327,9 @@ I'm aware of #lang sicp in DrRacket and many other 3rd party implementations you
 </p>
 </div>
 </div>
-<div id="outline-container-org0392657" class="outline-3">
-<h3 id="org0392657">IDE/Editor</h3>
-<div class="outline-text-3" id="text-org0392657">
+<div id="outline-container-org61f8bab" class="outline-3">
+<h3 id="org61f8bab">IDE/Editor</h3>
+<div class="outline-text-3" id="text-org61f8bab">
 <p>
 You can type code into any text editor, save as filename.scm, run mit-scheme, and load your file in the REPL (load "filename.scm") but an IDE with scheme mode to help balance parens and run interactive debugging will be much easier. 
 </p>
@@ -367,9 +371,9 @@ Commands:
 </div>
 </div>
 </div>
-<div id="outline-container-org1088e50" class="outline-2">
-<h2 id="org1088e50">BEGIN</h2>
-<div class="outline-text-2" id="text-org1088e50">
+<div id="outline-container-orgfb481ef" class="outline-2">
+<h2 id="orgfb481ef">BEGIN</h2>
+<div class="outline-text-2" id="text-orgfb481ef">
 <p>
 Assuming you downloaded Sussman's <a href="http://web.mit.edu/6.945/dont-panic/.edwin">edwin config</a> and saved it as ".edwin" in your home directory or even whatever directory you're running mit-scheme type the following:
 </p>
@@ -415,7 +419,7 @@ Now you have a screen to enter code with and a REPL below. In emacs there is no 
 <p>
 In test.scm editor buffer enter some random code:
 </p>
-<pre class="example" id="org5d599ac">
+<pre class="example" id="org8b02baf">
 (define x 3)
 (+ x 2)
 (+ x 2 2)
@@ -424,7 +428,7 @@ In test.scm editor buffer enter some random code:
 </pre>
 
 <p>
-Run it in the REPL with M-o (eval entire buffer) or type C-h m to get a list of available key bindings/commands to evaluate scheme expressions. To switch out of the help buffer type C-x b and default will be test.scm or wherever you were last. You can control which code you want to run and often the Lisp developer procedure is to eval a single function and then manually input tests for it in the REPL.
+Run it in the REPL with M-o (eval entire buffer) or type C-h m to get a list of available key bindings/commands to evaluate scheme expressions. To switch out of the help buffer type C-x b and the default will be test.scm or wherever you were last. You can control which code you want to run and often the Lisp developer procedure is to eval a single function and then manually input tests for it in the REPL.
 </p>
 
 <p>
@@ -438,7 +442,7 @@ C-x C-s saves your editing window buffer and C-x C-c will <a href="https://www.g
 <p>
 If you get something similar:
 </p>
-<pre class="example" id="org4036a6e">
+<pre class="example" id="orgb951707">
 ;Unbound variable: *2
 ;To continue, call RESTART with an option number:
 ; (RESTART 3) =&gt; Specify a value to use instead of *2.
@@ -449,9 +453,9 @@ If you get something similar:
 Then typing (restart 1) will return to the REPL and you can check your code again to fix the problem or you can try one of the options to fix the problem. The bulk of errors will be parens problems in the beginning but it's how you learn and after a few of them you're much more careful about code and what scope it's in. If you run the debugger type C-h m to get a list of commands. Read the <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/dont-panic/">don't panic</a> guide how to debug.
 </p>
 </div>
-<div id="outline-container-org194e5b7" class="outline-4">
-<h4 id="org194e5b7">Edwin demo in Lecture 1</h4>
-<div class="outline-text-4" id="text-org194e5b7">
+<div id="outline-container-orgc458444" class="outline-4">
+<h4 id="orgc458444">Edwin demo in Lecture 1</h4>
+<div class="outline-text-4" id="text-orgc458444">
 <p>
 First <a href="https://www.youtube.com/watch?v=-J_xL4IGhJA">lecture</a> from the 1986 series if you want to follow him with edwin like @35:40 in the video:
 </p>
@@ -467,17 +471,17 @@ First <a href="https://www.youtube.com/watch?v=-J_xL4IGhJA">lecture</a> from the
 </ul>
 </div>
 </div>
-<div id="outline-container-orge866376" class="outline-4">
-<h4 id="orge866376">Run the tutorial!</h4>
-<div class="outline-text-4" id="text-orge866376">
+<div id="outline-container-org5100942" class="outline-4">
+<h4 id="org5100942">Run the tutorial!</h4>
+<div class="outline-text-4" id="text-org5100942">
 <p>
 Hold Ctrl-h then type t to start the tutorial so you understand what 'point' means (the location of the current cursor) and all the cut + paste commands.
 </p>
 </div>
 </div>
-<div id="outline-container-org31ee75c" class="outline-3">
-<h3 id="org31ee75c">SICP 1.x</h3>
-<div class="outline-text-3" id="text-org31ee75c">
+<div id="outline-container-orgb5bc66d" class="outline-3">
+<h3 id="orgb5bc66d">SICP 1.x</h3>
+<div class="outline-text-3" id="text-orgb5bc66d">
 <p>
 I would not read these early chapters very fast as it builds up showing the various abstractions in incremental levels that will be needed for later chapters.
 </p>
@@ -487,7 +491,7 @@ A computational process I would interpret as a running program or the act of com
 </p>
 
 <p>
-Write yourself some notes. These chapters tell us everything is an expression and every expression has a value. Procedures themselves are a value. A sequence of expressions within parens is a combination where the operator is applied to the values of the expressions. The operator can be a simple procedure or a compound very complex procedure. These complex procedures can be named so we can refer to their results. The environment (scope) is the range of significance that a name has where some names are globally accessible and others only locally within procedures (so far in the book). 
+Write yourself some notes. These chapters tell us everything is an expression and every expression has a value. Procedures themselves are a value. A sequence of expressions within parens is a combination where the operator is applied to the values of the expressions. The operator can be a simple procedure or a compound very complex procedure. These complex procedures can be named so we can refer to their results. The environment (scope) is the range of significance that a name has where some names are globally accessible and others only locally within procedures. 
 </p>
 
 <p>
@@ -505,14 +509,14 @@ This is what they mean by the evaluation rule is recursive
 </ul>
 
 <p>
-In order to evaluate an expression it has to evaluate the most nested subexpression the rule points to itself like a loop that keeps evaluating until recursion stops and a value is produced. Special forms are not procedures because they aren't always evaluated and if the OR procedure returns true for one expression in a chain of OR's then it returns #t or true and doesn't need to evaluate anymore expressions.
+In order to evaluate an expression it has to evaluate the most nested subexpression the rule points to itself like a loop that keeps evaluating until recursion stops and a value is produced. Special forms are not procedures because they aren't always evaluated and if the OR procedure returns true for one expression in a chain of OR's then it doesn't need to evaluate anymore expressions.
 </p>
 
 
 <p>
 Ex 1.2 is an example of an impossible to read figure. Use the <a href="http://libgen.is/book/index.php?md5=2E2D076C195F245EED60A5D3B00BE993">pdf</a>.
 </p>
-<pre class="example" id="org7fd45a6">
+<pre class="example" id="org44ae4f8">
 (/ (+ 5 4 (- 2 (- 3 (+ 6 (/ 4 5)))))
    (* 3 (- 6 2) (- 2 7)))
 </pre>
@@ -520,7 +524,7 @@ Ex 1.2 is an example of an impossible to read figure. Use the <a href="http://li
 <p>
 Ex 1.3 simple (cond (and ())) you can write your own test cases/examples too:
 </p>
-<pre class="example" id="org1516c7e">
+<pre class="example" id="org80d8dfd">
 (= (three-square-sum 1 2 3) (+ (* 2 2) (* 3 3))
 (= (three-square-sum 3 1 2) 13)
 (= (three-square-sum 3 2 1) 13)
@@ -544,7 +548,7 @@ Ex 1.6 new-if is a regular procedure not a special form so it's input (all the s
 Ex 1.7 try examples: 
 </p>
 
-<pre class="example" id="org4fba96c">
+<pre class="example" id="org1237471">
 1 ]=&gt; (sqrt 0.0009)
 ;Value: .04030062264654547
 
@@ -553,10 +557,10 @@ Ex 1.7 try examples:
 </pre>
 
 <p>
-This happens because using our current testing strategy of subtracting the square of the guess from the radicand the epsilon (0.001) isn't precise enough for small numbers and very large numbers clearly they never meet that precision or it takes too long to do so. If we ratio the change in guess with the existing guess, the closer the guess is the closer the ratio approaches 1 so we can adjust our program to check for this by subtracting that ratio from 1 to see if the two guesses are within epsilon of each other.
+Subtracting the square of the guess from the radicand isn't precise enough for small numbers and very large numbers clearly they never meet that precision or it takes too long to do so. If we ratio the change in guess with the existing guess, the closer the guess is the closer the ratio approaches 1 so we can adjust our program to check for this by subtracting that ratio from 1 to see if the two guesses are within epsilon (0.001) of each other.
 </p>
 
-<pre class="example" id="org1edc4d9">
+<pre class="example" id="orgc709854">
 (define (good-enough? guess x)
   (&lt; (abs(- 1 (/ (improve guess x) guess))) 0.001))
 </pre>
@@ -569,7 +573,7 @@ Now gigantic square roots eval immediately and tiny square roots are close enoug
 Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8/4 + 4)/3 or 6/3 = 2. All I did was change improve procedure and delete average procedure since it wasn't needed anymore:
 </p>
 
-<pre class="example" id="orgcd35747">
+<pre class="example" id="org48b98d3">
 (define (improve guess x)
   (/ (+ (/ x (* guess guess)) (* 2 guess)) 3))
 </pre>
@@ -579,14 +583,14 @@ Ex. 1.8 The cube root of 8 is 2 or 2 * 2 * 2. Plugging that into the formula: (8
 </p>
 </div>
 </div>
-<div id="outline-container-org11a46dc" class="outline-3">
-<h3 id="org11a46dc">SICP 1.2.1</h3>
-<div class="outline-text-3" id="text-org11a46dc">
+<div id="outline-container-org0e62140" class="outline-3">
+<h3 id="org0e62140">SICP 1.2.1</h3>
+<div class="outline-text-3" id="text-org0e62140">
 <p>
-I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f. It's the same as what is in the book except simplified. A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
+I rewrote fact-iter to instead be a function nested inside another function, with a 'trampoline' meaning execution falls to the bottom of the function hitting (f 1 n) and bounces back calling f(). A factorial is a product of every number up to the nth factorial so 3! is 1x2x3. 
 </p>
 
-<pre class="example" id="org730cdb9">
+<pre class="example" id="org2007526">
 (define (factorial n)
   (define (f total counter)
     (if (&lt; counter 2)
@@ -611,7 +615,7 @@ Ex 1.9 addition is defined as a function that uses <i>a</i> as a counter and inc
 Ex 1.10 'concise math definitions' means turn (* 5 n n) into 5n<sup>2</sup> and if you plug in some values to f then f(n) = 2y. If you are using edwin you can run the stepper see the <a href="https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user.pdf">manual</a> for mit-scheme. Otherwise hand step:
 </p>
 
-<pre class="example" id="orga7781a6">
+<pre class="example" id="org7876808">
 (define (A x y)
   (cond ((= y 0) 0)
         ((= x 0) (* 2 y))
@@ -654,9 +658,9 @@ G seems to produce 2<sup>n</sup> while H generates sequence 2, 4, 16, 65536&#x20
 </p>
 </div>
 </div>
-<div id="outline-container-org0d01ad6" class="outline-3">
-<h3 id="org0d01ad6">SICP 1.2.2</h3>
-<div class="outline-text-3" id="text-org0d01ad6">
+<div id="outline-container-orgc516319" class="outline-3">
+<h3 id="orgc516319">SICP 1.2.2</h3>
+<div class="outline-text-3" id="text-orgc516319">
 <p>
 Phi or \(\varphi\) is a constant like e and there's many articles and videos on <a href="https://www.goldennumber.net/math/">Phi</a>. In case it wasn't clear in the book the iterative algorithm comes from the observation that 0, 1, 1, 2, 3, 5.. the next in the sequence is the sum of the previous 2 numbers.   
 </p>
@@ -679,14 +683,14 @@ Hand step the count-change procedure with only 2 coins and amount 1:
 The computations are delayed as (+) needs two arguments so recursion is unrolled fully then evaluation can begin once it stops with 0 or 1. 
 </p>
 </div>
-<div id="outline-container-orgb3b9ac6" class="outline-4">
-<h4 id="orgb3b9ac6">Ex 1.11</h4>
-<div class="outline-text-4" id="text-orgb3b9ac6">
+<div id="outline-container-org6760e1f" class="outline-4">
+<h4 id="org6760e1f">Ex 1.11</h4>
+<div class="outline-text-4" id="text-org6760e1f">
 <p>
 Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A100550">OEIS</a> and there's actually a generating function solution a physicist figured out however the assignment wants us to create an iterable procedure. You can use the slower recursive procedure we learned to test your iterative one. I took eqv? from the mit-scheme reference manual.
 </p>
 
-<pre class="example" id="org8c23d72">
+<pre class="example" id="org1ae8916">
 (define (f n)
   (define (f-iter n1 n2 n3 counter)
     (cond ((&lt; n 3) n)
@@ -710,14 +714,14 @@ Write examples 1, 2, 4, 11, 25, 59.. enter it into <a href="https://oeis.org/A10
 </pre>
 </div>
 </div>
-<div id="outline-container-org84d2906" class="outline-4">
-<h4 id="org84d2906">Ex 1.12</h4>
-<div class="outline-text-4" id="text-org84d2906">
+<div id="outline-container-orgc8b26d7" class="outline-4">
+<h4 id="orgc8b26d7">Ex 1.12</h4>
+<div class="outline-text-4" id="text-orgc8b26d7">
 <p>
 Pascal's triangle or array is explained <a href="https://www.youtube.com/watch?v=h0Woqc_5qUE%20">here</a> as the number of paths you can take to get to that number in the array or the number of coefficients in (a + b)<sup>n</sup>
 </p>
 
-<pre class="example" id="orgbcf0cf7">
+<pre class="example" id="org548e4bc">
 (define (pascal row col)
   (cond ((= row 0) 1)
 	((&gt; col row) 0)
@@ -735,7 +739,7 @@ For <a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle#/media/File:Sierp
 You can property test your program by noticing each element in a row of Pascal's array sums to \(2^{(row)}\): 
 </p>
 
-<pre class="example" id="org66619a2">
+<pre class="example" id="org4e44598">
 (define (pascal row col)
   (cond ((= row 0) 1)
 	((&gt; col row) 0)
@@ -757,14 +761,14 @@ You can property test your program by noticing each element in a row of Pascal's
 </pre>
 </div>
 </div>
-<div id="outline-container-orgf9438c9" class="outline-4">
-<h4 id="orgf9438c9">Ex 1.13</h4>
-<div class="outline-text-4" id="text-orgf9438c9">
+<div id="outline-container-orge56c8d1" class="outline-4">
+<h4 id="orge56c8d1">Ex 1.13</h4>
+<div class="outline-text-4" id="text-orge56c8d1">
 <p>
 Closest integer means a number like -1, 0, 1, 2, 3.. not a decimal/rational. Try some examples in scheme:
 </p>
 
-<pre class="example" id="org097041d">
+<pre class="example" id="org7cfe699">
 (define (fib n)
   (cond ((= n 0) 0)
         ((= n 1) 1)
@@ -777,6 +781,11 @@ Closest integer means a number like -1, 0, 1, 2, 3.. not a decimal/rational. Try
 (define (f n)
   ;; expt and sqrt in mit-scheme reference doc
   (/ (- (expt (phi +) n) (expt (phi -) n)) (sqrt 5)))
+
+(fib 11)
+(f 11)
+(fib 12)
+(f 12)
 </pre>
 
 <p>
@@ -829,9 +838,9 @@ You could keep following their solution or take advantage of the fact that phi<s
 </div>
 </div>
 </div>
-<div id="outline-container-org7be7cfa" class="outline-3">
-<h3 id="org7be7cfa">SICP 1.2.3</h3>
-<div class="outline-text-3" id="text-org7be7cfa">
+<div id="outline-container-orgafe7147" class="outline-3">
+<h3 id="orgafe7147">SICP 1.2.3</h3>
+<div class="outline-text-3" id="text-orgafe7147">
 <p>
 Watch the <a href="https://www.youtube.com/watch?v=V_7mmwpgJHU">lecture</a> @17:09 where he explains what time and space means though the whole lecture is worth watching. Time is the amount of steps that are evaluated and space is the amount of data needing to be stored. The numbers 16 and 8 differ by a constant factor of 2 and by a constant factor of 8 but as he says in this analysis we don't care what the constant is just that it is a constant and not changing with the input. Try the iterative procedure in the lecture that uses '1+' and '-1+' both built-in increment/decrement functions. 
 </p>
@@ -869,7 +878,7 @@ The \(\in\) symbol means 'is in' the set of functions inside the brackets of big
 </p>
 
 <ul class="org-ul">
-<li>Fib(n) is steps take R(n) = \(\frac{\varphi^n}{\sqrt 5}\)</li>
+<li>Fib(n) steps take R(n) = \(\frac{\varphi^n}{\sqrt 5}\) and we can choose the constants arbitrarily as the definition allows this so long as the inequality holds</li>
 </ul>
 
 <p>
@@ -900,14 +909,14 @@ Watch <a href="https://youtu.be/_gKb855_3bk?si=IOQF3DAvcbRfCHrB">this</a> to lea
 The formal definition of big-O and big-theta is that there exists some specific input n<sub>0</sub> where for every input n larger than n<sub>0</sub> the constants will always hold so you don't have to worry about tiny edge cases where inputs are small so long as the constant(s) hold eventually for all future inputs. 
 </p>
 </div>
-<div id="outline-container-orga6de11a" class="outline-4">
-<h4 id="orga6de11a">Ex 1.14</h4>
-<div class="outline-text-4" id="text-orga6de11a">
+<div id="outline-container-orgf4eed44" class="outline-4">
+<h4 id="orgf4eed44">Ex 1.14</h4>
+<div class="outline-text-4" id="text-orgf4eed44">
 <p>
 There is a nice graphic <a href="https://sicp-solutions.net/post/sicp-solution-exercise-1-14/">here</a> showing the full (cc 11 5) tree. He used (display) to generate the data to plug into graphviz and we can do the same while adjusting the procedure to count the number of calls or nodes in the process tree. Zero out the cond then in the else add 2 for 2 calls to cc:
 </p>
 
-<pre class="example" id="org4930d00">
+<pre class="example" id="org694fae1">
 (define (count-nodes amount)
   (cc amount 5))
 (define (cc amount kinds-of-coins)
@@ -942,7 +951,7 @@ There is a nice graphic <a href="https://sicp-solutions.net/post/sicp-solution-e
 We can do the same for the fib function and compare the result to the tree in the book (14 nodes not including the root) 
 </p>
 
-<pre class="example" id="orgfe4ddd8">
+<pre class="example" id="orgc1cd53b">
 (define (fib-nodes n)
   (cond ((= n 0) 0)
         ((= n 1) 0)
@@ -957,7 +966,7 @@ We can do the same for the fib function and compare the result to the tree in th
 We can see count-change process steps are much less than fib:
 </p>
 
-<pre class="example" id="org165c301">
+<pre class="example" id="orge09e612">
 1 ]=&gt; (fib-nodes 20)
 ;Value: 21890
 
@@ -1033,14 +1042,14 @@ You can see for up to 900 inputs it's still bounded by x<sup>3</sup> but if you 
 </p>
 </div>
 </div>
-<div id="outline-container-org9841851" class="outline-4">
-<h4 id="org9841851">Ex 1.15</h4>
-<div class="outline-text-4" id="text-org9841851">
+<div id="outline-container-org99ecdda" class="outline-4">
+<h4 id="org99ecdda">Ex 1.15</h4>
+<div class="outline-text-4" id="text-org99ecdda">
 <p>
 Build another step counter
 </p>
 
-<pre class="example" id="org9f773cd">
+<pre class="example" id="orgc10e4f3">
 (define (count c angle)
   (display c) (display " ") (display angle) (newline)
   (if (not (&gt; (abs angle) 0.1))
@@ -1071,18 +1080,18 @@ The sine function calls (p (p (p (p (p 0.05144))))) and once the recursion stops
 </div>
 </div>
 </div>
-<div id="outline-container-orga887a03" class="outline-3">
-<h3 id="orga887a03">SICP 1.2.4</h3>
-<div class="outline-text-3" id="text-orga887a03">
+<div id="outline-container-org3246790" class="outline-3">
+<h3 id="org3246790">SICP 1.2.4</h3>
+<div class="outline-text-3" id="text-org3246790">
 </div>
-<div id="outline-container-org5d5e7b7" class="outline-4">
-<h4 id="org5d5e7b7">Ex 1.16</h4>
-<div class="outline-text-4" id="text-org5d5e7b7">
+<div id="outline-container-orgc5c2a97" class="outline-4">
+<h4 id="orgc5c2a97">Ex 1.16</h4>
+<div class="outline-text-4" id="text-orgc5c2a97">
 <p>
 The book states the invariant here is ab<sup>n</sup> meaning it's value should not change each time we iterate/loop (change state). The hint/observation is a(b<sup>2</sup>)<sup>n/2</sup> is always going to be ab<sup>n</sup> since 2n/2 is n and that is our even clause in the cond. The else clause or not even is bb<sup>n-1</sup> and abb<sup>n-1</sup> is of course ab<sup>n</sup> too. I wrote some tests here but this is Lisp at anytime you can manually enter tests into the REPL. 
 </p>
 
-<pre class="example" id="org7c4da91">
+<pre class="example" id="org6fe0ecc">
 (define (even? n)
   (= (remainder n 2) 0))
 
@@ -1109,14 +1118,14 @@ The book states the invariant here is ab<sup>n</sup> meaning it's value should n
 </pre>
 </div>
 </div>
-<div id="outline-container-orgc995377" class="outline-4">
-<h4 id="orgc995377">Ex 1.17</h4>
-<div class="outline-text-4" id="text-orgc995377">
+<div id="outline-container-org2f5df17" class="outline-4">
+<h4 id="org2f5df17">Ex 1.17</h4>
+<div class="outline-text-4" id="text-org2f5df17">
 <p>
 Try examples, ab is b amount of times a is added to itself so 3 x 4 is 4 groups of 3 added or (+ 3 3 3 3) or 4 addition steps. How would double/half help us here? Applying the even test to b: (+ (double 3) (double 3)) is (+ 6 6) or 2 steps and lg(4) is 2. An odd example is 3 x 5 or (+ 3 (double 3) (double 3)) and that's our procedure. Whenever we can halve the product b we double a, if we can't we add whatever a is and reduce b by 1. 
 </p>
 
-<pre class="example" id="orga50bfa2">
+<pre class="example" id="org9f41c51">
 (define (even? n)
   (= (remainder n 2) 0))
 
@@ -1136,7 +1145,7 @@ Try examples, ab is b amount of times a is added to itself so 3 x 4 is 4 groups 
 We can count the number of arithmetic steps by altering our procedure then check it against log (base e) a built-in procedure to make sure our number of steps are logarithmic. The book so far is only concerned with the actual steps for arithmetic they aren't concerned with what is the cost of calling halve and double so I assume those are constant step operations thus ignored:
 </p>
 
-<pre class="example" id="orgcc28a74">
+<pre class="example" id="orgfb419a5">
 (define (* a b)
   (cond ((= b 0) 0)
 	((even? b) (* (double a) (halve b)))
@@ -1153,9 +1162,9 @@ We can count the number of arithmetic steps by altering our procedure then check
 </pre>
 </div>
 </div>
-<div id="outline-container-org7f9b3e8" class="outline-4">
-<h4 id="org7f9b3e8">Ex 1.19</h4>
-<div class="outline-text-4" id="text-org7f9b3e8">
+<div id="outline-container-orgf3e4f74" class="outline-4">
+<h4 id="orgf3e4f74">Ex 1.19</h4>
+<div class="outline-text-4" id="text-orgf3e4f74">
 <p>
 Apply the first state change a &lt;- bq + aq + ap and b &lt;- bp + aq
 </p>
@@ -1201,9 +1210,9 @@ I only know this from <a href="https://learnaifromscratch.github.io/taocp.html">
 </div>
 </div>
 </div>
-<div id="outline-container-org974467f" class="outline-3">
-<h3 id="org974467f">SICP 1.2.5</h3>
-<div class="outline-text-3" id="text-org974467f">
+<div id="outline-container-org998830a" class="outline-3">
+<h3 id="org998830a">SICP 1.2.5</h3>
+<div class="outline-text-3" id="text-org998830a">
 <p>
 This is 'integer division' or mod so the remainder 6 in GCD(206,40) is 200 with 6 remaining or 206 mod 40. 
 </p>
@@ -1225,18 +1234,18 @@ Ex. 1.20 chapter 4 extensively covers this. Applicative-order all parameters are
 </p>
 </div>
 </div>
-<div id="outline-container-orgc977b00" class="outline-3">
-<h3 id="orgc977b00">SICP 1.2.6</h3>
-<div class="outline-text-3" id="text-orgc977b00">
+<div id="outline-container-org12ca6d3" class="outline-3">
+<h3 id="org12ca6d3">SICP 1.2.6</h3>
+<div class="outline-text-3" id="text-org12ca6d3">
 <p>
-Let's write search-for-primes. There is 2 problems with this exercise. First if you are using a language that isn't mit-scheme you will have to find an equivalent runtime procedure in that language's libraries. Second the modern x86 or ARM64 desktop/laptop can execute a loop in code at about 100m iterations per second and the interpreter will be slower than compiled code so still it's going to be at least tens of millions per second so there is no point testing the times unless you start at enormous inputs of 1 trillion or more. Since this is a ridiculous gigantic number I modified my version to give me the first 3 primes with hardcoded numbers. 
+Let's write search-for-primes. There is 2 problems with this exercise. First if you are using a language that isn't mit-scheme you will have to find an equivalent runtime procedure in that language's libraries. Second the modern x86 or ARM64 desktop/laptop can execute a loop of constant ops at about 100m iterations per second and the interpreter will be slower than compiled code so still it's going to be at least tens of millions per second so there is no point testing the times unless you start at enormous inputs of 1 trillion or more. 
 </p>
 
 <p>
 I changed timed-prime-test to produce false if not prime so I could test it for carmichael numbers, changed some displays around but the range parameter is probably pointless as we have to use huge numbers.  
 </p>
 
-<pre class="example" id="orgd6c0a00">
+<pre class="example" id="org6e20f33">
 (define (timed-prime-test n)
   (start-prime-test n (runtime)))
 (define (start-prime-test n start-time)
@@ -1295,7 +1304,7 @@ Adding a factor of 10 increases runtime by roughly 3x which is the sqrt of 10.
 Ex 1.23 after you discover that the repeated and needless testing with an if predicate slows the process down try the following:
 </p>
 
-<pre class="example" id="orgb675064">
+<pre class="example" id="orge99ee60">
 (define (bytwo? n)
   (divides? n 2))
 
@@ -1327,7 +1336,7 @@ Ex 1.26 A 'loose reasoner' the hint is Eva Lu Ator because scheme uses applicati
 </p>
 
 <p>
-The last exercise is explained <a href="https://stackoverflow.com/questions/3733384/confused-on-miller-rabin">here</a> where 'nontrivial' means something that isn't 1 since 1<sup>2</sup> has a trivial square root of 1 but any odd number squared mod 8 has a nontrivial square root of 1 for example 3<sup>2</sup> mod 8 or 9 mod 8 is 1 so now 3 is a nontrivial square root of 1 mod 8. The exercise is actually trivial even if the square root is nontrivial all you have to do is drop a check in the squaring branch of expmod "n = not 1 or n-1 and n<sup>2</sup> = 1 mod n" to reveal if it's a nontrivial square root and if so return 0 wiping out all the delayed multiplication and remainders of expmod so when the result gets back to fermat-test it compares a to 0. 
+The last exercise 1.28 is explained <a href="https://stackoverflow.com/questions/3733384/confused-on-miller-rabin">here</a> where 'nontrivial' means something that isn't 1 since 1<sup>2</sup> has a trivial square root of 1 but any odd number squared mod 8 has a nontrivial square root of 1 for example 3<sup>2</sup> mod 8 or 9 mod 8 is 1 so now 3 is a nontrivial square root of 1 mod 8. The exercise is actually trivial even if the square root is nontrivial all you have to do is drop a check in the squaring branch of expmod "n = not 1 or n-1 and n<sup>2</sup> = 1 mod n" to reveal if it's a nontrivial square root and if so return 0 wiping out all the delayed multiplication and remainders of expmod so when the result gets back to fermat-test it compares a to 0. 
 </p>
 
 <p>
@@ -1335,93 +1344,77 @@ If you enjoy the strange world of number theory we'll be doing more of it when w
 </p>
 </div>
 </div>
-<div id="outline-container-org64fb1ca" class="outline-3">
-<h3 id="org64fb1ca">SICP 1.3.1</h3>
-<div class="outline-text-3" id="text-org64fb1ca">
+<div id="outline-container-org44c03c5" class="outline-3">
+<h3 id="org44c03c5">SICP 1.3.1</h3>
+<div class="outline-text-3" id="text-org44c03c5">
 <p>
-TODO
+The integrals in this chapter aren't used only the numerical approximations which we are given full formulas for are so if you've never taken calculus it won't matter.
 </p>
 </div>
-<div id="outline-container-orgc36f56e" class="outline-4">
-<h4 id="orgc36f56e">Ex 1.29</h4>
-<div class="outline-text-4" id="text-orgc36f56e">
+<div id="outline-container-org30fd18b" class="outline-4">
+<h4 id="org30fd18b">Ex 1.29</h4>
+<div class="outline-text-4" id="text-org30fd18b">
 <p>
 The Simpson's rule is explained <a href="https://www.intmath.com/integration/6-simpsons-rule.php">here</a> (click on show answer) 
 </p>
 
 <p>
-We're asked to define a procedure that takes arguments f, a, b, n and given a formula for h which reuses the inputs to the procedure so we may as well place it inside so it has access to the outer parameter bindings. 
+We're asked to define a procedure that takes arguments f, a, b, n where f is a function to integrate, a and b are the integral ranges and n is a precision number.
 </p>
 
-<pre class="example" id="orgfebb5aa">
-(define (srule f a b n)
-
-  (define (h)
-    (/ (- b a) n))
-)
-</pre>
-
-<p>
-We're given the inputs to f where every even and odd n is scaled except for the first and last term:
-</p>
-
-<pre class="example" id="org495dfeb">
-(define (input k)
-  (* (scale k)
-     (f (+ a (* k (h))))))
- 
-(define (scale x)
-  (cond ((even? x) 2)
-  ((odd? x) 4)
-  ((or (= x 0) (= x n) 1))))
-</pre>
-
-<p>
-The book chapter already gave us sum and an incrementer for next, all that is left to do is write out that formula at the bottom of srule procedure exactly how it appears in the book:
-</p>
-
-<pre class="example" id="orgc2a320b">
-(* (/ (h) 3) (sum input 0 incr n)))
-</pre>
-
-<p>
-I rewrote this to take of advantage of the parameters to sum and added a scalar to sum since if we can control the incrementer why not have it skip even/odds:
-</p>
-
-<pre class="example" id="orgcfe864c">
-(define (sum term a next b scale)
+<pre class="example" id="org9fb0a50">
+(define (sum term a next b)
   (if (&gt; a b)
       0
-      (+ (* scale (term a))
-         (sum term (next a) next b scale))))
+      (+ (* (term a))
+         (sum term (next a) next b))))
 
 (define (srule f a b n)
-
   (define (parity x) (+ x 2))
-  (define delta-x (/ (- b a) n)) ;variable syntax we haven't learned yet
+  (define delta-x (/ (- b a) n)) 
   (define (y k) (f (+ a (* k delta-x))))
-
   (* (/ delta-x 3)
-     (+ (sum y 1 parity (- n 1) 4)
-	(sum y 2 parity (- n 1) 2)
-	(y 0)
-	(y n))))
+     (+ (* (sum y 1 parity (- n 1)) 4)
+        (* (sum y 2 parity (- n 1)) 2)
+	   (y 0)
+	   (y n))))
+	   
+; test functions y = 1/x+1 and y = x^2
+(define (fun x) (/ 1.0 (+ x 1)))
+(define (pow x) (* x x))
+
+; this should equal ~0.2876831 
+(srule fun 2 3 4)
+; this should equal 215/3
+(srule pow 1 6 4)
 </pre>
-</div>
-</div>
-<div id="outline-container-orgae1b059" class="outline-4">
-<h4 id="orgae1b059">Ex 1.30</h4>
-<div class="outline-text-4" id="text-orgae1b059">
+
 <p>
-&#x2026; cont TODO
+Exercise 1.30 to 1.33 are standard programming introducing the concept of fold/reduce (accumulate) and filter which will be used later on lists and streams. 
+</p>
+</div>
+</div>
+<div id="outline-container-org3b3e0d7" class="outline-4">
+<h4 id="org3b3e0d7">Ex. 1.34</h4>
+<div class="outline-text-4" id="text-org3b3e0d7">
+<pre class="example" id="org27d845d">
+(define (f g) (g 2))
+</pre>
+
+<p>
+If f is applied to itself, then it becomes the g in (g 2) which then will be given 2 as the parameter for g and end up trying to eval (2 2) an error. 
+</p>
+
+<p>
+TODO
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org30943b7" class="outline-2">
-<h2 id="org30943b7">SDF 0</h2>
-<div class="outline-text-2" id="text-org30943b7">
+<div id="outline-container-orgae21844" class="outline-2">
+<h2 id="orgae21844">SDF 0</h2>
+<div class="outline-text-2" id="text-orgae21844">
 <p>
 Now that we've finished Chapter 1 we can do the first pset from Sussman's 2024 <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/index.html">course</a> <i>Adventures in Advanced Symbolic Programming</i> and latest book <i>Software Design for Flexibiliy</i> (SDF). Let's try <a href="https://groups.csail.mit.edu/mac/users/gjs/6.945/assignments.html">Assignment 0</a> Diffie-Helman it's only prereq is SICP Chapter 1. TODO
 </p>
