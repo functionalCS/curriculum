@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-05-01 Fri 21:37 -->
+<!-- 2026-05-01 Fri 21:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A (mostly functional) 21st Century CompSci Curriculum</title>
@@ -234,43 +234,43 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga294147">What is this</a>
+<li><a href="#org3f54e3e">What is this</a>
 <ul>
-<li><a href="#org34c5160">CompSci undergrads in 2026</a></li>
-<li><a href="#org8b652d3">What you should take in university</a></li>
-<li><a href="#orgb0bd778">Motivation</a></li>
+<li><a href="#orgc81fc91">CompSci undergrads in 2026</a></li>
+<li><a href="#org8bc2043">What you should take in university</a></li>
+<li><a href="#orgc5299dc">Motivation</a></li>
 </ul>
 </li>
-<li><a href="#orgcaf3eda">Basics</a>
+<li><a href="#org47272b1">Basics</a>
 <ul>
-<li><a href="#org81e8ac3">Programming</a></li>
-<li><a href="#orgc601041">Math</a></li>
-<li><a href="#org9e0fcdf">Algorithms</a></li>
+<li><a href="#org6f986a8">Programming</a></li>
+<li><a href="#org6f89865">Math</a></li>
+<li><a href="#orgdf8f821">Algorithms</a></li>
 </ul>
 </li>
-<li><a href="#org03e401e">Computational Trinity</a>
+<li><a href="#orgac47058">Computational Trinity</a>
 <ul>
-<li><a href="#orgd1a285a">Type Theory</a></li>
-<li><a href="#org921bcf7">Proof Theory</a></li>
-<li><a href="#org679bb1f">Category theory</a></li>
+<li><a href="#org4574b3b">Type Theory</a></li>
+<li><a href="#orgfbd0483">Proof Theory</a></li>
+<li><a href="#orga095f1e">Category theory</a></li>
 </ul>
 </li>
-<li><a href="#orgdb26372">CS103 - Machines, Languages &amp; Computation</a></li>
-<li><a href="#orgfa802ab">Lean4</a>
+<li><a href="#org31a567a">CS103 - Machines, Languages &amp; Computation</a></li>
+<li><a href="#orgcffb9ee">Lean4</a>
 <ul>
-<li><a href="#org4607735">Proving equalities</a></li>
-<li><a href="#orgd699f62">Tips and tricks</a></li>
-<li><a href="#org5d9cf90">Proving inequalities</a></li>
-<li><a href="#org564f833">Proofs with structure</a></li>
+<li><a href="#orgb950454">Proving equalities</a></li>
+<li><a href="#orgb70bc61">Tips and tricks</a></li>
+<li><a href="#org53816ab">Proving inequalities</a></li>
+<li><a href="#org2739cc9">Proofs with structure</a></li>
 </ul>
 </li>
-<li><a href="#org80995bd">Principles of Functional Programming</a></li>
+<li><a href="#org4951fe9">Principles of Functional Programming</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga294147" class="outline-2">
-<h2 id="orga294147">What is this</h2>
-<div class="outline-text-2" id="text-orga294147">
+<div id="outline-container-org3f54e3e" class="outline-2">
+<h2 id="org3f54e3e">What is this</h2>
+<div class="outline-text-2" id="text-org3f54e3e">
 <p>
 This is a research dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">computational trinitarianism</a> where any concept in computation manifests itself in three forms: Logic (proof theory), Programs (type theory), and Categories (algebra of proofs). Any route can get you to the 'divine notion of computation' and discovering something that has meaning in all three points of view is a legitimate scientific discovery.
 </p>
@@ -290,9 +290,9 @@ In 2026 we have mostly imperative AI slop code flooding the earth but there exis
 <li>Languages who's definitions are not a bucket where features are thrown in breaking everything else</li>
 </ul>
 </div>
-<div id="outline-container-org34c5160" class="outline-3">
-<h3 id="org34c5160">CompSci undergrads in 2026</h3>
-<div class="outline-text-3" id="text-org34c5160">
+<div id="outline-container-orgc81fc91" class="outline-3">
+<h3 id="orgc81fc91">CompSci undergrads in 2026</h3>
+<div class="outline-text-3" id="text-orgc81fc91">
 <p>
 If you are not attending a fancy school like UChicago you likely won't take anything here. Even any kind of functional programming is now banished to uppergrad in many schools. There will be researchers on your campus involved in this so you should make an agreement to skip most of your 3-4th year electives and replace them with research. Many schools allow this, some don't. I didn't even know undergrads could do research when I went to university nobody including my professors or TAs ever mentioned it.
 </p>
@@ -302,9 +302,9 @@ My honest advice is to never take computer science as a bachelor as it's a waste
 </p>
 </div>
 </div>
-<div id="outline-container-org8b652d3" class="outline-3">
-<h3 id="org8b652d3">What you should take in university</h3>
-<div class="outline-text-3" id="text-org8b652d3">
+<div id="outline-container-org8bc2043" class="outline-3">
+<h3 id="org8bc2043">What you should take in university</h3>
+<div class="outline-text-3" id="text-org8bc2043">
 <p>
 Teach yourself the material here as your radical research hobby into futuristic type theory and find a school that teaches a <a href="https://www.reading.ac.uk/classics/">real classics major</a> meaning you learn Latin and ancient Greek, are taught logic, and how to speak in public. They should hopefully offer you a year of study in Athens or Rome (even Croatia).
 </p>
@@ -346,9 +346,9 @@ Meanwhile anyone can learn type theory and plug that into some video game like t
 </p>
 </div>
 </div>
-<div id="outline-container-orgb0bd778" class="outline-3">
-<h3 id="orgb0bd778">Motivation</h3>
-<div class="outline-text-3" id="text-orgb0bd778">
+<div id="outline-container-orgc5299dc" class="outline-3">
+<h3 id="orgc5299dc">Motivation</h3>
+<div class="outline-text-3" id="text-orgc5299dc">
 <p>
 We will shortly see Robert Harper saying that computer science <i>subsumes</i> many other subjects including math. He's not wrong. Remove yourself from thinking about creating junk apps or java schools and consider abstractly the entire idea of computing something. 
 </p>
@@ -359,16 +359,16 @@ As an example what we are learning they had a <i>notion</i> of back in the 1300s
 </div>
 </div>
 </div>
-<div id="outline-container-orgcaf3eda" class="outline-2">
-<h2 id="orgcaf3eda">Basics</h2>
-<div class="outline-text-2" id="text-orgcaf3eda">
+<div id="outline-container-org47272b1" class="outline-2">
+<h2 id="org47272b1">Basics</h2>
+<div class="outline-text-2" id="text-org47272b1">
 <p>
 Most of this I will just do at the same time there's no reason for a linear order.
 </p>
 </div>
-<div id="outline-container-org81e8ac3" class="outline-3">
-<h3 id="org81e8ac3">Programming</h3>
-<div class="outline-text-3" id="text-org81e8ac3">
+<div id="outline-container-org6f986a8" class="outline-3">
+<h3 id="org6f986a8">Programming</h3>
+<div class="outline-text-3" id="text-org6f986a8">
 <ul class="org-ul">
 <li>15-150 <a href="https://brandonspark.github.io/150/">Principles of Functional Programming</a> (SML)
 <ul class="org-ul">
@@ -386,9 +386,9 @@ Most of this I will just do at the same time there's no reason for a linear orde
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc601041" class="outline-3">
-<h3 id="orgc601041">Math</h3>
-<div class="outline-text-3" id="text-orgc601041">
+<div id="outline-container-org6f89865" class="outline-3">
+<h3 id="org6f89865">Math</h3>
+<div class="outline-text-3" id="text-org6f89865">
 <p>
 This is a typical discrete math course except formalized in Lean 4.
 </p>
@@ -411,9 +411,9 @@ An introductory <a href="https://local.cis.strath.ac.uk/wp/extras/syllabus/?leve
 </ul>
 </div>
 </div>
-<div id="outline-container-org9e0fcdf" class="outline-3">
-<h3 id="org9e0fcdf">Algorithms</h3>
-<div class="outline-text-3" id="text-org9e0fcdf">
+<div id="outline-container-orgdf8f821" class="outline-3">
+<h3 id="orgdf8f821">Algorithms</h3>
+<div class="outline-text-3" id="text-orgdf8f821">
 <p>
 The best course is <a href="https://courses.csail.mit.edu/6.851/spring21/">Advanced Data Structures</a> by Erik Demaine and/or <a href="https://fdsa-book.net/">Functional Data Structures and Algorithms</a> proven in Isabelle to get used to the style of thinking an algorithm designer would have. If ChatGPT suggests to you some kind of graph algorithms you'll probably want to know if it's correct or not. 
 </p>
@@ -424,16 +424,16 @@ CMU has a course in SML <a href="https://www.cs.cmu.edu/~15210/schedule.html">15
 </div>
 </div>
 </div>
-<div id="outline-container-org03e401e" class="outline-2">
-<h2 id="org03e401e">Computational Trinity</h2>
-<div class="outline-text-2" id="text-org03e401e">
+<div id="outline-container-orgac47058" class="outline-2">
+<h2 id="orgac47058">Computational Trinity</h2>
+<div class="outline-text-2" id="text-orgac47058">
 <p>
 All 3 are the same concept: computer programming.
 </p>
 </div>
-<div id="outline-container-orgd1a285a" class="outline-3">
-<h3 id="orgd1a285a">Type Theory</h3>
-<div class="outline-text-3" id="text-orgd1a285a">
+<div id="outline-container-org4574b3b" class="outline-3">
+<h3 id="org4574b3b">Type Theory</h3>
+<div class="outline-text-3" id="text-org4574b3b">
 <p>
 Practical Foundations for Programming Languages
 </p>
@@ -463,9 +463,9 @@ HoTT &amp; Univalence
 </ul>
 </div>
 </div>
-<div id="outline-container-org921bcf7" class="outline-3">
-<h3 id="org921bcf7">Proof Theory</h3>
-<div class="outline-text-3" id="text-org921bcf7">
+<div id="outline-container-orgfbd0483" class="outline-3">
+<h3 id="orgfbd0483">Proof Theory</h3>
+<div class="outline-text-3" id="text-orgfbd0483">
 <p>
 Intuitionistic logic is a synonym for “constructive logic” and <a href="https://www.andrew.cmu.edu/user/avigad/Papers/formal_epistemology.pdf">proof theory</a>.
 </p>
@@ -480,9 +480,9 @@ Intuitionistic logic is a synonym for “constructive logic” and <a href="http
 </ul>
 </div>
 </div>
-<div id="outline-container-org679bb1f" class="outline-3">
-<h3 id="org679bb1f">Category theory</h3>
-<div class="outline-text-3" id="text-org679bb1f">
+<div id="outline-container-orga095f1e" class="outline-3">
+<h3 id="orga095f1e">Category theory</h3>
+<div class="outline-text-3" id="text-orga095f1e">
 <p>
 The algebra of proofs.
 </p>
@@ -495,9 +495,9 @@ The algebra of proofs.
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-orgd57982d" class="outline-4">
-<h4 id="orgd57982d">Applications</h4>
-<div class="outline-text-4" id="text-orgd57982d">
+<div id="outline-container-org2d86b76" class="outline-4">
+<h4 id="org2d86b76">Applications</h4>
+<div class="outline-text-4" id="text-org2d86b76">
 <p>
 See the <a href="https://topos.institute/collaborative-modelling">Topos Institute</a> for more. 
 </p>
@@ -508,9 +508,9 @@ See the <a href="https://topos.institute/collaborative-modelling">Topos Institut
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a5a2c3" class="outline-4">
-<h4 id="org2a5a2c3">Research</h4>
-<div class="outline-text-4" id="text-org2a5a2c3">
+<div id="outline-container-org600946d" class="outline-4">
+<h4 id="org600946d">Research</h4>
+<div class="outline-text-4" id="text-org600946d">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into the seemingly impossible technical details. 
 </p>
@@ -518,11 +518,11 @@ Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/jou
 </div>
 </div>
 </div>
-<div id="outline-container-orgdb26372" class="outline-2">
-<h2 id="orgdb26372">CS103 - Machines, Languages &amp; Computation</h2>
-<div class="outline-text-2" id="text-orgdb26372">
+<div id="outline-container-org31a567a" class="outline-2">
+<h2 id="org31a567a">CS103 - Machines, Languages &amp; Computation</h2>
+<div class="outline-text-2" id="text-org31a567a">
 <p>
-This <a href="https://local.cis.strath.ac.uk/wp/extras/syllabus/?level=ug&amp;year=2025&amp;classid=1164">course</a> is taught by Conor McBride at the University of Strathclyde Glasgow and teaches math from scratch but from a view of abstract algebraic structures. We are about to do nothing but abstract category theory and algebra so may as well start at the beginning. This course also teaches computability, context-free grammars, recursion, undecidability and finite state machines all of which we'll need later and if you walk around telling people you have a CompSci degree they'd expect you to know this.
+This <a href="https://local.cis.strath.ac.uk/wp/extras/syllabus/?level=ug&amp;year=2025&amp;classid=1164">course</a> is taught by Conor McBride at the University of Strathclyde Glasgow and teaches math from scratch but from a view of abstract algebraic structures. We are about to do nothing but abstract category theory and algebra so may as well start at the beginning. This course also teaches computability, context-free grammars, recursion, undecidability and finite state machines all of which we'll need later and if you walk around telling people you have a CompSci degree they will expect you to know this.
 </p>
 
 <p>
@@ -558,7 +558,7 @@ Assuming you already installed <a href="https://www.gnu.org/software/emacs/">ema
 <p>
 Add the following lines to ~/.emacs
 </p>
-<pre class="example" id="org3616157">
+<pre class="example" id="org0daedc2">
 (add-to-list 'load-path "~/.emacs.d/ask")
 (load "ask.el")
 (add-to-list 'auto-mode-alist '("\\.ask\\'" . ask-mode))
@@ -573,13 +573,13 @@ You could easily configure VSCode to simply run "ask filename.ask" with a hot-ke
 </p>
 
 <p>
-TODO
+TODO took me some detective work to find ask and install it
 </p>
 </div>
 </div>
-<div id="outline-container-orgfa802ab" class="outline-2">
-<h2 id="orgfa802ab">Lean4</h2>
-<div class="outline-text-2" id="text-orgfa802ab">
+<div id="outline-container-orgcffb9ee" class="outline-2">
+<h2 id="orgcffb9ee">Lean4</h2>
+<div class="outline-text-2" id="text-orgcffb9ee">
 <p>
 Let's do <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this as most CMU students will be taking <a href="https://www.math.cmu.edu/~jmackey/151_128/welcome.html">15-151</a> at the same time.   
 </p>
@@ -592,9 +592,9 @@ Let's do <i>The Mechanics of Proof</i> because 15-150 will assume we know some o
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-org6ea0a84" class="outline-4">
-<h4 id="org6ea0a84">Local install</h4>
-<div class="outline-text-4" id="text-org6ea0a84">
+<div id="outline-container-org0f3e469" class="outline-4">
+<h4 id="org0f3e469">Local install</h4>
+<div class="outline-text-4" id="text-org0f3e469">
 <p>
 Gitpod free tier is easiest. To install Lean locally w/Visual Studio:
 </p>
@@ -618,17 +618,17 @@ Open any .lean extension file and you should get a right panel opening up in VS 
 </p>
 </div>
 </div>
-<div id="outline-container-org74e0f14" class="outline-4">
-<h4 id="org74e0f14">Emacs</h4>
-<div class="outline-text-4" id="text-org74e0f14">
+<div id="outline-container-org0fd1017" class="outline-4">
+<h4 id="org0fd1017">Emacs</h4>
+<div class="outline-text-4" id="text-org0fd1017">
 <p>
 Install <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a> and Ctrl-c Ctrl-i opens the lean view in a new window showing goals. 
 </p>
 </div>
 </div>
-<div id="outline-container-org4607735" class="outline-3">
-<h3 id="org4607735">Proving equalities</h3>
-<div class="outline-text-3" id="text-org4607735">
+<div id="outline-container-orgb950454" class="outline-3">
+<h3 id="orgb950454">Proving equalities</h3>
+<div class="outline-text-3" id="text-orgb950454">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. The goal here is to make both sides equal, with the right side finessed using algebra so it can be rewritten by a hypothesis such as a - b = 4 in the first example. 
 </p>
@@ -637,7 +637,7 @@ Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/
 1.2.x <i>Proving equalities in Lean</i> the .lean files are all included in the Math2001 directory you cloned from github. I had to fight with Lean to get it to accept 1.2.4 so rewrote it exactly like she did with parens:
 </p>
 
-<pre class="example" id="org8fdc761">
+<pre class="example" id="orgc89b866">
 -- Example 1.2.4.
 -- Exercise: type out the whole proof printed in the text as a Lean proof.
 example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
@@ -656,7 +656,7 @@ example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
 The underscore tells the matcher to ignore the left hand side of the equation when rewriting or other actions as we are presently working only with the right hand side. Look at the infoview/goals it will tell you when that stage is done by 'goals accomplished'. Try clicking around various parts of the proof to see how the infoview changes:
 </p>
 
-<pre class="example" id="org23f72df">
+<pre class="example" id="orgc182261">
 -- Example 1.3.2
 example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
   calc
@@ -669,7 +669,7 @@ example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
 You can rewrite a line using both hypotheses and eliminate some steps:
 </p>
 
-<pre class="example" id="org52367ff">
+<pre class="example" id="orgc817903">
 example {u v : ℚ} (h1 : 4 * u + v = 3) (h2 : v = 2) : u = 1 / 4 :=
   calc
   u = (4 * u + v)/4 - v/4 := by ring
@@ -678,14 +678,14 @@ example {u v : ℚ} (h1 : 4 * u + v = 3) (h2 : v = 2) : u = 1 / 4 :=
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd699f62" class="outline-3">
-<h3 id="orgd699f62">Tips and tricks</h3>
-<div class="outline-text-3" id="text-orgd699f62">
+<div id="outline-container-orgb70bc61" class="outline-3">
+<h3 id="orgb70bc61">Tips and tricks</h3>
+<div class="outline-text-3" id="text-orgb70bc61">
 <p>
 1.3.2 once again we first establish x = x then use the hypothesis to rewrite it
 </p>
 
-<pre class="example" id="org0eca759">
+<pre class="example" id="orgfa15406">
 -- Example 1.3.2
 example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
   calc
@@ -698,7 +698,7 @@ example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
 For the rest of these examples try them yourself going through the 03TipsandTricks.lean file before looking at the solution it's the only way you learn.  
 </p>
 
-<pre class="example" id="orgc335ab1">
+<pre class="example" id="org55f3e9b">
 -- Example 1.3.5
 example {x : ℤ} (h1 : 2 * x + 3 = x) : x = -3 :=
   calc
@@ -715,7 +715,7 @@ example {x : ℤ} (h1 : 2 * x + 3 = x) : x = -3 :=
 1.3.11 exercises all use the examples we just saw except the last 2: 
 </p>
 
-<pre class="example" id="orgd7f5ef6">
+<pre class="example" id="org8a4dad8">
 -- Exercises 1.3.11
 example {x y : ℝ} (h1 : x = 3) (h2 : y = 4 * x - 3) : y = 9 :=
   calc
@@ -824,9 +824,9 @@ Exercise 16 is of course impossible (no rational number exists that when squared
 </p>
 </div>
 </div>
-<div id="outline-container-org5d9cf90" class="outline-3">
-<h3 id="org5d9cf90">Proving inequalities</h3>
-<div class="outline-text-3" id="text-org5d9cf90">
+<div id="outline-container-org53816ab" class="outline-3">
+<h3 id="org53816ab">Proving inequalities</h3>
+<div class="outline-text-3" id="text-org53816ab">
 <p>
 We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-inequalities">proofs by calc</a> chapter.
 </p>
@@ -854,13 +854,13 @@ We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by
 To get the full list of the unicode symbols every editor plugin comes with an <a href="https://github.com/leanprover-community/lean4-mode/blob/master/data/abbreviations.json">abbreviations.json</a> file. Place '\' (LaTeX style commands) before any of those symbols on the left of the abbreviations file to see them converted to the symbols on the right. For example \b is converted in the editor to \(\beta\)    
 </p>
 
-<pre class="example" id="orgef87f35">
+<pre class="example" id="org993fb59">
 \ge greater or equal
 \le less than or equal
 &lt; and &gt; are just unicode keyboard chars
 </pre>
 
-<pre class="example" id="org087cf7a">
+<pre class="example" id="org2c696a5">
 -- Example 1.4.2
 example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 :=
   calc
@@ -874,7 +874,7 @@ example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 :=
 Example 1.4.3 think why is x + y &lt;= x + (x + 5) it's because y &lt;= x + 5 and x is &lt;= to itself. 
 </p>
 
-<pre class="example" id="orgda1357c">
+<pre class="example" id="orgba55a05">
 -- Example 1.4.3
 example {x y : ℝ} (h1 : y ≤ x + 5) (h2 : x ≤ -2) : x + y &lt; 2 :=
   calc
@@ -888,7 +888,7 @@ example {x y : ℝ} (h1 : y ≤ x + 5) (h2 : x ≤ -2) : x + y &lt; 2 :=
 Example 1.4.6 the final tactic is := by extra which is defined in the <a href="https://hrmacbeth.github.io/math2001/Index_of_Tactics.html">Index of Lean tactics</a> as "extra checks an inequality whose two sides differ by the addition of a positive quantity". 
 </p>
 
-<pre class="example" id="orgbddfaf6">
+<pre class="example" id="org3bd3d43">
 -- Example 1.4.9
 example {a b : ℚ} (h1 : a ≥ 0) (h2 : b ≥ 0) (h3 : a + b ≤ 8) :
     3 * a * b + a ≤ 7 * b + 72 :=
@@ -910,7 +910,7 @@ example {a b : ℚ} (h1 : a ≥ 0) (h2 : b ≥ 0) (h3 : a + b ≤ 8) :
 Try the 14.11 exercises I couldn't get lean to accept my solution for the last exercise:
 </p>
 
-<pre class="example" id="orgfb9cc6d">
+<pre class="example" id="org099b353">
 example {x y : ℤ} (h1 : x + 3 ≥ 2 * y) (h2 : 1 ≤ y) : x ≥ -1 :=
   calc
   x = x + 3 - 3 := by ring
@@ -973,18 +973,18 @@ Read the next section on addarith, it's a purposely weakened version of linarith
 </p>
 </div>
 </div>
-<div id="outline-container-org564f833" class="outline-3">
-<h3 id="org564f833">Proofs with structure</h3>
-<div class="outline-text-3" id="text-org564f833">
+<div id="outline-container-org2739cc9" class="outline-3">
+<h3 id="org2739cc9">Proofs with structure</h3>
+<div class="outline-text-3" id="text-org2739cc9">
 <p>
 TODO
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org80995bd" class="outline-2">
-<h2 id="org80995bd">Principles of Functional Programming</h2>
-<div class="outline-text-2" id="text-org80995bd">
+<div id="outline-container-org4951fe9" class="outline-2">
+<h2 id="org4951fe9">Principles of Functional Programming</h2>
+<div class="outline-text-2" id="text-org4951fe9">
 <p>
 TODO there is abbreviated version of this course <a href="https://www.functionsarevalues.com/">here</a>
 </p>
