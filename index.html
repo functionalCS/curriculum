@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-05-05 Tue 21:40 -->
+<!-- 2026-05-06 Wed 06:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A (mostly functional) 21st Century CompSci Curriculum</title>
@@ -234,49 +234,49 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgef41813">What is this</a></li>
-<li><a href="#orgc425299">Basics</a>
+<li><a href="#org6cf57b2">What is this</a></li>
+<li><a href="#org83c8f27">Basics</a>
 <ul>
-<li><a href="#orgb879f0e">Programming</a></li>
-<li><a href="#org4dd75db">Math</a></li>
-<li><a href="#org3431d4c">Algorithms</a></li>
+<li><a href="#org20847f8">Programming</a></li>
+<li><a href="#org6ed8275">Math</a></li>
+<li><a href="#org277df7c">Algorithms</a></li>
 </ul>
 </li>
-<li><a href="#org86a7fe7">Computational Trinity</a>
+<li><a href="#org3f5dce3">Computational Trinity</a>
 <ul>
-<li><a href="#org7a37edb">Type Theory</a></li>
-<li><a href="#orga2365f7">Proof Theory</a></li>
-<li><a href="#org1407e04">Category theory</a>
+<li><a href="#org0b0d22d">Type Theory</a></li>
+<li><a href="#org977c63a">Proof Theory</a></li>
+<li><a href="#orgc48f9eb">Category theory</a>
 <ul>
-<li><a href="#orgb420338">Applications</a></li>
-<li><a href="#orge7996c3">Research</a></li>
+<li><a href="#org70a9064">Applications</a></li>
+<li><a href="#org93f8aec">Research</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org91b5278">Mathematical Structures for CS</a>
+<li><a href="#orgc6b0710">Mathematical Structures for CS</a>
 <ul>
-<li><a href="#org054acea">Spuds and lemons</a></li>
-<li><a href="#org2b11332">Go forth and multiply</a></li>
-<li><a href="#org9661318">Is multiplication associative?</a></li>
+<li><a href="#org5376a86">Spuds and lemons</a></li>
+<li><a href="#org7919b9b">Go forth and multiply</a></li>
+<li><a href="#orgf1e72a2">Is multiplication associative?</a></li>
 </ul>
 </li>
-<li><a href="#orga7b7315">Mechanics of Proof</a>
+<li><a href="#org63fefb7">Mechanics of Proof</a>
 <ul>
-<li><a href="#org6217846">Lean4 proof assistant</a></li>
-<li><a href="#orga201d6e">Proving equalities</a></li>
-<li><a href="#org38f3e1f">Tips and tricks</a></li>
-<li><a href="#org06d0777">Proving inequalities</a></li>
-<li><a href="#orgb08b19e">Proofs with structure</a></li>
+<li><a href="#org87718d8">Lean4 proof assistant</a></li>
+<li><a href="#orgca4a33f">Proving equalities</a></li>
+<li><a href="#org02f2f5a">Tips and tricks</a></li>
+<li><a href="#org833aa1d">Proving inequalities</a></li>
+<li><a href="#orgf49d70c">Proofs with structure</a></li>
 </ul>
 </li>
-<li><a href="#orgcb3b518">Principles of Functional Programming</a></li>
+<li><a href="#org61b6ea0">Principles of Functional Programming</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgef41813" class="outline-2">
-<h2 id="orgef41813">What is this</h2>
-<div class="outline-text-2" id="text-orgef41813">
+<div id="outline-container-org6cf57b2" class="outline-2">
+<h2 id="org6cf57b2">What is this</h2>
+<div class="outline-text-2" id="text-org6cf57b2">
 <p>
 This is a research dive into what <a href="https://www.cs.cmu.edu/~rwh/">Robert Harper</a> calls <a href="https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/">computational trinitarianism</a> where any concept in computation manifests itself in three forms: Logic (proof theory), Programs (type theory), and Categories (algebra of proofs). Any route can get you to the 'divine notion of computation' and discovering something that has meaning in all three points of view is a legitimate scientific discovery.
 </p>
@@ -286,13 +286,13 @@ A consequence of years of type theory research is we now have proof assistants w
 </p>
 </div>
 </div>
-<div id="outline-container-orgc425299" class="outline-2">
-<h2 id="orgc425299">Basics</h2>
-<div class="outline-text-2" id="text-orgc425299">
+<div id="outline-container-org83c8f27" class="outline-2">
+<h2 id="org83c8f27">Basics</h2>
+<div class="outline-text-2" id="text-org83c8f27">
 </div>
-<div id="outline-container-orgb879f0e" class="outline-3">
-<h3 id="orgb879f0e">Programming</h3>
-<div class="outline-text-3" id="text-orgb879f0e">
+<div id="outline-container-org20847f8" class="outline-3">
+<h3 id="org20847f8">Programming</h3>
+<div class="outline-text-3" id="text-org20847f8">
 <p>
 The proof assistant used is the language itself.
 </p>
@@ -302,7 +302,6 @@ The proof assistant used is the language itself.
 <ul class="org-ul">
 <li>The terse <a href="https://www.functionsarevalues.com/">version</a></li>
 <li>Older Assignments &amp; labs can be grabbed from <a href="https://github.com/zhengguan/15150-2">here</a> and <a href="https://github.com/zh3036/15150">here</a></li>
-<li>TAs wrote helpful <a href="https://smlhelp.github.io/book/docs/">docs</a> for 15-150</li>
 <li>We can also try whatever current version of <a href="https://hypefortypes.github.io/">hype for types</a></li>
 <li>A very <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/proofdirected-program-transformation-a-functional-account-of-efficient-regular-expression-matching/454BB5CD9B0B056FA91957F2F9CC3EC5?utm_campaign=shareaholic&amp;utm_medium=copy_link&amp;utm_source=bookmark">detailed</a> and efficient rewrite of the regex matcher from Harper's SML book for proof directed debugging</li>
 </ul></li>
@@ -320,9 +319,9 @@ Coinduction/Coalgebras are introduced here.
 </ul>
 </div>
 </div>
-<div id="outline-container-org4dd75db" class="outline-3">
-<h3 id="org4dd75db">Math</h3>
-<div class="outline-text-3" id="text-org4dd75db">
+<div id="outline-container-org6ed8275" class="outline-3">
+<h3 id="org6ed8275">Math</h3>
+<div class="outline-text-3" id="text-org6ed8275">
 <p>
 This is a typical discrete math course formalized in Lean 4.
 </p>
@@ -345,33 +344,33 @@ Mathematical Structures for CS an introductory <a href="https://local.cis.strath
 </ul>
 </div>
 </div>
-<div id="outline-container-org3431d4c" class="outline-3">
-<h3 id="org3431d4c">Algorithms</h3>
-<div class="outline-text-3" id="text-org3431d4c">
+<div id="outline-container-org277df7c" class="outline-3">
+<h3 id="org277df7c">Algorithms</h3>
+<div class="outline-text-3" id="text-org277df7c">
 <p>
 The most interesting course is <a href="https://courses.csail.mit.edu/6.851/spring21/">Advanced Data Structures</a> by Erik Demaine.
 </p>
 
 <p>
-I plan to use the free book <a href="https://fdsa-book.net/">Functional Data Structures and Algorithms</a> which verifies complexity and correctness with Isabelle/HOL to get used to the style of thinking an algorithm designer would have. I then plan to try <a href="https://github.com/calfproject/agda-calf">calf</a> to analyze costs of the same algorithms with different cost models. There's many other books to try analyzing their algorithms in calf like the parallel algorithms in CMU's <a href="https://www.umut-acar.org/algorithms-book">15-210 Book</a> by Umut A. Acar which uses a better cost model to analyze <a href="https://www.cs.cmu.edu/~rwh/papers/iolambda/short.pdf">cache efficient</a> algorithms that accounts for garbage collection and moving I/O around.
+I plan to use the free book <a href="https://fdsa-book.net/">Functional Data Structures and Algorithms</a> which verifies complexity and correctness with Isabelle/HOL then will try <a href="https://github.com/calfproject/agda-calf">calf</a> to analyze costs of the same algorithms with different cost models. There's many other books to try in calf like the parallel algorithms in CMU's <a href="https://www.umut-acar.org/algorithms-book">15-210 Book</a> that accounts for garbage collection and moving I/O around.
 </p>
 
 <p>
-An optional course you may like is <a href="https://courses.csail.mit.edu/6.5440/fall23/">Algorithmic Lower Bounds</a> and draft <a href="https://hardness.mit.edu/">book</a> because one day you will be working on something which seems to be impossible and you'll want to know is there a similar problem out there someone else has already proved belongs in EXP-hard because it means you are wasting your time. There is many, many problems that can't be solved with an algorithm in any sort of sane polynomial time. This course teaches how an existing problem in some complexity class can be reduced using constraint logic and other methods to whatever it is you're working on to prove you're screwed. Now you can change the goals of what you're trying to do or maybe try known approximation tricks of similar problems in that class to help get better running time.    
+A course you may like is <a href="https://courses.csail.mit.edu/6.5440/fall23/">Algorithmic Lower Bounds</a> and draft <a href="https://hardness.mit.edu/">book</a> because one day you will be working on something which seems to be impossible and you'll want to know is there a similar problem out there someone else has already proved belongs in EXP-hard because it means you are wasting your time. There is many, many problems that can't be solved with an algorithm in any sort of sane polynomial time. This course teaches how an existing problem in some complexity class can be reduced using constraint logic and other methods to whatever it is you're working on to prove you're screwed. Now you can change the goals of what you're trying to do or maybe try known approximation tricks of similar problems in that class to help get better running time.    
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org86a7fe7" class="outline-2">
-<h2 id="org86a7fe7">Computational Trinity</h2>
-<div class="outline-text-2" id="text-org86a7fe7">
+<div id="outline-container-org3f5dce3" class="outline-2">
+<h2 id="org3f5dce3">Computational Trinity</h2>
+<div class="outline-text-2" id="text-org3f5dce3">
 <p>
 All these topics are the same concept: computer programming.
 </p>
 </div>
-<div id="outline-container-org7a37edb" class="outline-3">
-<h3 id="org7a37edb">Type Theory</h3>
-<div class="outline-text-3" id="text-org7a37edb">
+<div id="outline-container-org0b0d22d" class="outline-3">
+<h3 id="org0b0d22d">Type Theory</h3>
+<div class="outline-text-3" id="text-org0b0d22d">
 <p>
 Proofs are programs. 
 </p>
@@ -404,9 +403,9 @@ Everything we can find on phase distinctions too and <a href="https://home.sandi
 </p>
 </div>
 </div>
-<div id="outline-container-orga2365f7" class="outline-3">
-<h3 id="orga2365f7">Proof Theory</h3>
-<div class="outline-text-3" id="text-orga2365f7">
+<div id="outline-container-org977c63a" class="outline-3">
+<h3 id="org977c63a">Proof Theory</h3>
+<div class="outline-text-3" id="text-org977c63a">
 <p>
 Intuitionistic logic is a synonym for “constructive logic” and <a href="https://www.andrew.cmu.edu/user/avigad/Papers/formal_epistemology.pdf">proof theory</a> is viewing mathematical proofs as finite combinatorial objects or actual things you can construct and show someone.  
 </p>
@@ -422,9 +421,9 @@ Intuitionistic logic is a synonym for “constructive logic” and <a href="http
 </ul>
 </div>
 </div>
-<div id="outline-container-org1407e04" class="outline-3">
-<h3 id="org1407e04">Category theory</h3>
-<div class="outline-text-3" id="text-org1407e04">
+<div id="outline-container-orgc48f9eb" class="outline-3">
+<h3 id="orgc48f9eb">Category theory</h3>
+<div class="outline-text-3" id="text-orgc48f9eb">
 <p>
 The algebra of proofs/programs. 
 </p>
@@ -440,9 +439,9 @@ The algebra of proofs/programs.
 NJ Wildberger made an excellent <a href="https://www.youtube.com/playlist?list=PLIljB45xT85D7wczwyUQdwDe2duZ7wPTf">Algebraic Topology</a> course which avoids set theory nonsense and focuses on the ideas. This is what we'll need to understand any book on Category Theory.
 </p>
 </div>
-<div id="outline-container-orgb420338" class="outline-4">
-<h4 id="orgb420338">Applications</h4>
-<div class="outline-text-4" id="text-orgb420338">
+<div id="outline-container-org70a9064" class="outline-4">
+<h4 id="org70a9064">Applications</h4>
+<div class="outline-text-4" id="text-org70a9064">
 <p>
 See the <a href="https://topos.institute/">Topos Institute</a> for more.
 </p>
@@ -456,13 +455,9 @@ See the <a href="https://topos.institute/">Topos Institute</a> for more.
 </ul>
 </div>
 </div>
-<div id="outline-container-orge7996c3" class="outline-4">
-<h4 id="orge7996c3">Research</h4>
-<div class="outline-text-4" id="text-orge7996c3">
-<p>
-It may seem topics like <a href="https://pdos.csail.mit.edu/6.824/">Distributed Systems</a> are missing but you will already know about message passing concurrency, asych promises and whatever language features for doing this. If you're writing this kind of software to enforce modularity with a bunch of abstractions you're likely working within a constructive modal logic which of course means (because of the 'computational trinity') you are working in a categorical model too (frames) which of course means you are working in a type theory (multimodal dependent type theory). You could write distributed systems without ever knowing that but it's an example how if you can program it then there exists a logic and an algebra for it too waiting to be discovered. 
-</p>
-
+<div id="outline-container-org93f8aec" class="outline-4">
+<h4 id="org93f8aec">Research</h4>
+<div class="outline-text-4" id="text-org93f8aec">
 <p>
 Robert Harper once spent an <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/on-being-a-phd-student-of-robert-harper/B68BCF31384084D9FDCB17A7DF1DE7A0">entire week</a> reading the source of an operating system to find out in complete detail exactly what happened when he pushed a button on his keyboard how it ended up transformed as pixels on his screen. His advice to grad students is to develop a point of view so when you start a project articulate exactly why it's worthwhile and keep this perspective when you are deep into the seemingly impossible technical details.
 </p>
@@ -496,9 +491,9 @@ What you can do with AI is use it to analyze Lean's Mathlib or <a href="https://
 </div>
 </div>
 </div>
-<div id="outline-container-org91b5278" class="outline-2">
-<h2 id="org91b5278">Mathematical Structures for CS</h2>
-<div class="outline-text-2" id="text-org91b5278">
+<div id="outline-container-orgc6b0710" class="outline-2">
+<h2 id="orgc6b0710">Mathematical Structures for CS</h2>
+<div class="outline-text-2" id="text-orgc6b0710">
 <p>
 This <a href="https://local.cis.strath.ac.uk/wp/extras/syllabus/?level=ug&amp;year=2025&amp;classid=1164">course</a> is taught by Conor McBride at the University of Strathclyde Glasgow and teaches math from scratch but from a view of abstract algebraic structures. We are about to do nothing but abstract category theory and algebra so may as well start at the beginning. This course also teaches computability, context-free grammars, recursion, undecidability and finite state machines which some is due to legacy reasons but if you walk around telling people you have a CompSci degree they will expect you to know this. McBride co-invented <a href="https://ncatlab.org/nlab/show/observational+type+theory">Observational</a> Type Theory which will learn eventually when we get to type theory.
 </p>
@@ -540,7 +535,7 @@ You're done unless you use emacs which in case:
 <p>
 Add the following lines to ~/.emacs
 </p>
-<pre class="example" id="org3692e6d">
+<pre class="example" id="orga24b631">
 (add-to-list 'load-path "~/.emacs.d/ask")
 (load "ask.el")
 (add-to-list 'auto-mode-alist '("\\.ask\\'" . ask-mode))
@@ -550,9 +545,9 @@ Add the following lines to ~/.emacs
 Everytime you open a file ending in .ask it should automatically start ask-mode. If not run 'M-x ask-mode' where M-x is usually Alt-x on a modern keyboard and it will start. Run the current buffer by pressing Tab and Edit-&gt;Undo to go back or C-x u which is press Ctrl-x, let go and press u. You can customize the colors in ask.el if your emacs has a dark background.
 </p>
 </div>
-<div id="outline-container-org054acea" class="outline-3">
-<h3 id="org054acea">Spuds and lemons</h3>
-<div class="outline-text-3" id="text-org054acea">
+<div id="outline-container-org5376a86" class="outline-3">
+<h3 id="org5376a86">Spuds and lemons</h3>
+<div class="outline-text-3" id="text-org5376a86">
 <p>
 Watching the first <a href="https://youtu.be/WD4inwgZwKc?si=jDwCRFGuPDPVagEr">lecture</a>. Some of this is in <a href="https://github.com/pigworker/MS4P/blob/main/MS4P.pdf">chapter 1</a> of the book draft. 
 </p>
@@ -562,10 +557,10 @@ This already seems bonkers but reminder what we are actually learning is <a href
 </p>
 
 <p>
-Everything in the lectures enter them into an .ask file and don't delete them because we'll need all these definitions later. Ask has to be built up from scratch: "Ask doesn't know anything by default and you've removed part of it's brain". 
+Everything in the lectures enter them into an .ask file and don't delete them because we'll need all these definitions later. Ask has to be built up from scratch: "Ask doesn't know anything by default and if you delete things you've removed part of it's brain". 
 </p>
 
-<pre class="example" id="orgd84d6de">
+<pre class="example" id="org21b548e">
 -- Double dash signals a comment!
 
 -- Declare a data type, Number,
@@ -580,108 +575,74 @@ define four = S (S (S (S Z)))
 </pre>
 
 <p>
-When you run that in emacs by pressing Tab, it will change your current buffer to show 'defined' like in the lecture except on their system the output is shown beside the editor and ours directly changes things. Undo the changes if you make a mistake. 
+When you run that in emacs by pressing Tab, it will change your current buffer to show 'defined' like in the lecture except on their system the output is shown beside the editor and ours directly changes things. Undo the changes if you make a mistake.
 </p>
 
-<pre class="example" id="orgb37e792">
+<p>
+The way addition works is in the <a href="https://github.com/pigworker/MS4P/blob/main/MS4P.pdf">book</a> Chapter 1.2, to add S(SZ) to SZ remove the two S's on the left and once Z is reached <i>substitute</i> it for the other number SZ to get S(S(SZ). Here is the function that does exactly that and if you press tab as you write then Ask fills in all the code for you:
+</p>
+
+<pre class="example" id="org5dd2627">
 -- define plus
 plus :: Number -&gt; Number -&gt; Number
-define plus n m inductively n where
- define plus n m from n where
-   define plus Z y = y
-   define plus (S x) y = S (plus x y)
+defined plus n m inductively n where
+  defined plus n m from n where
+    defined plus Z m = m
+    defined plus (S x) m = S (plus x m)
 </pre>
 
 <p>
-Defined inductively means something constructed by a finite amount of applications of a given set of rules. A number has two 'rules' for it's construction: Z or S Number. You make more numbers by applying the constructor S to a Number like S (S Z) or S Z. We're told to imagine a skewer with a lemon added first then spuds or S attached on the skewer on top of the lemon. The book recommended for this course is <i>Godel, Escher, Bach</i> and defining things that reference themselves by name is in that book which we'll shortly read ourselves. 
+Defined inductively means something constructed by a finite amount of applications of a given set of rules. A number has two 'rules' for it's construction: Z or S Number. You make more numbers by applying the constructor S to a Number like S (SZ) to make 2 or SZ to make 1. We're told to imagine a skewer with a lemon added first then spuds attached on the skewer beside the lemon. 
 </p>
 
 <p>
 Full explanation of the code:
 </p>
 
-<pre class="example" id="org5c9a6e9">
+<pre class="example" id="org946c69b">
 plus :: Number -&gt; Number -&gt; Number
 </pre>
 
 <p>
-This is a function signature that says plus consumes two inputs of type Number and returns a type Number. 
+This is a function type signature: plus consumes two inputs of type Number and returns type Number. 
 </p>
 
-<pre class="example" id="orga982529">
+<pre class="example" id="orgc87ca51">
 define plus n m inductively n where
 </pre>
 
 <p>
-Prof McBride says to interpret this as n is the input that gets smaller meaning in the body of the function we work on the n input one spud at a time until we reach a lemon. Recall that anything defined inductively is something constructed from a finite set of applications of a given set of rules that's also what this is saying here: n was made by such a process so it will have <i>cases</i> to split on.
+Prof McBride says to interpret this as n is the input that gets smaller. Recall that anything defined inductively is something constructed from a finite set of applications of a given set of rules that's also what this is saying here: n was made by such a process so it will have <i>cases</i> to split on.
 </p>
 
-<pre class="example" id="org2be88ac">
+<pre class="example" id="org72d3640">
 defined plus n m from n where
-   defined plus Z y = y
-   defined plus (S x) y = S (plus x y)
+ defined plus Z m = m
+ defined plus (S x) m = S (plus x m)
 </pre>
 
 <p>
-Here we split the cases: n is either Z or S Number. Everytime the plus function is run plus checks the input n: is this current input Z or S Number?
-</p>
-
-<p>
-There is two variables here y and x which you can freely change. The variable y is bound to the <i>current</i> input m. The variable x is bound to the <i>current</i> Number from S Number. If a Number is S (S Z) then (S Z) is bound to x. This is interpreted as 'the rest of the number'. If we call plus again with the rest of the number each time then the inputs to plus keep getting smaller until Z is reached. 
+Here we split the cases: the input n is either Z or S Number. The variable x is bound to the <i>current</i> Number from S Number. If a Number is S(SZ) then (SZ) is bound to x. This is interpreted as 'the rest of the number'. If we keep calling plus again with the rest of the number x then the inputs to plus get smaller until Z is reached.  
 </p>
 
 <p>
 Let's look at how this function returns values.
 </p>
 
-<pre class="example" id="org9e88e6b">
-Set the value of n = S (S (S (S Z)))
-Set the value of m = Z
-
-Apply the function plus to n and m 
-
-S (plus (S (S (S Z))) Z)
- S (S (plus (S (S Z)) Z))
- S (S (S (plus S Z) Z))
- S (S (S (S (plus Z) Z)))  
- --  case if Z return m which here m = Z 
- S (S (S (S Z)))
+<pre class="example" id="orgf26a704">
+Set value of n = S(S(S(SZ)))
+Set value of m = Z
+plus n m returns:
+S(plus (S(S(SZ))) m)
+S(S(plus (S(SZ)) m))
+S(S(S(plus SZ m)))
+S(S(S(S(plus Z m))))  
+ -- case if Z return m which here m = Z 
+S(S(S(SZ)))
 </pre>
 
 <p>
-Where do the brackets come from in the returns? In the definition of plus with return S (plus x y). Execution in purely functional programming is simple substitution like math. Everything in the brackets is placed by the next return and all future computations keep growing inside more brackets of (plus x y) then the most nested bracket is evaluated first once we reach a Z and recursion stops.
-</p>
-
-<p>
-Step this plus function so many times you figure out exactly what's going on. I inserted commas between the inputs to plus m n because Haskell syntax is so abstract it's hard to follow what's happening but (plus n, m) means (plus n m):
-</p>
-
-<ul class="org-ul">
-<li>n = S (S Z), m = (S, Z)</li>
-<li>plus S (S Z), (S, Z)  
-<ul class="org-ul">
-<li>S (plus (S Z), m)</li>
-<li>S (S (plus Z), m)
-<ul class="org-ul">
-<li>return m as per plus definition</li>
-</ul></li>
-<li>S (S (S, Z))</li>
-</ul></li>
-</ul>
-
-<p>
-Step this again with n = Z, m = (S, Z):
-</p>
-<ul class="org-ul">
-<li>plus Z, (S Z)
-<ul class="org-ul">
-<li>returm m as per plus definition</li>
-</ul></li>
-<li>(S Z)</li>
-</ul>
-
-<p>
-Recursion builds up delayed computations until it halts with Z and can eval.
+Where do the brackets come from in the returns? In the definition of plus with return S (plus x m). Execution in purely functional programming is simple substitution like math. Everything in the brackets is replaced by the next return which is another S (plus x m) then the most nested bracket is evaluated first once we reach a Z and recursion stops.
 </p>
 
 <p>
@@ -689,7 +650,7 @@ In this lecture is a very illustrative way to tell students to use chat and not 
 </p>
 
 <p>
-We can't see the other screen but this is just associativity: n + m is n added m times. 2 + 3 is 2 + 2 + 2 and 3 + 2 is 3 + 3 and both are the same result. 
+We can't see the other screen but this is just associativity: n + m is n added m times. 2 + 3 is 2 + 2 + 2 and 3 + 2 is 3 + 3 and both are the same result. This is in the <a href="https://github.com/pigworker/MS4P/blob/main/MS4P.pdf">book</a> 1.2 Chapter.
 </p>
 
 <p>
@@ -701,14 +662,14 @@ Inductive reasoning is after you observe all the special cases you make an 'indu
 </p>
 
 <p>
-A proof by induction is similar you manually prove that some property holds in the base case which here means an input of Z. That property could be that the plus function will always have the property that whatever inputs you give it n and m will be return n + m. Next you inductively assume for all future inputs n that this property still holds. You prove it holds for the n + 1 input or successor input then there is an implication chain from the Z input to n + 1 that this property always holds.
+A proof by induction is similar you manually prove that some property holds in the base case which here means an input of Z. That property could be that the plus function will always have the property that whatever inputs you give it n and m will return n + m. Next you inductively assume for all future inputs n that this property still holds. You prove it holds for the n + 1 input or successor input then there is an implication chain from the Z input, n inputs, n + 1 input that this property always holds.
 </p>
 
 <p>
 Let's prove the (+) function:
 </p>
 
-<pre class="example" id="org3be045d">
+<pre class="example" id="orgca46b57">
 (+) :: Number -&gt; Number -&gt; Number
 defined x + y inductively x where
   defined x + y from x where
@@ -717,22 +678,22 @@ defined x + y inductively x where
 </pre>
 
 <p>
-Prove Z + a = a. First substitute the inputs to (+) with the left side of the proof (the inputs):
+Prove Z + a = a. We don't have to substitute any inputs here as it's obvious a is returned:
 </p>
 
-<pre class="example" id="org6af1dd6">
+<pre class="example" id="org50c10b3">
 (+) :: Number -&gt; Number -&gt; Number
-defined Z + a inductively Z where
-  defined Z + a from Z where
-   defined Z + a = a
+defined x + y inductively Z where
+  defined x + y from Z where
+   defined Z + y = y
    ....
 </pre>
 
 <p>
-And as expected a is returned we proved Z + a = a. Let's try the other proof:
+Let's try the other proof:
 </p>
 
-<pre class="example" id="orgff70046">
+<pre class="example" id="orga04ab46">
 prove x + Z = x tested where
   prove x + Z = x inductively x where
     prove x + Z = x from x where
@@ -740,26 +701,26 @@ prove x + Z = x tested where
 </pre>
 
 <p>
-Again replace all the code via substitution with the input Sx + Z:
+Replace the code via substitution with the input Sx + Z:
 </p>
 
-<pre class="example" id="org6a53f8c">
+<pre class="example" id="org14e5729">
 (+) :: Number -&gt; Number -&gt; Number
-defined S x + Z inductively S x where
-  defined S x + Z from S x where
-   defined Z + Z = Z
-   defined (S x) + Z = S (x + Z)   
+defined x + y inductively x where
+  defined x + y from x where
+   defined Z + y = Z
+   defined (S x) + y = S (x + Z)  
 </pre>
 
 <p>
-In the proof we assumed x + Z = x if you look at "prove x + Z = x inductively x". Looking at the definition of the (+) function S x + Z = S (x + Z) we can rewrite (x + Z) to be x. Why? We <i>assumed</i> it was true. Proof is done: S x + Z = S x.
+In the proof we assumed x + Z = x with "prove x + Z = x inductively x" and can rewrite S (x + Z) to x. Proof is done: S x + Z = S x.
 </p>
 
 <p>
 Next proof:
 </p>
 
-<pre class="example" id="orgc5a3144">
+<pre class="example" id="org4b6e1d6">
 (+) :: Number -&gt; Number -&gt; Number
 defined x + y inductively x where
   defined x + y from x where
@@ -773,27 +734,27 @@ proven (x + y) + z = x + (y + z) tested where
 </pre>
 
 <p>
-Just like before replace all inputs with the given inputs "S x + y + z":
+Plug the input "S x + y + z" into (+) or (S x) + (y + z) as + only accepts two inputs. 
 </p>
 
-<pre class="example" id="org39b4b36">
+<pre class="example" id="org9f4e2ba">
 (+) :: Number -&gt; Number -&gt; Number
-defined S x + (y + z) inductively x where
-  defined S x + (y + z) from S x where
-   defined Z + (y + z) = (y + z)
-   defined (S x) + (y + z) = S (x + (y + z))
+defined x + y inductively x where
+  defined x + y from x where
+   defined Z + y = (y + z)
+   defined (S x) + y = S (x + (y + z))
 </pre>
 
 <p>
-We assumed inductively that x + y + z = x + (y + z). This is now:
+We assumed inductively that x + y + z = x + (y + z): 
 </p>
 
-<pre class="example" id="orgd17e49e">
+<pre class="example" id="orgeb46fbb">
 (+) :: Number -&gt; Number -&gt; Number
-defined S x + (y + z) inductively x where
-  defined S x + (y + z) from S x where
-   defined Z + (y + z) = (y + z)
-   defined (S x) + (y + z) = S x + y + z
+defined x + y inductively x where
+  defined x + y from x where
+   defined Z + y = (y + z)
+   defined (S x) + y = S x + y + z
 </pre>
 
 <p>
@@ -801,9 +762,9 @@ Proven as S x + (y + z) = S x + y + z.
 </p>
 </div>
 </div>
-<div id="outline-container-org2b11332" class="outline-3">
-<h3 id="org2b11332">Go forth and multiply</h3>
-<div class="outline-text-3" id="text-org2b11332">
+<div id="outline-container-org7919b9b" class="outline-3">
+<h3 id="org7919b9b">Go forth and multiply</h3>
+<div class="outline-text-3" id="text-org7919b9b">
 <p>
 Watching <a href="https://youtu.be/Qk4Vse_F_z0?si=3M7z3U0lowyaTAmu">lecture 2</a>.
 </p>
@@ -813,10 +774,14 @@ We don't have access to the homework but it's not needed. Pause the lecture befo
 </p>
 
 <p>
-For example multiplication is defined in math as repeated addition so 3 * 2 is two groups of 3 added or 3 groups of 2 added. Everytime your program looks at the input that is inductively defined to shrink to Z then add an entire copy of the other input. See if your solution matches the lecture solution.
+Try writing multiply before it's shown in the lecture. Multiplication is defined in math as repeated addition: 3 * 2 is two groups of 3 added or 3 groups of 2 added. Everytime your program looks at the input that is inductively defined to shrink to Z then add an entire copy of the other input.
 </p>
 
-<pre class="example" id="org7cb5242">
+<p>
+You should be pressing tab often and having Ask fill out all the code for you.
+</p>
+
+<pre class="example" id="org25c85b6">
 (*) :: Number -&gt; Number -&gt; Number
 defined a * b inductively b where
   defined a * b from b where
@@ -827,62 +792,66 @@ proven a * (S Z) = a tested
 </pre>
 
 <p>
-Prove a * S Z = a. As before substitute the input to the function body:
+Prove a * SZ = a. Ask does this for us trivially but we can figure it out ourselves too. As before substitute the input to the function body. 
 </p>
 
-<pre class="example" id="org3c86c03">
+<pre class="example" id="org81d6067">
 (*) :: Number -&gt; Number -&gt; Number
-defined a * S Z inductively S Z where
-  defined a * S Z from S Z where
+defined a * b inductively b where
+  defined a * b from b where
     defined a * Z = Z
-    defined a * S Z = a + (a * Z)
+    defined a * S x = a + (a * Z) &lt;-- only change w/input a*SZ
 </pre>
 
 <p>
-a + (a * Z) is trivially returned as a + Z and we already proved a + Z = a.
+The successor of Z is SZ and the x in SZ is Z. Here a + (a * Z) is trivially returned as a + Z and we already proved a + Z = a. Proof is done: a * SZ = a.
 </p>
 
 <p>
-Next prove S Z * b = b and replace all the inputs again:
+Next prove SZ * b = b and replace all the inputs again:
 </p>
 
-<pre class="example" id="org1184423">
+<pre class="example" id="orge367c68">
 (*) :: Number -&gt; Number -&gt; Number
-defined S Z * b inductively b where
-  defined S Z * b from b where
-    defined S Z * Z = Z
-    defined S Z * S x = S Z + (S Z * x)
+defined a * b inductively b where
+  defined a * b from b where
+    defined a * Z = Z
+    defined a * S x = SZ + (SZ * x)
 </pre>
 
 <p>
-This becomes S Z * S x = S Z + (S Z * x) where we inductively assumed S Z * b = b. Rewrite using this assumption:
+We inductively assumed SZ * b = b and can rewrite:
 </p>
 
-<pre class="example" id="orga396b11">
+<pre class="example" id="orgfdec475">
 (*) :: Number -&gt; Number -&gt; Number
-defined S Z * b inductively b where
-  defined S Z * b from b where
-    defined S Z * Z = Z
-    defined S Z * S x = S Z + x
+defined a * b inductively b where
+  defined a * b from b where
+    defined a * Z = Z
+    defined a * S x = SZ + x
 </pre>
 
 <p>
-S Z + x is really 1 + x making x into a successor or S x. Proof is done: S Z * S x = S x. 
+SZ + x is really 1 + x making x into a successor or Sx. Proof is done: SZ * Sx = Sx. 
 </p>
 </div>
 </div>
-<div id="outline-container-org9661318" class="outline-3">
-<h3 id="org9661318">Is multiplication associative?</h3>
-<div class="outline-text-3" id="text-org9661318">
+<div id="outline-container-orgf1e72a2" class="outline-3">
+<h3 id="orgf1e72a2">Is multiplication associative?</h3>
+<div class="outline-text-3" id="text-orgf1e72a2">
 <p>
 Watching <a href="https://youtu.be/NETkgRXkNXA?si=KO2fiYccSLPR7b5R">lecture 3</a> 
 </p>
 
-<pre class="example" id="org1758789">
+<pre class="example" id="orgeb2e8ad">
 prove (a * b) * c = a * (b * c) inductively c where
   prove a * b * c = a * (b * c) from c where
     given c = S x prove a * b * S x = a * (b * S x) ?
 </pre>
+
+<p>
+We should collect a list of everything proven so far because that is what Ask uses as well.
+</p>
 
 <p>
 TODO
@@ -890,9 +859,9 @@ TODO
 </div>
 </div>
 </div>
-<div id="outline-container-orga7b7315" class="outline-2">
-<h2 id="orga7b7315">Mechanics of Proof</h2>
-<div class="outline-text-2" id="text-orga7b7315">
+<div id="outline-container-org63fefb7" class="outline-2">
+<h2 id="org63fefb7">Mechanics of Proof</h2>
+<div class="outline-text-2" id="text-org63fefb7">
 <p>
 Let's do <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this as most CMU students will be taking <a href="https://www.math.cmu.edu/~jmackey/151_128/welcome.html">15-151</a> at the same time.   
 </p>
@@ -905,9 +874,9 @@ Let's do <i>The Mechanics of Proof</i> because 15-150 will assume we know some o
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-org6217846" class="outline-3">
-<h3 id="org6217846">Lean4 proof assistant</h3>
-<div class="outline-text-3" id="text-org6217846">
+<div id="outline-container-org87718d8" class="outline-3">
+<h3 id="org87718d8">Lean4 proof assistant</h3>
+<div class="outline-text-3" id="text-org87718d8">
 <p>
 Lean uses an <a href="https://lipn.info/@mevenlennonbertrand/116023220744101670">undecidable</a> type theory so it's proof-checker (kernel) is incomplete meaning if you aren't experienced in Lean tactics to avoid these issues you could get blown out by <a href="https://youtu.be/IaX6B-CIUmE?si=kU4ex-iJG9cxqLuf">Kurt Godel</a> and think this is a software bug when it's incompleteness. It is popular because they were the only proof assistant to care about user experience you could get Lean running quickly in VSCode and start proving things immediately. The Mathlib is <a href="https://leanprover-community.github.io/mathlib_stats.html">gigantic</a> so whatever subject you are working in chances are there already exists verified theorems you can readily use from the library. That's of course assuming they aren't dumping AI slop directly into Mathlib and are hopefully keeping all that as seperate libraries but I have no idea honestly. It will work well enough for this book anyway.     
 </p>
@@ -953,9 +922,9 @@ Install <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a> and Ct
 </p>
 </div>
 </div>
-<div id="outline-container-orga201d6e" class="outline-3">
-<h3 id="orga201d6e">Proving equalities</h3>
-<div class="outline-text-3" id="text-orga201d6e">
+<div id="outline-container-orgca4a33f" class="outline-3">
+<h3 id="orgca4a33f">Proving equalities</h3>
+<div class="outline-text-3" id="text-orgca4a33f">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. The .lean files to do these examples are in the Math2001 directory you cloned from github. The goal here is to make both sides equal at first with the right side finessed using algebra so it can be rewritten by the hypothesis a - b = 4 in the first example. 
 </p>
@@ -964,7 +933,7 @@ Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/
 1.2.x <i>Proving equalities in Lean</i> make a proof skeleton first:
 </p>
 
-<pre class="example" id="org1445848">
+<pre class="example" id="orgc496ce2">
 -- Example 1.2.4.
 -- Exercise: type out the whole proof printed in the text as a Lean proof.
 example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
@@ -978,7 +947,7 @@ example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
 The Lean docs suggest using <a href="https://leanprover-community.github.io/extras/calc.html">underscore</a> to keep the calc structure balanced while working on the proof that way we will get helpful error messages and not excessive red squiggles errors. That code declares 6 variables of type Int, h1 and h2 are assumptions/hypothesis, and we want to prove d(af - be) = 0. Calc is an environment like activating a mode.
 </p>
 
-<pre class="example" id="org07c49df">
+<pre class="example" id="orgc83ee7e">
 -- Example 1.2.4.
 -- Exercise: type out the whole proof printed in the text as a Lean proof.
 example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
@@ -996,14 +965,14 @@ I tried avoiding the reorder at first and skipping directly to rw but the patter
 </p>
 </div>
 </div>
-<div id="outline-container-org38f3e1f" class="outline-3">
-<h3 id="org38f3e1f">Tips and tricks</h3>
-<div class="outline-text-3" id="text-org38f3e1f">
+<div id="outline-container-org02f2f5a" class="outline-3">
+<h3 id="org02f2f5a">Tips and tricks</h3>
+<div class="outline-text-3" id="text-org02f2f5a">
 <p>
 1.3.2 once again we first establish x = x then use the hypothesis to rewrite it.
 </p>
 
-<pre class="example" id="orgd4e5f2f">
+<pre class="example" id="org29ec49a">
 -- Example 1.3.2
 example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
   calc
@@ -1016,7 +985,7 @@ example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
 Try the 1.3.11 exercises: 
 </p>
 
-<pre class="example" id="org622a415">
+<pre class="example" id="org1521f31">
 -- Exercises 1.3.11
 example {x y : ℝ} (h1 : x = 3) (h2 : y = 4 * x - 3) : y = 9 :=
   calc
@@ -1117,7 +1086,7 @@ example {t : ℚ} (ht : t ^ 2 - 4 = 0) :
 Exercise 15 I changed the hypothesis and this worked:
 </p>
 
-<pre class="example" id="orgbd75ebf">
+<pre class="example" id="orgd78bc86">
 example {x y : ℝ} (h1 : x = 2) (h2 : y * x = 2 * x ) : y = 2 :=
  calc
   y = y * 2/2 := by ring 
@@ -1132,9 +1101,9 @@ Exercise 16 is of course impossible (no rational number exists that when squared
 </p>
 </div>
 </div>
-<div id="outline-container-org06d0777" class="outline-3">
-<h3 id="org06d0777">Proving inequalities</h3>
-<div class="outline-text-3" id="text-org06d0777">
+<div id="outline-container-org833aa1d" class="outline-3">
+<h3 id="org833aa1d">Proving inequalities</h3>
+<div class="outline-text-3" id="text-org833aa1d">
 <p>
 We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-inequalities">proofs by calc</a> chapter.
 </p>
@@ -1162,13 +1131,13 @@ We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by
 To get the full list of the unicode symbols every editor plugin comes with an <a href="https://github.com/leanprover-community/lean4-mode/blob/master/data/abbreviations.json">abbreviations.json</a> file. Place '\' (LaTeX style commands) before any of those symbols on the left of the abbreviations file to see them converted to the symbols on the right. For example \b is converted in the editor to \(\beta\)    
 </p>
 
-<pre class="example" id="orgaa6c9b2">
+<pre class="example" id="orge76dde5">
 \ge greater or equal
 \le less than or equal
 &lt; and &gt; are just unicode keyboard chars
 </pre>
 
-<pre class="example" id="org0c97c48">
+<pre class="example" id="org38c96e1">
 -- Example 1.4.2
 example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 :=
   calc
@@ -1182,7 +1151,7 @@ example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 :=
 Example 1.4.3 think why is x + y &lt;= x + (x + 5) it's because y &lt;= x + 5 and x is &lt;= to itself. 
 </p>
 
-<pre class="example" id="org71ca4a1">
+<pre class="example" id="org5c8dcd4">
 -- Example 1.4.3
 example {x y : ℝ} (h1 : y ≤ x + 5) (h2 : x ≤ -2) : x + y &lt; 2 :=
   calc
@@ -1196,7 +1165,7 @@ example {x y : ℝ} (h1 : y ≤ x + 5) (h2 : x ≤ -2) : x + y &lt; 2 :=
 Example 1.4.6 the final tactic is := by extra which is defined in the <a href="https://hrmacbeth.github.io/math2001/Index_of_Tactics.html">Index of Lean tactics</a> as "extra checks an inequality whose two sides differ by the addition of a positive quantity". 
 </p>
 
-<pre class="example" id="orgb91665b">
+<pre class="example" id="orgd9cca1b">
 -- Example 1.4.9
 example {a b : ℚ} (h1 : a ≥ 0) (h2 : b ≥ 0) (h3 : a + b ≤ 8) :
     3 * a * b + a ≤ 7 * b + 72 :=
@@ -1218,7 +1187,7 @@ example {a b : ℚ} (h1 : a ≥ 0) (h2 : b ≥ 0) (h3 : a + b ≤ 8) :
 Try the 14.11 exercises:
 </p>
 
-<pre class="example" id="org3c11783">
+<pre class="example" id="orgd82c534">
 example {x y : ℤ} (h1 : x + 3 ≥ 2 * y) (h2 : 1 ≤ y) : x ≥ -1 :=
   calc
   x = x + 3 - 3 := by ring
@@ -1282,9 +1251,9 @@ Read the next section on addarith, it's a purposely weakened version of linarith
 </p>
 </div>
 </div>
-<div id="outline-container-orgb08b19e" class="outline-3">
-<h3 id="orgb08b19e">Proofs with structure</h3>
-<div class="outline-text-3" id="text-orgb08b19e">
+<div id="outline-container-orgf49d70c" class="outline-3">
+<h3 id="orgf49d70c">Proofs with structure</h3>
+<div class="outline-text-3" id="text-orgf49d70c">
 <p>
 We finally learn what the infoview does besides telling us 'goals accomplished'. 2.1.5 example is a little hard to follow if you don't plug it into lean:
 </p>
@@ -1309,7 +1278,7 @@ The cancel tactic removes a common factor from both sides so x<sup>2</sup> = 2<s
 There's many times I have to put brackets around something for the rewriter to pick it up, tried to see if I could replicate the problem in VS Code on a laptop and same issue. Just have to be specific sometimes to the rewriter what you want. 2.1.7 example the hint was that Lean can infer from the have declarations that this quantity is positive and I interpret this as scope where the have declarations are outside calc:
 </p>
 
-<pre class="example" id="org0c3a963">
+<pre class="example" id="org35f8c2f">
 example (a b : ℝ) (h1 : -b ≤ a) (h2 : a ≤ b) : a ^ 2 ≤ b ^ 2 := by
   have h3 : 0 ≤ a + b := by addarith [h1]
   have h4 : 0 ≤ b - a := by addarith [h2] 
@@ -1323,7 +1292,7 @@ example (a b : ℝ) (h1 : -b ≤ a) (h2 : a ≤ b) : a ^ 2 ≤ b ^ 2 := by
 2.1.8 example is similar:
 </p>
 
-<pre class="example" id="org36f3689">
+<pre class="example" id="org4014b21">
 example (a b : ℝ) (h : a ≤ b) : a ^ 3 ≤ b ^ 3 := by
   have h1 : 0 ≤ b - a := by addarith [h]
   calc
@@ -1336,7 +1305,7 @@ example (a b : ℝ) (h : a ≤ b) : a ^ 3 ≤ b ^ 3 := by
 2.1.9 exercises took forever because of scope issues with the lean viewer it works like Python you have to be aware of white spacing/indents: 
 </p>
 
-<pre class="example" id="org12c1f76">
+<pre class="example" id="orgae05367">
 example {x : ℚ} (h1 : x ^ 2 = 4) (h2 : 1 &lt; x) : x = 2 := by
   have h3 :=
   calc
@@ -1371,7 +1340,7 @@ example (x y : ℚ) (h : x * y = 1) (h2 : x ≥ 1) : y ≤ 1 := by
 Applying lemmas you look at the goals and that now drives the proof:
 </p>
 
-<pre class="example" id="org7765924">
+<pre class="example" id="org84d62e8">
 example {y : ℝ} : y ^ 2 + 1 ≠ 0 := by
   apply ne_of_gt
   calc
@@ -1408,9 +1377,9 @@ example {s : ℚ} (h1 : 3 * s ≤ -6) (h2 : 2 * s ≥ -4) : s = -2 := by
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb3b518" class="outline-2">
-<h2 id="orgcb3b518">Principles of Functional Programming</h2>
-<div class="outline-text-2" id="text-orgcb3b518">
+<div id="outline-container-org61b6ea0" class="outline-2">
+<h2 id="org61b6ea0">Principles of Functional Programming</h2>
+<div class="outline-text-2" id="text-org61b6ea0">
 <p>
 TODO here the proof assistant is the programming language itself. 
 </p>
